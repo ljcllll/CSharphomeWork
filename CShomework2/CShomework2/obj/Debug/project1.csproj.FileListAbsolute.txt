@@ -1,0 +1,7 @@
+D:\mycode\CShomework2\CShomework2\bin\Debug\CShomework2.exe.config
+D:\mycode\CShomework2\CShomework2\bin\Debug\CShomework2.exe
+D:\mycode\CShomework2\CShomework2\bin\Debug\CShomework2.pdb
+D:\mycode\CShomework2\CShomework2\obj\Debug\project1.csprojAssemblyReference.cache
+D:\mycode\CShomework2\CShomework2\obj\Debug\project1.csproj.CoreCompileInputs.cache
+D:\mycode\CShomework2\CShomework2\obj\Debug\CShomework2.exe
+D:\mycode\CShomework2\CShomework2\obj\Debug\CShomework2.pdb

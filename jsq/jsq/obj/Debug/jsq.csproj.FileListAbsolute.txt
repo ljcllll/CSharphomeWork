@@ -1,0 +1,7 @@
+D:\mycode\jsq\jsq\bin\Debug\jsq.exe.config
+D:\mycode\jsq\jsq\bin\Debug\jsq.exe
+D:\mycode\jsq\jsq\bin\Debug\jsq.pdb
+D:\mycode\jsq\jsq\obj\Debug\jsq.csprojAssemblyReference.cache
+D:\mycode\jsq\jsq\obj\Debug\jsq.csproj.CoreCompileInputs.cache
+D:\mycode\jsq\jsq\obj\Debug\jsq.exe
+D:\mycode\jsq\jsq\obj\Debug\jsq.pdb

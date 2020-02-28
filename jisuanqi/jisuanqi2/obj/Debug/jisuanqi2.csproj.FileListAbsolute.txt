@@ -1,0 +1,10 @@
+D:\mycode\jisuanqi\jisuanqi2\bin\Debug\jisuanqi2.exe.config
+D:\mycode\jisuanqi\jisuanqi2\bin\Debug\jisuanqi2.exe
+D:\mycode\jisuanqi\jisuanqi2\bin\Debug\jisuanqi2.pdb
+D:\mycode\jisuanqi\jisuanqi2\obj\Debug\jisuanqi2.csprojAssemblyReference.cache
+D:\mycode\jisuanqi\jisuanqi2\obj\Debug\jisuanqi2.Form1.resources
+D:\mycode\jisuanqi\jisuanqi2\obj\Debug\jisuanqi2.Properties.Resources.resources
+D:\mycode\jisuanqi\jisuanqi2\obj\Debug\jisuanqi2.csproj.GenerateResource.cache
+D:\mycode\jisuanqi\jisuanqi2\obj\Debug\jisuanqi2.csproj.CoreCompileInputs.cache
+D:\mycode\jisuanqi\jisuanqi2\obj\Debug\jisuanqi2.exe
+D:\mycode\jisuanqi\jisuanqi2\obj\Debug\jisuanqi2.pdb
