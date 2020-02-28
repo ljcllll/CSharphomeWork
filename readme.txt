@@ -1,2 +1,2 @@
-Git is a virsion control system.
-Git is free software.
+Git is a distributes virsion control system.
+Git is free software distributed under the GPL.
