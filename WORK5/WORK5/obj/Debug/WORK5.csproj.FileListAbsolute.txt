@@ -1,0 +1,7 @@
+D:\mycode\WORK5\WORK5\bin\Debug\WORK5.exe.config
+D:\mycode\WORK5\WORK5\bin\Debug\WORK5.exe
+D:\mycode\WORK5\WORK5\bin\Debug\WORK5.pdb
+D:\mycode\WORK5\WORK5\obj\Debug\WORK5.csprojAssemblyReference.cache
+D:\mycode\WORK5\WORK5\obj\Debug\WORK5.csproj.CoreCompileInputs.cache
+D:\mycode\WORK5\WORK5\obj\Debug\WORK5.exe
+D:\mycode\WORK5\WORK5\obj\Debug\WORK5.pdb
