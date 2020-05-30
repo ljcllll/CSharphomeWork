@@ -1,0 +1,596 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>一条有梦想的咸鱼。 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.ico?v=20200522" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/en_summergarden/bundle-en_summergarden.min.css?v=eJPbnlR84uox-N8Y1kMPtN4OnGKJuv0XEEgil80ofFA" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/en_summergarden/bundle-en_summergarden-mobile.min.css?v=qqfeWJjwG2yHc4G3o4D_aAh8NdA2Uspy5vjuqwOEq0c" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/yslss/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/yslss/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/yslss/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=6bwfCY2e02dLOXNW99G2BHZkYFmw9QyYTWeJ-W-sudo"></script>
+    <script>
+        var currentBlogId = 590895;
+        var currentBlogApp = 'yslss';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'En_summerGarden';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    <div id="page_begin_html">
+        
+
+    </div>
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a href="https://www.cnblogs.com/yslss/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="Return Home" /></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/yslss/">一条有梦想的咸鱼。</a>
+</h1>
+<h2>
+
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+
+<ul id="navList">
+	<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+CnBlogs</a>
+</li>
+	<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/yslss/">
+Home</a>
+</li>
+	<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+New Post</a>
+</li>
+	<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E4%B8%80%E6%9D%A1%E6%9C%89%E6%A2%A6%E6%83%B3%E7%9A%84%E5%92%B8%E9%B1%BC%E3%80%82">
+Contact</a></li>
+	<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+Admin</a>
+</li>
+	<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/yslss/rss/">
+Subscription</a>
+	
+<a id="blog_nav_rss_image" href="https://www.cnblogs.com/yslss/rss/">
+    <img src="/skins/en_summergarden/images/xml.gif" alt="订阅" />
+</a></li>
+</ul>
+
+
+
+		<div class="blogStats">
+			
+			<!--done-->
+Posts - 
+12&nbsp;
+Articles - 
+0&nbsp;
+Comments - 
+1&nbsp;
+
+
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+<!--done-->
+
+
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/yslss/archive/2020/05/30.html">2020年5月30日</a>
+    </div>
+
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/yslss/p/12990783.html">
+    单例模式，反射破环？
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+饿汉式 // 饿汉式单例 public class Hungry { //构造器私有 private Hungry(){ } // 一上来就把这个类加载了 private final static Hungry HUNGRY = new Hungry(); public static Hungry             <a href="https://www.cnblogs.com/yslss/p/12990783.html" class="c_b_p_desc_readmore">Read More</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-30 08:57
+一条有梦想的咸鱼。
+<span class="post-view-count">Views(70)</span><text> </text>
+<span class="post-comment-count">Comments(0)</span><text> </text>
+<span class="post-digg-count">Diggs(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12990783" rel="nofollow">
+    Edit
+</a>
+</div>
+        <div class="clear"></div>
+
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/yslss/archive/2020/05/29.html">2020年5月29日</a>
+    </div>
+
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/yslss/p/12985931.html">
+    SpringBoot打包Docker镜像
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+构建spring boot项目 本地测试访问 打成jar包 在本地运行jar包测试 到这一步就证明jar包没问题 idea下载一个插件 在这创建一个Dockerfile文件 安装插件后会高亮显示。 在Dockerfile文件 中写入 在服务器创建一个自己的目录 吧jar包和Dockerfile文件丢            <a href="https://www.cnblogs.com/yslss/p/12985931.html" class="c_b_p_desc_readmore">Read More</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-29 10:21
+一条有梦想的咸鱼。
+<span class="post-view-count">Views(18)</span><text> </text>
+<span class="post-comment-count">Comments(0)</span><text> </text>
+<span class="post-digg-count">Diggs(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12985931" rel="nofollow">
+    Edit
+</a>
+</div>
+        <div class="clear"></div>
+            <div class="postSeparator"></div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/yslss/p/12985791.html">
+    Docker部署Redis集群
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+# 创建网卡 docker network create redis --subnet 172.38.0.0/16 # 创建六个redis for port in $(seq 1 6); do mkdir -p /mydata/redis/node-${port}/conf touch /mydat            <a href="https://www.cnblogs.com/yslss/p/12985791.html" class="c_b_p_desc_readmore">Read More</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-29 10:02
+一条有梦想的咸鱼。
+<span class="post-view-count">Views(5)</span><text> </text>
+<span class="post-comment-count">Comments(0)</span><text> </text>
+<span class="post-digg-count">Diggs(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12985791" rel="nofollow">
+    Edit
+</a>
+</div>
+        <div class="clear"></div>
+            <div class="postSeparator"></div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/yslss/p/12985714.html">
+    Docker 网络，自定义网络！
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+理解Dcoker0 先清空所有环境 测试 三个网络 # 问题：docker 是如何处理容器网络访问的？ # 启动一个tomcat # 查看ip [root@iz2zeaet7s13lfkc8r3e2kz ysl]# docker exec -it tomcat01 ip addr 1: lo: &amp;lt;L            <a href="https://www.cnblogs.com/yslss/p/12985714.html" class="c_b_p_desc_readmore">Read More</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-29 09:52
+一条有梦想的咸鱼。
+<span class="post-view-count">Views(7)</span><text> </text>
+<span class="post-comment-count">Comments(0)</span><text> </text>
+<span class="post-digg-count">Diggs(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12985714" rel="nofollow">
+    Edit
+</a>
+</div>
+        <div class="clear"></div>
+            <div class="postSeparator"></div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/yslss/p/12985593.html">
+    Docker制作tomcat镜像，发布镜像
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+1、准备镜像文件 tomcat压缩包，jdk的压缩包！ 2、编写dockerfile文件,官方命名Dockerfile,build会自动寻找这个文件，就不需要 -f 指定了！ FROM centos MAINTAINER ysl&amp;lt;493487822@qq.com&amp;gt; COPY readme.txt /            <a href="https://www.cnblogs.com/yslss/p/12985593.html" class="c_b_p_desc_readmore">Read More</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-29 09:35
+一条有梦想的咸鱼。
+<span class="post-view-count">Views(4)</span><text> </text>
+<span class="post-comment-count">Comments(0)</span><text> </text>
+<span class="post-digg-count">Diggs(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12985593" rel="nofollow">
+    Edit
+</a>
+</div>
+        <div class="clear"></div>
+            <div class="postSeparator"></div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/yslss/p/12985482.html">
+    DockerFile
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+DockerFile介绍 dockerfile 是用来构建docker镜像的文件！命令参数脚本！ 构建步骤： 1、编写一个docker文件 2、docker build 构建成为一个镜像 3、docker run 运行镜像 4、docker push 发布镜像 （DockerHub，阿里云镜像仓库！            <a href="https://www.cnblogs.com/yslss/p/12985482.html" class="c_b_p_desc_readmore">Read More</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-29 09:11
+一条有梦想的咸鱼。
+<span class="post-view-count">Views(6)</span><text> </text>
+<span class="post-comment-count">Comments(1)</span><text> </text>
+<span class="post-digg-count">Diggs(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12985482" rel="nofollow">
+    Edit
+</a>
+</div>
+        <div class="clear"></div>
+
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/yslss/archive/2020/05/28.html">2020年5月28日</a>
+    </div>
+
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/yslss/p/12982371.html">
+    Docker容器数据卷
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+什么是容器数据卷 如果数据都在容器中，那么容器删除，数据就会丢失！需求：数据可以持久化 Mysql，容器删除=删库跑路！需求：Mysql数据可以存储在本地！ 容器之间可以有一个数据共享的技术！Docker容器中产生的数据，同步到本地！ 这就是卷技术！目录的挂载，将容器内的目录，挂载到Linux上面！            <a href="https://www.cnblogs.com/yslss/p/12982371.html" class="c_b_p_desc_readmore">Read More</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-28 17:37
+一条有梦想的咸鱼。
+<span class="post-view-count">Views(47)</span><text> </text>
+<span class="post-comment-count">Comments(0)</span><text> </text>
+<span class="post-digg-count">Diggs(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12982371" rel="nofollow">
+    Edit
+</a>
+</div>
+        <div class="clear"></div>
+            <div class="postSeparator"></div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/yslss/p/12982188.html">
+    Docker镜像
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+镜像是什么 镜像是一种轻量级、可执行的独立软件包，用来打包软件运行环境和基于运行环境的开发软件，它包含运行某个软件所需的所有内容， 包括代码、运行时、库、环境变量和配置文件。 Docker镜像原理 UnionFS(联合文件系统) Union文件系统(UnionFS) 是一种分层、轻量级并且高性能的文            <a href="https://www.cnblogs.com/yslss/p/12982188.html" class="c_b_p_desc_readmore">Read More</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-28 17:20
+一条有梦想的咸鱼。
+<span class="post-view-count">Views(4)</span><text> </text>
+<span class="post-comment-count">Comments(0)</span><text> </text>
+<span class="post-digg-count">Diggs(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12982188" rel="nofollow">
+    Edit
+</a>
+</div>
+        <div class="clear"></div>
+            <div class="postSeparator"></div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/yslss/p/12982155.html">
+    Docker部署nginx，tomcat，es，可视化
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+nginx [root@iz2zeaet7s13lfkc8r3e2kz /]# docker pull nginx #下载 Using default tag: latest latest: Pulling from library/nginx afb6ec6fdc1c: Pull complete            <a href="https://www.cnblogs.com/yslss/p/12982155.html" class="c_b_p_desc_readmore">Read More</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-28 17:17
+一条有梦想的咸鱼。
+<span class="post-view-count">Views(12)</span><text> </text>
+<span class="post-comment-count">Comments(0)</span><text> </text>
+<span class="post-digg-count">Diggs(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12982155" rel="nofollow">
+    Edit
+</a>
+</div>
+        <div class="clear"></div>
+            <div class="postSeparator"></div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/yslss/p/12982088.html">
+    Docker常用命令
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+帮助命令 docker version #查看docker版本 docker info #查看docker信息 docker 命令 --help #万能命令 Docker中文帮助文档 https://www.runoob.com/docker/docker-command-manual.html 镜            <a href="https://www.cnblogs.com/yslss/p/12982088.html" class="c_b_p_desc_readmore">Read More</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-28 17:10
+一条有梦想的咸鱼。
+<span class="post-view-count">Views(7)</span><text> </text>
+<span class="post-comment-count">Comments(0)</span><text> </text>
+<span class="post-digg-count">Diggs(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12982088" rel="nofollow">
+    Edit
+</a>
+</div>
+        <div class="clear"></div>
+
+</div>
+
+
+
+<div class="topicListFooter">
+    <div id="nav_next_page">
+        
+    <a href="https://www.cnblogs.com/yslss/default.html?page=2">
+        下一页
+    </a>
+
+    </div>    
+</div>
+
+
+
+
+
+
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="calendar"><div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script></div>
+			
+			<DIV id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</DIV>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 一条有梦想的咸鱼。
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    <div id="page_end_html">
+        <script>
+ 
+!function(){
+ 
+ function n(n,e,t){
+ 
+ return n.getAttribute(e)||t
+ 
+ }
+ 
+ function e(n){
+ 
+ return document.getElementsByTagName(n)
+ 
+ }
+ 
+ function t(){
+ 
+ var t=e("script"),o=t.length,i=t[o-1];
+ 
+ return{
+ 
+l:o,z:n(i,"zIndex",-1),o:n(i,"opacity",.5),c:n(i,"color","0,0,0"),n:n(i,"count",200)
+ 
+ }
+ 
+ }
+ 
+ function o(){
+ 
+ a=m.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,
+ 
+ c=m.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight
+ 
+ }
+ 
+ function i(){
+ 
+ r.clearRect(0,0,a,c);
+ 
+ var n,e,t,o,m,l;
+ 
+ s.forEach(function(i,x){
+ 
+ for(i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>a||i.x<0?-1:1,i.ya*=i.y>c||i.y<0?-1:1,r.fillRect(i.x-.5,i.y-.5,1,1),e=x+1;e<u.length;e++)n=u[e],
+ 
+ null!==n.x&&null!==n.y&&(o=i.x-n.x,m=i.y-n.y,
+ 
+ l=o*o+m*m,l<n.max&&(n===y&&l>=n.max/2&&(i.x-=.03*o,i.y-=.03*m),
+ 
+ t=(n.max-l)/n.max,r.beginPath(),r.lineWidth=t/2,r.strokeStyle="rgba("+d.c+","+(t+.2)+")",r.moveTo(i.x,i.y),r.lineTo(n.x,n.y),r.stroke()))
+ 
+ }),
+
+ x(i)
+ 
+ }
+ 
+ var a,c,u,m=document.createElement("canvas"),
+ 
+ d=t(),l="c_n"+d.l,r=m.getContext("2d"),
+x=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||
+ 
+ function(n){
+
+ window.setTimeout(n,1e3/45)
+ 
+ },
+ 
+ w=Math.random,y={x:null,y:null,max:2e4};m.id=l,m.style.cssText="position:fixed;top:0;left:0;z-index:"+d.z+";opacity:"+d.o,e("body")[0].appendChild(m),o(),window.onresize=o,
+ 
+ window.onmousemove=function(n){
+ 
+ n=n||window.event,y.x=n.clientX,y.y=n.clientY
+ 
+ },
+ 
+ window.onmouseout=function(){
+ 
+ y.x=null,y.y=null
+ 
+ };
+ 
+ for(var s=[],f=0;d.n>f;f++){
+ 
+ var h=w()*a,g=w()*c,v=2*w()-1,p=2*w()-1;s.push({x:h,y:g,xa:v,ya:p,max:6e3})
+ 
+ }
+ 
+ u=s.concat([y]),
+ 
+ setTimeout(function(){i()},100)
+ 
+ }();
+ 
+ </script>
+<script type="text/javascript">
+        var a_idx = 0;
+        jQuery(document).ready(function($) {
+        $("body").click(function(e) {
+        var a = new Array("I love you!", "あなたのことが好きです", " أنا أحبك ", "Kocham Cię!", "我爱你", " Я тебя люблю.", "사랑해", "ฉันรักเธอนะ", "Σ'αγαπώ!", "Anh yêu em!", "我中意你", "我愛你");
+        var $i = $("<span></span>").text(a[a_idx]);
+        a_idx = (a_idx + 1) % a.length;
+        var x = e.pageX,
+        y = e.pageY;
+        $i.css({
+            "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+            "top": y - 20,
+            "left": x,
+            "position": "absolute",
+            "font-weight": "bold",
+            "color": "rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"
+        });
+        $("body").append($i);
+        $i.animate({
+            "top": y - 180,
+            "opacity": 0
+        },
+        1500,
+        function() {
+            $i.remove();
+        });
+    });
+});
+</script>
+    </div>
+</body>
+</html>

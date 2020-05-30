@@ -1,0 +1,458 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    <meta property="og:description" content="本文主要讲述在html中使用requirejs时，如何让IDEA更加智能识别javascript的方法。 测试时的目录结构，一种典型的 thinkphp 的结构，同时，在 a.thml 中通过 req" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>require.js与IDEA的配合 - Cheney.Zhong.ZCY - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.ico?v=20200522" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/lessismore/bundle-lessismore.min.css?v=zbVMf2M2JAlJ02H61dM8SlvD_g-Qf1GNTSQ53ByHeUE" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/zhongchengyi/custom.css?v=zUPXqshGQa&#x2B;svcrMMQY8cyJQ87o=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/lessismore/bundle-lessismore-mobile.min.css?v=ADiCwO2hOTdd5yYidcx7eob7ix2VJI4o_TXjEycTHjs" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/zhongchengyi/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/zhongchengyi/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/zhongchengyi/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=6bwfCY2e02dLOXNW99G2BHZkYFmw9QyYTWeJ-W-sudo"></script>
+    <script>
+        var currentBlogId = 186342;
+        var currentBlogApp = 'zhongchengyi';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'LessIsMore';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    <div id="home">
+    <div id="header">
+        <div id="blogTitle">
+            
+<div class="title"><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/zhongchengyi/">Cheney.Zhong.ZCY</a>
+</div>
+<div class="subtitle">
+
+</div>
+
+        </div>
+        <div id="navigator">
+            
+<ul id="navList">
+    <li id="nav_sitehome"><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+    <li id="nav_myhome">
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/zhongchengyi/">
+首页</a>
+</li>
+    <li id="nav_newpost">
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+    <li id="nav_contact">
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/Cheney.Zhong.ZCY">
+联系</a></li>
+    <li id="nav_rss">
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/zhongchengyi/rss/">
+订阅</a></li>
+    <li id="nav_admin">
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+            <div class="blogStats">
+                
+<span id="stats_post_count">随笔 - 
+7&nbsp;</span>
+<span id="stats_article_count">文章 - 
+1&nbsp;</span>
+<!-- <span id="stats-comment_count"></span> -->
+<span id="stats_comment_count">评论 - 
+4</span>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div id="mainContent">
+            <div class="forFlow">
+                <div id="post_detail">
+    <div id="topics">
+        <div class="post">
+            <h1 class="postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/zhongchengyi/p/12982228.html">require.js与IDEA的配合</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+<div id="cnblogs_post_body" class="blogpost-body ">
+    <ul>
+<li>本文主要讲述在html中使用requirejs时，如何让IDEA更加智能识别javascript的方法。</li>
+</ul>
+<p style="margin-left: 60px;">&nbsp;测试时的目录结构，一种典型的 thinkphp 的结构，同时，在 a.thml 中通过 requirejs 引用 了 Public/Home/View/moduleA/a.js，</p>
+<p style="margin-left: 60px;">后面我们的测试，都在 a.js 中进行。</p>
+<p style="margin-left: 60px;">&nbsp;</p>
+<p style="margin-left: 60px;"><img src="https://img2020.cnblogs.com/blog/625732/202005/625732-20200529213337596-1264475185.png" alt=""></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2>路径可识别 + amd</h2>
+<p style="margin-left: 60px;">class, 对象，方法，都能完美识别</p>
+<h3>class 导出</h3>
+<p style="margin-left: 60px;">我们在 Class1.js 中导出一个 Class，且只使用 AMD 方式导出，代码如下：</p>
+<div class="cnblogs_code" style="margin-left: 60px;" onclick="cnblogs_code_show('71b471d0-4d94-4c9c-a1ce-beb4e29f3732')"><img id="code_img_closed_71b471d0-4d94-4c9c-a1ce-beb4e29f3732" class="code_img_closed" src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt=""><img id="code_img_opened_71b471d0-4d94-4c9c-a1ce-beb4e29f3732" class="code_img_opened" style="display: none" src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="">
+<div id="cnblogs_code_open_71b471d0-4d94-4c9c-a1ce-beb4e29f3732" class="cnblogs_code_hide" style="margin-left: 90px;">
+<pre><span style="color: #000000;">define([],
+    function () {
+        </span><span style="color: #0000ff;">class</span><span style="color: #000000;"> Class1 {
+            </span><span style="color: #0000ff;">static</span><span style="color: #000000;"> a() {
+
+            }
+
+            ia() {
+
+            }
+        }
+
+        </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> Class1;
+    })</span></pre>
+</div>
+<span class="cnblogs_code_collapse">View Code</span></div>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>当我用 control 按下时，Class1 能识别，且能进入</li>
+<li>导出的符号 c1，能自动联想class静态，实例方法</li>
+</ul>
+</li>
+</ul>
+<p style="margin-left: 60px;">&nbsp;<img src="https://img2020.cnblogs.com/blog/625732/202005/625732-20200529162056692-785068356.gif" alt=""></p>
+<p>&nbsp;</p>
+<h3>对象导出</h3>
+<p style="margin-left: 60px;">我们使用 moduleA/obj1.js 文件导出一个对象，代码如下：</p>
+<div class="cnblogs_code" style="margin-left: 60px;" onclick="cnblogs_code_show('22e71086-59ae-43a3-aa98-88ac57e818c6')"><img id="code_img_closed_22e71086-59ae-43a3-aa98-88ac57e818c6" class="code_img_closed" src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt=""><img id="code_img_opened_22e71086-59ae-43a3-aa98-88ac57e818c6" class="code_img_opened" style="display: none" src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="">
+<div id="cnblogs_code_open_22e71086-59ae-43a3-aa98-88ac57e818c6" class="cnblogs_code_hide" style="margin-left: 60px;">
+<pre><span style="color: #000000;">define([],
+    function () {
+        </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> {
+            </span><span style="color: #008000;">/*</span><span style="color: #008000;">*
+             * obj1 的 a 方法
+             </span><span style="color: #008000;">*/</span><span style="color: #000000;">
+            a: function () {
+
+            },
+        }
+    })</span></pre>
+</div>
+<span class="cnblogs_code_collapse">View Code</span></div>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>同导出class一样，能完美自动联想</li>
+</ul>
+</li>
+</ul>
+<p style="margin-left: 60px;"><img src="https://img2020.cnblogs.com/blog/625732/202005/625732-20200529162924026-658406842.gif" alt=""></p>
+<p>&nbsp;</p>
+<h2>路径不可识别 + amd</h2>
+<h3>class导出</h3>
+<p style="margin-left: 60px;">我们在 require.config 中配置了 modulaA/Class2.js 的路径，如下：</p>
+<div class="cnblogs_code" style="margin-left: 60px;" onclick="cnblogs_code_show('26f9f1da-4867-45a0-b239-791fcf1c890a')"><img id="code_img_closed_26f9f1da-4867-45a0-b239-791fcf1c890a" class="code_img_closed" src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt=""><img id="code_img_opened_26f9f1da-4867-45a0-b239-791fcf1c890a" class="code_img_opened" style="display: none" src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="">
+<div id="cnblogs_code_open_26f9f1da-4867-45a0-b239-791fcf1c890a" class="cnblogs_code_hide" style="margin-left: 60px;">
+<pre><span style="color: #000000;">    require.config({
+        paths:{
+            </span>'m1.class2': '../../../../Public/Home/View/moduleA/Class2'<span style="color: #000000;">,
+        }
+    })</span></pre>
+</div>
+<span class="cnblogs_code_collapse">View Code</span></div>
+<p style="margin-left: 60px;">&nbsp;Class2.js 文件与 Class1 结构一样，如下：</p>
+<div class="cnblogs_code" style="margin-left: 60px;" onclick="cnblogs_code_show('d292f4bb-7eb0-4770-a025-4673e0ca9032')"><img id="code_img_closed_d292f4bb-7eb0-4770-a025-4673e0ca9032" class="code_img_closed" src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt=""><img id="code_img_opened_d292f4bb-7eb0-4770-a025-4673e0ca9032" class="code_img_opened" style="display: none" src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="">
+<div id="cnblogs_code_open_d292f4bb-7eb0-4770-a025-4673e0ca9032" class="cnblogs_code_hide" style="margin-left: 60px;">
+<pre>define([], <span style="color: #0000ff;">function</span><span style="color: #000000;"> () {
+    class Class2 {
+        </span><span style="color: #008000;">/*</span><span style="color: #008000;">*
+         * class2 的 static a 方法
+         </span><span style="color: #008000;">*/</span><span style="color: #000000;">
+        static a() {
+
+        }
+
+        </span><span style="color: #008000;">/*</span><span style="color: #008000;">*
+         * class2 的 instance ia2 方法
+         </span><span style="color: #008000;">*/</span><span style="color: #000000;">
+        ia() {
+
+        }
+    }
+
+    </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> Class2;
+})</span></pre>
+</div>
+<span class="cnblogs_code_collapse">View Code</span></div>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>不能识别路径</li>
+<li>不能识别文件符号</li>
+<li>不能识别静态方法</li>
+<li>不能识别实例方法</li>
+</ul>
+</li>
+</ul>
+<p style="margin-left: 60px;"><img src="https://img2020.cnblogs.com/blog/625732/202005/625732-20200529164250642-1373399809.gif" alt=""></p>
+<p>&nbsp;</p>
+<h4>解决办法</h4>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>如果存在同名的class ，需要两个 class 都使用@alias 别名，如果不存在同名class可以不用@alias</li>
+<li>如果有静态的字段或方法，使用@exports声明导出，且指定导出名字</li>
+<li>在引用的地方，通过@module指定模块的名字，且导入的变量名与类名相同</li>
+</ul>
+</li>
+</ul>
+<h4>遗留问题：</h4>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Class3不是很好的被识别为 class，导致 Class3.ia 可以被导航（但导航是错的）。如下：</li>
+</ul>
+</li>
+</ul>
+<p style="margin-left: 60px;"><img src="https://img2020.cnblogs.com/blog/625732/202005/625732-20200529191450980-76476875.gif" alt=""></p>
+<p style="margin-left: 60px;">接下来我们通过 Class3 进行示例，Class3代码如下：</p>
+<div class="cnblogs_code" style="margin-left: 60px;" onclick="cnblogs_code_show('1e00e043-6256-4568-80a7-ee41f6d9f61b')"><img id="code_img_closed_1e00e043-6256-4568-80a7-ee41f6d9f61b" class="code_img_closed" src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt=""><img id="code_img_opened_1e00e043-6256-4568-80a7-ee41f6d9f61b" class="code_img_opened" style="display: none" src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="">
+<div id="cnblogs_code_open_1e00e043-6256-4568-80a7-ee41f6d9f61b" class="cnblogs_code_hide" style="margin-left: 60px;">
+<pre><span style="color: #000000;">define([],
+    </span><span style="color: #0000ff;">function</span><span style="color: #000000;"> () {
+        </span><span style="color: #008000;">/*</span><span style="color: #008000;">*
+         * @alias n1.Class3
+         * @exports n1/Class3
+         </span><span style="color: #008000;">*/</span><span style="color: #000000;">
+        class Class3 {
+            static b </span>=<span style="color: #000000;"> {
+                a: </span><span style="color: #0000ff;">function</span><span style="color: #000000;"> () {
+
+                }
+            };
+
+            </span><span style="color: #008000;">/*</span><span style="color: #008000;">*
+             *
+             </span><span style="color: #008000;">*/</span><span style="color: #000000;">
+            constructor() {
+
+            }
+
+            </span><span style="color: #008000;">/*</span><span style="color: #008000;">*
+             * class3 的 static a 方法
+             </span><span style="color: #008000;">*/</span><span style="color: #000000;">
+            static a() {
+
+            }
+
+            </span><span style="color: #008000;">/*</span><span style="color: #008000;">*
+             * class3 的 instance ia2 方法
+             </span><span style="color: #008000;">*/</span><span style="color: #000000;">
+            ia() {
+
+            }
+        }
+
+        </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> Class3;
+    })</span></pre>
+</div>
+<span class="cnblogs_code_collapse">View Code</span></div>
+<p style="margin-left: 60px;">效果如下：</p>
+<p style="margin-left: 60px;"><img src="https://img2020.cnblogs.com/blog/625732/202005/625732-20200529191000750-916541945.gif" alt=""></p>
+<h3>&nbsp;对象的导出</h3>
+<p style="margin-left: 60px;">对象导出没有找到很方便的办法，只能通过 @typedefine 来定义类型，然后在用的地方声明类型，如下：</p>
+<div class="cnblogs_code" style="margin-left: 60px;" onclick="cnblogs_code_show('467b2d52-0812-439d-827a-56df577be9b9')"><img id="code_img_closed_467b2d52-0812-439d-827a-56df577be9b9" class="code_img_closed" src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt=""><img id="code_img_opened_467b2d52-0812-439d-827a-56df577be9b9" class="code_img_opened" style="display: none" src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="">
+<div id="cnblogs_code_open_467b2d52-0812-439d-827a-56df577be9b9" class="cnblogs_code_hide">
+<pre><span style="color: #000000;">define([],
+    </span><span style="color: #0000ff;">function</span><span style="color: #000000;"> () {
+        </span><span style="color: #008000;">/*</span><span style="color: #008000;">*
+         * @typedef {Object} n1.obj1
+         * @property {Function} a
+         * @property {int} b
+         </span><span style="color: #008000;">*/</span><span style="color: #000000;">
+
+        let ob </span>=<span style="color: #000000;"> {
+            </span><span style="color: #008000;">/*</span><span style="color: #008000;">*
+             * obj1 的 a 方法
+             </span><span style="color: #008000;">*/</span><span style="color: #000000;">
+            a: </span><span style="color: #0000ff;">function</span><span style="color: #000000;"> () {
+
+            },
+            b: </span>1<span style="color: #000000;">,
+        };
+
+        </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> ob;
+    })</span></pre>
+</div>
+<span class="cnblogs_code_collapse">obj1.js</span></div>
+<p style="margin-left: 60px;"><img src="https://img2020.cnblogs.com/blog/625732/202005/625732-20200529212818657-1331013367.gif" alt=""></p>
+<h2>路径可识别 + umd 和&nbsp;路径不可识别 + umd</h2>
+<p style="margin-left: 60px;">&nbsp;我们准备了一个umd导出的类，如下：</p>
+<div class="cnblogs_code" style="margin-left: 60px;" onclick="cnblogs_code_show('2d5071e0-47aa-4ad2-9a0d-d9573e4a0208')"><img id="code_img_closed_2d5071e0-47aa-4ad2-9a0d-d9573e4a0208" class="code_img_closed" src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt=""><img id="code_img_opened_2d5071e0-47aa-4ad2-9a0d-d9573e4a0208" class="code_img_opened" style="display: none" src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="">
+<div id="cnblogs_code_open_2d5071e0-47aa-4ad2-9a0d-d9573e4a0208" class="cnblogs_code_hide">
+<pre>;(<span style="color: #0000ff;">function</span><span style="color: #000000;"> (factory) {
+    </span>'use strict'<span style="color: #000000;">;
+    </span><span style="color: #0000ff;">if</span> (<span style="color: #0000ff;">typeof</span> define === 'function' &amp;&amp;<span style="color: #000000;"> define.amd) {
+        </span><span style="color: #008000;">//</span><span style="color: #008000;"> AMD</span>
+<span style="color: #000000;">        define([], factory);
+    } </span><span style="color: #0000ff;">else</span> <span style="color: #0000ff;">if</span> (<span style="color: #0000ff;">typeof</span> module !== 'undefined' &amp;&amp;<span style="color: #000000;"> module.exports) {
+        </span><span style="color: #008000;">//</span><span style="color: #008000;"> CommonJS</span>
+        module.exports =<span style="color: #000000;"> factory();
+    } </span><span style="color: #0000ff;">else</span><span style="color: #000000;"> {
+        </span><span style="color: #008000;">//</span><span style="color: #008000;"> Global</span>
+        window.umd1 =<span style="color: #000000;"> factory();
+    }
+}(</span><span style="color: #0000ff;">function</span><span style="color: #000000;"> () {
+
+    class umd1 {
+        static a() {
+
+        }
+
+        ia() {
+            
+        }
+    }
+
+    </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> umd1;
+}));</span></pre>
+</div>
+<span class="cnblogs_code_collapse">umd1.js</span></div>
+<p style="margin-left: 60px;">在使用过程中发现，静态，示例方法都无法联想。对象的导出，IDEA 更无法识别。</p>
+<p style="margin-left: 60px;"><img src="https://img2020.cnblogs.com/blog/625732/202005/625732-20200529211712236-934234356.gif" alt=""></p>
+<p>&nbsp;</p>
+<h3>&nbsp;办法</h3>
+<p style="margin-left: 60px;">对于类的导出，可以采用与 #路径不可识别 + amd 的类导出一样的解决办法。</p>
+<p style="margin-left: 60px;">对于对象的导出，只有采取@typedefine 方式了。。。</p>
+<p style="margin-left: 60px;">&nbsp;</p>
+<p style="margin-left: 60px;">附：文中代码参见<a href="https://github.com/zhongchengyi/demo.require-vue-idea">https://github.com/zhongchengyi/demo.require-vue-idea</a></p>
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2020-05-29 21:47</span>&nbsp;
+<a href="https://www.cnblogs.com/zhongchengyi/">Cheney.Zhong.ZCY</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12982228" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12982228);return false;">收藏</a></div>
+        </div>
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 186342, cb_blogApp = 'zhongchengyi', cb_blogUserGuid = '5c3555b3-c9c7-e311-8d02-90b11c0b17d6';
+    var cb_entryId = 12982228, cb_entryCreatedDate = '2020-05-29 21:47', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;"></div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>    </div>
+</div>
+            </div>
+        </div>
+
+        <div id="sideBar">
+            <div id="sideBarMain">
+                
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+                <div id="calendar"><div id="blog-calendar" style="display:none"></div></div>                
+                <script>loadBlogDefaultCalendar();</script>
+                <div id="leftcontentcontainer">
+                    <!-- begin:SingleColumn -->
+                    <div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+                    <!-- end:  SingleColumn -->
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <div id="footer">
+        <!--done-->
+Copyright &copy; 2020 Cheney.Zhong.ZCY
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+    </div>
+</div>
+
+    
+</body>
+</html>

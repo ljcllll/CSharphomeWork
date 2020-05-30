@@ -1,0 +1,605 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    <meta property="og:description" content="一、MySQL主从搭建 搭建主从架构的MySQL常用的有两种实现方式： 基于binlog的fileName &#x2B; postion模式完成主从同步。 基于gtid完成主从同步搭建。 本篇就介绍如何使用第一" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>基于bin-log&amp;position搭建主从架构MySQL - 赐我白日梦 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.ico?v=20200522" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/custom/bundle-custom.min.css?v=1ssrnY3Il79Ok472qeVrpxlSprSXcHhYPgZC5S3wtVM" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/ZhuChangwu/custom.css?v=FdNeHgLurX28t6Rnidp1xoz5Eco=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/custom/bundle-custom-mobile.min.css?v=-Yh290MhQyDeXLmvKTSses9H6-49lqbpXFh55zvS0w8" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/ZhuChangwu/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/ZhuChangwu/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/ZhuChangwu/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=6bwfCY2e02dLOXNW99G2BHZkYFmw9QyYTWeJ-W-sudo"></script>
+    <script>
+        var currentBlogId = 480837;
+        var currentBlogApp = 'ZhuChangwu';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'Custom';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    <div id="page_begin_html">
+        <script>loadPageBeginHtml();</script>
+    </div>
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/ZhuChangwu/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/ZhuChangwu/">赐我白日梦</a>
+</h1>
+<h2>
+我需要一份工作
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/ZhuChangwu/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E8%B5%90%E6%88%91%E7%99%BD%E6%97%A5%E6%A2%A6">
+联系</a></li>
+<li>
+
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+150&nbsp; </span>
+<span id="stats_article_count">文章 - 
+0&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+80</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/ZhuChangwu/p/12990062.html">基于bin-log&amp;position搭建主从架构MySQL</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+    <p><div class="toc"><div class="toc-container-header">目录</div><ul><li><a href="#一、mysql主从搭建">一、MySQL主从搭建</a></li><li><a href="#二、主库">二、主库</a><ul><li><a href="#21、确定主库的binlog是否开启">2.1、确定主库的binlog是否开启</a></li><li><a href="#22、骚气的命令">2.2、骚气的命令</a></li><li><a href="#23、记录主库的master状态">2.3、记录主库的master状态</a></li></ul></li><li><a href="#三、从库">三、从库</a><ul><li><a href="#31、从库和主库保持同步">3.1、从库和主库保持同步</a></li><li><a href="#32、开启主从同步">3.2、开启主从同步</a></li><li><a href="#33、从库：如何断开主从">3.3、从库：如何断开主从</a></li><li><a href="#34、主库：如何断开主从">3.4、主库：如何断开主从</a></li></ul></li><li><a href="#四、中断处理">四、中断处理</a><ul><li><a href="#41、slave_io_running异常">4.1、Slave_IO_Running异常</a></li><li><a href="#42、slave_sql_running异常">4.2、Slave_Sql_Running异常</a></li></ul></li><li><a href="#五、流程">五、流程</a></li><li><a href="#六、可能会遇到的问题">六、可能会遇到的问题</a><ul><li><a href="#61、问题一：">6.1、问题一：</a></li><li><a href="#62、问题二：">6.2、问题二：</a></li><li><a href="#63、问题三：">6.3、问题三：</a></li><li><a href="#64、问题四：">6.4、问题四：</a></li><li><a href="#65、问题五：">6.5、问题五：</a></li><li><a href="#66、问题六：">6.6、问题六：</a></li><li><a href="#67、问题七：">6.7、问题七：</a></li></ul></li></ul></div></p>
+<h3 id="一、mysql主从搭建">一、MySQL主从搭建</h3>
+<p>搭建主从架构的MySQL常用的有两种实现方式：</p>
+<ol>
+<li>基于binlog的fileName + postion模式完成主从同步。</li>
+<li>基于gtid完成主从同步搭建。</li>
+</ol>
+<p>本篇就介绍如何使用第一种方式完成MySQL主从环境的搭建。</p>
+<p>基于fileName和position去实现主从复制，所谓的fileName就是bin-log的name，position指的是slave需要从master的binlog的哪个位置开始同步数据。</p>
+<p>这种模式同步数据方式麻烦的地方就是需要我们自己通过如下的命令去查找应该从哪个bin-log的哪个position去开始同步。</p>
+<h3 id="二、主库">二、主库</h3>
+<h4 id="21、确定主库的binlog是否开启">2.1、确定主库的binlog是否开启</h4>
+<p>命令：<code>show  variables like 'bin-log'</code></p>
+<p>原因：了解MySQL中常见的三个日志：</p>
+<ol>
+<li>单机MySQL的undolog日志中记录着如何将现有的数据恢复成被修改前的旧数据。</li>
+<li>单机MySQL的redolog. 中记录事物日志。</li>
+<li>主从模式的MySQL通过bin-log日志同步数据。</li>
+</ol>
+<h4 id="22、骚气的命令">2.2、骚气的命令</h4>
+<pre><code class="language-sql">grant replication slave on *.* to MySQLsync@&quot;127.0.0.1&quot; identified by &quot;MySQLsync123&quot;;
+</code></pre>
+<p>这条命令是在干什么呢？</p>
+<p>捋一下思路：我们做主从同步，在主库这边我们其实会单独创建一个账号用于实现主从同步。下面的命令其实就会帮我们创建出 <code>username=mysqlsync password=mysqlsync123</code>的账户专门用户主从同步使用。</p>
+<p>执行完上面的命令后，执行如下的命令查看上面的grant执行结果：</p>
+<pre><code class="language-bash">select user, host from mysql.user like '%mysqlsync%'
+</code></pre>
+<p><img src="https://img2020.cnblogs.com/blog/1496926/202005/1496926-20200529230353933-1077827497.png" alt=""></p>
+<h4 id="23、记录主库的master状态">2.3、记录主库的master状态</h4>
+<p>注意主库的查看主库当前是第几个binlog，已经数据的position。</p>
+<p>因为一会从库就是根据这两个信息知道自己该从主库的第几个binlog的什么positon开始同步。</p>
+<p><img src="https://img2020.cnblogs.com/blog/1496926/202005/1496926-20200529230017597-2036099465.png" alt="image-20200526192749846"></p>
+<h3 id="三、从库">三、从库</h3>
+<h4 id="31、从库和主库保持同步">3.1、从库和主库保持同步</h4>
+<p>从库执行change语句，和主库保持同步</p>
+<pre><code class="language-bash">CHANGE MASTER TO
+    MASTER_HOST='10.157.23.158',
+    MASTER_USER='mysqlsync',
+    MASTER_PASSWORD='mysqlsync123',
+    MASTER_PORT=8882,
+    MASTER_LOG_FILE='mysql-bin.000008',
+    MASTER_LOG_POS=1013;
+
+  
+ CHANGE MASTER TO
+  MASTER_HOST = '${new_master_ip}',
+  MASTER_USER = '${user}',
+  MASTER_PASSWORD = '${password}',
+  MASTER_PORT = ${new_master_port},
+  master_auto_position = 1; 
+  
+CHANGE MASTER TO
+  MASTER_HOST = '10.157.23.123',
+  MASTER_USER = 'mysqlsync',
+  MASTER_PASSWORD = 'mysqlsync123',
+  MASTER_PORT = 8882,
+  master_auto_position = 1; 
+</code></pre>
+<h4 id="32、开启主从同步">3.2、开启主从同步</h4>
+<pre><code>start slave
+show slave status \G
+</code></pre>
+<p><img src="https://img2020.cnblogs.com/blog/1496926/202005/1496926-20200529230018607-366166439.png" alt="image-20200409150520640"></p>
+<p>当我们可以看到 io线程和sql线程的状态都是yes时，说明此刻主从同步已经搭建完成了。</p>
+<h4 id="33、从库：如何断开主从">3.3、从库：如何断开主从</h4>
+<pre><code>stop slave io_thread
+stop slave sql_thread
+</code></pre>
+<h4 id="34、主库：如何断开主从">3.4、主库：如何断开主从</h4>
+<p>把用于进行主从同步的账号删除就好了</p>
+<pre><code>drop user ${user}@${slave_ip}
+</code></pre>
+<p>​</p>
+<h3 id="四、中断处理">四、中断处理</h3>
+<p>中断处理部分说的是，一开始我们搭建主从很可能并不是一番风顺的，就比如上面的Slave_IO_Running和Slave_SQL_Running很可能处于NO的状态。下面介绍一下常见的解决方式。</p>
+<h4 id="41、slave_io_running异常">4.1、<code>Slave_IO_Running</code>异常</h4>
+<p><code>Slave_IO_Running：no/connecting</code></p>
+<p>这说明从库连接不上主库，或者是一直处于正在连接的状态。</p>
+<p>可能是主库没有对从库进行授权，如果已经授权了那么重启一下salve。</p>
+<p>另一种原因就是master和slave的mysqld相关配置文件中，配置了相同server_id。</p>
+<p>还有可能你在执行change master命令时，输入的主库相关的信息本来就是错误的。</p>
+<h4 id="42、slave_sql_running异常">4.2、<code>Slave_Sql_Running</code>异常</h4>
+<p><code>Slave_Sql_Running:no</code></p>
+<p>一般这种情况是bin-log中的sql出问题了。</p>
+<p>第一种情况：可能我们配置了slave只能读，但是却有写请求打过来了，导致slave不能继续往下执行。</p>
+<p>第二种解决思路：让slave跳过有问题的这个事件，但是还是得把事件的原因查明白，不然不推荐直接跳过这个事件。</p>
+<pre><code class="language-bash">stop slave;
+set global sql_slave_skip_counter=1;
+start slave;
+</code></pre>
+<p>第三种思路：我们提前配置好错误号机制，当slave在同步的过程中，碰到我们配置的错误号采取自动跳过的机会而不再去默认的终止同步数据。</p>
+<pre><code class="language-bash"># 一般我们可以像下面这样，在my.cnf中的[MySQLd]的启动参数中添加如下内容
+--slave-skip-errors=1062,1053  
+--slave-skip-errors=all  
+--slave-skip-errors=ddl_exist_errors
+
+# 通过如下语句查看当前MySQL配置的变量
+MySQL&gt; show variables like 'slave_skip%';  
+
+# 通过如下命令可以查看到出现的errorno
+show slave status; # 观察Last_Errno
+
+# 常见的errorno
+1007：数据库已存在，创建数据库失败
+1008：数据库不存在，删除数据库失败
+1050：数据表已存在，创建数据表失败
+1051：数据表不存在，删除数据表失败
+1054：字段不存在，或程序文件跟数据库有冲突
+1060：字段重复，导致无法插入
+1061：重复键名
+1068：定义了多个主键
+1094：位置线程ID
+1146：数据表缺失，请恢复数据库
+1053：复制过程中主服务器宕机
+1062：主键冲突 Duplicate entry '%s' for key %d
+</code></pre>
+<p>第四种思路：手动给slave调整fileName和position的位置（如何允许放弃之前的一部分数据，而从当前最新的数据开始同步）</p>
+<pre><code class="language-bash"># 停掉slave
+slave stop
+# 进入master
+# 停止master的写操作
+# 查看master中当前bin-log和position
+show master status；
+# 切换回slave从新根据最新的position和bin-log进行同步
+# 进入master，开启master的写操作
+</code></pre>
+<h3 id="五、流程">五、流程</h3>
+<p>通过fileName和position完成定位，从库会向主库发送命令，<code>BINLOG_DUMP</code> ，命令中包含有positon和fileName， 主库获取到这些信息之后，指定name到指定position往从库发送bin-log</p>
+<h3 id="六、可能会遇到的问题">六、可能会遇到的问题</h3>
+<h4 id="61、问题一：">6.1、问题一：</h4>
+<p>change master时报错了</p>
+<p><img src="https://img2020.cnblogs.com/blog/1496926/202005/1496926-20200529230019169-353271923.png" alt="image-20200526202556494"></p>
+<p>报错说：<code>ERROR 1776 (HY000): Parameters MASTER_LOG_FILE, MASTER_LOG_POS, RELAY_LOG_FILE and RELAY_LOG_POS cannot be set when MASTER_AUTO_POSITION is active.</code></p>
+<p>原因是我之前使用过gtid进行同步数据，当时将master_auto_position设置成了1，再想使用手动指定position的主从同步方式需要得像下面这样，change回去。</p>
+<pre><code>CHANGE MASTER TO
+		MASTER_AUTO_POSITION=0;
+</code></pre>
+<hr>
+<h4 id="62、问题二：">6.2、问题二：</h4>
+<p>如果我随便写了个position再搭建主从时，会发生什么？</p>
+<p>下面的 MASTER_LOG_POS = 1003 就是我随便写的一个position，然后你可以看到两个现象</p>
+<ol>
+<li>Slave_IO_Running : No</li>
+<li>Last_IO_Error 位置报了个严重的错误</li>
+</ol>
+<pre><code class="language-bash">mysql&gt;  CHANGE MASTER TO
+    -&gt;        MASTER_HOST='10.157.23.xxx',
+    -&gt;         MASTER_USER='mysqlsync',
+    -&gt;        MASTER_PASSWORD='mysqlsync123',
+    -&gt;        MASTER_PORT=8882,
+    -&gt;        MASTER_LOG_FILE='mysql-bin.000008',
+    -&gt;       MASTER_LOG_POS=1003;
+Query OK, 0 rows affected, 2 warnings (0.01 sec)
+
+mysql&gt; start slave;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql&gt; show slave status\G;
+*************************** 1. row ***************************
+               Slave_IO_State:
+                  Master_Host: 10.157.23.158
+                  Master_User: mysqlsync
+                  Master_Port: 8882
+                Connect_Retry: 60
+              Master_Log_File: mysql-bin.000008
+          Read_Master_Log_Pos: 1003
+               Relay_Log_File: relay-log.000002
+                Relay_Log_Pos: 320
+        Relay_Master_Log_File: mysql-bin.000008
+             Slave_IO_Running: No
+            Slave_SQL_Running: Yes
+              Replicate_Do_DB:
+          Replicate_Ignore_DB:
+           Replicate_Do_Table:
+       Replicate_Ignore_Table:
+      Replicate_Wild_Do_Table:
+  Replicate_Wild_Ignore_Table: mysql.%,test.%
+                   Last_Errno: 0
+                   Last_Error:
+                 Skip_Counter: 0
+          Exec_Master_Log_Pos: 1003
+              Relay_Log_Space: 521
+              Until_Condition: None
+               Until_Log_File:
+                Until_Log_Pos: 0
+           Master_SSL_Allowed: No
+           Master_SSL_CA_File:
+           Master_SSL_CA_Path:
+              Master_SSL_Cert:
+            Master_SSL_Cipher:
+               Master_SSL_Key:
+        Seconds_Behind_Master: NULL
+Master_SSL_Verify_Server_Cert: No
+                Last_IO_Errno: 1236
+                Last_IO_Error: Got fatal error 1236 from master when reading data from binary log: 'log event entry exceeded max_allowed_packet; Increase max_allowed_packet on master; the first event 'mysql-bin.000008' at 1003, the last event read from './mysql-bin.000008' at 123, the last byte read from './mysql-bin.000008' at 1022.'
+               Last_SQL_Errno: 0
+               Last_SQL_Error:
+  Replicate_Ignore_Server_Ids:
+             Master_Server_Id: 2787871625
+                  Master_UUID: a5f1d6b2-8f9a-11ea-8138-b8599f2ef058
+             Master_Info_File: mysql.slave_master_info
+                    SQL_Delay: 0
+          SQL_Remaining_Delay: NULL
+      Slave_SQL_Running_State: Slave has read all relay log; waiting for more updates
+           Master_Retry_Count: 86400
+                  Master_Bind:
+      Last_IO_Error_Timestamp: 200529 10:22:46
+     Last_SQL_Error_Timestamp:
+               Master_SSL_Crl:
+           Master_SSL_Crlpath:
+           Retrieved_Gtid_Set:
+            Executed_Gtid_Set: 00c755a6-7a07-11ea-8701-b8599f2ef058:33-222,
+40efcb1b-7a1f-11ea-84ac-b8599f229b38:1-20,
+7e2dcb21-7d3b-11ea-aa0c-b8599f2ef058:1-18,
+9e6027f2-7ae9-11ea-ac13-b8599f2ef058:1409-7176,
+a5f1d6b2-8f9a-11ea-8138-b8599f2ef058:6-9:12-13:15,
+e90fdd54-7e04-11ea-8b23-b8599f2ef058:1-11
+                Auto_Position: 0
+         Replicate_Rewrite_DB:
+                 Channel_Name:
+           Master_TLS_Version:
+1 row in set (0.00 sec)
+</code></pre>
+<hr>
+<h4 id="63、问题三：">6.3、问题三：</h4>
+<p>假设我们有这样的场景：</p>
+<p>场景：现在主库有7条数据，从库有5条数据，搭建主从时如何让从库从第六条开始同步？</p>
+<blockquote>
+<p>这种情况仅仅是我们在做这种小实验，为啥这样说呢？如果是为线上的业务搭建搭建主从MySQL的话，大概率我们会清空主库然后再做同步。如果数据很重要，我们会对主库中的数据进行一次全量拷贝到从库（拷贝var包）。再做主从同步。</p>
+</blockquote>
+<blockquote>
+<p>在线上的环境中，主从的数据是会强一致的，从库只会接受业务方的读流量，也许网络环境很恶劣从库同步的速度明显比主库写入到速度低，但是只要从库没有说跳过了某个binlog而少同步了某条记录，我们都可以认为它们是正常的主从同步。不会出现主从中断的情况。</p>
+</blockquote>
+<blockquote>
+<p>线上的环境中什么情况下会出现主从中断呢？比如说，从库同步数据时，从库同步binlog时丢了一条数据，这时业务上突然来了条update语句，要更新数据，然后从库美滋滋的回放在主库dump过来的binlog时发现，竟然自己没有需要更新的这条记录，就会报错，这时为了业务止损，我们要在第一时间下线从库，然后去分析哪里出现问题了。</p>
+</blockquote>
+<p>针对这个实验我们这样去binlog中查看第5，6条数据的position，然后在从库中使用相应的position完成主从数据的同步。</p>
+<p>进入主库，通过下面的命令查看binlog</p>
+<pre><code class="language-bash">mysqlbinlog --no-defaults -vv --base64-output=decode-rows ../var/mysql-bin.000008 | less
+</code></pre>
+<p><img src="https://img2020.cnblogs.com/blog/1496926/202005/1496926-20200529230019880-620257515.png" alt="image-20200529095601076"></p>
+<p>找到了指定的binlog和指定的end_log_pos</p>
+<p>比如从库中没有第10，11条数据，我们就能通过end_log_pos = postion = 1013完成定位。</p>
+<pre><code class="language-bash">CHANGE MASTER TO
+    MASTER_HOST='10.157.23.158',
+    MASTER_USER='mysqlsync',
+    MASTER_PASSWORD='mysqlsync123',
+    MASTER_PORT=8882,
+    MASTER_LOG_FILE='mysql-bin.000008',
+    MASTER_LOG_POS=1013;
+</code></pre>
+<p>开启同步，并查看状态</p>
+<pre><code class="language-bash">start slave;
+show slave status\G;
+</code></pre>
+<p>再去查看从库就能发现，从你指定的position开始往后和主库的数据保持同步的。</p>
+<hr>
+<h4 id="64、问题四：">6.4、问题四：</h4>
+<p>问：主从接流量的情况是怎样的？业务的CRUD请求是如何被主从平分消费的？</p>
+<p>答：默认这种架构下是读写分离，也就是说，仅读流量会打到从库中</p>
+<p>问：那如果我们在从库所在的机器上本地登陆，然后手动执行删除的操作能成功吗？</p>
+<p>答：是的，可以执行成功。</p>
+<p>问：我可以简单粗暴的限制从库仅读吗？</p>
+<p>答：可以的，像下面这样</p>
+<pre><code class="language-bash">mysql&gt; show variables like '%read_only%';
++-----------------------+-------+
+| Variable_name         | Value |
++-----------------------+-------+
+| innodb_read_only      | OFF   |
+| read_only             | OFF   |
+| super_read_only       | OFF   |
+| transaction_read_only | OFF   |
+| tx_read_only          | OFF   |
++-----------------------+-------+
+5 rows in set (0.00 sec)
+
+
+set global read_only=0;  #关闭只读,可以读写
+set global read_only=1;  #开始只读模式
+</code></pre>
+<hr>
+<h4 id="65、问题五：">6.5、问题五：</h4>
+<p>假设主库中有1～7 共7条数据，从库中有1～5五条数据。也就是说，主库从库中前五条数据一样，但是主库比从库多了两条新数据。</p>
+<p>这时我们搭建主从同步时搞一搞事情，重复这个动作：在从库断开同步，然后查到主库第一个binlog中的数据的记录，确定我们要查找的position，再重新构建主从环境。观察一下从库这边数据的同步情况，以及会出现什么问题？从库这边的数据会成为double吗？</p>
+<p>答：数据不会double的</p>
+<hr>
+<h4 id="66、问题六：">6.6、问题六：</h4>
+<p>假设从库执行changemaster时，主库MASTER_HOST填错了:</p>
+<p>在查看slave 状态时，我们可以看到Last_IO_Error列有报错提示： <code>error connecting to master </code></p>
+<pre><code class="language-bash">mysql&gt; CHANGE MASTER TO
+    -&gt;     MASTER_HOST='10.157.23.158',
+    -&gt;     MASTER_USER='mysqlsync',
+    -&gt;     MASTER_PASSWORD='mysqlsync123',
+    -&gt;     MASTER_PORT=8882,
+    -&gt;     MASTER_LOG_FILE='mysql-bin.000008',
+    -&gt;     MASTER_LOG_POS=1013;
+Query OK, 0 rows affected, 2 warnings (0.01 sec)
+
+mysql&gt; start slave;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql&gt; show slave status\G;
+*************************** 1. row ***************************
+               Slave_IO_State: Connecting to master
+                  Master_Host: 10.157.23.123
+                  Master_User: mysqlsync
+                  Master_Port: 8882
+                Connect_Retry: 60
+              Master_Log_File: mysql-bin.000008
+          Read_Master_Log_Pos: 1003
+               Relay_Log_File: relay-log.000001
+                Relay_Log_Pos: 4
+        Relay_Master_Log_File: mysql-bin.000008
+             Slave_IO_Running: Connecting
+            Slave_SQL_Running: Yes
+              Replicate_Do_DB:
+          Replicate_Ignore_DB:
+           Replicate_Do_Table:
+       Replicate_Ignore_Table:
+      Replicate_Wild_Do_Table:
+  Replicate_Wild_Ignore_Table: mysql.%,test.%
+                   Last_Errno: 0
+                   Last_Error:
+                 Skip_Counter: 0
+          Exec_Master_Log_Pos: 1003
+              Relay_Log_Space: 154
+              Until_Condition: None
+               Until_Log_File:
+                Until_Log_Pos: 0
+           Master_SSL_Allowed: No
+           Master_SSL_CA_File:
+           Master_SSL_CA_Path:
+              Master_SSL_Cert:
+            Master_SSL_Cipher:
+               Master_SSL_Key:
+        Seconds_Behind_Master: NULL
+Master_SSL_Verify_Server_Cert: No
+                Last_IO_Errno: 2003
+                Last_IO_Error: error connecting to master 'mysqlsync@10.157.23.123:8882' - retry-time: 60  retries: 1
+               Last_SQL_Errno: 0
+               Last_SQL_Error:
+  Replicate_Ignore_Server_Ids:
+             Master_Server_Id: 0
+                  Master_UUID:
+             Master_Info_File: mysql.slave_master_info
+                    SQL_Delay: 0
+          SQL_Remaining_Delay: NULL
+      Slave_SQL_Running_State: Slave has read all relay log; waiting for more updates
+           Master_Retry_Count: 86400
+                  Master_Bind:
+      Last_IO_Error_Timestamp: 200529 10:13:34
+     Last_SQL_Error_Timestamp:
+               Master_SSL_Crl:
+           Master_SSL_Crlpath:
+           Retrieved_Gtid_Set:
+            Executed_Gtid_Set: 00c755a6-7a07-11ea-8701-b8599f2ef058:33-222,
+40efcb1b-7a1f-11ea-84ac-b8599f229b38:1-20,
+7e2dcb21-7d3b-11ea-aa0c-b8599f2ef058:1-18,
+9e6027f2-7ae9-11ea-ac13-b8599f2ef058:1409-7176,
+a5f1d6b2-8f9a-11ea-8138-b8599f2ef058:6-9:12-13:15,
+e90fdd54-7e04-11ea-8b23-b8599f2ef058:1-11
+                Auto_Position: 0
+         Replicate_Rewrite_DB:
+                 Channel_Name:
+           Master_TLS_Version:
+</code></pre>
+<h4 id="67、问题七：">6.7、问题七：</h4>
+<p>假设这种场景：假设主从现在的数据是一致的，然后你在从库所在的机器上本地登陆，然后手动删除一条，再从主库写入数据，那从库还能同步成功吗？</p>
+<p>答：从库依然会同步成功，但是其实这时候已经算是事故了，主从数据不一致，万一业务打来一条sql刚好使用你删的数据，那就会报错。</p>
+<blockquote>
+<p><strong>如果觉得对你有帮助欢迎关注我，后面还会分享通过gtid搭建主从mysql以及其他相关的知识点</strong></p>
+</blockquote>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2020-05-29 23:06</span>&nbsp;
+<a href="https://www.cnblogs.com/ZhuChangwu/">赐我白日梦</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12990062" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12990062);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 480837, cb_blogApp = 'ZhuChangwu', cb_blogUserGuid = 'd8da4907-0953-44ee-ad20-08d61f4d6673';
+    var cb_entryId = 12990062, cb_entryCreatedDate = '2020-05-29 23:06', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;"></div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 赐我白日梦
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+</body>
+</html>

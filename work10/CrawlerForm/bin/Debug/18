@@ -1,0 +1,572 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    <meta property="og:description" content="0. 前言 前几天FreeSql的作者向我推荐了FreeSql框架，想让我帮忙写个文章介绍一下。嗯，想不到我也能带个货了。哈哈，开个玩笑～看了下觉得设计的挺有意思的，所以就谢了这篇文章。 简单介绍一下" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>C# 数据操作系列 - 19 FreeSql 入坑介绍 - 月影西下 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.ico?v=20200522" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/coffee/bundle-coffee.min.css?v=KPz7rj-c2sTAV1_ck1aDmbZcuCG3KBhyLnfvzf6nn94" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/coffee/bundle-coffee-mobile.min.css?v=na9bpAY4yh7uEWCcrXj3vfJM3VBse8YtU6-5fUUQPz0" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/c7jie/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/c7jie/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/c7jie/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=6bwfCY2e02dLOXNW99G2BHZkYFmw9QyYTWeJ-W-sudo"></script>
+    <script>
+        var currentBlogId = 572560;
+        var currentBlogApp = 'c7jie';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'coffee';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a href="https://www.cnblogs.com/c7jie/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/c7jie/">月影西下</a>
+</h1>
+<h2>
+
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="navigator">
+			
+<ul id="navList">
+	<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+	<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/c7jie/">
+首页</a>
+</li>
+	<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+	<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E6%9C%88%E5%BD%B1%E8%A5%BF%E4%B8%8B">
+联系</a></li>
+	<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+	<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/c7jie/rss/">
+订阅</a>
+	
+<a id="blog_nav_rss_image" href="https://www.cnblogs.com/c7jie/rss/">
+    <img src="/skins/coffee/images/xml.gif" alt="订阅" />
+</a></li>
+</ul>
+
+
+
+			<div class="blogStats">
+				
+				<!--done-->
+随笔- 
+47&nbsp;
+文章- 
+0&nbsp;
+评论- 
+62&nbsp;
+
+
+
+				
+			</div><!--end: blogStats -->
+		</div><!--end: navigator 博客导航栏 -->
+		<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class = "postTitle">
+			
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/c7jie/p/12986598.html">C# 数据操作系列 - 19 FreeSql 入坑介绍</a>
+
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			
+<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+    <h1 id="0-前言">0. 前言</h1>
+<blockquote>
+<p>前几天FreeSql的作者向我推荐了FreeSql框架，想让我帮忙写个文章介绍一下。嗯，想不到我也能带个货了。哈哈，开个玩笑～看了下觉得设计的挺有意思的，所以就谢了这篇文章。</p>
+</blockquote>
+<p>简单介绍一下，FreeSql 是NCC组织的沙盒级项目，是一款功能强大的 ORM 组件，支持 .NET Core、.NET Framework 和 Xamarin。目前 FreeSql 支持以下数据库：MySQL、PostgreSQL、SqlServer、Oracle、Sqlite、Odbc、微软 Access 以及国产数据库达梦。</p>
+<p>也就是说也是一个由国内优秀开发者维护的优秀项目，初步看了下功能很齐全。小伙伴们有时间可以取瞅瞅。下图是我从它GitHub仓库里复制过来的。可以看见支持的功能还是相当多的。</p>
+<p><img src="https://img2020.cnblogs.com/other/1266612/202005/1266612-20200529114532217-2099337004.png" alt="img"></p>
+<blockquote>
+<p>关于NCC社区，是.net core的一个开源社区，也是国内最大的.net core开源社区</p>
+</blockquote>
+<h1 id="1-初步使用">1. 初步使用</h1>
+<p>照例，没安装就没有调用。所以，在创建项目之后，安装一下吧：</p>
+<pre><code class="language-bash">dotnet add package FreeSql
+</code></pre>
+<p>然后创建一个IFreeSql对象：</p>
+<pre><code class="language-c#">public class FreeSqlContext
+{
+    public static IFreeSql FreeSqlConnect { get; } =
+        new FreeSql.FreeSqlBuilder()            .UseConnectionString(FreeSql.DataType.Sqlite, @&quot;Data Source=document.db&quot;)
+        .UseAutoSyncStructure(true) //自动同步实体结构到数据库
+        .Build();
+}
+</code></pre>
+<p>因为官方要求将IFreeSql对象声明为单例模式，所以我在这里使用了静态属性。</p>
+<blockquote>
+<p>这种写法是C#的一种语法糖，只有get表示该属性是一个只能读的属性（与只读属性有个微妙的差距），等号后面表示该属性第一次赋值的内容。</p>
+</blockquote>
+<p>创建一个普通的Model类：</p>
+<pre><code class="language-c#">public class Model
+{
+    public int Id { get; set; }
+    public int StringLength { get; set; }
+    public string Name { get; set; }
+}
+</code></pre>
+<h2 id="11-简单插入">1.1 简单插入</h2>
+<p>然后试一下插入数据：</p>
+<pre><code class="language-c#">var row = FreeSqlContext.FreeSqlConnect.Insert(new Model
+{
+    Name = &quot;测试&quot;,
+    StringLength = 10
+}).ExecuteAffrows();
+
+</code></pre>
+<p><img src="https://img2020.cnblogs.com/other/1266612/202005/1266612-20200529114532487-882993465.png" alt="image-20200528103357431"></p>
+<p>提示如图内容，需要我们手动安装一下FreeSql的SQLite驱动，安装之后：</p>
+<pre><code class="language-bash">dotnet add packages FreeSql.Provider.Sqlite
+</code></pre>
+<p>FreeSql针对各种受支持的数据库都单独开发了驱动包，统一命名为：</p>
+<pre><code class="language-c#">FreeSql.Provider.&lt;数据库类型&gt;
+</code></pre>
+<p>安装完成后，重新运行后顺利完成执行，顺便帮你把数据库也生成好了（这一点我感觉挺好的），同时生成了一个主键为Id的Model表：</p>
+<pre><code class="language-sql">create table Model
+(
+    Id           INTEGER
+        primary key,
+    StringLength INTEGER not null,
+    Name         NVARCHAR(255)
+);
+</code></pre>
+<h2 id="12-简单查询">1.2 简单查询</h2>
+<p>接下来简单的查询一下刚刚插入的数据：</p>
+<pre><code class="language-c#">var list = FreeSqlContext.FreeSqlConnect.Queryable&lt;Model&gt;().ToList();
+</code></pre>
+<p>可以发现，查询使用还是非常方便的。</p>
+<h2 id="13-简单更新">1.3 简单更新</h2>
+<p>FreeSql的更新与其他框架相比略显复杂，这里先展示一种更新方式：</p>
+<pre><code class="language-c#">list[0].Name = &quot;修改测试&quot;;
+row = FreeSqlContext.FreeSqlConnect.Update&lt;Model&gt;().SetSource(list[0]).ExecuteAffrows();
+</code></pre>
+<p>先声明要更新的类型是Model，然后设置更新源。</p>
+<h2 id="14-简单删除">1.4 简单删除</h2>
+<pre><code class="language-c#">row = FreeSqlContext.FreeSqlConnect.Delete&lt;Model&gt;(new[] { list[0] }).ExecuteAffrows();
+</code></pre>
+<p>删除之前获取的数据。</p>
+<p>简单的看，FreeSql设计的增删改查都是以命令的形式进行的，在实际调用ExcuteXXX之前数据并不会保存到数据库中。</p>
+<h1 id="2-增删改查详解">2. 增删改查详解</h1>
+<p>在上一节中我们简单的使用了一下增删改查， 这一节将为大家详细分析一下FreeSql的增删改查。</p>
+<h2 id="21-新增">2.1 新增</h2>
+<pre><code class="language-c#">IInsert&lt;T1&gt; Insert&lt;T1&gt;() where T1 : class;
+IInsert&lt;T1&gt; Insert&lt;T1&gt;(T1 source) where T1 : class;
+IInsert&lt;T1&gt; Insert&lt;T1&gt;(IEnumerable&lt;T1&gt; source) where T1 : class;
+IInsert&lt;T1&gt; Insert&lt;T1&gt;(List&lt;T1&gt; source) where T1 : class;
+IInsert&lt;T1&gt; Insert&lt;T1&gt;(T1[] source) where T1 : class;
+</code></pre>
+<p>这是IFreeSql接口里声明的Insert方法，通过方法我们可以看到插入单数据插入以及多数据插入，并且返回一个IInsert&lt;T1&gt;的接口。当然也可以不传入数据直接获取一个IInsert接口实例。这几个方法很简单，我们就不在这多费时间了，然后跳进IInsert里，看一看里面有哪些方法吧。</p>
+<p>先来这样一组方法：</p>
+<pre><code class="language-c#">IInsert&lt;T1&gt; AppendData(T1 source);
+IInsert&lt;T1&gt; AppendData(T1[] source);
+IInsert&lt;T1&gt; AppendData(IEnumerable&lt;T1&gt; source);
+</code></pre>
+<p>这些方法可以后续为IInsert继续添加数据，以便执行更多的插入。</p>
+<pre><code class="language-c#">IInsert&lt;T1&gt; IgnoreColumns(string[] columns);
+IInsert&lt;T1&gt; IgnoreColumns(Expression&lt;Func&lt;T1, object&gt;&gt; columns);
+</code></pre>
+<p>设置在插入过程中忽略的列，设置之后这些列将不会插入到数据库中。其中 <code>Expression&lt;Func&lt;T1, object&gt;&gt;</code>表示一个包含列名属性的匿名对象。</p>
+<pre><code class="language-c#">IInsert&lt;T1&gt; InsertColumns(string[] columns);
+IInsert&lt;T1&gt; InsertColumns(Expression&lt;Func&lt;T1, object&gt;&gt; columns);
+</code></pre>
+<p>设置只插入这些列，其他的列将不会被插入。</p>
+<p>通过调用以下方法将执行插入：</p>
+<pre><code class="language-c#">int ExecuteAffrows();// 返回受影响的列
+</code></pre>
+<pre><code class="language-c#">long ExecuteIdentity();// 返回自增主键值
+</code></pre>
+<p>这个方法需要实体类的主键标记为自增（这部分内容见下一节）。如果启用了批量插入模式，该值将返回最后一个数据的主键值。</p>
+<pre><code class="language-c#">List&lt;T1&gt; ExecuteInserted();// 返回插入后的数据
+</code></pre>
+<p>这个方法官方标注只在Postgresql/SqlServer有效果。</p>
+<p>这是插入基本内容，相对而言插入比较简单。</p>
+<h2 id="22-删除">2.2 删除</h2>
+<p>这次换个顺序，因为删除的方法在这里相对简单一些。FreeSql对于单表的数据删除相对克制而谨慎。那么就让我们简单看一下如何进行删除吧。</p>
+<pre><code class="language-c#">IDelete&lt;T1&gt; Delete&lt;T1&gt;() where T1 : class;
+</code></pre>
+<p>设置泛型类型，创建一个删除器（我给起的名，官方没给起名，也就是一个IDelete接口实例）。</p>
+<pre><code class="language-c#">IDelete&lt;T1&gt; Delete&lt;T1&gt;(object dywhere) where T1 : class;
+</code></pre>
+<p>这个方法很有意思，支持的相当广泛。</p>
+<p>以下是官方给的注释：</p>
+<pre><code class="language-c#">主键值 | new[]{主键值1,主键值2} | TEntity1 | new[]{TEntity1,TEntity2} |new{id=1}
+</code></pre>
+<p>根据实际表现来看，会删除对应主键的数据。如果传入的是实体的话，会自动分析对应实体的主键，然后把这个数据标记为待删除。</p>
+<blockquote>
+<p>记住这种方式，因为在后续的Update中会用到。</p>
+</blockquote>
+<p>IFreeSql中的删除都不会立即删除，都会返回一个IDelete实例，与IInsert一样需要手动调用ExcuteXXX方法。</p>
+<p>那么我们来看一下IDelete里的方法：</p>
+<pre><code class="language-c#">IDelete&lt;T1&gt; Where(Expression&lt;Func&lt;T1, bool&gt;&gt; exp);
+IDelete&lt;T1&gt; Where(string sql, object parms = null);
+IDelete&lt;T1&gt; Where(T1 item);
+IDelete&lt;T1&gt; Where(IEnumerable&lt;T1&gt; items);
+</code></pre>
+<p>简单看一下方法，可以通过方法和参数就能知道其中含义。</p>
+<p>需要注意的是，如果使用exp 做批量删除的话，只能用实体类的属性作为条件，不能使用导航属性。</p>
+<p>使用sql语句的话，可以使用参数化写法如下：<code>Where(&quot;id = ?id&quot;, new { id = 1 })</code>，如果有多个条件的话sql里用and拼接。</p>
+<pre><code class="language-c#">IDelete&lt;T1&gt; WhereDynamic(object dywhere, bool not = false);
+</code></pre>
+<p>这里的dywhere与Delete的dywhere一样，not 如果设置为true，则表示删除除此之外的对象。</p>
+<p>FreeSql在设计删除模式时，如果在IFreeSql.Delete中传入参数，后续继续调用Where或者WhereDynamic的话，两次是以and 的形式拼接的条件：</p>
+<pre><code class="language-c#">list = FreeSqlContext.FreeSqlConnect.Queryable&lt;Model&gt;().ToList();
+FreeSqlContext.FreeSqlConnect.Delete&lt;Model&gt;(list[0]).WhereDynamic(list[2]).ExecuteAffrows();
+FreeSqlContext.FreeSqlConnect.Delete&lt;Model&gt;(list[0]).Where(t=&gt;t.Id &gt; 10).ExecuteAffrows();
+</code></pre>
+<p>分别生成了如下SQL语句：</p>
+<pre><code class="language-sql">DELETE FROM &quot;Model&quot; WHERE (&quot;Id&quot; = 1) AND (&quot;Id&quot; = 11)
+----------------------------
+DELETE FROM &quot;Model&quot; WHERE (&quot;Id&quot; = 1) AND (&quot;Id&quot; &gt; 10)
+</code></pre>
+<p>额，所以调用删除的时候最好注意一下，因为条件冲突的话，可能数据不会发生任何变化。</p>
+<p>执行删除：</p>
+<pre><code class="language-c#">int ExecuteAffrows();//返回被影响的行数
+List&lt;T1&gt; ExecuteDeleted();// 返回被删除的数据，一样只有 Postgresql/SqlServer 有效果
+</code></pre>
+<h2 id="23-更新">2.3 更新</h2>
+<pre><code class="language-c#">IUpdate&lt;T1&gt; Update&lt;T1&gt;() where T1 : class;
+IUpdate&lt;T1&gt; Update&lt;T1&gt;(object dywhere) where T1 : class;
+</code></pre>
+<p>同样，开启一个更新器（获取一个IUpdate示例），这里dywhere与删除支持的内容是一样的。不过，有一点不同的是：</p>
+<pre><code class="language-c#">row = FreeSqlContext.FreeSqlConnect.Update&lt;Model&gt;(list[0]).ExecuteAffrows();
+</code></pre>
+<p><strong>不会有任何数据发生更改</strong>。嗯，这点与Delete完全不一样。简单理解一下，在这里FreeSql只是解析了数据里的实体，但并没有从传入的实体解析出更新SQL语句。</p>
+<p>接下来，进入IUpdate：</p>
+<pre><code class="language-c#">IUpdate&lt;T1&gt; UpdateColumns(string[] columns);
+IUpdate&lt;T1&gt; UpdateColumns(Expression&lt;Func&lt;T1, object&gt;&gt; columns);
+IUpdate&lt;T1&gt; IgnoreColumns(Expression&lt;Func&lt;T1, object&gt;&gt; columns);
+IUpdate&lt;T1&gt; IgnoreColumns(string[] columns);
+</code></pre>
+<p>设置要更新的列和要忽略的列，两者互相冲突。</p>
+<p>示例：</p>
+<pre><code class="language-c#">row = FreeSqlContext.FreeSqlConnect.Update&lt;Model&gt;(list[0]).UpdateColumns(new[] { &quot;Name&quot; }).ExecuteAffrows();
+</code></pre>
+<p>是不是觉得欢天喜地的觉得会更新了，答案很残酷，没有。依旧返回0。说到这里了，FreeSql在更新上，需要额外指定更新的数据来源：</p>
+<pre><code class="language-c#">IUpdate&lt;T1&gt; SetSource(T1 source);
+IUpdate&lt;T1&gt; SetSource(IEnumerable&lt;T1&gt; source);
+</code></pre>
+<p>也就是，FreeSql会从source解析出需要更新的字段，然后使用Update/Ignore来设置只更新或忽略哪些列。</p>
+<p>最终示例：</p>
+<pre><code class="language-c#">row = FreeSqlContext.FreeSqlConnect.Update&lt;Model&gt;(list[0])
+    .SetSource(list[0]).UpdateColumns(new[] { &quot;Name&quot; }).ExecuteAffrows();
+row = FreeSqlContext.FreeSqlConnect.Update&lt;Model&gt;(list[0])
+    .SetSource(list).UpdateColumns(new[] { &quot;Name&quot; }).ExecuteAffrows();
+row = FreeSqlContext.FreeSqlConnect.Update&lt;Model&gt;(new[] { list[0] ,list[1]})
+    .SetSource(list[0]).UpdateColumns(new[] { &quot;Name&quot; }).ExecuteAffrows();
+row = FreeSqlContext.FreeSqlConnect.Update&lt;Model&gt;(new[] { list[0], list[1] })
+    .SetSource(list).UpdateColumns(new[] { &quot;Name&quot; }).ExecuteAffrows();
+</code></pre>
+<p>然后生成如下SQL：</p>
+<pre><code class="language-sql">UPDATE &quot;Model&quot; SET &quot;Name&quot; = @p_0 WHERE (&quot;Id&quot; = 1) AND (&quot;Id&quot; = 1)
+--------------------------
+UPDATE &quot;Model&quot; SET &quot;Name&quot; = CASE &quot;Id&quot;
+WHEN 1 THEN @p_0
+WHEN 10 THEN @p_1
+WHEN 11 THEN @p_2
+WHEN 12 THEN @p_3
+WHEN 13 THEN @p_4
+WHEN 14 THEN @p_5
+WHEN 15 THEN @p_6
+WHEN 16 THEN @p_7
+WHEN 17 THEN @p_8
+WHEN 18 THEN @p_9
+WHEN 19 THEN @p_10
+WHEN 20 THEN @p_11
+WHEN 21 THEN @p_12
+WHEN 22 THEN @p_13
+WHEN 23 THEN @p_14
+WHEN 24 THEN @p_15 END
+WHERE (&quot;Id&quot; IN (1,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24)) AND (&quot;Id&quot; = 1)
+--------------------
+UPDATE &quot;Model&quot; SET &quot;Name&quot; = @p_0 WHERE (&quot;Id&quot; = 1) AND (&quot;Id&quot; = 1 OR &quot;Id&quot; = 10)
+--------------------
+UPDATE &quot;Model&quot; SET &quot;Name&quot; = CASE &quot;Id&quot;
+WHEN 1 THEN @p_0
+WHEN 10 THEN @p_1
+WHEN 11 THEN @p_2
+WHEN 12 THEN @p_3
+WHEN 13 THEN @p_4
+WHEN 14 THEN @p_5
+WHEN 15 THEN @p_6
+WHEN 16 THEN @p_7
+WHEN 17 THEN @p_8
+WHEN 18 THEN @p_9
+WHEN 19 THEN @p_10
+WHEN 20 THEN @p_11
+WHEN 21 THEN @p_12
+WHEN 22 THEN @p_13
+WHEN 23 THEN @p_14
+WHEN 24 THEN @p_15 END
+WHERE (&quot;Id&quot; IN (1,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24)) AND (&quot;Id&quot; = 1 OR &quot;Id&quot; = 10)
+</code></pre>
+<p>可以看出，如果在生成IUpdate实例的时候，传入数据再使用SetSource进行更新会比较诡异。<strong>所以SetSource的正常使用方式是，获取IUpdate实例的时候，不传dywhere，直接获取一个空IUpdate。</strong></p>
+<p>那么dywhere该在什么时候使用呢？</p>
+<pre><code class="language-c#">row = FreeSqlContext.FreeSqlConnect.Update&lt;Model&gt;(list[0]).Set(t =&gt; t.StringLength + 1).ExecuteAffrows();
+</code></pre>
+<p>通过调用Set/SetDto/SetIf三种方法进行更新，当然了这三种方法并不局限于使用了dywhere参数。</p>
+<pre><code class="language-c#">IUpdate&lt;T1&gt; Set&lt;TMember&gt;(Expression&lt;Func&lt;T1, TMember&gt;&gt; exp);
+IUpdate&lt;T1&gt; Set&lt;TMember&gt;(Expression&lt;Func&lt;T1, TMember&gt;&gt; column, TMember value);
+IUpdate&lt;T1&gt; SetDto(object dto);
+IUpdate&lt;T1&gt; SetIf&lt;TMember&gt;(bool condition, Expression&lt;Func&lt;T1, TMember&gt;&gt; exp);
+IUpdate&lt;T1&gt; SetIf&lt;TMember&gt;(bool condition, Expression&lt;Func&lt;T1, TMember&gt;&gt; column, TMember value);
+</code></pre>
+<p>其中：</p>
+<ul>
+<li>Expression&lt;Func&lt;T1, TMember&gt;&gt; exp  表示在字段本身值的基础上进行操作</li>
+<li>Expression&lt;Func&lt;T1, TMember&gt;&gt; column, TMember value    表示将 column设置 value</li>
+<li>object dto  一个包含要更新属性和值的匿名类，或者一个字典类型（键为要更新的列，值为对应列的值）</li>
+<li>bool condition 表示满足条件则更新，否则将不进行更新</li>
+</ul>
+<p>IUpdate也提供了Where模式：</p>
+<pre><code class="language-c#">IUpdate&lt;T1&gt; Where(Expression&lt;Func&lt;T1, bool&gt;&gt; exp);
+IUpdate&lt;T1&gt; Where(string sql, object parms = null);
+IUpdate&lt;T1&gt; Where(T1 item);
+IUpdate&lt;T1&gt; Where(IEnumerable&lt;T1&gt; items);
+IUpdate&lt;T1&gt; WhereDynamic(object dywhere, bool not = false);
+</code></pre>
+<p>最终更新应该如下：</p>
+<pre><code class="language-c#">FreeSqlContext.FreeSqlConnect.Update&lt;Model&gt;(list[0]).Set(t =&gt; t.StringLength + 1).ExecuteAffrows();
+FreeSqlContext.FreeSqlConnect.Update&lt;Model&gt;(list[0]).SetDto(new { Name=&quot;测试2&quot; }).ExecuteAffrows();
+FreeSqlContext.FreeSqlConnect.Update&lt;Model&gt;(list[0]).SetIf(true, t =&gt; t.Name + 1).ExecuteAffrows();
+// 或者以下模式
+FreeSqlContext.FreeSqlConnect.Update&lt;Model&gt;()
+                .Where(t =&gt; true)
+                .Set(t =&gt; t.StringLength + 1)
+                .ExecuteAffrows();
+// 或者
+FreeSqlContext.FreeSqlConnect.Update&lt;Model&gt;(1)
+                .Set(t =&gt; t.StringLength + 1)
+                .ExecuteAffrows();
+</code></pre>
+<p>执行更新：</p>
+<pre><code class="language-c#">int ExecuteAffrows();// 返回受影响的行数
+List&lt;T1&gt; ExecuteUpdated();// 嗯， 只有 Postgresql/SqlServer 有效果
+</code></pre>
+<h2 id="24-查询">2.4 查询</h2>
+<p>FreeSql的查询有两种方式，一种是使用FreeSql的ISelect方法，一种是使用扩展出来的Queryable方法，两者最终返回是一样的，均返回了一个ISelect实例。</p>
+<p>那先来悄悄看一下两个方法的声明吧：</p>
+<pre><code class="language-c#">ISelect&lt;T1&gt; Select&lt;T1&gt;() where T1 : class;
+ISelect&lt;T1&gt; Select&lt;T1&gt;(object dywhere) where T1 : class;
+// 扩展方法在  FreeSqlGlobalExtensions 类
+public static ISelect&lt;T&gt; Queryable&lt;T&gt;(this IFreeSql freesql) where T : class;
+</code></pre>
+<p>其中有一个闪闪放光的 dywhere，与Update/Delete一样，也是通过传入的属性解析到主键值获取对应的数据。</p>
+<p>那么进入ISelect一探究竟吧：</p>
+<p>暂且忽略多个泛型支持的方法：</p>
+<pre><code class="language-c#">T1 First()
+TDto First&lt;TDto&gt;();
+TReturn First&lt;TReturn&gt;(Expression&lt;Func&lt;T1, TReturn&gt;&gt; select);
+T1 ToOne();
+TDto ToOne&lt;TDto&gt;();
+TReturn ToOne&lt;TReturn&gt;(Expression&lt;Func&lt;T1, TReturn&gt;&gt; select);
+</code></pre>
+<ul>
+<li>First和ToOne都是返回第一条数据</li>
+<li>TDto 表示要查询出来的字段合集，列名与数据表中一一对应</li>
+<li>Expression&lt;Func&lt;T1, TReturn&gt;&gt; select 类型投影，通过lambda语句建立T1到TReturn之间的关系</li>
+</ul>
+<p>返回多个：</p>
+<pre><code class="language-c#">List&lt;T1&gt; ToList(bool includeNestedMembers = false);
+List&lt;TDto&gt; ToList&lt;TDto&gt;();
+List&lt;TReturn&gt; ToList&lt;TReturn&gt;(Expression&lt;Func&lt;T1, TReturn&gt;&gt; select);
+</code></pre>
+<ul>
+<li>includeNestedMembers ： false: 返回 2级 LeftJoin/InnerJoin/RightJoin 对象；true: 返回所有 LeftJoin/InnerJoin/RightJoin的导航数据</li>
+</ul>
+<p>其他方法：</p>
+<pre><code class="language-c#">long Count();// 返回数目
+ISelect&lt;T1&gt; Distinct();//去重
+ISelect&lt;T1&gt; Skip(int offset);// 忽略几个
+ISelect&lt;T1&gt; Take(int limit);// 获取前几个
+ISelect&lt;T1&gt; OrderBy&lt;TMember&gt;(Expression&lt;Func&lt;T1, TMember&gt;&gt; column);// 排序
+ISelect&lt;T1&gt; OrderBy&lt;TMember&gt;(bool condition, Expression&lt;Func&lt;T1, TMember&gt;&gt; column);// 排序
+ISelect&lt;T1&gt; OrderByDescending&lt;TMember&gt;(Expression&lt;Func&lt;T1, TMember&gt;&gt; column); // 降序
+ISelect&lt;T1&gt; OrderByDescending&lt;TMember&gt;(bool condition, Expression&lt;Func&lt;T1, TMember&gt;&gt; column);// 降序
+decimal Sum&lt;TMember&gt;(Expression&lt;Func&lt;T1, TMember&gt;&gt; column);// 求和
+double Avg&lt;TMember&gt;(Expression&lt;Func&lt;T1, TMember&gt;&gt; column);// 求平均数
+</code></pre>
+<p>设置查询条件：</p>
+<pre><code class="language-c#">ISelect&lt;T1&gt; Where(Expression&lt;Func&lt;T1, bool&gt;&gt; exp);
+ISelect&lt;T1&gt; WhereIf(bool condition, Expression&lt;Func&lt;T1, bool&gt;&gt; exp);
+ISelect&lt;T1&gt; Where(string sql, object parms = null);
+</code></pre>
+<p>注意与dywhere之间是并列关系。</p>
+<p>关于查询FreeSql做了很多优化，更多内容可以查阅官方文档。到目前为止，这些方法已经可以满足一个项目的使用了。</p>
+<h1 id="3-总结">3. 总结</h1>
+<p>FreeSql可以说结合了很多优秀的ORM框架内容，而且针对不同的方式分成了不同的插件形式，使主干可以轻装上阵。</p>
+<p><img src="https://img2020.cnblogs.com/other/1266612/202005/1266612-20200529114532682-1579997770.png" alt="image-20200528153843902"></p>
+<p>这是官方文档中关于不同使用习惯的介绍。</p>
+<p>关于FreeSql的基础内容就到这里了，如果对FreeSql有更多的需求的话，可以踊跃吐槽哦~~如果有小伙伴还想看的话，我将会继续为大家讲解的。</p>
+<p>至此，2020-5-28 《C# 数据操作系列》<strong>暂时</strong> 完结（如果后续有其他好的ORM的话，还会继续更新的）。</p>
+<blockquote>
+<p>更多内容烦请关注<a href="https://www.attachie.club">我的博客《高先生小屋》</a></p>
+</blockquote>
+<p><img src="https://img2020.cnblogs.com/other/1266612/202005/1266612-20200529114532984-1514074843.png" alt="file"></p>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+		</div>
+		<div class="postDesc">posted @ 
+<span id="post-date">2020-05-29 11:46</span>&nbsp;
+<a href="https://www.cnblogs.com/c7jie/">月影西下</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12986598" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12986598);return false;">收藏</a></div>
+	</div>
+	
+	
+</div><!--end: topics 文章、评论容器-->
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 572560, cb_blogApp = 'c7jie', cb_blogUserGuid = 'f7f130fe-8c19-4f36-4637-08d4ef52ecb6';
+    var cb_entryId = 12986598, cb_entryCreatedDate = '2020-05-29 11:46', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;"></div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div></div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="calendar"><div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script></div>
+			
+			<DIV id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</DIV>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 月影西下
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+</body>
+</html>

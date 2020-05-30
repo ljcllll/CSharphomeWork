@@ -1,0 +1,10 @@
+D:\QQ下载\bi_yan_liu-course_learning-master\course_learning\week10\SimpleCrawler\CrawlerForm\bin\Debug\CrawlerForm.exe.config
+D:\QQ下载\bi_yan_liu-course_learning-master\course_learning\week10\SimpleCrawler\CrawlerForm\bin\Debug\CrawlerForm.exe
+D:\QQ下载\bi_yan_liu-course_learning-master\course_learning\week10\SimpleCrawler\CrawlerForm\bin\Debug\CrawlerForm.pdb
+D:\QQ下载\bi_yan_liu-course_learning-master\course_learning\week10\SimpleCrawler\CrawlerForm\obj\Debug\CrawlerForm.csprojAssemblyReference.cache
+D:\QQ下载\bi_yan_liu-course_learning-master\course_learning\week10\SimpleCrawler\CrawlerForm\obj\Debug\CrawlerForm.Form1.resources
+D:\QQ下载\bi_yan_liu-course_learning-master\course_learning\week10\SimpleCrawler\CrawlerForm\obj\Debug\CrawlerForm.Properties.Resources.resources
+D:\QQ下载\bi_yan_liu-course_learning-master\course_learning\week10\SimpleCrawler\CrawlerForm\obj\Debug\CrawlerForm.csproj.GenerateResource.cache
+D:\QQ下载\bi_yan_liu-course_learning-master\course_learning\week10\SimpleCrawler\CrawlerForm\obj\Debug\CrawlerForm.csproj.CoreCompileInputs.cache
+D:\QQ下载\bi_yan_liu-course_learning-master\course_learning\week10\SimpleCrawler\CrawlerForm\obj\Debug\CrawlerForm.exe
+D:\QQ下载\bi_yan_liu-course_learning-master\course_learning\week10\SimpleCrawler\CrawlerForm\obj\Debug\CrawlerForm.pdb

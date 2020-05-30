@@ -1,0 +1,297 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    <meta property="og:description" content="承接上一篇中最后的测试结果图，使用过的pytest-html 插件原生态的报告的话。可能会发现 内容样式都有些不同。其实是做了些扩展相关设置所呈现的效果，当然可以定制的更深度一些，更加中文、本地化，又" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>基于Python豆瓣自动化测试【2】 - 姜子轩 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.ico?v=20200522" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/lessismoreright/bundle-lessismoreright.min.css?v=aar1eIg4zz9tL2uCrzOGDur190sJi2DazF273FikoL4" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/jzhlin/custom.css?v=w6ksPv6d&#x2B;NtJh3WtcKoUwq3HLes=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/lessismoreright/bundle-lessismoreright-mobile.min.css?v=FJjyQba01xzuYKRyPpSwE1bMq69pRjxrz5wp2oZZGLY" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/jzhlin/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/jzhlin/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/jzhlin/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=6bwfCY2e02dLOXNW99G2BHZkYFmw9QyYTWeJ-W-sudo"></script>
+    <script>
+        var currentBlogId = 117614;
+        var currentBlogApp = 'jzhlin';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'LessIsMoreRight';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    <div id="page_begin_html">
+        <script>loadPageBeginHtml();</script>
+    </div>
+    <div id="home">
+    <div id="header">
+        <div id="blogTitle">
+            
+<div class="title"><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/jzhlin/">姜子轩</a>
+</div>
+<div class="subtitle">
+这个世界就是信息的集合。
+</div>
+
+        </div>
+        <div id="navigator">
+            
+<ul id="navList">
+    <li id="nav_sitehome">
+</li>
+    <li id="nav_myhome">
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/jzhlin/">
+首页</a>
+</li>
+    <li id="nav_newpost">
+
+
+</li>
+    <li id="nav_contact">
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E5%A7%9C%E5%AD%90%E8%BD%A9">
+联系</a></li>
+    <li id="nav_rss">
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/jzhlin/rss/">
+订阅</a></li>
+    <li id="nav_admin">
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+            <div class="blogStats">
+                
+<span id="stats_post_count">随笔 - 
+18&nbsp;</span>
+<span id="stats_article_count">文章 - 
+0&nbsp;</span>
+<!-- <span id="stats-comment_count"></span> -->
+<span id="stats_comment_count">评论 - 
+48</span>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div id="mainContent">
+            <div class="forFlow">
+                <div id="post_detail">
+    <div id="topics">
+        <div class="post">
+            <h1 class="postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/jzhlin/p/12989263.html">基于Python豆瓣自动化测试【2】</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+    <div id="cnblogs_post_description" style="display: none">
+        承接上一篇中最后的测试结果图，使用过的pytest-html 插件原生态的报告的话。可能会发现 内容样式都有些不同。其实是做了些扩展相关设置所呈现的效果，当然可以定制的更深度一些，更加中文、本地化，又或者根据公司需要进行定向研发。例如就上文中的测试报告进行一些中文定制改造后效果如下图所示。这篇就如何优化、定制pytest-html 测试报告进行些讲解
+    </div>
+<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+    <p>—— Pytest基础使用教程【2】</p>
+<h3 id="从测试报告说起">从测试报告说起</h3>
+<p>承接上一篇中最后的测试结果图，使用过的pytest-html 插件原生态的报告的话。可能会发现 内容样式都有些不同。其实是做了些扩展相关设置所呈现的效果，当然可以定制的更深度一些，更加中文、本地化，又或者根据公司需要进行定向研发。例如就上文中的测试报告进行一些中文定制改造后效果如下图所示。这篇就如何优化、定制pytest-html 测试报告进行些讲解<br>
+<img src="https://img2020.cnblogs.com/blog/409098/202005/409098-20200529191717278-1089182523.png" alt=""></p>
+<h3 id="pytest-html-扩展">Pytest-html 扩展</h3>
+<p>目前最新的 pytest-html版本为2.1.1 。这个版本共提供 5个Hook，分别是：</p>
+<pre><code class="language-python">def pytest_html_report_title(report)
+</code></pre>
+<p>设置测试报告的标题</p>
+<pre><code class="language-python">def pytest_html_results_summary(prefix, summary, postfix)
+</code></pre>
+<p>在Summary部分，添加自定义内容</p>
+<pre><code class="language-python">def pytest_html_results_table_header(cells)
+</code></pre>
+<p>定制 Result 部分，表单的头部</p>
+<pre><code class="language-python">def pytest_html_results_table_row(report, cells)
+</code></pre>
+<p>定制Result部分，每行测试Case的内容</p>
+<pre><code class="language-python">def pytest_html_results_table_html(report, data)
+</code></pre>
+<p>在完成Result渲染后，详情新增写HTMl标记语言内容</p>
+<h3 id="测试报告title">测试报告Title</h3>
+<p>所谓Title指代的是报告图中【豆瓣网自动化测试示例（基于Pytest）】行文字内容。Report 其实是 插件的HTMLReport对象，简单看下源码，相信使用上就能很好的把握理解。关键部分见红框<br>
+<img src="https://img2020.cnblogs.com/blog/409098/202005/409098-20200529191754423-1661422431.png" alt=""></p>
+<p>所以，这个扩展而言只需要 conftest.py 对于扩展hook中设置下report title字段就能够，按需修改标题。</p>
+<pre><code class="language-python">@pytest.hookimpl(optionalhook=True)
+def pytest_html_report_title(report):
+	report.title = &quot;豆瓣网自动化测试示例（基于Pytest）&quot;
+</code></pre>
+<h3 id="扩展summary部分">扩展Summary部分</h3>
+<p>Summary扩展设计，允许对于 整个模块进行定制。分为前（prefix）、中（summary）、后（postfix）三个部分进行设置。同样的 看下源码，更好的把握如何来使用。关键部分见红框<br>
+<img src="https://img2020.cnblogs.com/blog/409098/202005/409098-20200529191806610-1474122657.png" alt=""></p>
+<p>其实，就是把 前中后三个部分的html拼接起来，中部（summary） 会有些插件默认的html内容。<br>
+<img src="https://img2020.cnblogs.com/blog/409098/202005/409098-20200529191822232-2058132239.png" alt=""></p>
+<p>所以，扩展使用上就很明晰了，只需要把html设置进去即可。</p>
+<pre><code class="language-python">@pytest.hookimpl(optionalhook=True)
+def pytest_html_results_summary(prefix, summary, postfix):
+     prefix.extend([html.p(&quot;测试人: 姜子轩&quot;)])
+</code></pre>
+<h3 id="result-表格的扩展">Result 表格的扩展</h3>
+<p>可以分成两部分，一部分是表头的设置。同样的通过 cells 来生成 Result 表格的头部。<br>
+<img src="https://img2020.cnblogs.com/blog/409098/202005/409098-20200529192003126-1941584883.png" alt=""></p>
+<p>看完上述源码相信，pytest_html_results_table_header 使用上就非常明确了。主要就是对cells进行操作。</p>
+<pre><code class="language-python">@pytest.hookimpl(optionalhook=True)
+ def pytest_html_results_table_header(cells):
+     cells.insert(2, html.th('模块'))
+     cells.insert(3, html.th('描述'))
+     cells.insert(4, html.th('时间', class_='sortable time', col='time'))
+     cells.pop()
+</code></pre>
+<p>对于每一行数据进行扩展上，也就是 pytest_html_results_table_row、pytest_html_results_table_html。这两个的使用，同样先看下源码。<br>
+<img src="https://img2020.cnblogs.com/blog/409098/202005/409098-20200529192027241-1122576348.png" alt=""></p>
+<p>其中两个函数的关键点在于 report 参数，cells 与 data用来制定扩展的html标签，而内容上通过 report 来进行透传。所以 这里一般会结合pytest内置的hook来使用，pytest_runtest_makereport。具体来说如下：<br>
+<img src="https://img2020.cnblogs.com/blog/409098/202005/409098-20200529223637258-950288763.png" alt=""></p>
+<p>具体代码演示。</p>
+<pre><code class="language-python">@pytest.hookimpl(optionalhook=True)
+def pytest_html_results_table_row(report, cells):
+     cells.insert(2, html.td(report.module))
+    cells.insert(3, html.td(report.description))
+    cells.insert(4, html.td(datetime.utcnow(), class_='col-time'))
+     cells.pop()
+     
+     
+ @pytest.hookimpl(hookwrapper=True)
+def pytest_runtest_makereport(item, call):
+     outcome = yield
+     report = outcome.get_result()
+     report.description = str(item.function.__doc__)
+     report.module = str(item.module.__doc__)
+</code></pre>
+<h3 id="深度定制">深度定制</h3>
+<p>以上内容，可以看到Pytest-html v2.1.2版本 提供的全部扩展功能，能够对 title、summary、table 进行内容扩展研发。不过，无法实现本文最前面全中文报告。所以 想要完美 的根据公司、业务需求改造，这里提供一个思路方法可以将 Pytest-html 源码下载下来进行改造。其 整体的实现并不复杂，主要逻辑 在 plugin.py 里面。<br>
+<img src="https://img2020.cnblogs.com/blog/409098/202005/409098-20200529223439079-2146851679.png" alt=""></p>
+<p>其中，整个报告的生成 在 <em><strong>_generate_report 函数</strong></em> 中。在本篇中就不深入来说实现，计划在后续 pytest插件研发、Pytest-html实现中进一步分享</p>
+<p>如果对本文 深度定制中文版报告 改造或者 是上文中扩展源码有兴趣的可以关注 公众号私信交流。</p>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2020-05-29 19:27</span>&nbsp;
+<a href="https://www.cnblogs.com/jzhlin/">姜子轩</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12989263" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12989263);return false;">收藏</a></div>
+        </div>
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 117614, cb_blogApp = 'jzhlin', cb_blogUserGuid = '7d5510de-319e-e111-aa3f-842b2b196315';
+    var cb_entryId = 12989263, cb_entryCreatedDate = '2020-05-29 19:27', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;"></div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>    </div>
+</div>
+            </div>
+        </div>
+
+        <div id="sideBar">
+            <div id="sideBarMain">
+                
+
+
+<div id="sidebar_ad"></div>
+                <div id="calendar"><div id="blog-calendar" style="display:none"></div></div>                
+                <script>loadBlogDefaultCalendar();</script>
+                <div id="leftcontentcontainer">
+                    <!-- begin:SingleColumn -->
+                    <div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+                    <!-- end:  SingleColumn -->
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <div id="footer">
+        <!--done-->
+Copyright &copy; 2020 姜子轩
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+    </div>
+</div>
+
+    <div id="page_end_html">
+        <script src="https://s96.cnzz.com/stat.php?id=4186047&web_id=4186047&show=pic" language="JavaScript"></script>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F9e45b74ac25c4e1e69e37055a3c3acdf' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=13262826" charset="UTF-8"></script>
+    </div>
+</body>
+</html>

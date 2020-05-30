@@ -1,0 +1,1080 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>赐我白日梦 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.ico?v=20200522" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/custom/bundle-custom.min.css?v=1ssrnY3Il79Ok472qeVrpxlSprSXcHhYPgZC5S3wtVM" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/ZhuChangwu/custom.css?v=FdNeHgLurX28t6Rnidp1xoz5Eco=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/custom/bundle-custom-mobile.min.css?v=-Yh290MhQyDeXLmvKTSses9H6-49lqbpXFh55zvS0w8" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/ZhuChangwu/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/ZhuChangwu/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/ZhuChangwu/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=6bwfCY2e02dLOXNW99G2BHZkYFmw9QyYTWeJ-W-sudo"></script>
+    <script>
+        var currentBlogId = 480837;
+        var currentBlogApp = 'ZhuChangwu';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'Custom';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    <div id="page_begin_html">
+        <script>loadPageBeginHtml();</script>
+    </div>
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/ZhuChangwu/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/ZhuChangwu/">赐我白日梦</a>
+</h1>
+<h2>
+我需要一份工作
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/ZhuChangwu/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E8%B5%90%E6%88%91%E7%99%BD%E6%97%A5%E6%A2%A6">
+联系</a></li>
+<li>
+
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+150&nbsp; </span>
+<span id="stats_article_count">文章 - 
+0&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+80</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+<!--done-->
+
+
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ZhuChangwu/archive/2020/04/08.html">2020年4月8日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ZhuChangwu/p/12657939.html">
+[置顶]    一款基于SVM算法的分布式法律助手
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：一. 项目简介 与 使用说明 体验网站(适配手机端): 项目基于 Spring Cloud 、Vue 构建，平台针对需要维权的用户而设计，主要提供如下三个功能模块。 一、 提供问答服务模块 。 用户可以在本模块中描述一句简短的话，系统将为用户推送出与用户描述相似的问题及答案。 二、 罪名推断模块 。            <a href="https://www.cnblogs.com/ZhuChangwu/p/12657939.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-04-08 09:24
+赐我白日梦
+<span class="post-view-count">阅读(96)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12657939" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ZhuChangwu/archive/2020/05/29.html">2020年5月29日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ZhuChangwu/p/12990062.html">
+    基于bin-log&amp;position搭建主从架构MySQL
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：一、MySQL主从搭建 搭建主从架构的MySQL常用的有两种实现方式： 基于binlog的fileName + postion模式完成主从同步。 基于gtid完成主从同步搭建。 本篇就介绍如何使用第一种方式完成MySQL主从环境的搭建。 基于fileName和position去实现主从复制，所谓的f            <a href="https://www.cnblogs.com/ZhuChangwu/p/12990062.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-29 23:06
+赐我白日梦
+<span class="post-view-count">阅读(63)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12990062" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+            <div class="postSeparator"></div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ZhuChangwu/p/12987168.html">
+    盘点Mysql的登陆方式
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：前置知识 我们想登陆到mysql中前提是肯定需要一个用户名和密码：比如 root root 在mysql中用户的信息会存放在 mysql数据库下的 user表中 可以 use mysql 然后select * from user\G;查看到系统上的所用的用户信息； 其中有一列叫做HOST，HOST的            <a href="https://www.cnblogs.com/ZhuChangwu/p/12987168.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-29 14:08
+赐我白日梦
+<span class="post-view-count">阅读(199)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12987168" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ZhuChangwu/archive/2020/05/28.html">2020年5月28日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ZhuChangwu/p/12984153.html">
+    Linux，Mac下MySQL的安装及一些知识点的整理
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：Linux下载安装 在服务器上下载的话，需要安装Mysql5.7相关的yum源 wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm 安装刚下载的rpm包 rpm -ivh mysql80-communit            <a href="https://www.cnblogs.com/ZhuChangwu/p/12984153.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-28 21:40
+赐我白日梦
+<span class="post-view-count">阅读(98)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12984153" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ZhuChangwu/archive/2020/05/23.html">2020年5月23日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ZhuChangwu/p/12943334.html">
+    再探Vue的Watch、Computed、Filter
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：watch 看完本小节你将了解： 什么情况下需要watch？ 如何对普通属性进行watch？ 如何对对象属性进行watch？ 什么是深度watch？ 如何提高对对象属性watch的效率？ 如何让watch立即生效？ 假设我们要实现下面的效果： 需求： 我们期望，页面上的FullName = Firs            <a href="https://www.cnblogs.com/ZhuChangwu/p/12943334.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-23 16:53
+赐我白日梦
+<span class="post-view-count">阅读(16)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12943334" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+            <div class="postSeparator"></div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ZhuChangwu/p/12941602.html">
+    VueRouter小手册
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：一. 了解router VueRouter 是Vue的插件，它可以通过根据地址栏动态的变换进而实现对不同路由组件进行切换。 比如：http:localhost:8080/path/123?username=xxx&amp;amp;password=xxx#route 在上面的url中，#后面部分我们称之为锚点，也称            <a href="https://www.cnblogs.com/ZhuChangwu/p/12941602.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-23 11:09
+赐我白日梦
+<span class="post-view-count">阅读(107)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12941602" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ZhuChangwu/archive/2020/05/17.html">2020年5月17日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ZhuChangwu/p/12904378.html">
+    Js 基础补充
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：﻿js参考手册： 作用域 全局变量 在js种 一堆{} 就是一个作用域。使用var声明的变量是全局变量， 全局变量可以在任何变量的任何位置使用。 由此看出，全局变量的生命周期并没有被{}限制着，这是因为全局变量会发生变量的提升，也就是会被提升的 在if，for，while条件的{}种使用var生命的            <a href="https://www.cnblogs.com/ZhuChangwu/p/12904378.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-17 11:18
+赐我白日梦
+<span class="post-view-count">阅读(35)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12904378" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ZhuChangwu/archive/2020/05/06.html">2020年5月6日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ZhuChangwu/p/12838759.html">
+    JS对象与原型
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：一. JS的对象 1.1 创建对象的几种方式 1.1.1 通过字面量创建对象 在js中，一对 其实就是一个对象 1.1.2 通过系统的构造函数 通过系统的构造函数创建一个空的对象，然后用js动态语言的特性，如果一个对象没有某个属性或者方法，那么我们点一下再附上值就好了 1.1.3 通过自定义构造方法            <a href="https://www.cnblogs.com/ZhuChangwu/p/12838759.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-06 20:40
+赐我白日梦
+<span class="post-view-count">阅读(117)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(1)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12838759" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ZhuChangwu/archive/2020/04/13.html">2020年4月13日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ZhuChangwu/p/12689180.html">
+    Golang笔记集
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：学习Golang了, 下面分享我的, 还有我收集的Golang的学习资料 我的基础笔记地址: 其他参考: Go的学习之路 知识图谱: Golang中文网: GoLang社区: 易佰教程: 博客: 菜鸟教程:            <a href="https://www.cnblogs.com/ZhuChangwu/p/12689180.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-04-13 07:43
+赐我白日梦
+<span class="post-view-count">阅读(936)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12689180" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ZhuChangwu/archive/2020/04/08.html">2020年4月8日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ZhuChangwu/p/12657939.html">
+    一款基于SVM算法的分布式法律助手
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：一. 项目简介 与 使用说明 体验网站(适配手机端): 项目基于 Spring Cloud 、Vue 构建，平台针对需要维权的用户而设计，主要提供如下三个功能模块。 一、 提供问答服务模块 。 用户可以在本模块中描述一句简短的话，系统将为用户推送出与用户描述相似的问题及答案。 二、 罪名推断模块 。            <a href="https://www.cnblogs.com/ZhuChangwu/p/12657939.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-04-08 09:24
+赐我白日梦
+<span class="post-view-count">阅读(96)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12657939" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ZhuChangwu/archive/2020/03/04.html">2020年3月4日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ZhuChangwu/p/12409270.html">
+    嗨! Apriori算法
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：Association Rule 一：项集和规则 1.1 认识名词: Association Rule : 关联规则 Frequent Itemsets : 频繁项集 Sequential Patterns: 模式序列 我们在网上购物的时候,经常会遇到这样的推送, 比如买了A书的人, 同时购买了B书            <a href="https://www.cnblogs.com/ZhuChangwu/p/12409270.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-03-04 14:21
+赐我白日梦
+<span class="post-view-count">阅读(291)</span><text> </text>
+<span class="post-comment-count">评论(2)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12409270" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ZhuChangwu/archive/2020/02/17.html">2020年2月17日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ZhuChangwu/p/12321151.html">
+    习惯用脚手架的你, 了解Webpack这些知识点吗?
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：大概准备春招两个月了, 也没找到坑位埋自己, 来看看webpack webpack 官网: www.webpackjs.com 对于前端的大兄弟来说, 每天在前端摸爬滚打, 各方征战, 那对于webpack肯定再熟悉不过了 所以说这篇文章适合给像我们这样的后端的同胞看着玩,(一说前端不是想用Boot            <a href="https://www.cnblogs.com/ZhuChangwu/p/12321151.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-02-17 12:17
+赐我白日梦
+<span class="post-view-count">阅读(410)</span><text> </text>
+<span class="post-comment-count">评论(1)</span><text> </text>
+<span class="post-digg-count">推荐(2)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12321151" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ZhuChangwu/archive/2020/01/27.html">2020年1月27日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ZhuChangwu/p/12237223.html">
+    NIO&amp;AIO编程模型
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：NIO线程模型 什么是NIO线程模型? 上图是NIO的线程模型, 基于select实现, 这种线程模型的特点: 多条channel通过一个选择器和单挑线程绑定, 并且在这种编程模型中, Channel中相关业务逻辑不允许存在耗时的任务 , 如果一定会有耗时的逻辑, 请将它们放置到线程池中去运行, 因            <a href="https://www.cnblogs.com/ZhuChangwu/p/12237223.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-01-27 23:26
+赐我白日梦
+<span class="post-view-count">阅读(254)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(1)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12237223" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ZhuChangwu/archive/2020/01/13.html">2020年1月13日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ZhuChangwu/p/12189152.html">
+    探究Dubbo的拓展机制: 下
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：承接上篇, 本篇博文的主题就是认认真真捋一捋, 看一下 Dubbo是如何实现他的IOC / AOP / 以及Dubbo SPI这个拓展点的 总览: 本篇的话总体上分成两部分进行展开 第一点就是 Dubbo在启动过程中加载原生的配置文件中提供的被@SPI标记的实现类: 第二就是Dubbo加载程序员后续            <a href="https://www.cnblogs.com/ZhuChangwu/p/12189152.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-01-13 20:24
+赐我白日梦
+<span class="post-view-count">阅读(198)</span><text> </text>
+<span class="post-comment-count">评论(1)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12189152" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ZhuChangwu/archive/2020/01/09.html">2020年1月9日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ZhuChangwu/p/12174031.html">
+    探究Dubbo的拓展机制: 上
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：这篇博文是我决心深度学习Dubbo框架时记录的笔记, 主题是Dubbo的拓展点, 下面的几个部分相对来说比较零散, 貌似是不和主题挂钩的 , 并且是一些很冷门的知识点 , 但是它们确实是深入学习Dubbo的前置知识 知识储备一: Dubbo的架构图 细化一下上图的各个组成部分: 服务提供者 提供服务            <a href="https://www.cnblogs.com/ZhuChangwu/p/12174031.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-01-09 23:28
+赐我白日梦
+<span class="post-view-count">阅读(272)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(2)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12174031" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ZhuChangwu/archive/2020/01/06.html">2020年1月6日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ZhuChangwu/p/12158405.html">
+    记: Spring Data Jpa @OneToMany 级联查询被动触发的问题
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：I have encountered a bug in using Spring Data Jpa. Specifically,when @OneToMany was used to maintain a one to many relationship, lazy loading was effe            <a href="https://www.cnblogs.com/ZhuChangwu/p/12158405.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-01-06 20:41
+赐我白日梦
+<span class="post-view-count">阅读(446)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12158405" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ZhuChangwu/archive/2019/12/23.html">2019年12月23日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ZhuChangwu/p/12082636.html">
+    后端小白的Bootstrap笔记
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：栅格系统 下面这张图是Bootstrap对栅格系统有关系数的规定 什么是栅格体统? 栅格系统是Bootstrap提供的移动优先的网格系统, 各个 分界点 如上: 576px 720px 992px 1200px 一行最多盛放12列, 从上图中也能看出一共是5种响应尺寸(分别对应不同的尺寸的屏幕) 其            <a href="https://www.cnblogs.com/ZhuChangwu/p/12082636.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2019-12-23 10:57
+赐我白日梦
+<span class="post-view-count">阅读(402)</span><text> </text>
+<span class="post-comment-count">评论(2)</span><text> </text>
+<span class="post-digg-count">推荐(4)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12082636" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ZhuChangwu/archive/2019/12/19.html">2019年12月19日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ZhuChangwu/p/12069797.html">
+    最短路径问题
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：最短路径问题 本文将解析如何使用 Dijkstra 算法求解最短路径问题 如下图: 就像上图, 每一个点可以理解成一个岔路口, 线段就是路径, 线段上的值为长度, 如何找到从 v0到各个岔路口的最小值, 也就是最短路径问题 如何使用代码表示出上图呢? 最短路径问题 和 深度广度搜索一样, 都是建立在            <a href="https://www.cnblogs.com/ZhuChangwu/p/12069797.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2019-12-19 19:51
+赐我白日梦
+<span class="post-view-count">阅读(273)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(1)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12069797" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ZhuChangwu/archive/2019/12/17.html">2019年12月17日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ZhuChangwu/p/12056729.html">
+    深度优先搜索 &amp; 广度优先搜索
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：[TOC] 邻接表 邻接表的深度优先搜索 假如我们有如下 无向图 如果我们想对其进行深度优先遍历的话, 其实情况不止一种, 比如 0 1 2 5 7 6 4 3 下面介绍使用 临接表 法对其进行遍历, 一般邻接表长下面这样: 思路: 参照上下两图我们可以发现, 邻接表中的左半部分是一个链表数组, 0            <a href="https://www.cnblogs.com/ZhuChangwu/p/12056729.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2019-12-17 20:42
+赐我白日梦
+<span class="post-view-count">阅读(89)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12056729" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ZhuChangwu/archive/2019/12/09.html">2019年12月9日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ZhuChangwu/p/12011096.html">
+    Netty的线程模型, 调优 及 献上写过注释的源码工程
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：Netty能干什么? Http服务器 使用Netty可以编写一个 Http服务器, 就像tomcat那样,能接受用户发送的http请求, , 只不过没有实现Servelt规范, 但是它也能解析携带的参数, 对请求的路径进行路由导航, 从而实现将不同的请求导向不同的handler进行处理 对socke            <a href="https://www.cnblogs.com/ZhuChangwu/p/12011096.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2019-12-09 15:04
+赐我白日梦
+<span class="post-view-count">阅读(474)</span><text> </text>
+<span class="post-comment-count">评论(1)</span><text> </text>
+<span class="post-digg-count">推荐(2)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12011096" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ZhuChangwu/archive/2019/12/06.html">2019年12月6日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ZhuChangwu/p/11997499.html">
+    SSO单点登录思路
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：SSO (Single Sign On) 什么是单点登录: 在大型的互联网公司中会有多个系统, 多个项目, 虽然这些项目都属于同一家公司, 但是项目本身其实都是独立的, 那多个系统可不可以实现共享同一份用户认证数据呢? SSO单点登录就是做这件事, 各个项目之间彼此相互信任, 在其中任意一个系统中进            <a href="https://www.cnblogs.com/ZhuChangwu/p/11997499.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2019-12-06 20:31
+赐我白日梦
+<span class="post-view-count">阅读(1021)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(1)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11997499" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ZhuChangwu/archive/2019/12/04.html">2019年12月4日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ZhuChangwu/p/11985742.html">
+    Docker 学习笔记
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：安装 docker的安装最好需要centos内核版本在3.1及以上 查看系统内核版本 安装依赖 添加yum源 更新yum源 安装docker 配置镜像加速 使用阿里云的镜像加速服务 https://cr.console.aliyun.com/cn hangzhou/instances/mirrors            <a href="https://www.cnblogs.com/ZhuChangwu/p/11985742.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2019-12-04 21:30
+赐我白日梦
+<span class="post-view-count">阅读(636)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11985742" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ZhuChangwu/archive/2019/12/03.html">2019年12月3日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ZhuChangwu/p/11976677.html">
+    Apache Thrift 的魅力
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：WhyApacheThrift 因为最近在项目中需要集成进来一个Python编写的机器学习算法,但是我的后端主要使用的是SpringCloud技术栈. 于是面临着异构语言之间的通信实现方式的抉择. 因为业务逻辑是这样的 主要就是实现2 3这部分请求响应, 实现的方式挺多的, 只要有能力甚至将py封装            <a href="https://www.cnblogs.com/ZhuChangwu/p/11976677.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2019-12-03 14:42
+赐我白日梦
+<span class="post-view-count">阅读(903)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11976677" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ZhuChangwu/archive/2019/12/02.html">2019年12月2日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ZhuChangwu/p/11972798.html">
+    Protocol Buffers
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：Google Protobuf Why Protobuf protobuf它是Google提供的一个技术, 一个类库, 也可以说是一套规范, 学java的人都知道java有自己的序列化机制, 对不同的java程序来说,他们可以使用同一种序列化机制进行数据的传递, 但是java的序列化机制并不适用于其            <a href="https://www.cnblogs.com/ZhuChangwu/p/11972798.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2019-12-02 19:30
+赐我白日梦
+<span class="post-view-count">阅读(586)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11972798" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ZhuChangwu/archive/2019/11/27.html">2019年11月27日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ZhuChangwu/p/11945832.html">
+    使用Docker搭建maven私服 及常规使用方法
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：安装 登录 配置 进入容器中查看密码是多少 根据上图的提示进入到指定的目录,查看密码是啥 继续访问, 修改密码 修改私服的中央仓库位置，如果嫌国外的站点太慢了， 我们就将其修改成阿里云，修改方式就是替换一下链接就ok 创建hosted类型的仓库 选择创建的仓库类型是hosted类型，为什么非得选择这            <a href="https://www.cnblogs.com/ZhuChangwu/p/11945832.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2019-11-27 22:01
+赐我白日梦
+<span class="post-view-count">阅读(619)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(1)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11945832" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ZhuChangwu/archive/2019/11/26.html">2019年11月26日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ZhuChangwu/p/11939124.html">
+    串烧 JavaCAS相关知识
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：JMM与问题引入 为啥先说JMM,因为CAS的实现类中维护的变量都被volatile修饰, 这个volatile 是遵循JMM规范(不是百分百遵循,下文会说)实现的保证多线程并发访问某个变量实现线程安全的手段 一连串的知识点慢慢缕 首先说什么是JMM, JMM就是大家所说的java的内存模型, 它是            <a href="https://www.cnblogs.com/ZhuChangwu/p/11939124.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2019-11-26 23:08
+赐我白日梦
+<span class="post-view-count">阅读(299)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(1)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11939124" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+
+<div class="topicListFooter">
+    <div id="nav_next_page">
+        
+    <a href="https://www.cnblogs.com/ZhuChangwu/default.html?page=2">
+        下一页
+    </a>
+
+    </div>    
+</div>
+
+
+
+
+
+
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 赐我白日梦
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+</body>
+</html>

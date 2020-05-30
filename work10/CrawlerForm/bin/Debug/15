@@ -1,0 +1,979 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="referrer" content="always" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>新闻区 - 博客园</title>
+    <link rel="shortcut icon" href="//common.cnblogs.com/favicon.ico?v=20200522" type="image/x-icon" />
+    <link rel="Stylesheet" type="text/css" href="/css/aggsite.min.css?v=XVK9pBwACFM32BSjHQ3T_N9NQGXjkUDwYVLWn2h19Dg" />
+        <link id="RSSLink" title="RSS" type="application/rss+xml" rel="alternate" href="http://feed.cnblogs.com/news/rss" />
+    <script src="//common.cnblogs.com/script/jquery.js" type="text/javascript"></script>
+    <script src="/js/aggsite.min.js?v=SMfb3cvJ_BVQu17ffdyLH0AsFTOFX87b871AzEvWXNo"></script>
+    <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot('/1090369/A1', [468, 60], 'div-gpt-ad-1547816814884-0').addService(googletag.pubads());
+            googletag.defineSlot('/1090369/B1', [300, 250], 'div-gpt-ad-1546331539224-0').addService(googletag.pubads());
+            googletag.defineSlot('/1090369/B2', [300, 250], 'div-gpt-ad-1539007469525-0').addService(googletag.pubads());
+            googletag.defineSlot('/1090369/B3', [300, 250], 'div-gpt-ad-1546331252242-0').addService(googletag.pubads());
+            googletag.defineSlot('/1090369/B4', [300, 250], 'div-gpt-ad-1546331385104-0').addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+
+        /**/</script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="hd_info">
+            <div id="cnts">
+                <div id="site_nav_top">代码改变世界</div>
+                <div id="login_area"><span id="span_userinfo"></span></div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div id="header">
+            <p class="h_r_3"></p><p class="h_r_2"></p><p class="h_r_1"></p>
+            <div id="header_block">
+                <div id="logo">
+                    <h1>
+                        <a href="https://www.cnblogs.com/" title="开发者的网上家园"><img src="/images/logo_small.gif" alt="博客园Logo" width="142" height="55" /></a>
+                    </h1>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+            <p class="h_r_1"></p><p class="h_r_2"></p><p class="h_r_3"></p>
+        </div>
+        <div id="nav_menu"><a href="https://home.cnblogs.com/">园子</a><a href="https://news.cnblogs.com">新闻</a><a href="https://q.cnblogs.com/">博问</a><a href="https://ing.cnblogs.com/">闪存</a><a href="https://group.cnblogs.com/">小组</a><a href="https://wz.cnblogs.com/">收藏</a><a href="https://job.cnblogs.com/">招聘</a><a href="https://edu.cnblogs.com/">班级</a><a href="http://zzk.cnblogs.com/">找找看</a></div>
+        <div id="main">
+            <div class="post_nav_block_wrapper">
+                <ul class="post_nav_block">
+                        <li><a href="/" id="tabnav_" class="" title="">首页</a></li>
+                        <li><a href="/pick/" id="tabnav_pick" class="" title="编辑精选博文">精华</a></li>
+                        <li><a href="/candidate/" id="tabnav_candidate" class="" title="候选区的博文">候选</a></li>
+                        <li><a href="/news/" id="tabnav_news" class="current_nav" title="新闻频道最新新闻">新闻</a></li>
+                        <li><a href="/following" id="tabnav_following" class="" title="我关注博客的最新博文">关注</a></li>
+                        <li><a href="/aggsite/mycommented" id="tabnav_aggsitemycommented" class="" title="我评论过的博文">我评</a></li>
+                        <li><a href="/aggsite/mydigged" id="tabnav_aggsitemydigged" class="" title="我推荐过的博文">我赞</a></li>
+                        <li><a href="/subscription" id="tabnav_subscription" class="" title="我订阅的博客">订阅</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="rss_link" id="rss_block">
+<span id="posts_refresh_tips"></span><a id="posts_refresh" href="#" class="refresh" title="刷新博文列表" onclick="aggSite.loadCategoryPostList();return false">刷新</a><a href="http://feed.cnblogs.com/news/rss"><img src="//common.cnblogs.com/images/icon_rss.gif" alt="点击订阅" style="position:relative;top:2px;" title="订阅博客园文章" /></a>            </div>
+                <div id="headline_block" class="headline"><ul><li class="editor_pick"><a href="https://www.cnblogs.com/coco1s/p/12980682.html" id="editor_pick_lnk" target="_blank">【编辑推荐】巧用 display: contents 增强页面语义<span id="editor_pick_count"></span></a> <a href="/aggsite/headline" title="查看更多编辑推荐" class="right_more">»</a></li><li><a href="https://www.cnblogs.com/c7jie/p/12986598.html" target="_blank" title="阅读640, 评论9, 推荐17">[最多推荐]C# 数据操作系列 - 19 FreeSql 入坑介绍(9/640)</a> <a href="/aggsite/topdigged24h" title="查看24小时推荐排行" class="right_more">»</a></li><li><a href="https://news.cnblogs.com/n/663027/" target="_blank" title="阅读398, 评论0, 推荐2">[新闻头条]专为「神盾局」打造的软体机器人：通用电气出品，能挖隧道，可军用(0/398)</a> <a href="https://news.cnblogs.com/" title="查看更多新闻" class="right_more">»</a></li><li><a href="https://news.cnblogs.com/n/662991/" target="_blank" title="阅读1463, 评论1, 推荐7">[推荐新闻]基础软件+开源，为什么是现在？(1/1463)</a> <a href="https://news.cnblogs.com/n/recommend" title="查看更多推荐新闻" class="right_more">»</a></li></ul></div>
+
+            <div id="pager_top" style="display:none"></div>
+            <div id="post_list_tips" class="hide"></div>
+            
+            <div id="post_list">
+                <style>
+    .diggit {
+        cursor: auto;
+    }
+
+    .pfs {
+        height: auto;
+    }
+</style>
+    <div class="post_item">
+        <div class="digg">
+            <div class="diggit">
+                <span class="diggnum" id="digg_count_663043">0</span>
+            </div>
+            <div class="clear"></div>
+            <div id="digg_tip_663043" class="digg_tip"></div>
+        </div>
+        <div class="post_item_body">
+            <h3><a class="titlelnk" href="//news.cnblogs.com/n/663043/" target="_blank">高端影像旗舰：华为P40 Pro+全面评测</a></h3>
+            <p class="post_item_summary">
+                    <a href="//news.cnblogs.com/n/topic_188.htm" target="_blank"><img width="48" class="pfs" src="https://img2018.cnblogs.com/news_topic/20190730153501178-1904121953.png" alt="" /></a>
+                华为P系列会将手机拍摄带领到怎样的高度？背部构造精密的超感知徕卡五摄承载着大众的想象与期待。华为 P40 Pro+ 首次引入 10 倍的光学变焦，是手机摄影天花板般的存在，探索手机变焦无人区的华为给出的答案。 拍照在整机的设计中占据了极高权重，相机模组的改动牵一发而动全身。相机排列为起点的外观 ID
+            </p>
+            <div class="post_item_foot">
+                <a href="//home.cnblogs.com/u/34358/" class="lightblue" target="_blank">itwriter</a>
+                发布于 2020-05-29 21:22
+                <span class="article_comment">
+                    <a href="//news.cnblogs.com/n/663043#bottom" class="gray" target="_blank">
+                        评论(0)
+                    </a>
+                </span><span class="article_view"><a href="//news.cnblogs.com/n/663043/" class="gray" target="_blank">阅读(416)</a></span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="post_item">
+        <div class="digg">
+            <div class="diggit">
+                <span class="diggnum" id="digg_count_663042">0</span>
+            </div>
+            <div class="clear"></div>
+            <div id="digg_tip_663042" class="digg_tip"></div>
+        </div>
+        <div class="post_item_body">
+            <h3><a class="titlelnk" href="//news.cnblogs.com/n/663042/" target="_blank">网易聆讯资料全文：丁磊持股44.7%为最大股东</a></h3>
+            <p class="post_item_summary">
+                    <a href="//news.cnblogs.com/n/topic_126.htm" target="_blank"><img width="48" class="pfs" src="//images0.cnblogs.com/news_topic/163.gif" alt="" /></a>
+                划重点： 网易 5 月 29 日通过港交所聆讯，上市联席保荐人为中金、瑞士信贷、摩根大通。 网易主要业务有三个，分别为：在线游戏、网易有道、创新业务及其他。 网易目前有两位持股超过5% 的大股东，其中丁磊持股 14.56 亿股，占总股本的 44.7%，OrbisInvestmentManagemen
+            </p>
+            <div class="post_item_foot">
+                <a href="//home.cnblogs.com/u/34358/" class="lightblue" target="_blank">itwriter</a>
+                发布于 2020-05-29 21:22
+                <span class="article_comment">
+                    <a href="//news.cnblogs.com/n/663042#bottom" class="gray" target="_blank">
+                        评论(1)
+                    </a>
+                </span><span class="article_view"><a href="//news.cnblogs.com/n/663042/" class="gray" target="_blank">阅读(242)</a></span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="post_item">
+        <div class="digg">
+            <div class="diggit">
+                <span class="diggnum" id="digg_count_663041">0</span>
+            </div>
+            <div class="clear"></div>
+            <div id="digg_tip_663041" class="digg_tip"></div>
+        </div>
+        <div class="post_item_body">
+            <h3><a class="titlelnk" href="//news.cnblogs.com/n/663041/" target="_blank">全国推广！交通事故纠纷可网上处理 ：一键理赔太省心</a></h3>
+            <p class="post_item_summary">
+                对于广大车主来说，遇到道路交通事故损害赔偿纠纷，当事人往往需要多次往返于公安、保险、鉴定机构，甚至法院等多部门来解决，耗时耗力。而今后，可能不需要那么麻烦了。 5 月 22 日，国家四部门联合发文，将在全国推广交通事故损害“网上数据一体化处理”。纠纷、理赔一键解决，方便广大车主出行。 据了解，早在 
+            </p>
+            <div class="post_item_foot">
+                <a href="//home.cnblogs.com/u/34358/" class="lightblue" target="_blank">itwriter</a>
+                发布于 2020-05-29 21:18
+                <span class="article_comment">
+                    <a href="//news.cnblogs.com/n/663041#bottom" class="gray" target="_blank">
+                        评论(0)
+                    </a>
+                </span><span class="article_view"><a href="//news.cnblogs.com/n/663041/" class="gray" target="_blank">阅读(175)</a></span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="post_item">
+        <div class="digg">
+            <div class="diggit">
+                <span class="diggnum" id="digg_count_663040">0</span>
+            </div>
+            <div class="clear"></div>
+            <div id="digg_tip_663040" class="digg_tip"></div>
+        </div>
+        <div class="post_item_body">
+            <h3><a class="titlelnk" href="//news.cnblogs.com/n/663040/" target="_blank">周杰伦入驻快手：开通首个中文社交媒体账号</a></h3>
+            <p class="post_item_summary">
+                    <a href="//news.cnblogs.com/n/topic_793.htm" target="_blank"><img width="48" class="pfs" src="//images2015.cnblogs.com/news_topic/20161222123753807-514279725.png" alt="" /></a>
+                5 月 29 日消息，周杰伦在快手上开通了首个中文社交媒体账号，账号名为“周同学”，认证周杰伦，个性签名为“全网唯一，只在快手”，截至目前账号已有 7 千名粉丝关注。 据悉，今年年初，周杰伦的新综艺《周游记》曾入驻快手，拿下周杰伦综艺首秀。
+            </p>
+            <div class="post_item_foot">
+                <a href="//home.cnblogs.com/u/34358/" class="lightblue" target="_blank">itwriter</a>
+                发布于 2020-05-29 21:13
+                <span class="article_comment">
+                    <a href="//news.cnblogs.com/n/663040#bottom" class="gray" target="_blank">
+                        评论(0)
+                    </a>
+                </span><span class="article_view"><a href="//news.cnblogs.com/n/663040/" class="gray" target="_blank">阅读(195)</a></span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="post_item">
+        <div class="digg">
+            <div class="diggit">
+                <span class="diggnum" id="digg_count_663039">0</span>
+            </div>
+            <div class="clear"></div>
+            <div id="digg_tip_663039" class="digg_tip"></div>
+        </div>
+        <div class="post_item_body">
+            <h3><a class="titlelnk" href="//news.cnblogs.com/n/663039/" target="_blank">全国2.5万家 支付宝“数字酒店”来了：无接触入住 免费升房</a></h3>
+            <p class="post_item_summary">
+                    <a href="//news.cnblogs.com/n/topic_131.htm" target="_blank"><img width="48" class="pfs" src="https://img2018.cnblogs.com/news_topic/20190919211901993-1718488031.png" alt="" /></a>
+                5 月 29 日消息，26 家酒店集团在支付宝开了“数字酒店”，小程序订房、无接触入住，还打通了会员体系。只要上支付宝搜“酒店黑金卡”，26 家会员免费领！ 据了解，复星、华住、首旅如家、锦江等 26 家大型酒店集团与支付宝达成战略合作，共同打造“数字酒店”。&#160;第一步便是将酒店会员体系与支付宝会员体
+            </p>
+            <div class="post_item_foot">
+                <a href="//home.cnblogs.com/u/34358/" class="lightblue" target="_blank">itwriter</a>
+                发布于 2020-05-29 21:11
+                <span class="article_comment">
+                    <a href="//news.cnblogs.com/n/663039#bottom" class="gray" target="_blank">
+                        评论(0)
+                    </a>
+                </span><span class="article_view"><a href="//news.cnblogs.com/n/663039/" class="gray" target="_blank">阅读(181)</a></span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="post_item">
+        <div class="digg">
+            <div class="diggit">
+                <span class="diggnum" id="digg_count_663038">0</span>
+            </div>
+            <div class="clear"></div>
+            <div id="digg_tip_663038" class="digg_tip"></div>
+        </div>
+        <div class="post_item_body">
+            <h3><a class="titlelnk" href="//news.cnblogs.com/n/663038/" target="_blank">微信疑似上线灰度测试功能：允许用户每年修改一次微信号</a></h3>
+            <p class="post_item_summary">
+                    <a href="//news.cnblogs.com/n/topic_372.htm" target="_blank"><img width="48" class="pfs" src="https://img2018.cnblogs.com/news_topic/20191011113837921-1266267629.png" alt="" /></a>
+                据国内媒体报道，部分用户反映，微信疑似上线灰度功能，允许每年修改一次微信号。 网曝截图显示，修改微信号的位置已更改了描述说明：“微信号是帐号的唯一凭证，一年只能修改一次。”而此前的微信版本中，此区域的描述说明为：“微信号是帐号唯一凭证，只能设置一次。” 消息公布后，引发网友热议。从反馈来看，不少网友
+            </p>
+            <div class="post_item_foot">
+                <a href="//home.cnblogs.com/u/34358/" class="lightblue" target="_blank">itwriter</a>
+                发布于 2020-05-29 21:09
+                <span class="article_comment">
+                    <a href="//news.cnblogs.com/n/663038#bottom" class="gray" target="_blank">
+                        评论(2)
+                    </a>
+                </span><span class="article_view"><a href="//news.cnblogs.com/n/663038/" class="gray" target="_blank">阅读(255)</a></span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="post_item">
+        <div class="digg">
+            <div class="diggit">
+                <span class="diggnum" id="digg_count_663037">0</span>
+            </div>
+            <div class="clear"></div>
+            <div id="digg_tip_663037" class="digg_tip"></div>
+        </div>
+        <div class="post_item_body">
+            <h3><a class="titlelnk" href="//news.cnblogs.com/n/663037/" target="_blank">刘强东退出深圳市分期乐网络科技有限公司投资人</a></h3>
+            <p class="post_item_summary">
+                    <a href="//news.cnblogs.com/n/topic_1085.htm" target="_blank"><img width="48" class="pfs" src="//images2017.cnblogs.com/news_topic/20171221143750193-1907500788.png" alt="" /></a>
+                网易科技讯，5 月 29 日消息，天眼查数据显示，近日，深圳市分期乐网络科技有限公司发生工商变更，投资人中的刘强东、西藏险峰长晴创业投资管理有限公司退出。 深圳市分期乐网络科技有限公司成立于 2013 年 8 月，注册资本 15 亿人民币，法定代表人为乐信创始人肖文杰，公司经营范围包括从事担保业务（
+            </p>
+            <div class="post_item_foot">
+                <a href="//home.cnblogs.com/u/34358/" class="lightblue" target="_blank">itwriter</a>
+                发布于 2020-05-29 21:07
+                <span class="article_comment">
+                    <a href="//news.cnblogs.com/n/663037#bottom" class="gray" target="_blank">
+                        评论(0)
+                    </a>
+                </span><span class="article_view"><a href="//news.cnblogs.com/n/663037/" class="gray" target="_blank">阅读(115)</a></span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="post_item">
+        <div class="digg">
+            <div class="diggit">
+                <span class="diggnum" id="digg_count_663036">0</span>
+            </div>
+            <div class="clear"></div>
+            <div id="digg_tip_663036" class="digg_tip"></div>
+        </div>
+        <div class="post_item_body">
+            <h3><a class="titlelnk" href="//news.cnblogs.com/n/663036/" target="_blank">小鹏汽车成立汽车销售服务新公司 注册资本1000万元</a></h3>
+            <p class="post_item_summary">
+                    <a href="//news.cnblogs.com/n/topic_1005.htm" target="_blank"><img width="48" class="pfs" src="//images2017.cnblogs.com/news_topic/20170829150318374-1903952524.png" alt="" /></a>
+                5 月 29 日消息，天眼查数据显示，5 月 26 日，上海智鹏汽车销售服务有限公司成立，注册资本 1000 万人民币，法定代表人为朱艳华，小鹏汽车联合创始人何涛出任监事。公司经营范围包括保险代理业务新能源汽车整车、汽车新车、电动自行车（按本市产品目录经营）、汽车零配件、自行车及零配件、日用百货、办
+            </p>
+            <div class="post_item_foot">
+                <a href="//home.cnblogs.com/u/34358/" class="lightblue" target="_blank">itwriter</a>
+                发布于 2020-05-29 21:05
+                <span class="article_comment">
+                    <a href="//news.cnblogs.com/n/663036#bottom" class="gray" target="_blank">
+                        评论(0)
+                    </a>
+                </span><span class="article_view"><a href="//news.cnblogs.com/n/663036/" class="gray" target="_blank">阅读(50)</a></span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="post_item">
+        <div class="digg">
+            <div class="diggit">
+                <span class="diggnum" id="digg_count_663035">0</span>
+            </div>
+            <div class="clear"></div>
+            <div id="digg_tip_663035" class="digg_tip"></div>
+        </div>
+        <div class="post_item_body">
+            <h3><a class="titlelnk" href="//news.cnblogs.com/n/663035/" target="_blank">经历史上最严重亏损 软银愿景基金总裁薪酬却翻倍！</a></h3>
+            <p class="post_item_summary">
+                    <a href="//news.cnblogs.com/n/topic_825.htm" target="_blank"><img width="48" class="pfs" src="//images2015.cnblogs.com/news_topic/20170215120802707-1327265605.png" alt="" /></a>
+                图示：愿景基金负责人拉杰夫&#183;米斯拉（Rajeev Misra） 网易科技讯，5 月 29 日消息，据国外媒体报道，尽管软银集团的投资亏损高达 177 亿美元，但软银愿景基金总裁的薪酬却大幅增加。 软银在本周五的一份声明中称，在截至 3 月 31 日的上一财年，愿景基金负责人拉杰夫&#183;米斯拉（Rajee
+            </p>
+            <div class="post_item_foot">
+                <a href="//home.cnblogs.com/u/34358/" class="lightblue" target="_blank">itwriter</a>
+                发布于 2020-05-29 21:03
+                <span class="article_comment">
+                    <a href="//news.cnblogs.com/n/663035#bottom" class="gray" target="_blank">
+                        评论(0)
+                    </a>
+                </span><span class="article_view"><a href="//news.cnblogs.com/n/663035/" class="gray" target="_blank">阅读(104)</a></span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="post_item">
+        <div class="digg">
+            <div class="diggit">
+                <span class="diggnum" id="digg_count_663034">0</span>
+            </div>
+            <div class="clear"></div>
+            <div id="digg_tip_663034" class="digg_tip"></div>
+        </div>
+        <div class="post_item_body">
+            <h3><a class="titlelnk" href="//news.cnblogs.com/n/663034/" target="_blank">瑞幸回应“IPO前已涉虚假交易”质疑：正全力推进内部调查</a></h3>
+            <p class="post_item_summary">
+                    <a href="//news.cnblogs.com/n/topic_1213.htm" target="_blank"><img width="48" class="pfs" src="https://images2018.cnblogs.com/news_topic/20180515154619133-1755088138.png" alt="" /></a>
+                澎湃新闻记者王启帆 瑞幸咖啡（Nasdaq: LK）被曝在 IPO 前已涉虚假交易。 5 月 29 日，华尔街日报援引知情人士消息，在首次公开募股前，就有一批瑞幸咖啡员工就已设计虚假交易，以帮助销售量的增长。一位知情人士透露，员工会注册个人账户购买大量代金券，以此方式至少捏造了 2 亿至 3 亿元的
+            </p>
+            <div class="post_item_foot">
+                <a href="//home.cnblogs.com/u/34358/" class="lightblue" target="_blank">itwriter</a>
+                发布于 2020-05-29 21:00
+                <span class="article_comment">
+                    <a href="//news.cnblogs.com/n/663034#bottom" class="gray" target="_blank">
+                        评论(0)
+                    </a>
+                </span><span class="article_view"><a href="//news.cnblogs.com/n/663034/" class="gray" target="_blank">阅读(60)</a></span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="post_item">
+        <div class="digg">
+            <div class="diggit">
+                <span class="diggnum" id="digg_count_663033">0</span>
+            </div>
+            <div class="clear"></div>
+            <div id="digg_tip_663033" class="digg_tip"></div>
+        </div>
+        <div class="post_item_body">
+            <h3><a class="titlelnk" href="//news.cnblogs.com/n/663033/" target="_blank">去哪儿网总裁勾志鹏：国内机酒业务已恢复7成以上</a></h3>
+            <p class="post_item_summary">
+                    <a href="//news.cnblogs.com/n/topic_293.htm" target="_blank"><img width="48" class="pfs" src="https://img2018.cnblogs.com/news_topic/20191018161932114-2046512846.png" alt="" /></a>
+                5 月 29 日消息，去哪儿网总裁勾志鹏直播连线搜狐集团董事局主席张朝阳时透露，目前去哪儿网已进入疫后的快速恢复期，特别是“五一”小长假之后，国内机票及酒店总体业务恢复至去年的 7 成以上。 旅游业是受疫情冲击最严重的行业之一，去哪儿网，也在积极采取各种方式自我恢复。直播就是其中的一种，去哪儿网上在
+            </p>
+            <div class="post_item_foot">
+                <a href="//home.cnblogs.com/u/34358/" class="lightblue" target="_blank">itwriter</a>
+                发布于 2020-05-29 20:58
+                <span class="article_comment">
+                    <a href="//news.cnblogs.com/n/663033#bottom" class="gray" target="_blank">
+                        评论(0)
+                    </a>
+                </span><span class="article_view"><a href="//news.cnblogs.com/n/663033/" class="gray" target="_blank">阅读(34)</a></span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="post_item">
+        <div class="digg">
+            <div class="diggit">
+                <span class="diggnum" id="digg_count_663032">0</span>
+            </div>
+            <div class="clear"></div>
+            <div id="digg_tip_663032" class="digg_tip"></div>
+        </div>
+        <div class="post_item_body">
+            <h3><a class="titlelnk" href="//news.cnblogs.com/n/663032/" target="_blank">王兴称阿里放弃大文娱进倒计时，阿里回击</a></h3>
+            <p class="post_item_summary">
+                    <a href="//news.cnblogs.com/n/topic_6.htm" target="_blank"><img width="48" class="pfs" src="https://img2018.cnblogs.com/news_topic/20190926155313977-560433391.png" alt="" /></a>
+                三言财经 5 月 29 日消息，昨日，网传一张截图显示，美团创始人王兴在饭否上发文，表示：“阿里放弃大文娱已经是一件可以开始倒计时的事了”。 今日，阿里大文娱公关部负责人张威在朋友圈发文称，“美团不开茶馆真是可惜了一把手单口相声的表演癖好”。 目前，在饭否上，已经无法查询到王兴的该条消息。 据了解，
+            </p>
+            <div class="post_item_foot">
+                <a href="//home.cnblogs.com/u/34358/" class="lightblue" target="_blank">itwriter</a>
+                发布于 2020-05-29 20:54
+                <span class="article_comment">
+                    <a href="//news.cnblogs.com/n/663032#bottom" class="gray" target="_blank">
+                        评论(0)
+                    </a>
+                </span><span class="article_view"><a href="//news.cnblogs.com/n/663032/" class="gray" target="_blank">阅读(121)</a></span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="post_item">
+        <div class="digg">
+            <div class="diggit">
+                <span class="diggnum" id="digg_count_663031">0</span>
+            </div>
+            <div class="clear"></div>
+            <div id="digg_tip_663031" class="digg_tip"></div>
+        </div>
+        <div class="post_item_body">
+            <h3><a class="titlelnk" href="//news.cnblogs.com/n/663031/" target="_blank">重仓「新基建」，AI 创企们的又一次良机与大考</a></h3>
+            <p class="post_item_summary">
+                    <a href="//news.cnblogs.com/n/topic_132.htm" target="_blank"><img width="48" class="pfs" src="//images0.cnblogs.com/news_topic/ITblog.jpg" alt="" /></a>
+                倘若复盘今年两会代表们提到次数最多的词，&quot;新基建&quot;一定占其一。 它热到几乎所有科技大佬们都选择同一时间为其吆喝，帮其站台。 腾讯马化腾说，应把新基建加快延伸到医疗卫生领域。 百度李彦宏说，应加快建设人工智能基础设施，加速产业智能化。 联想杨元庆建议，应全面推动新基建和智慧经济建设。 360 周鸿祎建
+            </p>
+            <div class="post_item_foot">
+                <a href="//home.cnblogs.com/u/34358/" class="lightblue" target="_blank">itwriter</a>
+                发布于 2020-05-29 20:50
+                <span class="article_comment">
+                    <a href="//news.cnblogs.com/n/663031#bottom" class="gray" target="_blank">
+                        评论(0)
+                    </a>
+                </span><span class="article_view"><a href="//news.cnblogs.com/n/663031/" class="gray" target="_blank">阅读(35)</a></span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="post_item">
+        <div class="digg">
+            <div class="diggit">
+                <span class="diggnum" id="digg_count_663030">0</span>
+            </div>
+            <div class="clear"></div>
+            <div id="digg_tip_663030" class="digg_tip"></div>
+        </div>
+        <div class="post_item_body">
+            <h3><a class="titlelnk" href="//news.cnblogs.com/n/663030/" target="_blank">寒武纪正值当打之年：估值超300亿元，云端芯片收入增近8倍</a></h3>
+            <p class="post_item_summary">
+                    <a href="//news.cnblogs.com/n/topic_1471.htm" target="_blank"><img width="48" class="pfs" src="https://img2018.cnblogs.com/news_topic/20190620222657011-1238231060.png" alt="" /></a>
+                四岁的寒武纪科技，在情况复杂多变的 2020 年迎来了上市大考。从去年 12 月传出接受科创板上市辅导，到今年 3 月上交所正式受理寒武纪科创板上市申请，提交招股说明书，再到 5 月对上交所的两轮问询回复。寒武纪上市的每一个节点都受到了外界的极大关注。 本月 20 日，寒武纪回复上交所第二轮问询函的
+            </p>
+            <div class="post_item_foot">
+                <a href="//home.cnblogs.com/u/34358/" class="lightblue" target="_blank">itwriter</a>
+                发布于 2020-05-29 20:45
+                <span class="article_comment">
+                    <a href="//news.cnblogs.com/n/663030#bottom" class="gray" target="_blank">
+                        评论(0)
+                    </a>
+                </span><span class="article_view"><a href="//news.cnblogs.com/n/663030/" class="gray" target="_blank">阅读(61)</a></span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="post_item">
+        <div class="digg">
+            <div class="diggit">
+                <span class="diggnum" id="digg_count_663029">0</span>
+            </div>
+            <div class="clear"></div>
+            <div id="digg_tip_663029" class="digg_tip"></div>
+        </div>
+        <div class="post_item_body">
+            <h3><a class="titlelnk" href="//news.cnblogs.com/n/663029/" target="_blank">特朗普发布命令，旨在打击Twitter和Facebook等社交媒体</a></h3>
+            <p class="post_item_summary">
+                    <a href="//news.cnblogs.com/n/topic_21.htm" target="_blank"><img width="48" class="pfs" src="https://img2018.cnblogs.com/news_topic/20190903105334209-2022543618.png" alt="" /></a>
+                本周四，美国总统唐纳德&#183;特朗普签署了一项行政命令，旨在打击 Twitter 和 Facebook 等社交网络。 在签署这份行政命令时，特朗普表示，社交媒体不是“中立的平台”，并表示，Twitter 禁止账号、编辑或删除帖子等操作行为，让它变得主观又偏见。 此前，Twitter 将特朗普的一条关于「邮
+            </p>
+            <div class="post_item_foot">
+                <a href="//home.cnblogs.com/u/34358/" class="lightblue" target="_blank">itwriter</a>
+                发布于 2020-05-29 20:42
+                <span class="article_comment">
+                    <a href="//news.cnblogs.com/n/663029#bottom" class="gray" target="_blank">
+                        评论(0)
+                    </a>
+                </span><span class="article_view"><a href="//news.cnblogs.com/n/663029/" class="gray" target="_blank">阅读(92)</a></span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="post_item">
+        <div class="digg">
+            <div class="diggit">
+                <span class="diggnum" id="digg_count_663028">0</span>
+            </div>
+            <div class="clear"></div>
+            <div id="digg_tip_663028" class="digg_tip"></div>
+        </div>
+        <div class="post_item_body">
+            <h3><a class="titlelnk" href="//news.cnblogs.com/n/663028/" target="_blank">沈向洋：读论文的三个层次</a></h3>
+            <p class="post_item_summary">
+                    <a href="//news.cnblogs.com/n/topic_132.htm" target="_blank"><img width="48" class="pfs" src="//images0.cnblogs.com/news_topic/ITblog.jpg" alt="" /></a>
+                5 月 14 日，沈向洋博士在全球创新学院（GIX）课程上曾做了一场线上公开课《You are how you read》，分享他对于科研论文阅读、撰写的宝贵经验，引起一时轰动。由于围观网友太多，导致会议系统崩溃，众多网友无法接入观看，不免唏嘘不已。近日，为满足广大网友的需求，微软亚洲研究院将沈向洋
+            </p>
+            <div class="post_item_foot">
+                <a href="//home.cnblogs.com/u/34358/" class="lightblue" target="_blank">itwriter</a>
+                发布于 2020-05-29 20:37
+                <span class="article_comment">
+                    <a href="//news.cnblogs.com/n/663028#bottom" class="gray" target="_blank">
+                        评论(0)
+                    </a>
+                </span><span class="article_view"><a href="//news.cnblogs.com/n/663028/" class="gray" target="_blank">阅读(61)</a></span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="post_item">
+        <div class="digg">
+            <div class="diggit">
+                <span class="diggnum" id="digg_count_663027">2</span>
+            </div>
+            <div class="clear"></div>
+            <div id="digg_tip_663027" class="digg_tip"></div>
+        </div>
+        <div class="post_item_body">
+            <h3><a class="titlelnk" href="//news.cnblogs.com/n/663027/" target="_blank">专为「神盾局」打造的软体机器人：通用电气出品，能挖隧道，可军用</a></h3>
+            <p class="post_item_summary">
+                    <a href="//news.cnblogs.com/n/topic_624.htm" target="_blank"><img width="48" class="pfs" src="//images2015.cnblogs.com/news_topic/20150911111442153-33706165.png" alt="" /></a>
+                2017 年，欧盟斥巨资打造了一款能一边自动钻到地下挖洞、一边 3D 打印砌墙的机器人&#160;BADGER，传统的隧道掘进机（Tunnel Boring Machine）被甩出几条街。 近日，美国通用电气公司（General Electric Company，GE）更是受到蚯蚓和树根的启发，为现实版「神盾
+            </p>
+            <div class="post_item_foot">
+                <a href="//home.cnblogs.com/u/34358/" class="lightblue" target="_blank">itwriter</a>
+                发布于 2020-05-29 20:31
+                <span class="article_comment">
+                    <a href="//news.cnblogs.com/n/663027#bottom" class="gray" target="_blank">
+                        评论(0)
+                    </a>
+                </span><span class="article_view"><a href="//news.cnblogs.com/n/663027/" class="gray" target="_blank">阅读(398)</a></span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="post_item">
+        <div class="digg">
+            <div class="diggit">
+                <span class="diggnum" id="digg_count_663026">0</span>
+            </div>
+            <div class="clear"></div>
+            <div id="digg_tip_663026" class="digg_tip"></div>
+        </div>
+        <div class="post_item_body">
+            <h3><a class="titlelnk" href="//news.cnblogs.com/n/663026/" target="_blank">推特CEO回应给特朗普贴“事实核查”标签：方便人们自己作出判断</a></h3>
+            <p class="post_item_summary">
+                    <a href="//news.cnblogs.com/n/topic_111.htm" target="_blank"><img width="48" class="pfs" src="https://img2018.cnblogs.com/news_topic/20191025154240816-905588526.png" alt="" /></a>
+                在美国社交媒体巨头推特首次对特朗普出手，给他的推文贴上有关“事实核查”标签，并遭到后者“严格监管或关停社交媒体公司”的警告后，当地时间 28 日，推特 CEO 杰克&#183;多尔西（Jack Dorsey）发声了。他表示，此举能方便人们自己作出判断。 28 日，多尔西转发在推特上分享平台“公民诚信政策”的链
+            </p>
+            <div class="post_item_foot">
+                <a href="//home.cnblogs.com/u/34358/" class="lightblue" target="_blank">itwriter</a>
+                发布于 2020-05-29 20:23
+                <span class="article_comment">
+                    <a href="//news.cnblogs.com/n/663026#bottom" class="gray" target="_blank">
+                        评论(0)
+                    </a>
+                </span><span class="article_view"><a href="//news.cnblogs.com/n/663026/" class="gray" target="_blank">阅读(65)</a></span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="post_item">
+        <div class="digg">
+            <div class="diggit">
+                <span class="diggnum" id="digg_count_663025">0</span>
+            </div>
+            <div class="clear"></div>
+            <div id="digg_tip_663025" class="digg_tip"></div>
+        </div>
+        <div class="post_item_body">
+            <h3><a class="titlelnk" href="//news.cnblogs.com/n/663025/" target="_blank">开发者声称微软Windows软件包管理器抄袭了AppGet</a></h3>
+            <p class="post_item_summary">
+                    <a href="//news.cnblogs.com/n/topic_2.htm" target="_blank"><img width="48" class="pfs" src="https://img2018.cnblogs.com/news_topic/20200115105457739-1483150216.png" alt="" /></a>
+                上周，微软推出了新的 Windows 软件包管理器（winget），这让所有人都大吃一惊，但看起来该公司似乎从它面试过的一位开发者那里抄袭了核心机制。软件包管理器 AppGet 背后的开发者 Keivan Beigi 提供了一份详细的说明，说明微软在去年对他的工作产生了兴趣，然后在沉寂下来之后推出了
+            </p>
+            <div class="post_item_foot">
+                <a href="//home.cnblogs.com/u/34358/" class="lightblue" target="_blank">itwriter</a>
+                发布于 2020-05-29 20:15
+                <span class="article_comment">
+                    <a href="//news.cnblogs.com/n/663025#bottom" class="gray" target="_blank">
+                        评论(0)
+                    </a>
+                </span><span class="article_view"><a href="//news.cnblogs.com/n/663025/" class="gray" target="_blank">阅读(125)</a></span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="post_item">
+        <div class="digg">
+            <div class="diggit">
+                <span class="diggnum" id="digg_count_663023">0</span>
+            </div>
+            <div class="clear"></div>
+            <div id="digg_tip_663023" class="digg_tip"></div>
+        </div>
+        <div class="post_item_body">
+            <h3><a class="titlelnk" href="//news.cnblogs.com/n/663023/" target="_blank">百度发表论文：如何借助大数据提升后疫情时代决策效率</a></h3>
+            <p class="post_item_summary">
+                    <a href="//news.cnblogs.com/n/topic_5.htm" target="_blank"><img width="48" class="pfs" src="//images0.cnblogs.com/news_topic/baidu.jpg" alt="" /></a>
+                据介绍，研究者在试图摸清地图数据与经济复苏情况的关联时，发现了两个关键因子——地图用户到店数量（Volumes of Visits to Venues，简称 V3）与商户新开设的地理位置点数量（New Venues Created，简称 NVC）。V3 可以反映用户的活跃程度，NVC 则反映商户的活
+            </p>
+            <div class="post_item_foot">
+                <a href="//home.cnblogs.com/u/34358/" class="lightblue" target="_blank">itwriter</a>
+                发布于 2020-05-29 20:10
+                <span class="article_comment">
+                    <a href="//news.cnblogs.com/n/663023#bottom" class="gray" target="_blank">
+                        评论(0)
+                    </a>
+                </span><span class="article_view"><a href="//news.cnblogs.com/n/663023/" class="gray" target="_blank">阅读(32)</a></span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="post_item">
+        <div class="digg">
+            <div class="diggit">
+                <span class="diggnum" id="digg_count_663022">0</span>
+            </div>
+            <div class="clear"></div>
+            <div id="digg_tip_663022" class="digg_tip"></div>
+        </div>
+        <div class="post_item_body">
+            <h3><a class="titlelnk" href="//news.cnblogs.com/n/663022/" target="_blank">滴滴自动驾驶首轮融资超5亿美元 将加大研发投入</a></h3>
+            <p class="post_item_summary">
+                    <a href="//news.cnblogs.com/n/topic_473.htm" target="_blank"><img width="48" class="pfs" src="https://img2018.cnblogs.com/news_topic/20191223145757455-25945654.png" alt="" /></a>
+                5 月 29 日消息，滴滴出行宣布旗下自动驾驶公司完成首轮超 5 亿美元融资，以加大研发测试投入，加深产业合作，推进在国内外特定区域开展自动驾驶载人应用，进一步提升出行安全和效率。 2016 年，滴滴开始投入自动驾驶研发测试。2019 年 8 月，滴滴将旗下自动驾驶部门升级为公司。这是滴滴自动驾驶公
+            </p>
+            <div class="post_item_foot">
+                <a href="//home.cnblogs.com/u/34358/" class="lightblue" target="_blank">itwriter</a>
+                发布于 2020-05-29 20:05
+                <span class="article_comment">
+                    <a href="//news.cnblogs.com/n/663022#bottom" class="gray" target="_blank">
+                        评论(0)
+                    </a>
+                </span><span class="article_view"><a href="//news.cnblogs.com/n/663022/" class="gray" target="_blank">阅读(35)</a></span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="post_item">
+        <div class="digg">
+            <div class="diggit">
+                <span class="diggnum" id="digg_count_663021">0</span>
+            </div>
+            <div class="clear"></div>
+            <div id="digg_tip_663021" class="digg_tip"></div>
+        </div>
+        <div class="post_item_body">
+            <h3><a class="titlelnk" href="//news.cnblogs.com/n/663021/" target="_blank">阅文风波满月 网文作者：“没有钱赚就不写了”</a></h3>
+            <p class="post_item_summary">
+                    <a href="//news.cnblogs.com/n/topic_1032.htm" target="_blank"><img width="48" class="pfs" src="//images2017.cnblogs.com/news_topic/20171016134347302-1609415530.png" alt="" /></a>
+                一个月前，阅文的“合同事件”在网文圈引发了地震，之后的“5&#183;5 断更节”则让利益纠葛更加尖锐。一个月之后，对峙双方的恩怨仍未完全了结，始终没有一个能平衡平台、作者以及读者三方利益的方案。而那些受波及最深的网文作者们，也为自己的未来谋划，无奈离开也好，自行创业也罢，网文江湖似乎到了不破不立的关键时刻。
+            </p>
+            <div class="post_item_foot">
+                <a href="//home.cnblogs.com/u/34358/" class="lightblue" target="_blank">itwriter</a>
+                发布于 2020-05-29 19:22
+                <span class="article_comment">
+                    <a href="//news.cnblogs.com/n/663021#bottom" class="gray" target="_blank">
+                        评论(0)
+                    </a>
+                </span><span class="article_view"><a href="//news.cnblogs.com/n/663021/" class="gray" target="_blank">阅读(111)</a></span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="post_item">
+        <div class="digg">
+            <div class="diggit">
+                <span class="diggnum" id="digg_count_663020">0</span>
+            </div>
+            <div class="clear"></div>
+            <div id="digg_tip_663020" class="digg_tip"></div>
+        </div>
+        <div class="post_item_body">
+            <h3><a class="titlelnk" href="//news.cnblogs.com/n/663020/" target="_blank">谷歌在搜索中加入焦虑自我评估功能</a></h3>
+            <p class="post_item_summary">
+                    <a href="//news.cnblogs.com/n/topic_1.htm" target="_blank"><img width="48" class="pfs" src="https://img2018.cnblogs.com/news_topic/20190730073028742-506112123.png" alt="" /></a>
+                据外媒 CNET 报道，谷歌正在与非盈利组织 “美国国家心理疾病协会”合作，为用户提供更多的精神健康资源，其中包括一项经过临床验证的焦虑自我评估。从本周四开始，当美国的谷歌用户在搜索有关焦虑的信息时，他们将被引导到谷歌的知识面板中的自我评估，即搜索结果顶部的关键事实和信息框。有关焦虑的症状和常见的治
+            </p>
+            <div class="post_item_foot">
+                <a href="//home.cnblogs.com/u/34358/" class="lightblue" target="_blank">itwriter</a>
+                发布于 2020-05-29 19:00
+                <span class="article_comment">
+                    <a href="//news.cnblogs.com/n/663020#bottom" class="gray" target="_blank">
+                        评论(0)
+                    </a>
+                </span><span class="article_view"><a href="//news.cnblogs.com/n/663020/" class="gray" target="_blank">阅读(26)</a></span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="post_item">
+        <div class="digg">
+            <div class="diggit">
+                <span class="diggnum" id="digg_count_663019">0</span>
+            </div>
+            <div class="clear"></div>
+            <div id="digg_tip_663019" class="digg_tip"></div>
+        </div>
+        <div class="post_item_body">
+            <h3><a class="titlelnk" href="//news.cnblogs.com/n/663019/" target="_blank">Gmail用户未来可直接在收件箱中拨打Google Voice电话</a></h3>
+            <p class="post_item_summary">
+                    <a href="//news.cnblogs.com/n/topic_165.htm" target="_blank"><img width="48" class="pfs" src="//images0.cnblogs.com/news_topic/gmail.gif" alt="" /></a>
+                拥有 Google Voice 许可的 G Suite 用户，即将能在 Gmail 的收件箱中直接拨打 Google Voice 电话。这样用户就不需要跳转到第二个页面，就能拨打 Google Voice 电话。在该功能推出之后，用户能够从收件箱的右侧工具栏上直接访问 Google Voice，将会
+            </p>
+            <div class="post_item_foot">
+                <a href="//home.cnblogs.com/u/34358/" class="lightblue" target="_blank">itwriter</a>
+                发布于 2020-05-29 16:28
+                <span class="article_comment">
+                    <a href="//news.cnblogs.com/n/663019#bottom" class="gray" target="_blank">
+                        评论(0)
+                    </a>
+                </span><span class="article_view"><a href="//news.cnblogs.com/n/663019/" class="gray" target="_blank">阅读(35)</a></span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="post_item">
+        <div class="digg">
+            <div class="diggit">
+                <span class="diggnum" id="digg_count_663018">0</span>
+            </div>
+            <div class="clear"></div>
+            <div id="digg_tip_663018" class="digg_tip"></div>
+        </div>
+        <div class="post_item_body">
+            <h3><a class="titlelnk" href="//news.cnblogs.com/n/663018/" target="_blank">没有地址也能收快递：Google Maps优化显示Plus Code功能</a></h3>
+            <p class="post_item_summary">
+                    <a href="//news.cnblogs.com/n/topic_1.htm" target="_blank"><img width="48" class="pfs" src="https://img2018.cnblogs.com/news_topic/20190730073028742-506112123.png" alt="" /></a>
+                Google Maps 正式推出一项新功能，可根据你的位置生成一个独特的六位码。当你所居住的地区无法使用传统街道地址进行确认，那么别人就能通过这个六位码找到你的所在地。这项新功能称之为“Plus Code”，只需要在 Maps 应用中点击代表你当前位置的蓝色圆点图标就可以看到。 Plus Code 
+            </p>
+            <div class="post_item_foot">
+                <a href="//home.cnblogs.com/u/34358/" class="lightblue" target="_blank">itwriter</a>
+                发布于 2020-05-29 16:20
+                <span class="article_comment">
+                    <a href="//news.cnblogs.com/n/663018#bottom" class="gray" target="_blank">
+                        评论(0)
+                    </a>
+                </span><span class="article_view"><a href="//news.cnblogs.com/n/663018/" class="gray" target="_blank">阅读(183)</a></span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="post_item">
+        <div class="digg">
+            <div class="diggit">
+                <span class="diggnum" id="digg_count_663017">0</span>
+            </div>
+            <div class="clear"></div>
+            <div id="digg_tip_663017" class="digg_tip"></div>
+        </div>
+        <div class="post_item_body">
+            <h3><a class="titlelnk" href="//news.cnblogs.com/n/663017/" target="_blank">庆祝《吃豆人》40周年 《我的世界》上线主题DLC关卡</a></h3>
+            <p class="post_item_summary">
+                    <a href="//news.cnblogs.com/n/topic_658.htm" target="_blank"><img width="48" class="pfs" src="//images2015.cnblogs.com/news_topic/20151203184618721-1389498768.png" alt="" /></a>
+                为庆祝吃豆人（PAC-MAN）的 40 岁生日，深受玩家欢迎的 pellet-chomping, ghost-busting, yellow-coloured 以及 somewhat-spherical 首次亮相《我的世界》（Minecraft）。目前全新的 PAC-MAN DLC 已经上架 Min
+            </p>
+            <div class="post_item_foot">
+                <a href="//home.cnblogs.com/u/34358/" class="lightblue" target="_blank">itwriter</a>
+                发布于 2020-05-29 16:17
+                <span class="article_comment">
+                    <a href="//news.cnblogs.com/n/663017#bottom" class="gray" target="_blank">
+                        评论(0)
+                    </a>
+                </span><span class="article_view"><a href="//news.cnblogs.com/n/663017/" class="gray" target="_blank">阅读(205)</a></span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="post_item">
+        <div class="digg">
+            <div class="diggit">
+                <span class="diggnum" id="digg_count_663016">0</span>
+            </div>
+            <div class="clear"></div>
+            <div id="digg_tip_663016" class="digg_tip"></div>
+        </div>
+        <div class="post_item_body">
+            <h3><a class="titlelnk" href="//news.cnblogs.com/n/663016/" target="_blank">谷歌：7月14日发布的Chrome 84将恢复SameSite cookie更新策略</a></h3>
+            <p class="post_item_summary">
+                    <a href="//news.cnblogs.com/n/topic_1.htm" target="_blank"><img width="48" class="pfs" src="https://img2018.cnblogs.com/news_topic/20190730073028742-506112123.png" alt="" /></a>
+                本周四，谷歌宣布将从 7 月 14 日发布的 Chrome 84 稳定版开始，重新恢复 SameSite cookie 策略，并且会逐步部署到 Chrome 80 以及以上的版本中。Chrome 80 于今年 2 月份上线，谷歌就开始滚动推出 SameSite 更新，通过 cookies 的发送机制
+            </p>
+            <div class="post_item_foot">
+                <a href="//home.cnblogs.com/u/34358/" class="lightblue" target="_blank">itwriter</a>
+                发布于 2020-05-29 16:10
+                <span class="article_comment">
+                    <a href="//news.cnblogs.com/n/663016#bottom" class="gray" target="_blank">
+                        评论(0)
+                    </a>
+                </span><span class="article_view"><a href="//news.cnblogs.com/n/663016/" class="gray" target="_blank">阅读(135)</a></span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="post_item">
+        <div class="digg">
+            <div class="diggit">
+                <span class="diggnum" id="digg_count_663015">1</span>
+            </div>
+            <div class="clear"></div>
+            <div id="digg_tip_663015" class="digg_tip"></div>
+        </div>
+        <div class="post_item_body">
+            <h3><a class="titlelnk" href="//news.cnblogs.com/n/663015/" target="_blank">出于安全方面考虑 OpenSSH宣布放弃对SHA-1认证方案的支持</a></h3>
+            <p class="post_item_summary">
+                    <a href="//news.cnblogs.com/n/topic_784.htm" target="_blank"><img width="48" class="pfs" src="//images2015.cnblogs.com/news_topic/20161220103620275-677405996.png" alt="" /></a>
+                OpenSSH 是最受欢迎的连接和管理远程服务器实用工具之一，近日团队宣布计划放弃对 SHA-1 认证方案的支持。OpenSSH 在公告中引用了 SHA-1 散列算法中存在的安全问题，被业内认为是不安全的。该算法在 2017 年 2 月被谷歌密码学专家破解，可利用 SHAttered 技术将两个不同
+            </p>
+            <div class="post_item_foot">
+                <a href="//home.cnblogs.com/u/34358/" class="lightblue" target="_blank">itwriter</a>
+                发布于 2020-05-29 16:04
+                <span class="article_comment">
+                    <a href="//news.cnblogs.com/n/663015#bottom" class="gray" target="_blank">
+                        评论(0)
+                    </a>
+                </span><span class="article_view"><a href="//news.cnblogs.com/n/663015/" class="gray" target="_blank">阅读(202)</a></span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="post_item">
+        <div class="digg">
+            <div class="diggit">
+                <span class="diggnum" id="digg_count_663014">1</span>
+            </div>
+            <div class="clear"></div>
+            <div id="digg_tip_663014" class="digg_tip"></div>
+        </div>
+        <div class="post_item_body">
+            <h3><a class="titlelnk" href="//news.cnblogs.com/n/663014/" target="_blank">Android Studio 4.0发布</a></h3>
+            <p class="post_item_summary">
+                    <a href="//news.cnblogs.com/n/topic_148.htm" target="_blank"><img width="48" class="pfs" src="//images2015.cnblogs.com/news_topic/20161020185521154-1185360701.png" alt="" /></a>
+                Android Studio 4.0 已经发布。此版本亮点包括新的 Motion 编辑器；构建分析器，可用于分析构建速度较慢的原因。同时对 CPU Profiler 用户界面进行了大修，提供更加直观的工作流和简单的线程并行分析。另一方面是改进了 Layout Inspector，现在可以提供应用 U
+            </p>
+            <div class="post_item_foot">
+                <a href="//home.cnblogs.com/u/34358/" class="lightblue" target="_blank">itwriter</a>
+                发布于 2020-05-29 15:56
+                <span class="article_comment">
+                    <a href="//news.cnblogs.com/n/663014#bottom" class="gray" target="_blank">
+                        评论(0)
+                    </a>
+                </span><span class="article_view"><a href="//news.cnblogs.com/n/663014/" class="gray" target="_blank">阅读(415)</a></span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="post_item">
+        <div class="digg">
+            <div class="diggit">
+                <span class="diggnum" id="digg_count_663013">0</span>
+            </div>
+            <div class="clear"></div>
+            <div id="digg_tip_663013" class="digg_tip"></div>
+        </div>
+        <div class="post_item_body">
+            <h3><a class="titlelnk" href="//news.cnblogs.com/n/663013/" target="_blank">Twitter正式宣布草稿箱和定时发布功能</a></h3>
+            <p class="post_item_summary">
+                    <a href="//news.cnblogs.com/n/topic_111.htm" target="_blank"><img width="48" class="pfs" src="https://img2018.cnblogs.com/news_topic/20191025154240816-905588526.png" alt="" /></a>
+                外媒在几周前报道了 Twitter 开测的定时发布和草稿功能，今天，该公司正式宣布了 PWA 客户端的新特性。如最初报道的那样，定时发布可设置最长 18 个月内的日期。弹窗中还可选择特定的时区、以及预定推特的列表，便于用户制定和管理多条推文的发布计划。 据悉，定制发布已成为推特官方开发的 Tweet
+            </p>
+            <div class="post_item_foot">
+                <a href="//home.cnblogs.com/u/34358/" class="lightblue" target="_blank">itwriter</a>
+                发布于 2020-05-29 15:51
+                <span class="article_comment">
+                    <a href="//news.cnblogs.com/n/663013#bottom" class="gray" target="_blank">
+                        评论(0)
+                    </a>
+                </span><span class="article_view"><a href="//news.cnblogs.com/n/663013/" class="gray" target="_blank">阅读(79)</a></span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+   
+
+            </div>
+            <script>editorPickStat(); aggSite.user.getUserInfo();</script>
+            <script type="text/javascript">
+                var aggSiteModel = {"CategoryType":"News","ParentCategoryId":0,"CategoryId":-1,"PageIndex":1,"TotalPostCount":3000,"ItemListActionName":"AggSiteNewsList"};
+            </script>
+            <div id="pager_bottom"><div id="paging_block"><div class="pager"><a href="/news/" class="p_1 current" onclick="aggSite.loadCategoryPostList(1,30);buildPaging(1);return false;">1</a><a href="/news/2" class="p_2 middle" onclick="aggSite.loadCategoryPostList(2,30);buildPaging(2);return false;">2</a><a href="/news/3" class="p_3 middle" onclick="aggSite.loadCategoryPostList(3,30);buildPaging(3);return false;">3</a><a href="/news/4" class="p_4 middle" onclick="aggSite.loadCategoryPostList(4,30);buildPaging(4);return false;">4</a><a href="/news/5" class="p_5 middle" onclick="aggSite.loadCategoryPostList(5,30);buildPaging(5);return false;">5</a><a href="/news/6" class="p_6 middle" onclick="aggSite.loadCategoryPostList(6,30);buildPaging(6);return false;">6</a><a href="/news/7" class="p_7 middle" onclick="aggSite.loadCategoryPostList(7,30);buildPaging(7);return false;">7</a><a href="/news/8" class="p_8 middle" onclick="aggSite.loadCategoryPostList(8,30);buildPaging(8);return false;">8</a><a href="/news/9" class="p_9 middle" onclick="aggSite.loadCategoryPostList(9,30);buildPaging(9);return false;">9</a><a href="/news/10" class="p_10 middle" onclick="aggSite.loadCategoryPostList(10,30);buildPaging(10);return false;">10</a><a href="/news/11" class="p_11 middle" onclick="aggSite.loadCategoryPostList(11,30);buildPaging(11);return false;">11</a><span class="ellipsis">···</span><a href="/news/100" class="p_100 last" onclick="aggSite.loadCategoryPostList(100,30);buildPaging(100);return false;">100</a><a href="/news/2" onclick="aggSite.loadCategoryPostList(2,30);buildPaging(2);return false;">Next &gt;</a></div></div><script type="text/javascript">var pagingBuider={"OnlyLinkText":false,"TotalCount":3000,"PageIndex":1,"PageSize":30,"ShowPageCount":5,"SkipCount":0,"UrlFormat":"/news/{0}","OnClickJsFunc":"aggSite.loadCategoryPostList()","FirstPageLink":"/news/","AjaxUrl":"/AggSite/Pager","AjaxCallbak":null,"TopPagerId":"pager_top","IsRenderScript":true};function buildPaging(pageIndex){pagingBuider.PageIndex=pageIndex;$.ajax({url:pagingBuider.AjaxUrl,data:JSON.stringify(pagingBuider),type:'post',dataType:'text',contentType:'application/json; charset=utf-8',success:function (data) { $('#paging_block').html(data); var pagerTop=$('#pager_top');if(pageIndex>1){$(pagerTop).html(data).show();}else{$(pagerTop).hide();}}});}</script>
+</div>
+            <div id="side_nav">
+                
+    <div id="cate_title_block">
+<div id="cate_title_title"><div class="cate_title">网站分类</div></div>
+<ul id="cate_item">
+<li id="cate_item_108698" onmouseover="cateShow(108698)" onmouseout="cateHidden(108698)">
+<a href="/cate/108698/">.NET技术(2)</a>
+</li>
+<li id="cate_item_2" onmouseover="cateShow(2)" onmouseout="cateHidden(2)">
+<a href="/cate/2/">编程语言(10)</a>
+</li>
+<li id="cate_item_108701" onmouseover="cateShow(108701)" onmouseout="cateHidden(108701)">
+<a href="/cate/108701/">软件设计(1)</a>
+</li>
+<li id="cate_item_108703" onmouseover="cateShow(108703)" onmouseout="cateHidden(108703)">
+<a href="/cate/108703/">Web前端(3)</a>
+</li>
+<li id="cate_item_108704" onmouseover="cateShow(108704)" onmouseout="cateHidden(108704)">
+<a href="/cate/108704/">企业信息化(1)</a>
+</li>
+<li id="cate_item_108705" onmouseover="cateShow(108705)" onmouseout="cateHidden(108705)">
+<a href="/cate/108705/">手机开发(0)</a>
+</li>
+<li id="cate_item_108709" onmouseover="cateShow(108709)" onmouseout="cateHidden(108709)">
+<a href="/cate/108709/">软件工程(1)</a>
+</li>
+<li id="cate_item_108712" onmouseover="cateShow(108712)" onmouseout="cateHidden(108712)">
+<a href="/cate/108712/">数据库技术(1)</a>
+</li>
+<li id="cate_item_108724" onmouseover="cateShow(108724)" onmouseout="cateHidden(108724)">
+<a href="/cate/108724/">操作系统(1)</a>
+</li>
+<li id="cate_item_4" onmouseover="cateShow(4)" onmouseout="cateHidden(4)">
+<a href="/cate/4/">其他分类(4)</a>
+</li>
+<li id="cate_item_0" onmouseover="cateShow(0)" onmouseout="cateHidden(0)">
+<a href="/cate/all/">所有随笔(414)</a>
+</li>
+<li id="cate_item_-1" onmouseover="cateShow(-1)" onmouseout="cateHidden(-1)">
+<a href="/comment/">所有评论(84)</a>
+</li>
+</ul>
+<div class="cate_bottom"></div>
+<div id="cate_sub_block"></div>
+<script type="text/javascript">var cateIdList = '108698,2,108701,108703,108704,108705,108709,108712,108724,4';aggSite.loadSubCategories();</script>
+</div>
+<div class="l_s"></div>
+<p class="r_l_3"></p><p class="r_l_2"></p><p class="r_l_1"></p>
+<div class="w_l">
+<h4>链接</h4>        
+<ul>
+    <li><a href="https://group.cnblogs.com/forum/public/" target="_blank">反馈或建议</a></li> 
+    <li><a href="//www.cnblogs.com/cmt/" target="_blank">官方博客</a></li>
+    <li><a href="/skins.aspx" target="_blank">博客模板</a></li>
+    <li><a href="http://www.blogjava.net/">Java博客</a></li>
+    <li><a href="http://www.cppblog.com/">C++博客</a></li>
+    <li><a href="//www.cnblogs.com/cmt/archive/2009/09/26/1574616.html">手机版</a></li>
+</ul>
+</div>
+<p class="r_l_1"></p><p class="r_l_2"></p><p class="r_l_3"></p>
+<div class="l_s"></div>
+<div id="user_stats"></div>
+<div class="l_s"></div>        
+<p class="r_l_3"></p><p class="r_l_2"></p><p class="r_l_1"></p>
+<div class="w_l">                
+<h4>统计信息</h4>
+<div id="site_stats"></div>      
+</div>
+<p class="r_l_1"></p><p class="r_l_2"></p><p class="r_l_3"></p>
+            </div>
+            <div id="side_right">
+                    <div class="w_r">
+                        <h4><a href="https://news.cnblogs.com/n/comment" class="s_r_t">最新新闻评论</a><span class="more"><a href="https://news.cnblogs.com/n/comment" class="right_more">»</a></span></h4>
+                        <div id="news_comments"><div style="margin:0 auto;width:50px;"><img src="//common.cnblogs.com/images/loading.gif" alt="loading..." /></div></div>
+                        <script>
+                            $.get('/aggsite/NewsComments', null, function (data) {
+                                $('#news_comments').html(data);
+                            }, 'text');
+                        </script>
+                    </div>
+                <div id="cnblogs_a1">
+                    <div id='div-gpt-ad-1547816814884-0' style='height:60px; width:468px;'>
+                        <script>
+                            googletag.cmd.push(function () { googletag.display('div-gpt-ad-1547816814884-0'); });
+                        </script>
+                    </div>
+                </div>
+                <div id="cnblogs_b1" class="sidebar-image">
+                    <div id='div-gpt-ad-1546331539224-0' style='height:250px; width:300px;'>
+                        <script>
+                            googletag.cmd.push(function () { googletag.display('div-gpt-ad-1546331539224-0'); });
+                        </script>
+                    </div>
+                </div>
+                <div id="ad_right_text" class="ad_right_text"></div>
+                <div id="side_right_block"></div>
+            </div>
+        </div>
+        <div id="footer_bottom">
+            <div>Powered by .NET Core on Kubernetes</div>
+            <div><a href="https://about.cnblogs.com/">关于博客园</a><a href="https://about.cnblogs.com/contact">联系我们</a><a href="https://about.cnblogs.com/ad">广告服务</a><a href="https://about.cnblogs.com/job">人才服务</a>&copy;2004-2020<a href="https://www.cnblogs.com/">博客园</a>保留所有权利<a href="http://www.beian.miit.gov.cn" target="_blank">沪ICP备09004260号</a></div>
+            <div><a href="https://ss.knet.cn/verifyseal.dll?sn=e131108110100433392itm000000&amp;ct=df&amp;a=1&amp;pa=0.25787803245785335" rel="nofollow" target="_blank"><img id="cnnic_img" src="//common.cnblogs.com/images/cnnic.png" alt="" width="64" height="23" /></a><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011502001144" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="//common.cnblogs.com/images/ghs.png" alt="" /><span style="float:left;height:20px;line-height:20px;margin: 0 5px 0 5px; color:#939393;">沪公网安备 31011502001144号</span></a></div>
+        </div>
+    </div>
+</body>
+</html>

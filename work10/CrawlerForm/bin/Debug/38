@@ -1,0 +1,511 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    <meta property="og:description" content="strlen source" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>strlen 老瓶装新酒 - 喜欢兰花山丘 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.ico?v=20200522" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/simpleclear/bundle-simpleclear.min.css?v=VK2UnJ8cJRhid2HBuGo4mQJdQ6E3Xlp7fD_jRXm5PUU" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/simpleclear/bundle-simpleclear-mobile.min.css?v=DidnFOvv24-VeVpMoJxhxZWs9iNA_ZwNuLjfe3iZZR8" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/life2refuel/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/life2refuel/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/life2refuel/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=6bwfCY2e02dLOXNW99G2BHZkYFmw9QyYTWeJ-W-sudo"></script>
+    <script>
+        var currentBlogId = 248606;
+        var currentBlogApp = 'life2refuel';
+        var cb_enable_mathjax = true;
+        var isLogined = false;
+        var skinName = 'SimpleClear';
+    </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true },
+        TeX: {
+        equationNumbers: { autoNumber: ['AMS'], useLabelIds: true },
+        extensions: ['extpfeil.js', 'mediawiki-texvc.js'],
+        Macros: {bm: "\\boldsymbol"}
+        },
+        'HTML-CSS': { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+        });
+    </script>
+    <script src="https://mathjax.cnblogs.com/2_7_5/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;v=20200504"></script>
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    <div id="main">
+    <div id="header">
+        
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/life2refuel/">喜欢兰花山丘</a>
+</h1>
+<p id="tagline">
+人生很多事，纵然无歌，但求无悔。
+</p>
+
+
+    </div>
+    <div id="post_detail">
+<div class="post">
+    <h2 class="postTitle">
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/life2refuel/p/12983832.html">strlen 老瓶装新酒</a>
+</h2>
+    <div class="postText">
+    <div id="cnblogs_post_description" style="display: none">
+        strlen source
+    </div>
+<div id="cnblogs_post_body" class="blogpost-body ">
+    <h2>前言 - strlen 概述</h2>
+<p>　　无意间扫到 glibc strlen.c 中代码, 久久不能忘怀. 在一无所知的编程生涯中又记起点点滴滴:</p>
+<p>编程可不是儿戏 ❀, 有些难, 也有些不舍. 随轨迹一同重温, 曾经最熟悉的 strlen 手感吧 ~</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008000;">/*</span><span style="color: #008000;"> Copyright (C) 1991-2020 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+   Written by Torbjorn Granlund (tege@sics.se),
+   with help from Dan Sahlin (dan@sics.se);
+   commentary by Jim Blandy (jimb@ai.mit.edu).
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   &lt;</span><span style="color: #008000; text-decoration: underline;">https://www.gnu.org/licenses/</span><span style="color: #008000;">&gt;.  </span><span style="color: #008000;">*/</span><span style="color: #000000;">
+
+#include </span>&lt;<span style="color: #0000ff;">string</span>.h&gt;<span style="color: #000000;">
+#include </span>&lt;stdlib.h&gt;
+
+<span style="color: #0000ff;">#undef</span> strlen<span style="color: #000000;">
+
+#ifndef STRLEN
+# define STRLEN strlen
+</span><span style="color: #0000ff;">#endif</span>
+
+<span style="color: #008000;">/*</span><span style="color: #008000;"> Return the length of the null-terminated string STR.  Scan for
+   the null terminator quickly by testing four bytes at a time.  </span><span style="color: #008000;">*/</span><span style="color: #000000;">
+size_t
+STRLEN (</span><span style="color: #0000ff;">const</span> <span style="color: #0000ff;">char</span> *<span style="color: #000000;">str)
+{
+  </span><span style="color: #0000ff;">const</span> <span style="color: #0000ff;">char</span> *<span style="color: #000000;">char_ptr;
+  </span><span style="color: #0000ff;">const</span> unsigned <span style="color: #0000ff;">long</span> <span style="color: #0000ff;">int</span> *<span style="color: #000000;">longword_ptr;
+  unsigned </span><span style="color: #0000ff;">long</span> <span style="color: #0000ff;">int</span><span style="color: #000000;"> longword, himagic, lomagic;
+
+  </span><span style="color: #008000;">/*</span><span style="color: #008000;"> Handle the first few characters by reading one character at a time.
+     Do this until CHAR_PTR is aligned on a longword boundary.  </span><span style="color: #008000;">*/</span>
+  <span style="color: #0000ff;">for</span> (char_ptr = str; ((unsigned <span style="color: #0000ff;">long</span> <span style="color: #0000ff;">int</span><span style="color: #000000;">) char_ptr
+            </span>&amp; (<span style="color: #0000ff;">sizeof</span> (longword) - <span style="color: #800080;">1</span>)) != <span style="color: #800080;">0</span><span style="color: #000000;">;
+       </span>++<span style="color: #000000;">char_ptr)
+    </span><span style="color: #0000ff;">if</span> (*char_ptr == <span style="color: #800000;">'</span><span style="color: #800000;">\0</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+      </span><span style="color: #0000ff;">return</span> char_ptr -<span style="color: #000000;"> str;
+
+  </span><span style="color: #008000;">/*</span><span style="color: #008000;"> All these elucidatory comments refer to 4-byte longwords,
+     but the theory applies equally well to 8-byte longwords.  </span><span style="color: #008000;">*/</span><span style="color: #000000;">
+
+  longword_ptr </span>= (unsigned <span style="color: #0000ff;">long</span> <span style="color: #0000ff;">int</span> *<span style="color: #000000;">) char_ptr;
+
+  </span><span style="color: #008000;">/*</span><span style="color: #008000;"> Bits 31, 24, 16, and 8 of this number are zero.  Call these bits
+     the "holes."  Note that there is a hole just to the left of
+     each byte, with an extra at the end:
+
+     bits:  01111110 11111110 11111110 11111111
+     bytes: AAAAAAAA BBBBBBBB CCCCCCCC DDDDDDDD
+
+     The 1-bits make sure that carries propagate to the next 0-bit.
+     The 0-bits provide holes for carries to fall into.  </span><span style="color: #008000;">*/</span><span style="color: #000000;">
+  himagic </span>= <span style="color: #800080;">0x80808080L</span><span style="color: #000000;">;
+  lomagic </span>= <span style="color: #800080;">0x01010101L</span><span style="color: #000000;">;
+  </span><span style="color: #0000ff;">if</span> (<span style="color: #0000ff;">sizeof</span> (longword) &gt; <span style="color: #800080;">4</span><span style="color: #000000;">)
+    {
+      </span><span style="color: #008000;">/*</span><span style="color: #008000;"> 64-bit version of the magic.  </span><span style="color: #008000;">*/</span>
+      <span style="color: #008000;">/*</span><span style="color: #008000;"> Do the shift in two steps to avoid a warning if long has 32 bits.  </span><span style="color: #008000;">*/</span><span style="color: #000000;">
+      himagic </span>= ((himagic &lt;&lt; <span style="color: #800080;">16</span>) &lt;&lt; <span style="color: #800080;">16</span>) |<span style="color: #000000;"> himagic;
+      lomagic </span>= ((lomagic &lt;&lt; <span style="color: #800080;">16</span>) &lt;&lt; <span style="color: #800080;">16</span>) |<span style="color: #000000;"> lomagic;
+    }
+  </span><span style="color: #0000ff;">if</span> (<span style="color: #0000ff;">sizeof</span> (longword) &gt; <span style="color: #800080;">8</span><span style="color: #000000;">)
+    abort ();
+
+  </span><span style="color: #008000;">/*</span><span style="color: #008000;"> Instead of the traditional loop which tests each character,
+     we will test a longword at a time.  The tricky part is testing
+     if *any of the four* bytes in the longword in question are zero.  </span><span style="color: #008000;">*/</span>
+  <span style="color: #0000ff;">for</span><span style="color: #000000;"> (;;)
+    {
+      longword </span>= *longword_ptr++<span style="color: #000000;">;
+
+      </span><span style="color: #0000ff;">if</span> (((longword - lomagic) &amp; ~longword &amp; himagic) != <span style="color: #800080;">0</span><span style="color: #000000;">)
+    {
+      </span><span style="color: #008000;">/*</span><span style="color: #008000;"> Which of the bytes was the zero?  If none of them were, it was
+         a misfire; continue the search.  </span><span style="color: #008000;">*/</span>
+
+      <span style="color: #0000ff;">const</span> <span style="color: #0000ff;">char</span> *cp = (<span style="color: #0000ff;">const</span> <span style="color: #0000ff;">char</span> *) (longword_ptr - <span style="color: #800080;">1</span><span style="color: #000000;">);
+
+      </span><span style="color: #0000ff;">if</span> (cp[<span style="color: #800080;">0</span>] == <span style="color: #800080;">0</span><span style="color: #000000;">)
+        </span><span style="color: #0000ff;">return</span> cp -<span style="color: #000000;"> str;
+      
+      </span><span style="color: #0000ff;">if</span> (cp[<span style="color: #800080;">1</span>] == <span style="color: #800080;">0</span><span style="color: #000000;">)
+        </span><span style="color: #0000ff;">return</span> cp - str + <span style="color: #800080;">1</span><span style="color: #000000;">;
+      </span><span style="color: #0000ff;">if</span> (cp[<span style="color: #800080;">2</span>] == <span style="color: #800080;">0</span><span style="color: #000000;">)
+        </span><span style="color: #0000ff;">return</span> cp - str + <span style="color: #800080;">2</span><span style="color: #000000;">;
+      </span><span style="color: #0000ff;">if</span> (cp[<span style="color: #800080;">3</span>] == <span style="color: #800080;">0</span><span style="color: #000000;">)
+        </span><span style="color: #0000ff;">return</span> cp - str + <span style="color: #800080;">3</span><span style="color: #000000;">;
+      </span><span style="color: #0000ff;">if</span> (<span style="color: #0000ff;">sizeof</span> (longword) &gt; <span style="color: #800080;">4</span><span style="color: #000000;">)
+        {
+          </span><span style="color: #0000ff;">if</span> (cp[<span style="color: #800080;">4</span>] == <span style="color: #800080;">0</span><span style="color: #000000;">)
+        </span><span style="color: #0000ff;">return</span> cp - str + <span style="color: #800080;">4</span><span style="color: #000000;">;
+          </span><span style="color: #0000ff;">if</span> (cp[<span style="color: #800080;">5</span>] == <span style="color: #800080;">0</span><span style="color: #000000;">)
+        </span><span style="color: #0000ff;">return</span> cp - str + <span style="color: #800080;">5</span><span style="color: #000000;">;
+          </span><span style="color: #0000ff;">if</span> (cp[<span style="color: #800080;">6</span>] == <span style="color: #800080;">0</span><span style="color: #000000;">)
+        </span><span style="color: #0000ff;">return</span> cp - str + <span style="color: #800080;">6</span><span style="color: #000000;">;
+          </span><span style="color: #0000ff;">if</span> (cp[<span style="color: #800080;">7</span>] == <span style="color: #800080;">0</span><span style="color: #000000;">)
+        </span><span style="color: #0000ff;">return</span> cp - str + <span style="color: #800080;">7</span><span style="color: #000000;">;
+        }
+    }
+    }
+}
+libc_hidden_builtin_def (strlen)</span></pre>
+</div>
+<p>&nbsp;</p>
+<h2>正文 - 思考和分析</h2>
+<h3>1. unsigned long int 字节多大 4 字节, 8 字节 ?&nbsp;</h3>
+<div class="cnblogs_code">
+<pre>  unsigned <span style="color: #0000ff;">long</span> <span style="color: #0000ff;">int</span> longword, himagic, lomagic;</pre>
+</div>
+<p>&nbsp;</p>
+<p>long 具体多长和平台有关, 例如大多数 linux , x86 sizeof (long) = 4, x64 sizeof (long) = 8.</p>
+<p>window x86, x64 sizeof (long) = 4.&nbsp;&nbsp;(2020年05月28日), C 标准保证 sizeof(long) &gt;= sizeof (int)</p>
+<p>具体多少字节交给了实现方.</p>
+<p>&nbsp;</p>
+<h3>2.&nbsp;((unsigned long int) char_ptr &amp; (sizeof (longword) - 1)) 位对齐 ?&nbsp;</h3>
+<div class="cnblogs_code">
+<pre>  <span style="color: #008000;">/*</span><span style="color: #008000;"> Handle the first few characters by reading one character at a time.
+     Do this until CHAR_PTR is aligned on a longword boundary.  </span><span style="color: #008000;">*/</span>
+  <span style="color: #0000ff;">for</span> (char_ptr = str; ((unsigned <span style="color: #0000ff;">long</span> <span style="color: #0000ff;">int</span><span style="color: #000000;">) char_ptr
+            </span>&amp; (<span style="color: #0000ff;">sizeof</span> (longword) - <span style="color: #800080;">1</span>)) != <span style="color: #800080;">0</span><span style="color: #000000;">;
+       </span>++<span style="color: #000000;">char_ptr)
+    </span><span style="color: #0000ff;">if</span> (*char_ptr == <span style="color: #800000;">'</span><span style="color: #800000;">\0</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+      </span><span style="color: #0000ff;">return</span> char_ptr - str;</pre>
+</div>
+<p>&nbsp;</p>
+<p>起始的这些代码的作用是, 让 chart_ptr 按照 sizeof (unsigned long) 字节大小进行位对齐.</p>
+<p>这涉及到多数计算机硬件对齐有要求和性能方面的考虑等等(性能是主要因素).</p>
+<p>&nbsp;</p>
+<h3>3.&nbsp;himagic = 0x80808080L; lomagic = 0x01010101L; what fuck ?&nbsp;</h3>
+<div class="cnblogs_code">
+<pre>  <span style="color: #008000;">/*</span><span style="color: #008000;"> Bits 31, 24, 16, and 8 of this number are zero.  Call these bits
+     the "holes."  Note that there is a hole just to the left of
+     each byte, with an extra at the end:
+
+     bits:  01111110 11111110 11111110 11111111
+     bytes: AAAAAAAA BBBBBBBB CCCCCCCC DDDDDDDD
+
+     The 1-bits make sure that carries propagate to the next 0-bit.
+     The 0-bits provide holes for carries to fall into.  </span><span style="color: #008000;">*/</span><span style="color: #000000;">
+  himagic </span>= <span style="color: #800080;">0x80808080L</span><span style="color: #000000;">;
+  lomagic </span>= <span style="color: #800080;">0x01010101L</span><span style="color: #000000;">;
+  </span><span style="color: #0000ff;">if</span> (<span style="color: #0000ff;">sizeof</span> (longword) &gt; <span style="color: #800080;">4</span><span style="color: #000000;">)
+    {
+      </span><span style="color: #008000;">/*</span><span style="color: #008000;"> 64-bit version of the magic.  </span><span style="color: #008000;">*/</span>
+      <span style="color: #008000;">/*</span><span style="color: #008000;"> Do the shift in two steps to avoid a warning if long has 32 bits.  </span><span style="color: #008000;">*/</span><span style="color: #000000;">
+      himagic </span>= ((himagic &lt;&lt; <span style="color: #800080;">16</span>) &lt;&lt; <span style="color: #800080;">16</span>) |<span style="color: #000000;"> himagic;
+      lomagic </span>= ((lomagic &lt;&lt; <span style="color: #800080;">16</span>) &lt;&lt; <span style="color: #800080;">16</span>) |<span style="color: #000000;"> lomagic;
+    }
+  </span><span style="color: #0000ff;">if</span> (<span style="color: #0000ff;">sizeof</span> (longword) &gt; <span style="color: #800080;">8</span><span style="color: #000000;">)
+    abort ();
+
+  </span><span style="color: #008000;">/*</span><span style="color: #008000;"> Instead of the traditional loop which tests each character,
+     we will test a longword at a time.  The tricky part is testing
+     if *any of the four* bytes in the longword in question are zero.  </span><span style="color: #008000;">*/</span>
+  <span style="color: #0000ff;">for</span><span style="color: #000000;"> (;;)
+    {
+      longword </span>= *longword_ptr++<span style="color: #000000;">;
+
+      </span><span style="color: #0000ff;">if</span> (((longword - lomagic) &amp; ~longword &amp; himagic) != <span style="color: #800080;">0</span><span style="color: #000000;">)
+    {</span></pre>
+</div>
+<p>&nbsp;</p>
+<h4>3.1&nbsp;(((longword - lomagic) &amp; ~longword &amp; himagic) != 0) ? mmp ?</h4>
+<p>可能这就是艺术吧. 想到这个想法的, 真是个天才啊! 好巧妙. 哈哈哈.&nbsp; 我们会分两个小点说明下.</p>
+<p>首次看, 感觉有点萌. 我这里用个简单的思路来带大家理解这个问题. 上面代码主要围绕</p>
+<p>sizeof (unsigned long)&nbsp;4 字节和&nbsp;8 字节去处理得到. 我们简单点, 通过处理 1 字节, 类比递归机制.</p>
+<p>搞懂这个公式背后的原理 (ˇˍˇ) ～</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008000;">/*</span><span style="color: #008000;">*
+ * himagic      : 1000 0000
+ * lomagic      : 0000 0001
+ * longword     : XXXX XXXX
+ * /
+unsigned long himagic = 0x80L;
+unsigned long lomagic = 0x01L;
+
+unsigned long longword ;</span></pre>
+</div>
+<p>&nbsp;随后我们仔细分析下面公式</p>
+<div class="cnblogs_code">
+<pre>((longword - lomagic) &amp; ~longword &amp; himagic)</pre>
+</div>
+<p>( &amp; himagic ) = ( &amp; 1000 0000) 表明最终只在乎最高位.&nbsp;</p>
+<p>longword 分三种情况讨论</p>
+<div class="cnblogs_code">
+<pre>longword     : 1XXX XXXX  <span style="color: #800080;">128</span> =&lt; x &lt;= <span style="color: #800080;">255</span><span style="color: #000000;">
+longword     : 0XXX XXXX  </span><span style="color: #800080;">0</span> &lt; x &lt; <span style="color: #800080;">128</span><span style="color: #000000;">
+longword     : </span><span style="color: #800080;">0000</span> <span style="color: #800080;">0000</span>  x = <span style="color: #800080;">0</span></pre>
+</div>
+<p>第一种 longword = 1XXX XXXX&nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 那么 ~longword = 0YYY YYYY 显然 ~ longword &amp; himagic = 0000 0000 不用继续了.</p>
+<p>第二种 longword = 0XXX XXXX 且不为 0, 及不小于 1</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;显然 (longword - lomagic) = 0ZZZ ZZZ &gt;= 0 且 &lt; 127,&nbsp;因为 lomagic = 1;&nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;此刻 (longword - lomagic) &amp; himagic = 0ZZZ ZZZZ &amp; 1000 0000 = 0 , 所以也不需要继续了.</p>
+<p>第三种 longword = 0000 0000</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 那么 ~longword &amp; himagic = 1111 1111 &amp; 1000 0000 = 1000 000;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 再看&nbsp;(longword - lomagic) = (0000 0000 - 0000 0001) , 由于无符号数减法是按照</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (补码(0000 0000) + 补码(-000 0001)) =&nbsp;(补码(0000 0000) + 补码(~000 0001 + 1))</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; =&nbsp;(补码(0000 0000) + 补码(1111 1111)) = 1111 1111 (快捷的可以查公式得到最终结果),</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 因而 此刻最终结果为 1111 1111 &amp; 1000 0000 = 1000 0000 &gt; 0.</p>
+<p>综合讨论, 可以根据上面公式巧妙的筛选出值是否为 0.&nbsp; 对于 2字节, 4 字节, 8 字节, 思路完全相似.&nbsp;</p>
+<p>&nbsp;</p>
+<h4>3.2&nbsp;(sizeof (longword) &gt; 4) ?&nbsp;(sizeof (longword) &gt; 8) 为什么不用宏, 大展宏图呗 ?</h4>
+<p>宏可以做到多平台源码共享, 无法做到多平台二进制共享.&nbsp;glibc 这么通用项目, 可移植性影响因子</p>
+<p>可能会很重. (性能是毒酒, 想活的久还是少喝 ~ )&nbsp;</p>
+<p>&nbsp;</p>
+<h3>4.&nbsp;libc_hidden_builtin_def (strlen) ? 闹哪样 ~</h3>
+<p>理解这个东西, 要引入些场外信息&nbsp; (不同编译参数会不一样, 这里只抽取其中一条分支解法)</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008000;">//</span><span style="color: #008000;"> file : glibc-2.31/include/libc-symbols.h</span>
+<span style="color: #000000;">
+libc_hidden_builtin_def (strlen)
+
+</span><span style="color: #0000ff;">#define</span> libc_hidden_builtin_def(name) libc_hidden_def (name)<span style="color: #000000;">
+
+# define libc_hidden_def(name) hidden_def (name)
+
+</span><span style="color: #008000;">/*</span><span style="color: #008000;"> Define ALIASNAME as a strong alias for NAME.  </span><span style="color: #008000;">*/</span><span style="color: #000000;">
+# define strong_alias(name, aliasname) _strong_alias(name, aliasname)
+# define _strong_alias(name, aliasname) \
+  </span><span style="color: #0000ff;">extern</span><span style="color: #000000;"> __typeof (name) aliasname __attribute__ ((alias (#name))) \
+    __attribute_copy__ (name);
+
+</span><span style="color: #008000;">/*</span><span style="color: #008000;"> For assembly, we need to do the opposite of what we do in C:
+   in assembly gcc __REDIRECT stuff is not in place, so functions
+   are defined by its normal name and we need to create the
+   __GI_* alias to it, in C __REDIRECT causes the function definition
+   to use __GI_* name and we need to add alias to the real name.
+   There is no reason to use hidden_weak over hidden_def in assembly,
+   but we provide it for consistency with the C usage.
+   hidden_proto doesn't make sense for assembly but the equivalent
+   is to call via the HIDDEN_JUMPTARGET macro instead of JUMPTARGET.  </span><span style="color: #008000;">*/</span><span style="color: #000000;">
+#  define hidden_def(name)    strong_alias (name, __GI_##name)
+
+</span><span style="color: #008000;">/*</span><span style="color: #008000;"> Undefine (also defined in libc-symbols.h).  </span><span style="color: #008000;">*/</span>
+<span style="color: #0000ff;">#undef</span> __attribute_copy__
+<span style="color: #0000ff;">#if</span> __GNUC_PREREQ (9, 0)
+<span style="color: #008000;">/*</span><span style="color: #008000;"> Copies attributes from the declaration or type referenced by
+   the argument.  </span><span style="color: #008000;">*/</span><span style="color: #000000;">
+# define __attribute_copy__(arg) __attribute__ ((__copy__ (arg)))
+</span><span style="color: #0000ff;">#else</span><span style="color: #000000;">
+# define __attribute_copy__(arg)
+</span><span style="color: #0000ff;">#endif</span></pre>
+</div>
+<p>&nbsp;</p>
+<p>利用上面宏定义, 进行展开&nbsp;&nbsp;</p>
+<div class="cnblogs_code">
+<pre><span style="color: #000000;">libc_hidden_builtin_def (strlen)
+</span>|<span style="color: #000000;">
+
+hidden_def (strlen)
+</span>|<span style="color: #000000;">
+
+strong_alias (strlen, __GI_strlen)
+</span>|<span style="color: #000000;">
+
+_strong_alias (strlen, __GI_strlen)
+</span>|
+
+<span style="color: #0000ff;">extern</span> __typeof (strlen) __GI_strlen __attribute__ ((alias (<span style="color: #800000;">"</span><span style="color: #800000;">strlen</span><span style="color: #800000;">"</span><span style="color: #000000;">))) __attribute_copy__ (strlen);
+</span>|<br />
+<span style="color: #0000ff;">extern</span> __typeof (strlen) __GI_strlen __attribute__ ((alias (<span style="color: #800000;">"</span><span style="color: #800000;">strlen</span><span style="color: #800000;">"</span><span style="color: #000000;">))) __attribute__ ((__copy__ (strlen)));
+``</span></pre>
+</div>
+<p>&nbsp;</p>
+<p>其中 GUN C 扩展语法</p>
+<div>
+<div>　　<strong>__typeof (arg)</strong> : 获取变量的声明的类型</div>
+<div>　　<strong>__attribute__ ((__copy__ (arg)))</strong> : GCC 9 以上版本 attribute copy 复制特性</div>
+<div>　　<strong>alias_name __attribute__ ((alias (name)))</strong> : 为 name 声明符号别名 alias name.</div>
+<div>&nbsp;</div>
+<div>总结:&nbsp; libc_hidden_builtin_def (strlen) 意思是基于 strlen 符号, 重新定义一个符号别名 __GI_strlen.&nbsp;</div>
+<div>(补充资料 strong_alias 注释)</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>strlen 工程代码有很多种, 我们这里选择一个通用 glibc 版本去思考和分析. 有兴趣可以自行查阅更多.&nbsp;</div>
+<div>随口就来&nbsp; ~ 做人嘛开心最重要 ~ 千锤百炼芮成钢 ~ 哈哈哈</div>
+</div>
+<p>&nbsp;</p>
+<h2>后记 - 展望与生活</h2>
+<p>　　错误是难免的, 欢迎指正和交流 ~&nbsp;</p>
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div></div>
+    <p class="postfoot">posted on 
+<span id="post-date">2020-05-29 21:37</span>&nbsp;
+<a href="https://www.cnblogs.com/life2refuel/">喜欢兰花山丘</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12983832" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12983832);return false;">收藏</a></p>
+</div>
+
+
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 248606, cb_blogApp = 'life2refuel', cb_blogUserGuid = 'bf05250e-3bc5-e211-8d02-90b11c0b17d6';
+    var cb_entryId = 12983832, cb_entryCreatedDate = '2020-05-29 21:37', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;"></div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div></div>
+
+
+</div>
+<div id="rightmenu">
+    
+<div id="my_links">
+<h3>导航</h3>
+<ul>
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/life2refuel/">
+首页</a>
+</li>
+
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E5%96%9C%E6%AC%A2%E5%85%B0%E8%8A%B1%E5%B1%B1%E4%B8%98">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/life2refuel/rss/">
+订阅</a></li><!--<partial name="./Shared/_XmlLink.cshtml" model="Model" />-->
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+</div>
+
+
+    <div id="calendar">
+        <div id="blog-calendar" style="display: none"></div>
+    </div>
+    <script>loadBlogDefaultCalendar();</script>
+    
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+    <div id="blog_stats">
+<h3>统计</h3>
+<ul>
+<li>随笔 - 
+114</li>
+<li>文章 - 
+0</li>
+<li>评论 - 
+128
+<!--<li>引用 - <partial name="./Shared/_PingTrackCount.cshtml" model="BlogServer.Web.Models.DetailBlogPage" />-->
+</li>
+</ul>
+</div>
+
+
+    <div id="blog-sidecolumn"></div>
+    <script>loadBlogSideColumn();</script>
+    <div id="footer">
+	Powered by: 
+	<br />
+	
+	<a href="https://www.cnblogs.com/" id="footer_site_link">博客园</a>
+	<br />
+	Copyright &copy; 2020 喜欢兰花山丘
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+</div>
+
+
+</div>
+    
+</body>
+</html>

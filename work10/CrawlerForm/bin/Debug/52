@@ -1,0 +1,451 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="never" />
+    <meta property="og:description" content="MANIFEST.MF是个什么？ 写这篇文件主要记录JRA文件里面到底是什么？然后MANIFEST.MF又是什么？Springboot 如何只有Main方法就可以运行的？ Springboot项目打包" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>MANIFEST.MF是个什么？ - 兔子托尼啊 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.ico?v=20200522" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/minyx2_lite/bundle-minyx2_lite.min.css?v=mxJZfspzqgmSFSdBbMH8zU83VuawcFZooz2hdrdyHlI" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/tonyY/custom.css?v=C0LfPVD4EXEXX8PaUPx7F3Ze13c=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/minyx2_lite/bundle-minyx2_lite-mobile.min.css?v=ADiCwO2hOTdd5yYidcx7eob7ix2VJI4o_TXjEycTHjs" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/tonyY/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/tonyY/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/tonyY/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=6bwfCY2e02dLOXNW99G2BHZkYFmw9QyYTWeJ-W-sudo"></script>
+    <script>
+        var currentBlogId = 241163;
+        var currentBlogApp = 'tonyY';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'Minyx2_Lite';
+    </script>
+    
+    
+    <script src="/skins/minyx2_lite/bundle-minyx2_lite.min.js?v=z_XLIOc5JYwRKqTPu9fAWp7D8tchhGxVWGYvlAiigUQ" type="text/javascript" language="javascript"></script>
+</head>
+<body>
+    <a name="top"></a>
+    
+    
+<div id="container">
+    <a class="minyx" href="https://www.cnblogs.com/">代码改变世界</a>
+    <ul id="topMnu">
+        <!-- 统计数据 -->
+        <li>
+            Posts - 
+70, 
+Articles - 
+0, 
+Comments - 
+70
+<!---->
+
+
+        </li>
+        <!-- 这边可以增加一些链接 -->
+        <!-- 博客园 -->
+        <li><a href="https://www.cnblogs.com/">Cnblogs</a></li>
+        <!-- 管理 -->
+        <li id="topMnu-dashboard">
+            <a id="lnkDashboard" href="https://i.cnblogs.com/">Dashboard</a>
+        </li>
+        <li>
+            
+    <a id="lnkLogin" href="https://account.cnblogs.com/signin/?returnUrl=https://www.cnblogs.com/tonyY/">Login</a>
+
+
+        </li>
+    </ul>
+
+    <script type="text/javascript">
+        var m = window.__blog.topMenuRendered;
+        if (m) { m(__$("topMnu")); }
+    </script>
+
+    <div id="header">
+        <ul id="menu">
+            <!-- 首页，当前section加上current类 -->
+            <li id="menu-home" class="current">
+                <a id="lnkHome" href="https://www.cnblogs.com/tonyY/">Home</a></li>
+            <!-- 联系 -->
+            <li id="menu-contact">
+                <a id="lnkContact" href="https://msg.cnblogs.com/send/%E5%85%94%E5%AD%90%E6%89%98%E5%B0%BC%E5%95%8A">Contact</a></li>
+            <!-- 相册 -->
+            <li id="menu-gallary">
+                <a id="lnkGallery" href="https://www.cnblogs.com/tonyY/gallery.html">Gallery</a></li>
+            <!-- 订阅 -->
+            <li id="menu-subscribe">
+                <a id="blog_nav_rss" href="javascript:void(0);" data-rss="https://www.cnblogs.com/tonyY/rss/">Subscribe</a></li>
+            <!-- Rss订阅 -->
+            <li id="rss">
+                <a id="lnkRss" href="https://www.cnblogs.com/tonyY/rss/">RSS</a></li>
+        </ul>
+        <div id="newmsg"></div>
+        <h1>
+            <!-- 主标题 -->
+            <a id="lnkBlogTitle" href="https://www.cnblogs.com/tonyY/">兔子托尼啊</a>
+            <!-- 子标题 -->
+            <small>
+                欢迎大家关注公众号【兔子托尼啊】有福利
+            </small>
+        </h1>
+    </div>
+
+    <script type="text/javascript">
+        var m = window.__blog.headerRendered;
+        if (m) { m(__$("header")); }
+    </script>
+
+    <div id="wrapper">
+        <div id="content">
+            <script type="text/javascript">
+                var m = window.__blog.preRenderPosts;
+                if (m) { m(); }
+            </script>
+            <div id="post_detail">
+<div class="post" id="post">
+    <a name="top"></a>
+    <h2>
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/tonyY/p/12988861.html">MANIFEST.MF是个什么？</a>
+</h2>
+    <small>
+<span id="post-date">2020-05-29 18:00</span>&nbsp;
+<a href="https://www.cnblogs.com/tonyY/">兔子托尼啊</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12988861" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12988861);return false;">收藏</a></small>
+    <div class="entry">
+        
+<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+    <h5 id="manifestmf是个什么？">MANIFEST.MF是个什么？</h5>
+<p>写这篇文件主要记录JRA文件里面到底是什么？然后MANIFEST.MF又是什么？Springboot 如何只有Main方法就可以运行的？</p>
+<h3 id="springboot项目打包">Springboot项目打包</h3>
+<p>Java开发中JRA包中经常会看到这个文件中。Springboot打包也会生成对应的JRA，下图我们用maven命令直接编译打包</p>
+<p>执行<code>mvn clean package -DskipTests=true -P test </code>，生成的文件如下<br>
+<img src="https://img-blog.csdnimg.cn/20200529171924157.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3J1aTg4OA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<ul>
+<li>这个JAR我们分两部分来讲解请看下图</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20200529172519323.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3J1aTg4OA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p><code>BOOT-INF</code>  注意了这个是我们自己写的代码生成的class和配置文件<br>
+<code>META-INF</code>  包含了<code>MANIFEST.MF</code>和	<code>maven</code>文件夹</p>
+<p>maven文件夹下面包含<code>pom.xml</code>和<code>pom.properites</code>文件<br>
+<code>pom.xml</code> 是代表的整个项目引用的第三方jar的maven坐标，如Spring 等<br>
+<code>pom.properites</code> 是当前执行 package 命令后打包当前项目的版本信息，<br>
+就如下面,是不是简单明了呀。</p>
+<pre><code class="language-xml">#Generated by Apache Maven
+#Fri May 29 16:56:23 CST 2020
+version=1.0-SNAPSHOT
+groupId=com.xxx
+artifactId=xxxxxService
+
+</code></pre>
+<h3 id="manifestmf-来源">MANIFEST.MF 来源</h3>
+<p>接下来看打包文件中的<code>MANIFEST.MF</code></p>
+<pre><code class="language-xml">Manifest-Version: 1.0
+Implementation-Title: xxxxService
+Implementation-Version: 1.0-SNAPSHOT
+Archiver-Version: Plexus Archiver
+Built-By: tony
+Implementation-Vendor-Id: com.xx
+Spring-Boot-Version: 1.5.10.RELEASE
+Implementation-Vendor: Pivotal Software, Inc.
+Main-Class: org.springframework.boot.loader.JarLauncher
+Start-Class: com.xxx.xxxxApplication
+Spring-Boot-Classes: BOOT-INF/classes/
+Spring-Boot-Lib: BOOT-INF/lib/
+Created-By: Apache Maven 3.5.3
+Build-Jdk: 1.8.0_144
+Implementation-URL: http://projects.spring.io/spring-boot/xxxAdminService/
+
+</code></pre>
+<p>直接看上面的内容，遇到问题我们先挑选容易的来看。</p>
+<h5 id="一般属性">一般属性</h5>
+<p>1、 Manifest-Version<br>
+用来定义manifest文件的版本，例如：Manifest-Version: 1.0</p>
+<p>2、Built-By</p>
+<p>3、Spring-Boot-Version<br>
+等等这些都是很简单的熟悉</p>
+<h5 id="包扩展属性">包扩展属性</h5>
+<p>1、Implementation-Title   定义了扩展实现的标题<br>
+2、 Implementation-Version   定义扩展实现的版本<br>
+3、 Implementation-Vendor   定义扩展实现的组织<br>
+4、 Implementation-Vendor-Id   定义扩展实现的组织的标识<br>
+5、 Implementation-URL :   定义该扩展包的下载地址(URL)</p>
+<h5 id="项目加载文件相关属性">项目加载文件相关属性</h5>
+<p>1、Spring-Boot-Classes: BOOT-INF/classes/<br>
+2、Spring-Boot-Lib: BOOT-INF/lib/</p>
+<h5 id="应用程序相关属性">应用程序相关属性</h5>
+<p>1、Main-Class</p>
+<p><code>org.springframework.boot.loader.JarLauncher</code> 这个很重要，很重要，是当前JRA的启动类， 定义jar文件的入口类，该类必须是一个可执行的类，一旦定义了该属性即可通过 java -jar x.jar来运行该jar文件。</p>
+<p>2、Start-Class<br>
+<code>com.jc.xxxApplication</code> 这个是你自己项目的启动执行类的开始，我这里是Springboot的main方法的开始</p>
+<pre><code class="language-java">import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure;
+import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+@EnableScheduling
+@MapperScan(basePackages = &quot;com.xxxxx.mapper&quot;)
+@SpringBootApplication(exclude = DruidDataSourceAutoConfigure.class)
+public class xxxxApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(xxxxAdminApplication.class, args);
+    }
+
+}
+</code></pre>
+<h3 id="入口">入口</h3>
+<pre><code class="language-java">//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by Fernflower decompiler)
+//
+
+package org.springframework.boot.loader;
+
+import org.springframework.boot.loader.archive.Archive;
+import org.springframework.boot.loader.archive.Archive.Entry;
+
+public class JarLauncher extends ExecutableArchiveLauncher {
+    static final String BOOT_INF_CLASSES = &quot;BOOT-INF/classes/&quot;;
+    static final String BOOT_INF_LIB = &quot;BOOT-INF/lib/&quot;;
+
+    public JarLauncher() {
+    }
+
+    protected JarLauncher(Archive archive) {
+        super(archive);
+    }
+
+    protected boolean isNestedArchive(Entry entry) {
+        return entry.isDirectory() ? entry.getName().equals(&quot;BOOT-INF/classes/&quot;) : entry.getName().startsWith(&quot;BOOT-INF/lib/&quot;);
+    }
+
+    public static void main(String[] args) throws Exception {
+        (new JarLauncher()).launch(args);
+    }
+}
+
+</code></pre>
+<p>看到上面的代码没有<code>JarLauncher</code>，上面的第一张截图中红框标出来的，<br>
+这个就是 执行<code>java -jar</code> 的入口。这个类里面会加载我们写代码编译出来的文件。</p>
+<p>我这个JAR是Springboot项目打包生成的，<code>JarLauncher</code> 会加载上面第二张截图中的class 和配置文件。</p>
+<p>大家有兴趣可以看看<code>org/springframework/boot/loader</code> 下面的类，这个包下面着重讲解了Springboot 如何只有Main方法就可以运行加载我们编译的class和配置文件。</p>
+<h3 id="总结">总结</h3>
+<p>以上就是Springboot如何优雅运行<code>java -jar xxx.jar</code></p>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+        <div class="clear"></div>
+        <div id="blog_post_info_block">
+        <div id="blog_post_info">
+        </div>
+        <div class="clear"></div>
+        <div id="post_next_prev"></div>
+    </div>
+</div>
+    <ul class="postmetadata">
+        
+<li class="icon_cat" id="BlogPostCategory">
+分类            <a href="https://www.cnblogs.com/tonyY/category/726984.html" target="_blank">Spring</a>
+,            <a href="https://www.cnblogs.com/tonyY/category/745319.html" target="_blank">Java</a>
+</li>
+<li class="icon_bullet" id="EntryTag">
+&nbsp;</li>
+    </ul>
+</div>
+<script type="text/javascript">
+    var m = window.__blog.postRendered;
+    if (m) { m(__$("post")); }
+</script>
+<script type="text/javascript">
+    var m = window.__blog.postRenderPosts;
+    if (m) { m(); }
+</script>
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 241163, cb_blogApp = 'tonyY', cb_blogUserGuid = '8166dc17-fb47-e511-b908-9dcfd8948a71';
+    var cb_entryId = 12988861, cb_entryCreatedDate = '2020-05-29 18:00', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;"></div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div></div>
+
+
+        </div>
+
+        <script type="text/javascript">
+            var m = window.__blog.contentRendered;
+            if (m) { m(__$("content")); }
+        </script>
+
+        <div id="sidebar">
+            <div id="about">
+                <div>
+                    <h2 id="about_title">About</h2>
+                    <div id="about_body">
+                        <div id="sidebar_news"></div>
+                        <script type="text/javascript">loadBlogNews();</script>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                var m = window.__blog.aboutRendered;
+                if (m) { m(__$("about")); }
+            </script>
+            <div id="mySearchWrapper">
+                <div id="mySearch">
+                    <input type="image" src="/skins/minyx2_lite/images/btnsearch.gif" id="btnZzk"  class="submit" onclick="zzk_go();return false;"/>
+                    <label class="lb_search"><input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="keyword" /></label>
+                </div>
+            </div>
+            <script type="text/javascript">
+                var m = window.__blog.searchFormRendered;
+                if (m) { m(__$("searchform")); }
+            </script>
+            <div id="sideMain">
+            </div>
+            <div id="sideRight">
+            </div>
+            <div id="sideLeft">
+            </div>            
+                <div id="sideContainer">
+                </div>
+                <script type="text/javascript">
+                    $.ajax({
+                        url: '/' + currentBlogApp + '/ajax/Minyx2_Lite_SideColumn.aspx',
+                        data: '{}',
+                        type: 'post',
+                        dataType: 'text',
+                        contentType: 'application/json; charset=utf-8',
+                        success: function (data) {
+                            if (data) {
+                                $("#sideContainer").html(data);
+                                $.ajax({
+                                    url: getAjaxBaseUrl() + 'TopLists.aspx',
+                                    type: 'get',
+                                    dataType: 'text',
+                                    success: function (topLists) {
+                                        if (topLists) {
+                                            $("#sideContainer").append(topLists);
+                                        }
+                                        var m = window.__blog.sideContainerRendered;
+                                        if (m) { m(__$("sideContainer")); }
+                                        window.__blog.sidebar.__layout();
+                                    }
+                                });
+                            }
+                        }
+                    });
+
+                </script>
+        </div>
+
+        <script type="text/javascript">
+            var m = window.__blog.sidebarRendered;
+            if (m) { m(__$("sidebar")); }
+        </script>
+
+        <div id="footer">
+            <p id="logoFoot">
+    <a href="http://www.spiga.com.mx/" title="Agencia Interactiva Spiga">www.spiga.com.mx</a>
+</p>
+<div class="footText">
+<p>
+Copyright &copy; 2020 兔子托尼啊
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+</p>
+<p>
+<a href="http://www.cnblogs.com">博客园</a>
+</p>
+</div>
+
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var m = window.__blog.wrapperRendered;
+        if (m) { m(__$("wrapper")); }
+    </script>
+
+</div>
+<script type="text/javascript">
+    var m = window.__blog.containerRendered;
+    if (m) { m(__$("container")); }
+</script>
+
+
+    
+</body>
+</html>

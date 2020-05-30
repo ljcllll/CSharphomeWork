@@ -1,0 +1,534 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    <meta property="og:description" content="在上一篇博客中，我们详细的对Q-learning的算法流程进行了介绍。同时我们使用了$\epsilon-贪婪法$防止陷入局部最优。 那么我们可以想一下，最后我们得到的结果是什么样的呢？因为我们考虑到了" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>DQN（Deep Q-learning）入门教程（四）之Q-learning Play Flappy Bird - 段小辉 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.ico?v=20200522" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/custom/bundle-custom.min.css?v=1ssrnY3Il79Ok472qeVrpxlSprSXcHhYPgZC5S3wtVM" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/xiaohuiduan/custom.css?v=fzle95izIzJqcGXDn1Phvyz3R0w=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/custom/bundle-custom-mobile.min.css?v=-Yh290MhQyDeXLmvKTSses9H6-49lqbpXFh55zvS0w8" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/xiaohuiduan/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/xiaohuiduan/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/xiaohuiduan/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=6bwfCY2e02dLOXNW99G2BHZkYFmw9QyYTWeJ-W-sudo"></script>
+    <script>
+        var currentBlogId = 470993;
+        var currentBlogApp = 'xiaohuiduan';
+        var cb_enable_mathjax = true;
+        var isLogined = false;
+        var skinName = 'Custom';
+    </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true },
+        TeX: {
+        equationNumbers: { autoNumber: ['AMS'], useLabelIds: true },
+        extensions: ['extpfeil.js', 'mediawiki-texvc.js'],
+        Macros: {bm: "\\boldsymbol"}
+        },
+        'HTML-CSS': { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+        });
+    </script>
+    <script src="https://mathjax.cnblogs.com/2_7_5/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;v=20200504"></script>
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/xiaohuiduan/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/xiaohuiduan/">于风‘s blog</a>
+</h1>
+<h2>
+「Talk is cheap. Show me the code」
+遵循本心，做到极致
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li>
+</li>
+<li>
+
+</li>
+<li>
+
+
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E6%AE%B5%E5%B0%8F%E8%BE%89">
+联系</a></li>
+<li>
+
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+74&nbsp; </span>
+<span id="stats_article_count">文章 - 
+0&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+39</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/xiaohuiduan/p/12990510.html">DQN（Deep Q-learning）入门教程（四）之Q-learning Play Flappy Bird</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+    <p>在上一篇<a href="https://www.cnblogs.com/xiaohuiduan/p/12977830.html">博客</a>中，我们详细的对Q-learning的算法流程进行了介绍。同时我们使用了<span class="math inline">\(\epsilon-贪婪法\)</span>防止陷入局部最优。</p>
+<p><img src="https://img2020.cnblogs.com/blog/1439869/202005/1439869-20200530014805803-238391864.png" alt=""></p>
+<p>那么我们可以想一下，最后我们得到的结果是什么样的呢？因为我们考虑到了所有的（<span class="math inline">\(\epsilon-贪婪法\)</span>导致的）情况，因此最终我们将会得到一张如下的<strong>Q-Table</strong>表。</p>
+<table>
+<thead>
+<tr>
+<th>Q-Table</th>
+<th><span class="math inline">\(a_1\)</span></th>
+<th><span class="math inline">\(a_2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(s_1\)</span></td>
+<td><span class="math inline">\(q(s_1,a_1)\)</span></td>
+<td><span class="math inline">\(q(s_1,a_2)\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(s_2\)</span></td>
+<td><span class="math inline">\(q(s_2,a_1)\)</span></td>
+<td><span class="math inline">\(q(s_2,a_2)\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(s_3\)</span></td>
+<td><span class="math inline">\(q(s_3,a_1)\)</span></td>
+<td><span class="math inline">\(q(s_3,a_2)\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>当agent运行到某一个场景<span class="math inline">\(s\)</span>时，会去查询已经训练好的Q-Table，然后从中选择一个最大的<span class="math inline">\(q\)</span>对应的action。</p>
+<h2 id="训练内容">训练内容</h2>
+<p>这一次，我们将对Flappy-bird游戏进行训练。这个游戏的介绍我就不多说了，可以看一下<a href="https://zh.wikipedia.org/wiki/Flappy_Bird">维基百科</a>的介绍。</p>
+<p><img src="https://img2020.cnblogs.com/blog/1439869/202005/1439869-20200530014806480-858317041.png" alt=""></p>
+<p>游戏就是控制一只🐦穿越管道，然后可以获得分数，对于小鸟来说，他只有两个动作，跳or不跳，而我们的目标就是使小鸟穿越管道获得更多的分数。</p>
+<h2 id="前置准备">前置准备</h2>
+<p>因为我们的目标是来学习“强化学习”的，所以我们不可能说自己去弄一个Flappy-bird（当然自己弄也可以），这里我们直接使用一个已经写好的Flappy-bird。</p>
+<p><a href="https://github.com/ntasfi/PyGame-Learning-Environment">PyGame-Learning-Environment</a>，是一个Python的强化学习环境，简称PLE，下面时他Github上面的介绍：</p>
+<blockquote>
+<p><strong>PyGame Learning Environment (PLE)</strong> is a learning environment, mimicking the <a href="https://github.com/mgbellemare/Arcade-Learning-Environment">Arcade Learning Environment</a> interface, allowing a quick start to Reinforcement Learning in Python. The goal of PLE is <strong>allow practitioners to focus design of models and experiments instead of environment design.</strong></p>
+<p>PLE hopes to eventually build an expansive library of games.</p>
+</blockquote>
+<p>然后关于FlappyBird的文档介绍在<a href="https://pygame-learning-environment.readthedocs.io/en/latest/user/games/flappybird.html">这里</a>，文档的介绍还是蛮清楚的。安装步骤如下所示，推荐在Pipenv的环境下安装，不过你也可以直接clone<a href="https://github.com/xiaohuiduan/flappy-bird-q-learning">我的代码</a>然后然后根据reademe的步骤进行使用。</p>
+<blockquote>
+<pre><code>git clone https://github.com/ntasfi/PyGame-Learning-Environment.git
+cd PyGame-Learning-Environment/
+pip install -e .
+</code></pre>
+</blockquote>
+<p>需要的库如下：</p>
+<ul>
+<li>pygame</li>
+<li>numpy</li>
+<li>pillow</li>
+</ul>
+<h3 id="函数说明">函数说明</h3>
+<p>在<a href="https://pygame-learning-environment.readthedocs.io/en/latest/user/games/flappybird.html">官方文档</a>有几个的函数在这里说下，因为等下我们需要用到。</p>
+<ul>
+<li>
+<p><code>getGameState()</code>：获得游戏当前的状态，返回值为一个字典：</p>
+<ol>
+<li>player y position.</li>
+<li>players velocity.</li>
+<li>next pipe distance to player</li>
+<li>next pipe top y position</li>
+<li>next pipe bottom y position</li>
+<li>next next pipe distance to player</li>
+<li>next next pipe top y position</li>
+<li>next next pipe bottom y position</li>
+</ol>
+<p>部分数据表示如下：</p>
+<p><img src="https://img2020.cnblogs.com/blog/1439869/202005/1439869-20200530014806749-233334266.png" alt=""></p>
+</li>
+<li>
+<p><code>reset_game()</code>：重新开始游戏</p>
+</li>
+<li>
+<p><code>act(action)</code>：在游戏中执行一个动作，参数为动作，返回执行后的分数。</p>
+</li>
+<li>
+<p><code>game_over()</code>：假如游戏结束，则返回True，否者返回False。</p>
+</li>
+<li>
+<p><code>getActionSet()</code>：获得游戏的动作集合。</p>
+</li>
+</ul>
+<p>我们的窗体大小默认是288*512，其中鸟的速度在-20到10之间（最小速度我并不知道，但是经过观察，并没有小于-20的情况，而最大的速度在源代码里面已经说明好了为10）</p>
+<h2 id="coding-time">Coding Time</h2>
+<p>在前面我们说，通过<code>getGameState()</code>函数，我们可以获得几个关于环境的数据，在这里我们选择如下的数据：</p>
+<ul>
+<li>next_pipe_dist_to_player：</li>
+<li>player_y与next_pipe_top_y的差值</li>
+<li>🐦的速度</li>
+</ul>
+<p>但是我们可以想一想，next_pipe_dist_to_player一共会有多少种的取值：因为窗体大小为288*512，则取值的范围大约是0~288，也就是说它大约有288个取值，而关于player_y与next_pipe_top_y的差值，则大概有1024个取值。这样很难让模型收敛，因此我们将数值进行简化。其中简化的思路来自：<a href="https://github.com/BujuNB/Flappy-Brid-RL">GitHub</a></p>
+<p>首先我们创建一个Agent类，然后逐渐向里面添加功能。</p>
+<pre><code class="language-python">class Agent():
+
+    def __init__(self, action_space):
+        # 获得游戏支持的动作集合
+        self.action_set = action_space
+
+        # 创建q-table
+        self.q_table = np.zeros((6, 6, 6, 2))
+
+        # 学习率
+        self.alpha = 0.7
+        # 励衰减因子
+        self.gamma = 0.8
+        # 贪婪率
+        self.greedy = 0.8
+</code></pre>
+<p>至于为什么q-table的大小是(6,6,6,2)，其中的3个6分别代表<strong>next_pipe_dist_to_player</strong>，<strong>player_y与next_pipe_top_y的差值</strong>，<strong>🐦的速度</strong>，其中的2代表动作的个数。也就是说，表格中的state一共有$6 \times6 \times 6 $种，表格的大小为<span class="math inline">\(6 \times6 \times 6 \times 2\)</span>。</p>
+<h3 id="缩小状态值的范围">缩小状态值的范围</h3>
+<p>我们定义一个函数<code>get_state(s)</code>，这个函数专门提取游戏中的状态，然后返回进行简化的状态数据：</p>
+<pre><code class="language-python">    def get_state(self, state):
+        &quot;&quot;&quot;
+        提取游戏state中我们需要的数据
+        :param state: 游戏state
+        :return: 返回提取好的数据
+        &quot;&quot;&quot;
+        return_state = np.zeros((3,), dtype=int)
+        dist_to_pipe_horz = state[&quot;next_pipe_dist_to_player&quot;]
+        dist_to_pipe_bottom = state[&quot;player_y&quot;] - state[&quot;next_pipe_top_y&quot;]
+        velocity = state['player_vel']
+        if velocity &lt; -15:
+            velocity_category = 0
+        elif velocity &lt; -10:
+            velocity_category = 1
+        elif velocity &lt; -5:
+            velocity_category = 2
+        elif velocity &lt; 0:
+            velocity_category = 3
+        elif velocity &lt; 5:
+            velocity_category = 4
+        else:
+            velocity_category = 5
+
+        if dist_to_pipe_bottom &lt; 8:  # very close or less than 0
+            height_category = 0
+        elif dist_to_pipe_bottom &lt; 20:  # close
+            height_category = 1
+        elif dist_to_pipe_bottom &lt; 50:  # not close
+            height_category = 2
+        elif dist_to_pipe_bottom &lt; 125:  # mid
+            height_category = 3
+        elif dist_to_pipe_bottom &lt; 250:  # far
+            height_category = 4
+        else:
+            height_category = 5
+
+        # make a distance category
+        if dist_to_pipe_horz &lt; 8:  # very close
+            dist_category = 0
+        elif dist_to_pipe_horz &lt; 20:  # close
+            dist_category = 1
+        elif dist_to_pipe_horz &lt; 50:  # not close
+            dist_category = 2
+        elif dist_to_pipe_horz &lt; 125:  # mid
+            dist_category = 3
+        elif dist_to_pipe_horz &lt; 250:  # far
+            dist_category = 4
+        else:
+            dist_category = 5
+
+        return_state[0] = height_category
+        return_state[1] = dist_category
+        return_state[2] = velocity_category
+        return return_state
+</code></pre>
+<h3 id="更新q-table">更新Q-table</h3>
+<p>更新的数学公式如下：</p>
+<p><div class="math display">\[{\displaystyle Q^{new}(s_{t},a_{t})\leftarrow \underbrace {Q(s_{t},a_{t})} _{\text{旧的值}}+\underbrace {\alpha } _{\text{学习率}}\cdot \overbrace {{\bigg (}\underbrace {\underbrace {r_{t}} _{\text{奖励}}+\underbrace {\gamma } _{\text{奖励衰减因子}}\cdot \underbrace {\max _{a}Q(s_{t+1},a)} _{\text{estimate of optimal future value}}} _{\text{new value (temporal difference target)}}-\underbrace {Q(s_{t},a_{t})} _{\text{旧的值}}{\bigg )}} ^{\text{temporal difference}}}
+\]</div></p><p>下面是更新Q-table的函数代码：</p>
+<pre><code class="language-python">def update_q_table(self, old_state, current_action, next_state, r):
+    &quot;&quot;&quot;
+
+    :param old_state: 执行动作前的状态
+    :param current_action: 执行的动作
+    :param next_state: 执行动作后的状态
+    :param r: 奖励
+    :return:
+    &quot;&quot;&quot;
+    next_max_value = np.max(self.q_table[next_state[0], next_state[1], next_state[2]])
+
+    self.q_table[old_state[0], old_state[1], old_state[2], current_action] = (1 - self.alpha) * self.q_table[
+        old_state[0], old_state[1], old_state[2], current_action] + self.alpha * (r + next_max_value)
+</code></pre>
+<h3 id="选择最佳的动作">选择最佳的动作</h3>
+<p>然后我们就是根据q-table对应的Q值选择最大的那一个，其中第一个代表（也就是0）跳跃，第2个代表不执行任何操作。</p>
+<p>选择的示意图如下：</p>
+<p><img src="https://img2020.cnblogs.com/blog/1439869/202005/1439869-20200530014807034-1323519259.png" alt=""></p>
+<p>代码如下所示：</p>
+<pre><code class="language-python">def get_best_action(self, state, greedy=False):
+    &quot;&quot;&quot;
+    获得最佳的动作
+    :param state: 状态
+    :是否使用ϵ-贪婪法
+    :return: 最佳动作
+    &quot;&quot;&quot;
+	
+    # 获得q值
+    jump = self.q_table[state[0], state[1], state[2], 0]
+    no_jump = self.q_table[state[0], state[1], state[2], 1]
+    # 是否执行策略
+    if greedy:
+        if np.random.rand(1) &lt; self.greedy:
+            return np.random.choice([0, 1])
+        else:
+            if jump &gt; no_jump:
+                return 0
+            else:
+                return 1
+    else:
+        if jump &gt; no_jump:
+            return 0
+        else:
+            return 1
+</code></pre>
+<h3 id="更新值">更新<span class="math inline">\(\epsilon\)</span>值</h3>
+<p>这个比较简单，从前面的博客中，我们知道<span class="math inline">\(\epsilon\)</span>是随着训练次数的增加而减少的，有很多种策略可以选择，这里乘以<span class="math inline">\(0.95\)</span>吧。</p>
+<pre><code class="language-python">def update_greedy(self):
+    self.greedy *= 0.95
+</code></pre>
+<h3 id="执行动作">执行动作</h3>
+<p>在官方文档中，如果小鸟没有死亡奖励为0，越过一个管道，奖励为1，死亡奖励为-1，我们稍微的对其进行改变：</p>
+<pre><code class="language-python">def act(self, p, action):
+    &quot;&quot;&quot;
+    执行动作
+    :param p: 通过p来向游戏发出动作命令
+    :param action: 动作
+    :return: 奖励
+    &quot;&quot;&quot;
+    # action_set表示游戏动作集(119，None)，其中119代表跳跃
+    r = p.act(self.action_set[action])
+    if r == 0:
+        r = 1
+    if r == 1:
+        r = 10
+    else:
+        r = -1000
+    return r
+</code></pre>
+<h3 id="main函数">main函数</h3>
+<p>最后我们就可以执行main函数了。</p>
+<pre><code class="language-python">if __name__ == &quot;__main__&quot;:
+    # 训练次数
+    episodes = 2000_000000
+    # 实例化游戏对象
+    game = FlappyBird()
+    # 类似游戏的一个接口，可以为我们提供一些功能
+    p = PLE(game, fps=30, display_screen=False)
+    # 初始化
+    p.init()
+    # 实例化Agent，将动作集传进去
+    agent = Agent(p.getActionSet())
+    max_score = 0
+	
+    for episode in range(episodes):
+        # 重置游戏
+        p.reset_game()
+        # 获得状态
+        state = agent.get_state(game.getGameState())
+        agent.update_greedy()
+        while True:
+            # 获得最佳动作
+            action = agent.get_best_action(state)
+            # 然后执行动作获得奖励
+            reward = agent.act(p, action)
+            # 获得执行动作之后的状态
+            next_state = agent.get_state(game.getGameState())
+            # 更新q-table
+            agent.update_q_table(state, action, next_state, reward)
+            # 获得当前分数
+            current_score = p.score()
+            state = next_state
+            if p.game_over():
+                max_score = max(current_score, max_score)
+                print('Episodes: %s, Current score: %s, Max score: %s' % (episode, current_score, max_score))
+                # 保存q-table
+                if current_score &gt; 300:
+                    np.save(&quot;{}_{}.npy&quot;.format(current_score, episode), agent.q_table)
+                break
+</code></pre>
+<p>部分的训练的结果如下：</p>
+<p><img src="https://img2020.cnblogs.com/blog/1439869/202005/1439869-20200530014807411-1604207571.png" alt=""></p>
+<h2 id="总结">总结</h2>
+<p>emm，说实话，我也不知道结果会怎么样，因为训练的时间比较长，我不想放在我的电脑上面跑，然后我就放在树莓派上面跑，但是树莓派性能比较低，导致训练的速度比较慢。但是，我还是觉得我的方法有点问题，<code>get_state()</code>函数中简化的方法，我感觉不是特别的合理，如果各位有好的看法，可以在评论区留言哦，然后共同学习。</p>
+<p>项目地址：<a href="https://github.com/xiaohuiduan/flappy-bird-q-learning">https://github.com/xiaohuiduan/flappy-bird-q-learning</a></p>
+<h3 id="参考">参考</h3>
+<ul>
+<li><a href="https://towardsdatascience.com/use-reinforcement-learning-to-train-a-flappy-bird-never-to-die-35b9625aaecc">Use reinforcement learning to train a flappy bird NEVER to die</a></li>
+<li><a href="https://github.com/ntasfi/PyGame-Learning-Environment">PyGame-Learning-Environment</a></li>
+<li><a href="https://github.com/BujuNB/Flappy-Brid-RL">https://github.com/BujuNB/Flappy-Brid-RL</a></li>
+</ul>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2020-05-30 01:51</span>&nbsp;
+<a href="https://www.cnblogs.com/xiaohuiduan/">段小辉</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12990510" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12990510);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 470993, cb_blogApp = 'xiaohuiduan', cb_blogUserGuid = '9d1dc775-6586-4041-4842-08d5e3ea7912';
+    var cb_entryId = 12990510, cb_entryCreatedDate = '2020-05-30 01:51', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;"></div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 段小辉
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+</body>
+</html>

@@ -1,0 +1,521 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>段小辉 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.ico?v=20200522" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/custom/bundle-custom.min.css?v=1ssrnY3Il79Ok472qeVrpxlSprSXcHhYPgZC5S3wtVM" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/xiaohuiduan/custom.css?v=fzle95izIzJqcGXDn1Phvyz3R0w=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/custom/bundle-custom-mobile.min.css?v=-Yh290MhQyDeXLmvKTSses9H6-49lqbpXFh55zvS0w8" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/xiaohuiduan/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/xiaohuiduan/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/xiaohuiduan/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=6bwfCY2e02dLOXNW99G2BHZkYFmw9QyYTWeJ-W-sudo"></script>
+    <script>
+        var currentBlogId = 470993;
+        var currentBlogApp = 'xiaohuiduan';
+        var cb_enable_mathjax = true;
+        var isLogined = false;
+        var skinName = 'Custom';
+    </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true },
+        TeX: {
+        equationNumbers: { autoNumber: ['AMS'], useLabelIds: true },
+        extensions: ['extpfeil.js', 'mediawiki-texvc.js'],
+        Macros: {bm: "\\boldsymbol"}
+        },
+        'HTML-CSS': { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+        });
+    </script>
+    <script src="https://mathjax.cnblogs.com/2_7_5/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;v=20200504"></script>
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/xiaohuiduan/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/xiaohuiduan/">于风‘s blog</a>
+</h1>
+<h2>
+「Talk is cheap. Show me the code」
+遵循本心，做到极致
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li>
+</li>
+<li>
+
+</li>
+<li>
+
+
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E6%AE%B5%E5%B0%8F%E8%BE%89">
+联系</a></li>
+<li>
+
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+74&nbsp; </span>
+<span id="stats_article_count">文章 - 
+0&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+39</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+<!--done-->
+
+
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/xiaohuiduan/archive/2020/05/30.html">2020年5月30日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/xiaohuiduan/p/12990510.html">
+    DQN（Deep Q-learning）入门教程（四）之Q-learning Play Flappy Bird
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：在上一篇博客中，我们详细的对Q-learning的算法流程进行了介绍。同时我们使用了$\epsilon-贪婪法$防止陷入局部最优。 那么我们可以想一下，最后我们得到的结果是什么样的呢？因为我们考虑到了所有的（$\epsilon-贪婪法$导致的）情况，因此最终我们将会得到一张如下的Q-Table表。             <a href="https://www.cnblogs.com/xiaohuiduan/p/12990510.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-30 01:51
+段小辉
+<span class="post-view-count">阅读(18)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12990510" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/xiaohuiduan/archive/2020/05/28.html">2020年5月28日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/xiaohuiduan/p/12977830.html">
+    DQN（Deep Q-learning）入门教程（三）之蒙特卡罗法算法与Q-learning算法
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：蒙特卡罗法 在介绍Q-learing算法之前，我们还是对蒙特卡罗法（MC）进行一些介绍。MC方法是一种无模型（model-free）的强化学习方法，目标是得到最优的行为价值函数$q_*$。在前面一篇博客中，我们所介绍的动态规划算法则是一种有模型的算法。那么问题来了，什么是模型（model）？模型其实            <a href="https://www.cnblogs.com/xiaohuiduan/p/12977830.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-28 02:37
+段小辉
+<span class="post-view-count">阅读(60)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12977830" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/xiaohuiduan/archive/2020/05/27.html">2020年5月27日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/xiaohuiduan/p/12973303.html">
+    DQN（Deep Q-learning）入门教程（二）之最优选择
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：在上一篇博客：DQN（Deep Q-learning）入门教程（一）之强化学习介绍中有三个很重要的函数： 策略：\(\pi(a|s) = P(A_t=a | S_t=s)\) 状态价值函数：\(v_\pi(s)=\mathbb{E}\left[R_{t+1}+\gamma \left(S_{t+1}            <a href="https://www.cnblogs.com/xiaohuiduan/p/12973303.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-27 15:21
+段小辉
+<span class="post-view-count">阅读(65)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(1)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12973303" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/xiaohuiduan/archive/2020/05/24.html">2020年5月24日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/xiaohuiduan/p/12945449.html">
+    DQN（Deep Q-learning）入门教程（一）之强化学习介绍
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：什么是强化学习？ 强化学习（Reinforcement learning，简称RL）是和监督学习，非监督学习并列的第三种机器学习方法，如下图示： 首先让我们举一个小时候的例子： 你现在在家，有两个动作选择：打游戏和读书。如果选择打游戏的话，你就跑到了网吧，选择读书的话，就坐在了书桌面前。你爸妈下班回            <a href="https://www.cnblogs.com/xiaohuiduan/p/12945449.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-24 11:25
+段小辉
+<span class="post-view-count">阅读(69)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12945449" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/xiaohuiduan/archive/2020/05/23.html">2020年5月23日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/xiaohuiduan/p/12945133.html">
+    DQN（Deep Q-learning）入门教程（零）之教程介绍
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：简介 DQN入门系列地址: &quot;https://www.cnblogs.com/xiaohuiduan/category/1770037.html&quot; 本来呢，在上一个系列 &quot;数据挖掘入门系列&quot; 博客中，我是准备写数据挖掘的教程，然后不知怎么滴，博客越写越偏，写到了神经网络，深度学习去了。在我写完数据挖            <a href="https://www.cnblogs.com/xiaohuiduan/p/12945133.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-23 23:32
+段小辉
+<span class="post-view-count">阅读(71)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12945133" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/xiaohuiduan/archive/2020/05/12.html">2020年5月12日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/xiaohuiduan/p/12877094.html">
+    数据挖掘入门系列教程（结束）
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：从无到有，陆陆续续一个 数据挖掘入门系列 的教程就写了18篇博客了，这个是我没有想到的，本来以为可能写10篇博客就结束了，但是写着写着写着写着就写了这么多： 1. &quot;数据挖掘入门系列教程（一）之亲和性分析&quot; 2. &quot;数据挖掘入门系列教程（二）之分类问题OneR算法&quot; 3. &quot;数据挖掘入门系列教程（三            <a href="https://www.cnblogs.com/xiaohuiduan/p/12877094.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-12 16:38
+段小辉
+<span class="post-view-count">阅读(37)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(1)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12877094" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/xiaohuiduan/archive/2020/05/01.html">2020年5月1日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/xiaohuiduan/p/12813368.html">
+    数据挖掘入门系列教程（十二）之使用keras构建CNN网络识别CIFAR10
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：简介 在上一篇博客： &quot;数据挖掘入门系列教程（十一点五）之CNN网络介绍&quot; 中，介绍了CNN的工作原理和工作流程，在这一篇博客，将具体的使用代码来说明如何使用keras构建一个CNN网络来对CIFAR 10数据集进行训练。 如果对keras不是很熟悉的话，可以去看一看 &quot;官方文档&quot; 。或者看一看我前            <a href="https://www.cnblogs.com/xiaohuiduan/p/12813368.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-01 14:10
+段小辉
+<span class="post-view-count">阅读(137)</span><text> </text>
+<span class="post-comment-count">评论(2)</span><text> </text>
+<span class="post-digg-count">推荐(1)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12813368" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+            <div class="postSeparator"></div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/xiaohuiduan/p/12812288.html">
+    数据挖掘入门系列教程（十一点五）之CNN网络介绍
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：在前面的两篇博客中，我们介绍了DNN（深度神经网络）并使用keras实现了一个简单的DNN。在这篇博客中将介绍CNN（卷积神经网络），然后在下一篇博客中将使用keras构建一个简单的CNN，对 数据集进行分类预测。 CNN简介 我们可以想一个例子，假如我们现在需要对人进行识别分类，根据我们人类的思维            <a href="https://www.cnblogs.com/xiaohuiduan/p/12812288.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-01 00:59
+段小辉
+<span class="post-view-count">阅读(212)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(1)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12812288" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/xiaohuiduan/archive/2020/04/30.html">2020年4月30日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/xiaohuiduan/p/12806241.html">
+    数据挖掘入门系列教程（十一）之keras入门使用以及构建DNN网络识别MNIST
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：简介 在上一篇博客： &quot;数据挖掘入门系列教程（十点五）之DNN介绍及公式推导&quot; 中，详细的介绍了DNN，并对其进行了公式推导。本来这篇博客是准备直接介绍CNN的，但是想了一下，觉得还是使用keras构建一个DNN网络，然后进行一定的分类操作，这样能够更加的直观一点。 在这篇博客中将介绍： keras            <a href="https://www.cnblogs.com/xiaohuiduan/p/12806241.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-04-30 01:20
+段小辉
+<span class="post-view-count">阅读(172)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(2)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12806241" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/xiaohuiduan/archive/2020/04/27.html">2020年4月27日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/xiaohuiduan/p/12790996.html">
+    数据挖掘入门系列教程（十点五）之DNN介绍及公式推导
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：深度神经网络(DNN，Deep Neural Networks)简介 首先让我们先回想起在之前博客（ &quot;数据挖掘入门系列教程（七点五）之神经网络介绍&quot; ）中介绍的神经网络：为了解决M P模型中无法处理XOR等简单的非线性可分的问题时，我们提出了多层感知机，在输入层和输出层中间添加一层隐含层，这样该网            <a href="https://www.cnblogs.com/xiaohuiduan/p/12790996.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-04-27 23:17
+段小辉
+<span class="post-view-count">阅读(178)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(1)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12790996" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+
+<div class="topicListFooter">
+    <div id="nav_next_page">
+        
+    <a href="https://www.cnblogs.com/xiaohuiduan/default.html?page=2">
+        下一页
+    </a>
+
+    </div>    
+</div>
+
+
+
+
+
+
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 段小辉
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+</body>
+</html>

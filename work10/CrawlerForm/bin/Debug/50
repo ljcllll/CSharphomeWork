@@ -1,0 +1,833 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    <meta property="og:description" content="很多游戏，特别是养成类手游，都会有自己独特的建造系统，一个建造装置的状态循环或者说生命周期一般是这样的： 1.准备建造，设置各项资源的投入等 2.等待一段倒计时，正在建造中 3.建造结束，选择是否收取" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Unity 离线建造系统 - 汐夜 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.ico?v=20200522" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/coffee/bundle-coffee.min.css?v=KPz7rj-c2sTAV1_ck1aDmbZcuCG3KBhyLnfvzf6nn94" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/coffee/bundle-coffee-mobile.min.css?v=na9bpAY4yh7uEWCcrXj3vfJM3VBse8YtU6-5fUUQPz0" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/koshio0219/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/koshio0219/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/koshio0219/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=6bwfCY2e02dLOXNW99G2BHZkYFmw9QyYTWeJ-W-sudo"></script>
+    <script>
+        var currentBlogId = 523527;
+        var currentBlogApp = 'koshio0219';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'coffee';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a href="https://www.cnblogs.com/koshio0219/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/koshio0219/">汐夜</a>
+</h1>
+<h2>
+
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="navigator">
+			
+<ul id="navList">
+	<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+	<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/koshio0219/">
+首页</a>
+</li>
+	<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+	<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E6%B1%90%E5%A4%9C">
+联系</a></li>
+	<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+	<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/koshio0219/rss/">
+订阅</a>
+	
+<a id="blog_nav_rss_image" href="https://www.cnblogs.com/koshio0219/rss/">
+    <img src="/skins/coffee/images/xml.gif" alt="订阅" />
+</a></li>
+</ul>
+
+
+
+			<div class="blogStats">
+				
+				<!--done-->
+随笔- 
+46&nbsp;
+文章- 
+0&nbsp;
+评论- 
+5&nbsp;
+
+
+
+				
+			</div><!--end: blogStats -->
+		</div><!--end: navigator 博客导航栏 -->
+		<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class = "postTitle">
+			
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/koshio0219/p/12988884.html">Unity 离线建造系统</a>
+
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			
+<div id="cnblogs_post_body" class="blogpost-body ">
+    <p>很多游戏，特别是养成类手游，都会有自己独特的建造系统，一个建造装置的状态循环或者说生命周期一般是这样的：</p>
+<p>1.准备建造，设置各项资源的投入等</p>
+<p>2.等待一段倒计时，正在建造中</p>
+<p>3.建造结束，选择是否收取资源</p>
+<p>&nbsp;</p>
+<p>大体上，可以将建造盒子分为以下三种状态，每一个状态的逻辑和显示的页面不同：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008080;">1</span> <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">enum</span><span style="color: #000000;"> BuildBoxState
+</span><span style="color: #008080;">2</span> <span style="color: #000000;">{
+</span><span style="color: #008080;">3</span> <span style="color: #000000;">    Start,
+</span><span style="color: #008080;">4</span> <span style="color: #000000;">    Doing,
+</span><span style="color: #008080;">5</span> <span style="color: #000000;">    Complete
+</span><span style="color: #008080;">6</span> }</pre>
+</div>
+<div class="cnblogs_code">
+<pre><span style="color: #008080;"> 1</span>     <span style="color: #0000ff;">private</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> ShiftState(BuildBoxState state)
+</span><span style="color: #008080;"> 2</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;"> 3</span>         <span style="color: #0000ff;">switch</span><span style="color: #000000;"> (state)
+</span><span style="color: #008080;"> 4</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;"> 5</span>             <span style="color: #0000ff;">case</span><span style="color: #000000;"> BuildBoxState.Start:
+</span><span style="color: #008080;"> 6</span>                 Start.SetActive(<span style="color: #0000ff;">true</span><span style="color: #000000;">);
+</span><span style="color: #008080;"> 7</span>                 Doing.SetActive(<span style="color: #0000ff;">false</span><span style="color: #000000;">);
+</span><span style="color: #008080;"> 8</span>                 Complete.SetActive(<span style="color: #0000ff;">false</span><span style="color: #000000;">);
+</span><span style="color: #008080;"> 9</span> 
+<span style="color: #008080;">10</span> <span style="color: #000000;">                ResetResCount();
+</span><span style="color: #008080;">11</span>                 <span style="color: #0000ff;">break</span><span style="color: #000000;">;
+</span><span style="color: #008080;">12</span>             <span style="color: #0000ff;">case</span><span style="color: #000000;"> BuildBoxState.Doing:
+</span><span style="color: #008080;">13</span>                 Start.SetActive(<span style="color: #0000ff;">false</span><span style="color: #000000;">);
+</span><span style="color: #008080;">14</span>                 Doing.SetActive(<span style="color: #0000ff;">true</span><span style="color: #000000;">);
+</span><span style="color: #008080;">15</span>                 Complete.SetActive(<span style="color: #0000ff;">false</span><span style="color: #000000;">);
+</span><span style="color: #008080;">16</span> 
+<span style="color: #008080;">17</span> <span style="color: #000000;">                StartCoroutine(ShowBuildTime());
+</span><span style="color: #008080;">18</span>                 <span style="color: #0000ff;">break</span><span style="color: #000000;">;
+</span><span style="color: #008080;">19</span>             <span style="color: #0000ff;">case</span><span style="color: #000000;"> BuildBoxState.Complete:
+</span><span style="color: #008080;">20</span>                 Start.SetActive(<span style="color: #0000ff;">false</span><span style="color: #000000;">);
+</span><span style="color: #008080;">21</span>                 Doing.SetActive(<span style="color: #0000ff;">false</span><span style="color: #000000;">);
+</span><span style="color: #008080;">22</span>                 Complete.SetActive(<span style="color: #0000ff;">true</span><span style="color: #000000;">);
+</span><span style="color: #008080;">23</span> 
+<span style="color: #008080;">24</span>                 <span style="color: #0000ff;">break</span><span style="color: #000000;">;
+</span><span style="color: #008080;">25</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;">26</span>         CurState =<span style="color: #000000;"> state;
+</span><span style="color: #008080;">27</span>     }</pre>
+</div>
+<p>这里值得思考的并非是状态的切换或者基础的按钮侦听，视图资源更新等。</p>
+<p>如何在离线一段时间后重新获取目前对应建造盒子所处的状态才是重点；并且如果处于建造中状态的话，还应该能正确的显示剩余时间的倒计时。</p>
+<p>一个非常常见的想法是，在建造开始时记录一份开始建造的时间数据给服务器或存在本地离线数据中，当下一次再登录时读取当前系统的时间，并通过总共需要的建造时长来计算剩余时间。</p>
+<p>但假如总共需要的建造时长与当时投入的资源类型和量都有关系，这时就需要至少额外记载一类数据来进行计算。那么，有没有方法仅通过一个数据得到剩余时长呢？</p>
+<p>答案是，不记录开始建造的时刻，改为记录拟定建造完成的时刻。</p>
+<p>如此一来，每次离线登录后，只需要干两件事既可以判断出所有状态视图：</p>
+<p>1.是否存在该建造盒子ID对应的拟定建造完成时刻的数据，如果不存在，一定是处于准备状态，即Start状态。</p>
+<p>2.如果存在，对比当前系统时刻与拟定建造完成时刻的数据大小，大于等于则处于完成状态，小于则依然在建造中，并按秒显示差值更新。</p>
+<p>&nbsp;</p>
+<p>记录的时刻如下：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008080;"> 1</span>     <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">string</span><span style="color: #000000;"> BuildCompleteTime
+</span><span style="color: #008080;"> 2</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;"> 3</span>         <span style="color: #0000ff;">get</span>
+<span style="color: #008080;"> 4</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;"> 5</span>             <span style="color: #0000ff;">if</span><span style="color: #000000;"> (PlayerPrefs.HasKey(ID.ToString()))
+</span><span style="color: #008080;"> 6</span>                 <span style="color: #0000ff;">return</span><span style="color: #000000;"> PlayerPrefs.GetString(ID.ToString());
+</span><span style="color: #008080;"> 7</span>             <span style="color: #0000ff;">return</span><span style="color: #000000;"> S_Null;
+</span><span style="color: #008080;"> 8</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;"> 9</span>         <span style="color: #0000ff;">set</span>
+<span style="color: #008080;">10</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;">11</span> <span style="color: #000000;">            PlayerPrefs.SetString(ID.ToString(), value);
+</span><span style="color: #008080;">12</span> <span style="color: #000000;">            PlayerPrefs.Save();
+</span><span style="color: #008080;">13</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;">14</span>     }</pre>
+</div>
+<p>&nbsp;</p>
+<p>每次开始时，只需要判断这个数据是否存在：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008080;"> 1</span>     <span style="color: #0000ff;">protected</span> <span style="color: #0000ff;">override</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> InitState()
+</span><span style="color: #008080;"> 2</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;"> 3</span>         View = HudView <span style="color: #0000ff;">as</span><span style="color: #000000;"> BuildBoxView;
+</span><span style="color: #008080;"> 4</span>         <span style="color: #0000ff;">if</span> (BuildCompleteTime ==<span style="color: #000000;"> S_Null)
+</span><span style="color: #008080;"> 5</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;"> 6</span> <span style="color: #000000;">            ShiftState(BuildBoxState.Start);
+</span><span style="color: #008080;"> 7</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;"> 8</span>         <span style="color: #0000ff;">else</span>
+<span style="color: #008080;"> 9</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;">10</span> <span style="color: #000000;">            ShiftState(BuildBoxState.Doing);
+</span><span style="color: #008080;">11</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;">12</span>     }</pre>
+</div>
+<p>通过建造中的时刻关系自动判断是否完成：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008080;"> 1</span> <span style="color: #000000;">    IEnumerator ShowBuildTime()
+</span><span style="color: #008080;"> 2</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;"> 3</span>         <span style="color: #0000ff;">var</span> ct =<span style="color: #000000;"> GetCompleteTime();
+</span><span style="color: #008080;"> 4</span>         <span style="color: #0000ff;">if</span><span style="color: #000000;"> (CheckBuildCompleted(ct))
+</span><span style="color: #008080;"> 5</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;"> 6</span> <span style="color: #000000;">            ShiftState(BuildBoxState.Complete);
+</span><span style="color: #008080;"> 7</span>             <span style="color: #0000ff;">yield</span> <span style="color: #0000ff;">break</span><span style="color: #000000;">;
+</span><span style="color: #008080;"> 8</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;"> 9</span>         <span style="color: #0000ff;">else</span>
+<span style="color: #008080;">10</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;">11</span>             <span style="color: #0000ff;">for</span><span style="color: #000000;"> (; ; )
+</span><span style="color: #008080;">12</span> <span style="color: #000000;">            {
+</span><span style="color: #008080;">13</span> <span style="color: #000000;">                View.SetTime(CalNeedTime(ct));
+</span><span style="color: #008080;">14</span>                 <span style="color: #0000ff;">yield</span> <span style="color: #0000ff;">return</span> <span style="color: #0000ff;">new</span> WaitForSeconds(<span style="color: #800080;">1</span><span style="color: #000000;">);
+</span><span style="color: #008080;">15</span> <span style="color: #000000;">            }
+</span><span style="color: #008080;">16</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;">17</span>     }</pre>
+</div>
+<p>当建造完成点击收取资源时，切换为准备状态的同时，自动清空拟定建造完成时刻的数据记录：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008080;">1</span>     <span style="color: #0000ff;">private</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> OnClickGet()
+</span><span style="color: #008080;">2</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;">3</span>         Canvas.SendEvent(<span style="color: #0000ff;">new</span><span style="color: #000000;"> GetItemEvent());
+</span><span style="color: #008080;">4</span> <span style="color: #000000;">        ClearCompleteTime();
+</span><span style="color: #008080;">5</span> <span style="color: #000000;">        ShiftState(BuildBoxState.Start);
+</span><span style="color: #008080;">6</span>     }</pre>
+</div>
+<p>这里有一个问题是，为什么不在建造完成时就清理数据呢，因为有一种情况是，建造完成后，玩家还没来得及点击收取，就直接进入了离线状态，如果此时再次登录时数据已经清空，那他将做了一场无用功。</p>
+<p>说不定直接垃圾游戏毁我青春败我前程了，为了避免这种情况发生，我们只有确保玩家真正收取到资源的那一刻才能清理数据。</p>
+<p>&nbsp;</p>
+<p>到此，整个建造的基础逻辑已经梳理完毕。如果要实现快速建造的话，也只不过是将拟定的完成时间直接设置为此刻即可。如果之前记录的是开始建造的时刻，此时又会进行更多额外计算。</p>
+<p>&nbsp;</p>
+<p>接下来，关于时间的坑这里也略提一二吧，一开始我以为记录时刻只需要记录时分秒即可，因为最多的建造时长也不超过10小时一般，游戏要保证玩家每天登陆，不可能动用海量的时间去建造一个资源。</p>
+<p>如若如此，策划很可能会马上被抓出来祭天，并被玩家评论区冰冷的口水淹没。</p>
+<p>但后来写着写着就发现了一个问题，那就是好多天没登录的玩家怎么办，只记录时分秒根本没办法判断时间的早晚，后来想一会还是把日期也记录下来吧。</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008080;">1</span> <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">struct</span><span style="color: #000000;"> TimeData
+</span><span style="color: #008080;">2</span> <span style="color: #000000;">{
+</span><span style="color: #008080;">3</span>     <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">int</span><span style="color: #000000;"> DayOfYear;
+</span><span style="color: #008080;">4</span>     <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">int</span><span style="color: #000000;"> Hour;
+</span><span style="color: #008080;">5</span>     <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">int</span><span style="color: #000000;"> Minute;
+</span><span style="color: #008080;">6</span>     <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">int</span><span style="color: #000000;"> Second;
+</span><span style="color: #008080;">7</span> }</pre>
+</div>
+<p>要是你问，那一年以上没登录怎么办，那只能说，你建造的资源已经被时光的齿轮碾碎了（允悲...）。后来突然想起来如果是某一年的最后一天呢...emm，还是老实写全吧：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008080;"> 1</span> <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">struct</span><span style="color: #000000;"> TimeData
+</span><span style="color: #008080;"> 2</span> <span style="color: #000000;">{
+</span><span style="color: #008080;"> 3</span>     <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">int</span><span style="color: #000000;"> Year;
+</span><span style="color: #008080;"> 4</span>     <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">int</span><span style="color: #000000;"> DayOfYear;
+</span><span style="color: #008080;"> 5</span>     <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">int</span><span style="color: #000000;"> Hour;
+</span><span style="color: #008080;"> 6</span>     <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">int</span><span style="color: #000000;"> Minute;
+</span><span style="color: #008080;"> 7</span>     <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">int</span><span style="color: #000000;"> Second;
+</span><span style="color: #008080;"> 8</span> 
+<span style="color: #008080;"> 9</span>     <span style="color: #0000ff;">public</span> TimeData(<span style="color: #0000ff;">int</span> year,<span style="color: #0000ff;">int</span> dayOfYear,<span style="color: #0000ff;">int</span> hour,<span style="color: #0000ff;">int</span> minute,<span style="color: #0000ff;">int</span><span style="color: #000000;"> second)
+</span><span style="color: #008080;">10</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;">11</span>         Year =<span style="color: #000000;"> year;
+</span><span style="color: #008080;">12</span>         DayOfYear =<span style="color: #000000;"> dayOfYear;
+</span><span style="color: #008080;">13</span>         Hour =<span style="color: #000000;"> hour;
+</span><span style="color: #008080;">14</span>         Minute =<span style="color: #000000;"> minute;
+</span><span style="color: #008080;">15</span>         Second =<span style="color: #000000;"> second;
+</span><span style="color: #008080;">16</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">17</span> }</pre>
+</div>
+<p>&nbsp;</p>
+<p>完整时间数据管理脚本：</p>
+<div class="cnblogs_code" onclick="cnblogs_code_show('3f562812-98ac-41ec-8384-ae07ad87e538')"><img id="code_img_closed_3f562812-98ac-41ec-8384-ae07ad87e538" class="code_img_closed" src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt=""><img id="code_img_opened_3f562812-98ac-41ec-8384-ae07ad87e538" class="code_img_opened" style="display: none" src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="">
+<div id="cnblogs_code_open_3f562812-98ac-41ec-8384-ae07ad87e538" class="cnblogs_code_hide">
+<pre><span style="color: #008080;">  1</span> <span style="color: #0000ff;">using</span><span style="color: #000000;"> System;
+</span><span style="color: #008080;">  2</span> 
+<span style="color: #008080;">  3</span> <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">class</span> TimeDataManager : Singleton&lt;TimeDataManager&gt;
+<span style="color: #008080;">  4</span> <span style="color: #000000;">{
+</span><span style="color: #008080;">  5</span>     <span style="color: #0000ff;">const</span> <span style="color: #0000ff;">char</span> S_Time = <span style="color: #800000;">'</span><span style="color: #800000;">:</span><span style="color: #800000;">'</span><span style="color: #000000;">;
+</span><span style="color: #008080;">  6</span>     <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">int</span> GetYearDayCount(<span style="color: #0000ff;">int</span><span style="color: #000000;"> year)
+</span><span style="color: #008080;">  7</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;">  8</span>         <span style="color: #0000ff;">return</span> year % <span style="color: #800080;">4</span> == <span style="color: #800080;">0</span> ? <span style="color: #800080;">366</span> : <span style="color: #800080;">365</span><span style="color: #000000;">;
+</span><span style="color: #008080;">  9</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;"> 10</span> 
+<span style="color: #008080;"> 11</span>     <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">string</span><span style="color: #000000;"> TimeToString(TimeData d)
+</span><span style="color: #008080;"> 12</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;"> 13</span>         <span style="color: #0000ff;">return</span> d.Year.ToString() + S_Time + d.DayOfYear.ToString() + S_Time + d.Hour.ToString() + S_Time + d.Minute.ToString() + S_Time +<span style="color: #000000;"> d.Second.ToString();
+</span><span style="color: #008080;"> 14</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;"> 15</span> 
+<span style="color: #008080;"> 16</span>     <span style="color: #0000ff;">public</span> TimeData StringToTime(<span style="color: #0000ff;">string</span><span style="color: #000000;"> str)
+</span><span style="color: #008080;"> 17</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;"> 18</span>         <span style="color: #0000ff;">var</span> d = <span style="color: #0000ff;">new</span><span style="color: #000000;"> TimeData();
+</span><span style="color: #008080;"> 19</span>         <span style="color: #0000ff;">var</span> s =<span style="color: #000000;"> str.Split(S_Time);
+</span><span style="color: #008080;"> 20</span>         d.Year = <span style="color: #0000ff;">int</span>.Parse(s[<span style="color: #800080;">0</span><span style="color: #000000;">]);
+</span><span style="color: #008080;"> 21</span>         d.DayOfYear = <span style="color: #0000ff;">int</span>.Parse(s[<span style="color: #800080;">1</span><span style="color: #000000;">]);
+</span><span style="color: #008080;"> 22</span>         d.Hour = <span style="color: #0000ff;">int</span>.Parse(s[<span style="color: #800080;">2</span><span style="color: #000000;">]);
+</span><span style="color: #008080;"> 23</span>         d.Minute = <span style="color: #0000ff;">int</span>.Parse(s[<span style="color: #800080;">3</span><span style="color: #000000;">]);
+</span><span style="color: #008080;"> 24</span>         d.Second = <span style="color: #0000ff;">int</span>.Parse(s[<span style="color: #800080;">4</span><span style="color: #000000;">]);
+</span><span style="color: #008080;"> 25</span>         <span style="color: #0000ff;">return</span><span style="color: #000000;"> d;
+</span><span style="color: #008080;"> 26</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;"> 27</span> 
+<span style="color: #008080;"> 28</span>     <span style="color: #0000ff;">public</span><span style="color: #000000;"> TimeData GetNowTime()
+</span><span style="color: #008080;"> 29</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;"> 30</span>         <span style="color: #0000ff;">var</span> d = <span style="color: #0000ff;">new</span><span style="color: #000000;"> TimeData();
+</span><span style="color: #008080;"> 31</span>         <span style="color: #0000ff;">var</span> t =<span style="color: #000000;"> DateTime.Now;
+</span><span style="color: #008080;"> 32</span>         d.Year =<span style="color: #000000;"> t.Year;
+</span><span style="color: #008080;"> 33</span>         d.DayOfYear =<span style="color: #000000;"> t.DayOfYear;
+</span><span style="color: #008080;"> 34</span>         d.Hour =<span style="color: #000000;"> t.Hour;
+</span><span style="color: #008080;"> 35</span>         d.Minute =<span style="color: #000000;"> t.Minute;
+</span><span style="color: #008080;"> 36</span>         d.Second =<span style="color: #000000;"> t.Second;
+</span><span style="color: #008080;"> 37</span>         <span style="color: #0000ff;">return</span><span style="color: #000000;"> d;
+</span><span style="color: #008080;"> 38</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;"> 39</span> 
+<span style="color: #008080;"> 40</span>     <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">bool</span><span style="color: #000000;"> CheckTimeBeforeNow(TimeData d)
+</span><span style="color: #008080;"> 41</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;"> 42</span>         <span style="color: #0000ff;">var</span> now =<span style="color: #000000;"> GetNowTime();
+</span><span style="color: #008080;"> 43</span>         <span style="color: #0000ff;">if</span> (now.Year &lt; d.Year) { <span style="color: #0000ff;">return</span> <span style="color: #0000ff;">false</span><span style="color: #000000;">; }
+</span><span style="color: #008080;"> 44</span>         <span style="color: #0000ff;">else</span> <span style="color: #0000ff;">if</span> (now.Year &gt; d.Year) { <span style="color: #0000ff;">return</span> <span style="color: #0000ff;">true</span><span style="color: #000000;">; }
+</span><span style="color: #008080;"> 45</span>         <span style="color: #0000ff;">else</span> <span style="color: #0000ff;">if</span> (now.DayOfYear &lt; d.DayOfYear) { <span style="color: #0000ff;">return</span> <span style="color: #0000ff;">false</span><span style="color: #000000;">; }
+</span><span style="color: #008080;"> 46</span>         <span style="color: #0000ff;">else</span> <span style="color: #0000ff;">if</span> (now.DayOfYear &gt; d.DayOfYear) { <span style="color: #0000ff;">return</span> <span style="color: #0000ff;">true</span><span style="color: #000000;">; }
+</span><span style="color: #008080;"> 47</span>         <span style="color: #0000ff;">else</span> <span style="color: #0000ff;">if</span> (now.Hour &lt; d.Hour) { <span style="color: #0000ff;">return</span> <span style="color: #0000ff;">false</span><span style="color: #000000;">; }
+</span><span style="color: #008080;"> 48</span>         <span style="color: #0000ff;">else</span> <span style="color: #0000ff;">if</span> (now.Hour &gt; d.Hour) { <span style="color: #0000ff;">return</span> <span style="color: #0000ff;">true</span><span style="color: #000000;">; }
+</span><span style="color: #008080;"> 49</span>         <span style="color: #0000ff;">else</span> <span style="color: #0000ff;">if</span> (now.Minute &lt; d.Minute) { <span style="color: #0000ff;">return</span> <span style="color: #0000ff;">false</span><span style="color: #000000;">; }
+</span><span style="color: #008080;"> 50</span>         <span style="color: #0000ff;">else</span> <span style="color: #0000ff;">if</span> (now.Minute &gt; d.Minute) { <span style="color: #0000ff;">return</span> <span style="color: #0000ff;">true</span><span style="color: #000000;">; }
+</span><span style="color: #008080;"> 51</span>         <span style="color: #0000ff;">else</span> <span style="color: #0000ff;">if</span> (now.Second &lt; d.Second) { <span style="color: #0000ff;">return</span> <span style="color: #0000ff;">false</span><span style="color: #000000;">; }
+</span><span style="color: #008080;"> 52</span>         <span style="color: #0000ff;">return</span> <span style="color: #0000ff;">true</span><span style="color: #000000;">;
+</span><span style="color: #008080;"> 53</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;"> 54</span> 
+<span style="color: #008080;"> 55</span>     <span style="color: #0000ff;">public</span><span style="color: #000000;"> TimeData Add(TimeData moment,TimeData time)
+</span><span style="color: #008080;"> 56</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;"> 57</span>         <span style="color: #0000ff;">var</span> y = moment.Year +<span style="color: #000000;"> time.Year;
+</span><span style="color: #008080;"> 58</span>         <span style="color: #0000ff;">var</span> d = moment.DayOfYear +<span style="color: #000000;"> time.DayOfYear;
+</span><span style="color: #008080;"> 59</span>         <span style="color: #0000ff;">var</span> h = moment.Hour +<span style="color: #000000;"> time.Hour;
+</span><span style="color: #008080;"> 60</span>         <span style="color: #0000ff;">var</span> m = moment.Minute +<span style="color: #000000;"> time.Minute;
+</span><span style="color: #008080;"> 61</span>         <span style="color: #0000ff;">var</span> s = moment.Second +<span style="color: #000000;"> time.Second;
+</span><span style="color: #008080;"> 62</span> 
+<span style="color: #008080;"> 63</span>         <span style="color: #0000ff;">if</span> (s &gt; <span style="color: #800080;">59</span><span style="color: #000000;">)
+</span><span style="color: #008080;"> 64</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;"> 65</span>             s -= <span style="color: #800080;">60</span><span style="color: #000000;">;
+</span><span style="color: #008080;"> 66</span>             m++<span style="color: #000000;">;
+</span><span style="color: #008080;"> 67</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;"> 68</span> 
+<span style="color: #008080;"> 69</span>         <span style="color: #0000ff;">if</span> (m &gt; <span style="color: #800080;">59</span><span style="color: #000000;">)
+</span><span style="color: #008080;"> 70</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;"> 71</span>             m -= <span style="color: #800080;">60</span><span style="color: #000000;">;
+</span><span style="color: #008080;"> 72</span>             h++<span style="color: #000000;">;
+</span><span style="color: #008080;"> 73</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;"> 74</span> 
+<span style="color: #008080;"> 75</span>         <span style="color: #0000ff;">if</span> (h &gt; <span style="color: #800080;">23</span><span style="color: #000000;">)
+</span><span style="color: #008080;"> 76</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;"> 77</span>             h -= <span style="color: #800080;">24</span><span style="color: #000000;">;
+</span><span style="color: #008080;"> 78</span>             d++<span style="color: #000000;">;
+</span><span style="color: #008080;"> 79</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;"> 80</span> 
+<span style="color: #008080;"> 81</span>         <span style="color: #0000ff;">var</span> ydc =<span style="color: #000000;"> GetYearDayCount(moment.Year);
+</span><span style="color: #008080;"> 82</span>         <span style="color: #0000ff;">if</span> (d &gt;<span style="color: #000000;"> ydc)
+</span><span style="color: #008080;"> 83</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;"> 84</span>             d -=<span style="color: #000000;"> ydc;
+</span><span style="color: #008080;"> 85</span>             y++<span style="color: #000000;">;
+</span><span style="color: #008080;"> 86</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;"> 87</span> 
+<span style="color: #008080;"> 88</span>         <span style="color: #0000ff;">return</span> <span style="color: #0000ff;">new</span><span style="color: #000000;"> TimeData(y, d, h, m, s);
+</span><span style="color: #008080;"> 89</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;"> 90</span> 
+<span style="color: #008080;"> 91</span>     <span style="color: #0000ff;">public</span><span style="color: #000000;"> TimeData Sub(TimeData afterTime,TimeData beforeTime)
+</span><span style="color: #008080;"> 92</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;"> 93</span>         <span style="color: #0000ff;">var</span> d = <span style="color: #0000ff;">new</span><span style="color: #000000;"> TimeData();
+</span><span style="color: #008080;"> 94</span>         d.Second = afterTime.Second -<span style="color: #000000;"> beforeTime.Second;
+</span><span style="color: #008080;"> 95</span>         d.Minute = afterTime.Minute -<span style="color: #000000;"> beforeTime.Minute;
+</span><span style="color: #008080;"> 96</span>         d.Hour = afterTime.Hour -<span style="color: #000000;"> beforeTime.Hour;
+</span><span style="color: #008080;"> 97</span>         d.DayOfYear = afterTime.DayOfYear -<span style="color: #000000;"> beforeTime.DayOfYear;
+</span><span style="color: #008080;"> 98</span>         d.Year = afterTime.Year -<span style="color: #000000;"> beforeTime.Year;
+</span><span style="color: #008080;"> 99</span> 
+<span style="color: #008080;">100</span>         <span style="color: #0000ff;">if</span> (d.Second &lt; <span style="color: #800080;">0</span><span style="color: #000000;">)
+</span><span style="color: #008080;">101</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;">102</span>             d.Second += <span style="color: #800080;">60</span><span style="color: #000000;">;
+</span><span style="color: #008080;">103</span>             d.Minute--<span style="color: #000000;">;
+</span><span style="color: #008080;">104</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;">105</span> 
+<span style="color: #008080;">106</span>         <span style="color: #0000ff;">if</span> (d.Minute &lt; <span style="color: #800080;">0</span><span style="color: #000000;">)
+</span><span style="color: #008080;">107</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;">108</span>             d.Minute += <span style="color: #800080;">60</span><span style="color: #000000;">;
+</span><span style="color: #008080;">109</span>             d.Hour--<span style="color: #000000;">;
+</span><span style="color: #008080;">110</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;">111</span> 
+<span style="color: #008080;">112</span>         <span style="color: #0000ff;">if</span> (d.Hour &lt; <span style="color: #800080;">0</span><span style="color: #000000;">)
+</span><span style="color: #008080;">113</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;">114</span>             d.Hour += <span style="color: #800080;">24</span><span style="color: #000000;">;
+</span><span style="color: #008080;">115</span>             d.DayOfYear--<span style="color: #000000;">;
+</span><span style="color: #008080;">116</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;">117</span> 
+<span style="color: #008080;">118</span>         <span style="color: #0000ff;">var</span> ydc =<span style="color: #000000;"> GetYearDayCount(beforeTime.Year);
+</span><span style="color: #008080;">119</span>         <span style="color: #0000ff;">if</span> (d.DayOfYear &lt; <span style="color: #800080;">0</span><span style="color: #000000;">)
+</span><span style="color: #008080;">120</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;">121</span>             d.DayOfYear +=<span style="color: #000000;"> ydc;
+</span><span style="color: #008080;">122</span>             d.Year--<span style="color: #000000;">;
+</span><span style="color: #008080;">123</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;">124</span> 
+<span style="color: #008080;">125</span>         <span style="color: #0000ff;">return</span><span style="color: #000000;"> d;
+</span><span style="color: #008080;">126</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">127</span> }</pre>
+</div>
+<span class="cnblogs_code_collapse">View Code</span></div>
+<p>完整建造脚本：</p>
+<div class="cnblogs_code" onclick="cnblogs_code_show('4f8cb171-ed20-4d99-81bb-3d726de5ae29')"><img id="code_img_closed_4f8cb171-ed20-4d99-81bb-3d726de5ae29" class="code_img_closed" src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt=""><img id="code_img_opened_4f8cb171-ed20-4d99-81bb-3d726de5ae29" class="code_img_opened" style="display: none" src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="">
+<div id="cnblogs_code_open_4f8cb171-ed20-4d99-81bb-3d726de5ae29" class="cnblogs_code_hide">
+<pre><span style="color: #008080;">  1</span> <span style="color: #0000ff;">using</span><span style="color: #000000;"> System.Collections;
+</span><span style="color: #008080;">  2</span> <span style="color: #0000ff;">using</span><span style="color: #000000;"> UnityEngine;
+</span><span style="color: #008080;">  3</span> 
+<span style="color: #008080;">  4</span> <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">enum</span><span style="color: #000000;"> BuildBoxState
+</span><span style="color: #008080;">  5</span> <span style="color: #000000;">{
+</span><span style="color: #008080;">  6</span> <span style="color: #000000;">    Start,
+</span><span style="color: #008080;">  7</span> <span style="color: #000000;">    Doing,
+</span><span style="color: #008080;">  8</span> <span style="color: #000000;">    Complete
+</span><span style="color: #008080;">  9</span> <span style="color: #000000;">}
+</span><span style="color: #008080;"> 10</span> 
+<span style="color: #008080;"> 11</span> <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">class</span><span style="color: #000000;"> BuildBoxCtrl : HudBase
+</span><span style="color: #008080;"> 12</span> <span style="color: #000000;">{
+</span><span style="color: #008080;"> 13</span>     <span style="color: #0000ff;">private</span><span style="color: #000000;"> BuildBoxView View;
+</span><span style="color: #008080;"> 14</span>     <span style="color: #0000ff;">public</span> BuildBoxState CurState { <span style="color: #0000ff;">get</span>; <span style="color: #0000ff;">set</span><span style="color: #000000;">; }
+</span><span style="color: #008080;"> 15</span> 
+<span style="color: #008080;"> 16</span>     <span style="color: #0000ff;">public</span><span style="color: #000000;"> GameObject Start;
+</span><span style="color: #008080;"> 17</span>     <span style="color: #0000ff;">public</span><span style="color: #000000;"> GameObject Doing;
+</span><span style="color: #008080;"> 18</span>     <span style="color: #0000ff;">public</span><span style="color: #000000;"> GameObject Complete;
+</span><span style="color: #008080;"> 19</span> 
+<span style="color: #008080;"> 20</span>     <span style="color: #0000ff;">private</span> <span style="color: #0000ff;">const</span> <span style="color: #0000ff;">int</span> ResDef = <span style="color: #800080;">160</span><span style="color: #000000;">;
+</span><span style="color: #008080;"> 21</span>     <span style="color: #0000ff;">private</span> <span style="color: #0000ff;">const</span> <span style="color: #0000ff;">int</span> ResMax = <span style="color: #800080;">800</span><span style="color: #000000;">;
+</span><span style="color: #008080;"> 22</span>     <span style="color: #0000ff;">private</span> <span style="color: #0000ff;">const</span> <span style="color: #0000ff;">int</span> ResMin = <span style="color: #800080;">100</span><span style="color: #000000;">;
+</span><span style="color: #008080;"> 23</span>     <span style="color: #0000ff;">private</span> <span style="color: #0000ff;">const</span> <span style="color: #0000ff;">int</span> ResCha = <span style="color: #800080;">10</span><span style="color: #000000;">;
+</span><span style="color: #008080;"> 24</span>     <span style="color: #0000ff;">private</span> <span style="color: #0000ff;">int</span><span style="color: #000000;"> CurResCount;
+</span><span style="color: #008080;"> 25</span> 
+<span style="color: #008080;"> 26</span>     <span style="color: #0000ff;">private</span> <span style="color: #0000ff;">const</span> <span style="color: #0000ff;">string</span> S_Null = <span style="color: #800000;">""</span><span style="color: #000000;">;
+</span><span style="color: #008080;"> 27</span> 
+<span style="color: #008080;"> 28</span>     <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">int</span><span style="color: #000000;"> ID;
+</span><span style="color: #008080;"> 29</span> 
+<span style="color: #008080;"> 30</span>     <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">string</span><span style="color: #000000;"> BuildCompleteTime
+</span><span style="color: #008080;"> 31</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;"> 32</span>         <span style="color: #0000ff;">get</span>
+<span style="color: #008080;"> 33</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;"> 34</span>             <span style="color: #0000ff;">if</span><span style="color: #000000;"> (PlayerPrefs.HasKey(ID.ToString()))
+</span><span style="color: #008080;"> 35</span>                 <span style="color: #0000ff;">return</span><span style="color: #000000;"> PlayerPrefs.GetString(ID.ToString());
+</span><span style="color: #008080;"> 36</span>             <span style="color: #0000ff;">return</span><span style="color: #000000;"> S_Null;
+</span><span style="color: #008080;"> 37</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;"> 38</span>         <span style="color: #0000ff;">set</span>
+<span style="color: #008080;"> 39</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;"> 40</span> <span style="color: #000000;">            PlayerPrefs.SetString(ID.ToString(), value);
+</span><span style="color: #008080;"> 41</span> <span style="color: #000000;">            PlayerPrefs.Save();
+</span><span style="color: #008080;"> 42</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;"> 43</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;"> 44</span> 
+<span style="color: #008080;"> 45</span>     <span style="color: #0000ff;">protected</span> <span style="color: #0000ff;">override</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> InitState()
+</span><span style="color: #008080;"> 46</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;"> 47</span>         View = HudView <span style="color: #0000ff;">as</span><span style="color: #000000;"> BuildBoxView;
+</span><span style="color: #008080;"> 48</span>         <span style="color: #0000ff;">if</span> (BuildCompleteTime ==<span style="color: #000000;"> S_Null)
+</span><span style="color: #008080;"> 49</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;"> 50</span> <span style="color: #000000;">            ShiftState(BuildBoxState.Start);
+</span><span style="color: #008080;"> 51</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;"> 52</span>         <span style="color: #0000ff;">else</span>
+<span style="color: #008080;"> 53</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;"> 54</span> <span style="color: #000000;">            ShiftState(BuildBoxState.Doing);
+</span><span style="color: #008080;"> 55</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;"> 56</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;"> 57</span> 
+<span style="color: #008080;"> 58</span>     <span style="color: #0000ff;">protected</span> <span style="color: #0000ff;">override</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> AddListeners()
+</span><span style="color: #008080;"> 59</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;"> 60</span>         View.AddRes.onClick.AddListener(() =&gt;<span style="color: #000000;"> SetResCount(ResCha));
+</span><span style="color: #008080;"> 61</span>         View.CutRes.onClick.AddListener(() =&gt; SetResCount(-<span style="color: #000000;">ResCha));
+</span><span style="color: #008080;"> 62</span> <span style="color: #000000;">        View.Build.onClick.AddListener(OnClickBuild);
+</span><span style="color: #008080;"> 63</span> <span style="color: #000000;">        View.Get.onClick.AddListener(OnClickGet);
+</span><span style="color: #008080;"> 64</span>         View.Speed.onClick.AddListener(() =&gt; Canvas.SendEvent(<span style="color: #0000ff;">new</span><span style="color: #000000;"> ShowConfirmWindowEvent(ID)));
+</span><span style="color: #008080;"> 65</span>         Canvas.AddListener&lt;ConfirmCompleteEvent&gt;<span style="color: #000000;">(ConfirmCompleteHandler);
+</span><span style="color: #008080;"> 66</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;"> 67</span> 
+<span style="color: #008080;"> 68</span>     <span style="color: #0000ff;">protected</span> <span style="color: #0000ff;">override</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> RemoveListeners()
+</span><span style="color: #008080;"> 69</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;"> 70</span> <span style="color: #000000;">        View.AddRes.onClick.RemoveAllListeners();
+</span><span style="color: #008080;"> 71</span> <span style="color: #000000;">        View.CutRes.onClick.RemoveAllListeners();
+</span><span style="color: #008080;"> 72</span> <span style="color: #000000;">        View.Build.onClick.RemoveAllListeners();
+</span><span style="color: #008080;"> 73</span> <span style="color: #000000;">        View.Get.onClick.RemoveAllListeners();
+</span><span style="color: #008080;"> 74</span> <span style="color: #000000;">        View.Speed.onClick.RemoveAllListeners();
+</span><span style="color: #008080;"> 75</span>         Canvas.RemoveListener&lt;ConfirmCompleteEvent&gt;<span style="color: #000000;">(ConfirmCompleteHandler);
+</span><span style="color: #008080;"> 76</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;"> 77</span> 
+<span style="color: #008080;"> 78</span>     <span style="color: #0000ff;">private</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> ConfirmCompleteHandler(ConfirmCompleteEvent e)
+</span><span style="color: #008080;"> 79</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;"> 80</span>         <span style="color: #0000ff;">if</span> (e.bYes &amp;&amp; e.ID ==<span style="color: #000000;"> ID)
+</span><span style="color: #008080;"> 81</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;"> 82</span> <span style="color: #000000;">            SetCompleteTimeAtNow();
+</span><span style="color: #008080;"> 83</span> <span style="color: #000000;">            ShiftState(BuildBoxState.Complete);
+</span><span style="color: #008080;"> 84</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;"> 85</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;"> 86</span> 
+<span style="color: #008080;"> 87</span>     <span style="color: #0000ff;">private</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> OnClickBuild()
+</span><span style="color: #008080;"> 88</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;"> 89</span>         <span style="color: #0000ff;">var</span> pd =<span style="color: #000000;"> GameData.Instance.PlayerData;
+</span><span style="color: #008080;"> 90</span>         <span style="color: #0000ff;">if</span> (pd.ResourcePoint &lt;<span style="color: #000000;"> CurResCount)
+</span><span style="color: #008080;"> 91</span>             <span style="color: #0000ff;">return</span><span style="color: #000000;">;
+</span><span style="color: #008080;"> 92</span> 
+<span style="color: #008080;"> 93</span>         pd.ResourcePoint -=<span style="color: #000000;"> CurResCount;
+</span><span style="color: #008080;"> 94</span>         Canvas.SendEvent(<span style="color: #0000ff;">new</span><span style="color: #000000;"> UpdateUpBoxEvent());
+</span><span style="color: #008080;"> 95</span> 
+<span style="color: #008080;"> 96</span> <span style="color: #000000;">        SetCompleteTime();
+</span><span style="color: #008080;"> 97</span> <span style="color: #000000;">        ShiftState(BuildBoxState.Doing);
+</span><span style="color: #008080;"> 98</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;"> 99</span> 
+<span style="color: #008080;">100</span>     <span style="color: #0000ff;">private</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> OnClickGet()
+</span><span style="color: #008080;">101</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;">102</span>         Canvas.SendEvent(<span style="color: #0000ff;">new</span><span style="color: #000000;"> GetItemEvent());
+</span><span style="color: #008080;">103</span> <span style="color: #000000;">        ClearCompleteTime();
+</span><span style="color: #008080;">104</span> <span style="color: #000000;">        ShiftState(BuildBoxState.Start);
+</span><span style="color: #008080;">105</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">106</span> 
+<span style="color: #008080;">107</span>     <span style="color: #0000ff;">private</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> SetCompleteTime()
+</span><span style="color: #008080;">108</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;">109</span>         <span style="color: #0000ff;">var</span> nt =<span style="color: #000000;"> GetNowTime();
+</span><span style="color: #008080;">110</span>         <span style="color: #0000ff;">var</span> bt =<span style="color: #000000;"> CalBuildTime(CurResCount);
+</span><span style="color: #008080;">111</span>         <span style="color: #0000ff;">var</span> ct =<span style="color: #000000;"> TimeDataManager.Instance.Add(nt, bt);
+</span><span style="color: #008080;">112</span> <span style="color: #000000;">        SetCompleteTime(ct);     
+</span><span style="color: #008080;">113</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">114</span> 
+<span style="color: #008080;">115</span>     <span style="color: #0000ff;">private</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> SetCompleteTime(TimeData d)
+</span><span style="color: #008080;">116</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;">117</span>         BuildCompleteTime =<span style="color: #000000;"> TimeDataManager.Instance.TimeToString(d);
+</span><span style="color: #008080;">118</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">119</span> 
+<span style="color: #008080;">120</span>     <span style="color: #0000ff;">private</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> SetCompleteTimeAtNow()
+</span><span style="color: #008080;">121</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;">122</span>         <span style="color: #0000ff;">var</span> nt =<span style="color: #000000;"> GetNowTime();
+</span><span style="color: #008080;">123</span> <span style="color: #000000;">        SetCompleteTime(nt);
+</span><span style="color: #008080;">124</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">125</span> 
+<span style="color: #008080;">126</span>     <span style="color: #0000ff;">private</span><span style="color: #000000;"> TimeData GetCompleteTime()
+</span><span style="color: #008080;">127</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;">128</span>         <span style="color: #0000ff;">return</span><span style="color: #000000;"> TimeDataManager.Instance.StringToTime(BuildCompleteTime);
+</span><span style="color: #008080;">129</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">130</span> 
+<span style="color: #008080;">131</span>     <span style="color: #0000ff;">private</span><span style="color: #000000;"> TimeData GetNowTime()
+</span><span style="color: #008080;">132</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;">133</span>         <span style="color: #0000ff;">return</span><span style="color: #000000;"> TimeDataManager.Instance.GetNowTime();
+</span><span style="color: #008080;">134</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">135</span> 
+<span style="color: #008080;">136</span>     <span style="color: #0000ff;">private</span> TimeData CalBuildTime(<span style="color: #0000ff;">int</span><span style="color: #000000;"> res)
+</span><span style="color: #008080;">137</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;">138</span>         <span style="color: #0000ff;">var</span> d = <span style="color: #0000ff;">new</span><span style="color: #000000;"> TimeData();
+</span><span style="color: #008080;">139</span>         d.Hour = res / <span style="color: #800080;">100</span><span style="color: #000000;">;
+</span><span style="color: #008080;">140</span>         d.Minute = res % <span style="color: #800080;">100</span><span style="color: #000000;">;
+</span><span style="color: #008080;">141</span>         <span style="color: #0000ff;">if</span> (d.Minute &gt; <span style="color: #800080;">59</span><span style="color: #000000;">)
+</span><span style="color: #008080;">142</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;">143</span>             d.Second = d.Minute - <span style="color: #800080;">59</span><span style="color: #000000;">;
+</span><span style="color: #008080;">144</span>             d.Minute = <span style="color: #800080;">59</span><span style="color: #000000;">;
+</span><span style="color: #008080;">145</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;">146</span>         <span style="color: #0000ff;">return</span><span style="color: #000000;"> d;
+</span><span style="color: #008080;">147</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">148</span> 
+<span style="color: #008080;">149</span>     <span style="color: #0000ff;">private</span> <span style="color: #0000ff;">void</span> SetResCount(<span style="color: #0000ff;">int</span><span style="color: #000000;"> change)
+</span><span style="color: #008080;">150</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;">151</span>         CurResCount +=<span style="color: #000000;"> change;
+</span><span style="color: #008080;">152</span>         <span style="color: #0000ff;">if</span> (CurResCount &gt;<span style="color: #000000;"> ResMax)
+</span><span style="color: #008080;">153</span>             CurResCount =<span style="color: #000000;"> ResMax;
+</span><span style="color: #008080;">154</span>         <span style="color: #0000ff;">if</span> (CurResCount &lt;<span style="color: #000000;"> ResMin)
+</span><span style="color: #008080;">155</span>             CurResCount =<span style="color: #000000;"> ResMin;
+</span><span style="color: #008080;">156</span> 
+<span style="color: #008080;">157</span> <span style="color: #000000;">        View.SetRes(CurResCount);
+</span><span style="color: #008080;">158</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">159</span> 
+<span style="color: #008080;">160</span>     <span style="color: #0000ff;">private</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> ResetResCount()
+</span><span style="color: #008080;">161</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;">162</span>         CurResCount =<span style="color: #000000;"> ResDef;
+</span><span style="color: #008080;">163</span> <span style="color: #000000;">        View.SetRes(CurResCount);
+</span><span style="color: #008080;">164</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">165</span> 
+<span style="color: #008080;">166</span>     <span style="color: #0000ff;">private</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> ShiftState(BuildBoxState state)
+</span><span style="color: #008080;">167</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;">168</span>         <span style="color: #0000ff;">switch</span><span style="color: #000000;"> (state)
+</span><span style="color: #008080;">169</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;">170</span>             <span style="color: #0000ff;">case</span><span style="color: #000000;"> BuildBoxState.Start:
+</span><span style="color: #008080;">171</span>                 Start.SetActive(<span style="color: #0000ff;">true</span><span style="color: #000000;">);
+</span><span style="color: #008080;">172</span>                 Doing.SetActive(<span style="color: #0000ff;">false</span><span style="color: #000000;">);
+</span><span style="color: #008080;">173</span>                 Complete.SetActive(<span style="color: #0000ff;">false</span><span style="color: #000000;">);
+</span><span style="color: #008080;">174</span> 
+<span style="color: #008080;">175</span> <span style="color: #000000;">                ResetResCount();
+</span><span style="color: #008080;">176</span>                 <span style="color: #0000ff;">break</span><span style="color: #000000;">;
+</span><span style="color: #008080;">177</span>             <span style="color: #0000ff;">case</span><span style="color: #000000;"> BuildBoxState.Doing:
+</span><span style="color: #008080;">178</span>                 Start.SetActive(<span style="color: #0000ff;">false</span><span style="color: #000000;">);
+</span><span style="color: #008080;">179</span>                 Doing.SetActive(<span style="color: #0000ff;">true</span><span style="color: #000000;">);
+</span><span style="color: #008080;">180</span>                 Complete.SetActive(<span style="color: #0000ff;">false</span><span style="color: #000000;">);
+</span><span style="color: #008080;">181</span> 
+<span style="color: #008080;">182</span> <span style="color: #000000;">                StartCoroutine(ShowBuildTime());
+</span><span style="color: #008080;">183</span>                 <span style="color: #0000ff;">break</span><span style="color: #000000;">;
+</span><span style="color: #008080;">184</span>             <span style="color: #0000ff;">case</span><span style="color: #000000;"> BuildBoxState.Complete:
+</span><span style="color: #008080;">185</span>                 Start.SetActive(<span style="color: #0000ff;">false</span><span style="color: #000000;">);
+</span><span style="color: #008080;">186</span>                 Doing.SetActive(<span style="color: #0000ff;">false</span><span style="color: #000000;">);
+</span><span style="color: #008080;">187</span>                 Complete.SetActive(<span style="color: #0000ff;">true</span><span style="color: #000000;">);
+</span><span style="color: #008080;">188</span> 
+<span style="color: #008080;">189</span>                 <span style="color: #0000ff;">break</span><span style="color: #000000;">;
+</span><span style="color: #008080;">190</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;">191</span>         CurState =<span style="color: #000000;"> state;
+</span><span style="color: #008080;">192</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">193</span> 
+<span style="color: #008080;">194</span>     <span style="color: #0000ff;">private</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> ClearCompleteTime()
+</span><span style="color: #008080;">195</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;">196</span>         <span style="color: #0000ff;">if</span><span style="color: #000000;"> (PlayerPrefs.HasKey(ID.ToString()))
+</span><span style="color: #008080;">197</span> <span style="color: #000000;">            PlayerPrefs.DeleteKey(ID.ToString());
+</span><span style="color: #008080;">198</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">199</span> 
+<span style="color: #008080;">200</span> <span style="color: #000000;">    IEnumerator ShowBuildTime()
+</span><span style="color: #008080;">201</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;">202</span>         <span style="color: #0000ff;">var</span> ct =<span style="color: #000000;"> GetCompleteTime();
+</span><span style="color: #008080;">203</span>         <span style="color: #0000ff;">if</span><span style="color: #000000;"> (CheckBuildCompleted(ct))
+</span><span style="color: #008080;">204</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;">205</span> <span style="color: #000000;">            ShiftState(BuildBoxState.Complete);
+</span><span style="color: #008080;">206</span>             <span style="color: #0000ff;">yield</span> <span style="color: #0000ff;">break</span><span style="color: #000000;">;
+</span><span style="color: #008080;">207</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;">208</span>         <span style="color: #0000ff;">else</span>
+<span style="color: #008080;">209</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;">210</span>             <span style="color: #0000ff;">for</span><span style="color: #000000;"> (; ; )
+</span><span style="color: #008080;">211</span> <span style="color: #000000;">            {
+</span><span style="color: #008080;">212</span> <span style="color: #000000;">                View.SetTime(CalNeedTime(ct));
+</span><span style="color: #008080;">213</span>                 <span style="color: #0000ff;">yield</span> <span style="color: #0000ff;">return</span> <span style="color: #0000ff;">new</span> WaitForSeconds(<span style="color: #800080;">1</span><span style="color: #000000;">);
+</span><span style="color: #008080;">214</span> <span style="color: #000000;">            }
+</span><span style="color: #008080;">215</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;">216</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">217</span> 
+<span style="color: #008080;">218</span>     <span style="color: #0000ff;">private</span><span style="color: #000000;"> TimeData CalNeedTime(TimeData com)
+</span><span style="color: #008080;">219</span> <span style="color: #000000;">    {      
+</span><span style="color: #008080;">220</span>         <span style="color: #0000ff;">var</span> now =<span style="color: #000000;"> GetNowTime();
+</span><span style="color: #008080;">221</span>         <span style="color: #0000ff;">return</span><span style="color: #000000;"> TimeDataManager.Instance.Sub(com, now);
+</span><span style="color: #008080;">222</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">223</span> 
+<span style="color: #008080;">224</span>     <span style="color: #0000ff;">private</span> <span style="color: #0000ff;">bool</span><span style="color: #000000;"> CheckBuildCompleted(TimeData com)
+</span><span style="color: #008080;">225</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;">226</span>         <span style="color: #0000ff;">return</span><span style="color: #000000;"> TimeDataManager.Instance.CheckTimeBeforeNow(com);
+</span><span style="color: #008080;">227</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">228</span> }</pre>
+</div>
+<span class="cnblogs_code_collapse">View Code</span></div>
+<div class="cnblogs_code" onclick="cnblogs_code_show('b0c6185e-f56c-4c55-abe1-7bc5a35e5093')"><img id="code_img_closed_b0c6185e-f56c-4c55-abe1-7bc5a35e5093" class="code_img_closed" src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt=""><img id="code_img_opened_b0c6185e-f56c-4c55-abe1-7bc5a35e5093" class="code_img_opened" style="display: none" src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="">
+<div id="cnblogs_code_open_b0c6185e-f56c-4c55-abe1-7bc5a35e5093" class="cnblogs_code_hide">
+<pre><span style="color: #008080;"> 1</span> <span style="color: #0000ff;">using</span><span style="color: #000000;"> UnityEngine.UI;
+</span><span style="color: #008080;"> 2</span> <span style="color: #0000ff;">using</span><span style="color: #000000;"> TMPro;
+</span><span style="color: #008080;"> 3</span> 
+<span style="color: #008080;"> 4</span> <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">class</span><span style="color: #000000;"> BuildBoxView : HudView
+</span><span style="color: #008080;"> 5</span> <span style="color: #000000;">{
+</span><span style="color: #008080;"> 6</span>     <span style="color: #0000ff;">public</span><span style="color: #000000;"> TextMeshProUGUI ResCount;
+</span><span style="color: #008080;"> 7</span>     <span style="color: #0000ff;">public</span><span style="color: #000000;"> TextMeshProUGUI Time;
+</span><span style="color: #008080;"> 8</span> 
+<span style="color: #008080;"> 9</span>     <span style="color: #0000ff;">public</span><span style="color: #000000;"> Button AddRes;
+</span><span style="color: #008080;">10</span>     <span style="color: #0000ff;">public</span><span style="color: #000000;"> Button CutRes;
+</span><span style="color: #008080;">11</span>     <span style="color: #0000ff;">public</span><span style="color: #000000;"> Button Build;
+</span><span style="color: #008080;">12</span>     <span style="color: #0000ff;">public</span><span style="color: #000000;"> Button Get;
+</span><span style="color: #008080;">13</span>     <span style="color: #0000ff;">public</span><span style="color: #000000;"> Button Speed;
+</span><span style="color: #008080;">14</span> 
+<span style="color: #008080;">15</span>     <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">void</span> SetRes(<span style="color: #0000ff;">int</span><span style="color: #000000;"> v)
+</span><span style="color: #008080;">16</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;">17</span>         ResCount.text =<span style="color: #000000;"> v.ToString();
+</span><span style="color: #008080;">18</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">19</span> 
+<span style="color: #008080;">20</span>     <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> SetTime(TimeData data)
+</span><span style="color: #008080;">21</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;">22</span>         Time.text = data.Hour + <span style="color: #800000;">"</span><span style="color: #800000;">：</span><span style="color: #800000;">"</span> + data.Minute + <span style="color: #800000;">"</span><span style="color: #800000;">：</span><span style="color: #800000;">"</span> +<span style="color: #000000;"> data.Second;
+</span><span style="color: #008080;">23</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">24</span> }</pre>
+</div>
+<span class="cnblogs_code_collapse">View Code</span></div>
+<p>这里用到的UI基础类可详见之前写过的随笔：</p>
+<p><a href="https://www.cnblogs.com/koshio0219/p/12808063.html">https://www.cnblogs.com/koshio0219/p/12808063.html</a></p>
+<p>单例模式：</p>
+<p><a href="https://www.cnblogs.com/koshio0219/p/11203631.html">https://www.cnblogs.com/koshio0219/p/11203631.html</a></p>
+<p>&nbsp;</p>
+<p>补充：</p>
+<p>通用确认弹窗：</p>
+<div class="cnblogs_code" onclick="cnblogs_code_show('79ac7932-61bf-453b-b114-2052a4599e20')"><img id="code_img_closed_79ac7932-61bf-453b-b114-2052a4599e20" class="code_img_closed" src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt=""><img id="code_img_opened_79ac7932-61bf-453b-b114-2052a4599e20" class="code_img_opened" style="display: none" src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="">
+<div id="cnblogs_code_open_79ac7932-61bf-453b-b114-2052a4599e20" class="cnblogs_code_hide">
+<pre><span style="color: #008080;"> 1</span> <span style="color: #0000ff;">using</span><span style="color: #000000;"> TMPro;
+</span><span style="color: #008080;"> 2</span> <span style="color: #0000ff;">using</span><span style="color: #000000;"> UnityEngine.Events;
+</span><span style="color: #008080;"> 3</span> <span style="color: #0000ff;">using</span><span style="color: #000000;"> UnityEngine.UI;
+</span><span style="color: #008080;"> 4</span> 
+<span style="color: #008080;"> 5</span> <span style="color: #000000;">[System.Serializable]
+</span><span style="color: #008080;"> 6</span> <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">class</span> WindowBtClickdEvent : UnityEvent&lt;<span style="color: #0000ff;">bool</span>&gt;<span style="color: #000000;"> { }
+</span><span style="color: #008080;"> 7</span> 
+<span style="color: #008080;"> 8</span> <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">class</span><span style="color: #000000;"> WindowView : HudBase
+</span><span style="color: #008080;"> 9</span> <span style="color: #000000;">{
+</span><span style="color: #008080;">10</span>     <span style="color: #0000ff;">public</span><span style="color: #000000;"> Button Yes;
+</span><span style="color: #008080;">11</span>     <span style="color: #0000ff;">public</span><span style="color: #000000;"> Button No;
+</span><span style="color: #008080;">12</span>     <span style="color: #0000ff;">public</span><span style="color: #000000;"> TextMeshProUGUI Content;
+</span><span style="color: #008080;">13</span> 
+<span style="color: #008080;">14</span>     <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">string</span><span style="color: #000000;"> Text;
+</span><span style="color: #008080;">15</span> 
+<span style="color: #008080;">16</span>     <span style="color: #0000ff;">public</span><span style="color: #000000;"> WindowBtClickdEvent OnClick;
+</span><span style="color: #008080;">17</span> 
+<span style="color: #008080;">18</span>     <span style="color: #0000ff;">protected</span> <span style="color: #0000ff;">override</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> InitState()
+</span><span style="color: #008080;">19</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;">20</span>         Content.text =<span style="color: #000000;"> Text;
+</span><span style="color: #008080;">21</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">22</span> 
+<span style="color: #008080;">23</span>     <span style="color: #0000ff;">protected</span> <span style="color: #0000ff;">override</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> AddListeners()
+</span><span style="color: #008080;">24</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;">25</span>         Yes.onClick.AddListener(()=&gt; OnClick.Invoke(<span style="color: #0000ff;">true</span><span style="color: #000000;">));
+</span><span style="color: #008080;">26</span>         No.onClick.AddListener(() =&gt; OnClick.Invoke(<span style="color: #0000ff;">false</span><span style="color: #000000;">));
+</span><span style="color: #008080;">27</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">28</span> 
+<span style="color: #008080;">29</span>     <span style="color: #0000ff;">protected</span> <span style="color: #0000ff;">override</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> RemoveListeners()
+</span><span style="color: #008080;">30</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;">31</span> <span style="color: #000000;">        Yes.onClick.RemoveAllListeners();
+</span><span style="color: #008080;">32</span> <span style="color: #000000;">        No.onClick.RemoveAllListeners();
+</span><span style="color: #008080;">33</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">34</span> }</pre>
+</div>
+<span class="cnblogs_code_collapse">View Code</span></div>
+<p>&nbsp;</p>
+<p>效果：</p>
+<p><img src="https://img2020.cnblogs.com/blog/1725907/202005/1725907-20200529180145039-199216768.png" alt=""></p>
+<p>&nbsp;</p>
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+		</div>
+		<div class="postDesc">posted @ 
+<span id="post-date">2020-05-29 18:04</span>&nbsp;
+<a href="https://www.cnblogs.com/koshio0219/">汐夜</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12988884" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12988884);return false;">收藏</a></div>
+	</div>
+	
+	
+</div><!--end: topics 文章、评论容器-->
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 523527, cb_blogApp = 'koshio0219', cb_blogUserGuid = 'b3694f0e-1e05-4dc2-3e1d-08d6f93321fd';
+    var cb_entryId = 12988884, cb_entryCreatedDate = '2020-05-29 18:04', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;"></div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div></div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="calendar"><div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script></div>
+			
+			<DIV id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</DIV>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 汐夜
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+</body>
+</html>

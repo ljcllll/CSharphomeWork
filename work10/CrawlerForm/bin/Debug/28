@@ -1,0 +1,523 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>罗西的思考 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.ico?v=20200522" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/lessismoreright/bundle-lessismoreright.min.css?v=aar1eIg4zz9tL2uCrzOGDur190sJi2DazF273FikoL4" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/lessismoreright/bundle-lessismoreright-mobile.min.css?v=FJjyQba01xzuYKRyPpSwE1bMq69pRjxrz5wp2oZZGLY" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/rossiXYZ/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/rossiXYZ/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/rossiXYZ/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=6bwfCY2e02dLOXNW99G2BHZkYFmw9QyYTWeJ-W-sudo"></script>
+    <script>
+        var currentBlogId = 556264;
+        var currentBlogApp = 'rossiXYZ';
+        var cb_enable_mathjax = true;
+        var isLogined = false;
+        var skinName = 'LessIsMoreRight';
+    </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true },
+        TeX: {
+        equationNumbers: { autoNumber: ['AMS'], useLabelIds: true },
+        extensions: ['extpfeil.js', 'mediawiki-texvc.js'],
+        Macros: {bm: "\\boldsymbol"}
+        },
+        'HTML-CSS': { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+        });
+    </script>
+    <script src="https://mathjax.cnblogs.com/2_7_5/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;v=20200504"></script>
+    
+</head>
+<body>
+    <a name="top"></a>
+    <div id="page_begin_html">
+        
+
+    </div>
+    <div id="home">
+    <div id="header">
+        <div id="blogTitle">
+            
+<div class="title"><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/rossiXYZ/">罗西的思考</a>
+</div>
+<div class="subtitle">
+一手伸向技术，一手伸向生活
+</div>
+
+        </div>
+        <div id="navigator">
+            
+<ul id="navList">
+    <li id="nav_sitehome"><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+    <li id="nav_myhome">
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/rossiXYZ/">
+首页</a>
+</li>
+    <li id="nav_newpost">
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+    <li id="nav_contact">
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E7%BD%97%E8%A5%BF%E7%9A%84%E6%80%9D%E8%80%83">
+联系</a></li>
+    <li id="nav_rss">
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/rossiXYZ/rss/">
+订阅</a></li>
+    <li id="nav_admin">
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+            <div class="blogStats">
+                
+<span id="stats_post_count">随笔 - 
+31&nbsp;</span>
+<span id="stats_article_count">文章 - 
+0&nbsp;</span>
+<!-- <span id="stats-comment_count"></span> -->
+<span id="stats_comment_count">评论 - 
+3</span>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div id="mainContent">
+            <div class="forFlow">
+                
+
+
+
+
+
+
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/rossiXYZ/archive/2020/05/30.html">2020年5月30日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/rossiXYZ/p/12774543.html">
+    [白话解析] 通俗解析集成学习之GBDT
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：本文将为大家讲解GBDT这个机器学习中非常重要的算法。因为这个算法属于若干算法或者若干思想的结合，所以很难找到一个现实世界的通俗例子来讲解，所以只能少用数学公式来尽量减少理解难度。            <a href="https://www.cnblogs.com/rossiXYZ/p/12774543.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2020-05-30 04:49
+罗西的思考
+<span class="post-view-count">阅读(0)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12774543" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+            <div class="postSeparator"></div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/rossiXYZ/p/12990632.html">
+    Alink漫谈(五) : 迭代计算和Superstep
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：Alink 是阿里巴巴基于实时计算引擎 Flink 研发的新一代机器学习算法平台，是业界首个同时支持批式算法、流式算法的机器学习平台。迭代算法在很多数据分析领域会用到，比如机器学习或者图计算。本文将通过Superstep入手看看Alink是如何利用Flink迭代API来实现具体算法。            <a href="https://www.cnblogs.com/rossiXYZ/p/12990632.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2020-05-30 04:12
+罗西的思考
+<span class="post-view-count">阅读(18)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12990632" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/rossiXYZ/archive/2020/05/23.html">2020年5月23日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/rossiXYZ/p/12940942.html">
+    Alink漫谈(四) : 模型的来龙去脉
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：Alink 是阿里巴巴基于实时计算引擎 Flink 研发的新一代机器学习算法平台，是业界首个同时支持批式算法、流式算法的机器学习平台。本文将从模型角度入手带领大家来再次深入Alink。            <a href="https://www.cnblogs.com/rossiXYZ/p/12940942.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2020-05-23 08:19
+罗西的思考
+<span class="post-view-count">阅读(70)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12940942" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/rossiXYZ/archive/2020/05/16.html">2020年5月16日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/rossiXYZ/p/12898743.html">
+    [Alink漫谈之三] AllReduce通信模型
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：Alink 是阿里巴巴基于实时计算引擎 Flink 研发的新一代机器学习算法平台，是业界首个同时支持批式算法、流式算法的机器学习平台。本文将带领大家来分析Alink中通讯模型AllReduce的实现。AllReduce在Alink中应用较多，比如KMeans，LDA，Word2Vec，GD，lbfgs，Newton method，owlqn，SGD，Gbdt, random forest都用到了这个通讯模型。            <a href="https://www.cnblogs.com/rossiXYZ/p/12898743.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2020-05-16 09:17
+罗西的思考
+<span class="post-view-count">阅读(87)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(1)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12898743" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/rossiXYZ/archive/2020/05/10.html">2020年5月10日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/rossiXYZ/p/12861848.html">
+    Alink漫谈(二) : 从源码看机器学习平台Alink设计和架构
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：Alink 是阿里巴巴基于实时计算引擎 Flink 研发的新一代机器学习算法平台，是业界首个同时支持批式算法、流式算法的机器学习平台。本文是漫谈系列的第二篇，将从源码入手，带领大家具体剖析Alink是如何设计的，其架构如何。            <a href="https://www.cnblogs.com/rossiXYZ/p/12861848.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2020-05-10 09:10
+罗西的思考
+<span class="post-view-count">阅读(91)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12861848" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/rossiXYZ/archive/2020/05/05.html">2020年5月5日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/rossiXYZ/p/12831175.html">
+    Alink漫谈(一) : 从KMeans算法实现不同看Alink设计思想
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：Alink 是阿里巴巴基于实时计算引擎 Flink 研发的新一代机器学习算法平台，是业界首个同时支持批式算法、流式算法的机器学习平台。本文将带领大家从多重角度出发来分析推测Alink的设计思路。            <a href="https://www.cnblogs.com/rossiXYZ/p/12831175.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2020-05-05 16:28
+罗西的思考
+<span class="post-view-count">阅读(172)</span><text> </text>
+<span class="post-comment-count">评论(1)</span><text> </text>
+<span class="post-digg-count">推荐(1)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12831175" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/rossiXYZ/archive/2020/04/29.html">2020年4月29日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/rossiXYZ/p/12805698.html">
+    [源码分析]从&quot;UDF不应有状态&quot; 切入来剖析Flink SQL代码生成 (修订版)
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要："Flink SQL UDF不应有状态" 这个技术细节可能有些朋友已经知道了。但是为什么不应该有状态呢？这个恐怕大家就不甚清楚了。本文就带你一起从这个问题点入手，看看Flink SQL究竟是怎么处理UDF，怎么生成对应的SQL代码。            <a href="https://www.cnblogs.com/rossiXYZ/p/12805698.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2020-04-29 23:01
+罗西的思考
+<span class="post-view-count">阅读(120)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12805698" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/rossiXYZ/archive/2020/04/26.html">2020年4月26日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/rossiXYZ/p/12773123.html">
+    从&quot;UDF不应有状态&quot; 切入来剖析Flink SQL代码生成
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要："Flink SQL UDF不应有状态" 这个技术细节可能有些朋友已经知道了。但是为什么不应该有状态呢？这个恐怕大家就不甚清楚了。本文就带你一起从这个问题点入手，看看Flink SQL究竟是怎么处理UDF，怎么生成对应的SQL代码。            <a href="https://www.cnblogs.com/rossiXYZ/p/12773123.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2020-04-26 21:59
+罗西的思考
+<span class="post-view-count">阅读(63)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12773123" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/rossiXYZ/archive/2020/04/25.html">2020年4月25日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/rossiXYZ/p/12770436.html">
+    [源码分析] 带你梳理 Flink SQL / Table API内部执行流程
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：本文将简述Flink SQL / Table API的内部实现，为大家把 "从SQL语句到具体执行" 这个流程串起来。并且尽量多提供调用栈，这样大家在遇到问题时就知道应该从什么地方设置断点，对整体架构理解也能更加深入。            <a href="https://www.cnblogs.com/rossiXYZ/p/12770436.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2020-04-25 10:08
+罗西的思考
+<span class="post-view-count">阅读(188)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12770436" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/rossiXYZ/archive/2020/04/06.html">2020年4月6日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/rossiXYZ/p/12641231.html">
+    [白话解析] 通俗解析集成学习之bagging，boosting &amp; 随机森林
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：本文将尽量使用通俗易懂的方式，尽可能不涉及数学公式，而是从整体的思路上来看，运用感性直觉的思考来解释 集成学习。并且用水浒传为例学习。并且从名著中延伸了具体应用场景来帮助大家深入这个概念。            <a href="https://www.cnblogs.com/rossiXYZ/p/12641231.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2020-04-06 11:42
+罗西的思考
+<span class="post-view-count">阅读(159)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(1)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12641231" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+
+<div class="topicListFooter">
+    <div id="nav_next_page">
+        
+    <a href="https://www.cnblogs.com/rossiXYZ/default.html?page=2">
+        下一页
+    </a>
+
+    </div>    
+</div>
+
+
+
+
+            </div>
+        </div>
+
+        <div id="sideBar">
+            <div id="sideBarMain">
+                
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+                <div id="calendar"><div id="blog-calendar" style="display:none"></div></div>                
+                <script>loadBlogDefaultCalendar();</script>
+                <div id="leftcontentcontainer">
+                    <!-- begin:SingleColumn -->
+                    <div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+                    <!-- end:  SingleColumn -->
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <div id="footer">
+        <!--done-->
+Copyright &copy; 2020 罗西的思考
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+    </div>
+</div>
+
+    
+</body>
+</html>

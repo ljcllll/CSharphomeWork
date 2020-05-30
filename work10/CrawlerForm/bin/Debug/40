@@ -1,0 +1,440 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Cheney.Zhong.ZCY - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.ico?v=20200522" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/lessismore/bundle-lessismore.min.css?v=zbVMf2M2JAlJ02H61dM8SlvD_g-Qf1GNTSQ53ByHeUE" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/zhongchengyi/custom.css?v=zUPXqshGQa&#x2B;svcrMMQY8cyJQ87o=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/lessismore/bundle-lessismore-mobile.min.css?v=ADiCwO2hOTdd5yYidcx7eob7ix2VJI4o_TXjEycTHjs" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/zhongchengyi/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/zhongchengyi/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/zhongchengyi/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=6bwfCY2e02dLOXNW99G2BHZkYFmw9QyYTWeJ-W-sudo"></script>
+    <script>
+        var currentBlogId = 186342;
+        var currentBlogApp = 'zhongchengyi';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'LessIsMore';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    <div id="home">
+    <div id="header">
+        <div id="blogTitle">
+            
+<div class="title"><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/zhongchengyi/">Cheney.Zhong.ZCY</a>
+</div>
+<div class="subtitle">
+
+</div>
+
+        </div>
+        <div id="navigator">
+            
+<ul id="navList">
+    <li id="nav_sitehome"><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+    <li id="nav_myhome">
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/zhongchengyi/">
+首页</a>
+</li>
+    <li id="nav_newpost">
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+    <li id="nav_contact">
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/Cheney.Zhong.ZCY">
+联系</a></li>
+    <li id="nav_rss">
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/zhongchengyi/rss/">
+订阅</a></li>
+    <li id="nav_admin">
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+            <div class="blogStats">
+                
+<span id="stats_post_count">随笔 - 
+7&nbsp;</span>
+<span id="stats_article_count">文章 - 
+1&nbsp;</span>
+<!-- <span id="stats-comment_count"></span> -->
+<span id="stats_comment_count">评论 - 
+4</span>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div id="mainContent">
+            <div class="forFlow">
+                
+
+
+
+
+
+
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/zhongchengyi/archive/2019/12/26.html">2019年12月26日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/zhongchengyi/p/12101960.html">
+[置顶]    java 使用 poi 更新 ppt 中图表的数据
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：本文源码： 1.&#160;https://github.com/zhongchengyi/zhongcy.demos/tree/master/apoi-ppt-chart 2. 在第5节也有核心源码 1. apoi简介 Apache POI是Apache软件基金会的开放源码函式库，POI提供API给Java            <a href="https://www.cnblogs.com/zhongchengyi/p/12101960.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2019-12-26 18:59
+Cheney.Zhong.ZCY
+<span class="post-view-count">阅读(576)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12101960" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/zhongchengyi/archive/2020/05/29.html">2020年5月29日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/zhongchengyi/p/12982228.html">
+    require.js与IDEA的配合
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：本文主要讲述在html中使用requirejs时，如何让IDEA更加智能识别javascript的方法。 测试时的目录结构，一种典型的 thinkphp 的结构，同时，在 a.thml 中通过 requirejs 引用 了 Public/Home/View/moduleA/a.js， 后面我们的测试            <a href="https://www.cnblogs.com/zhongchengyi/p/12982228.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2020-05-29 21:47
+Cheney.Zhong.ZCY
+<span class="post-view-count">阅读(89)</span><text> </text>
+<span class="post-comment-count">评论(2)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12982228" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/zhongchengyi/archive/2020/05/16.html">2020年5月16日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/zhongchengyi/p/12899450.html">
+    html中require.config 缓存问题
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：在html中，require的官方基本用法如下： &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;title&gt;My Sample Project&lt;/title&gt; &lt;!-- data-main attribute tells require.js to load scripts/main            <a href="https://www.cnblogs.com/zhongchengyi/p/12899450.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2020-05-16 16:44
+Cheney.Zhong.ZCY
+<span class="post-view-count">阅读(41)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12899450" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/zhongchengyi/archive/2020/01/09.html">2020年1月9日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/zhongchengyi/p/12162792.html">
+    mongodb 更新嵌套数组的值
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：概要 本文主要讲述在 mongodb 中，怎么更新嵌套数组的值。 使用$更新数组 测试 for (let i = 0; i &lt; 3; i++) { let data = { name1_1: &#39;test&#39; + i, arr_1: [{ a: i, b: 2 }, { a: i + 1, b: 2 }            <a href="https://www.cnblogs.com/zhongchengyi/p/12162792.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2020-01-09 16:05
+Cheney.Zhong.ZCY
+<span class="post-view-count">阅读(1635)</span><text> </text>
+<span class="post-comment-count">评论(3)</span><text> </text>
+<span class="post-digg-count">推荐(3)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12162792" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/zhongchengyi/archive/2020/01/06.html">2020年1月6日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/zhongchengyi/p/12151756.html">
+    java poi ppt 接口的基本操作
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：依赖 在 pom.xml中增加以下依赖 注：很多博客，教我们用以下依赖，是没有XSSF相关内容的 version 版本 poi的版本可以在&#160;https://mvnrepository.com/artifact/org.apache.poi/poi&#160;进行查询。 找到想要依赖的版本 点击进入后，可以直接            <a href="https://www.cnblogs.com/zhongchengyi/p/12151756.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2020-01-06 08:24
+Cheney.Zhong.ZCY
+<span class="post-view-count">阅读(323)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12151756" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/zhongchengyi/archive/2019/12/31.html">2019年12月31日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/zhongchengyi/p/12125014.html">
+    java 使用 morphia 存取枚举为值
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：源码 https://github.com/zhongchengyi/zhongcy.demos/tree/master/mongo-morphia-demo 前言 morphia是java 使用orm方式操作mongodb的一个库。但是默认情况下，使用morphia存取enum时，是按名字存取的。            <a href="https://www.cnblogs.com/zhongchengyi/p/12125014.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2019-12-31 17:50
+Cheney.Zhong.ZCY
+<span class="post-view-count">阅读(93)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12125014" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/zhongchengyi/archive/2019/12/26.html">2019年12月26日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/zhongchengyi/p/12101960.html">
+    java 使用 poi 更新 ppt 中图表的数据
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：本文源码： 1.&#160;https://github.com/zhongchengyi/zhongcy.demos/tree/master/apoi-ppt-chart 2. 在第5节也有核心源码 1. apoi简介 Apache POI是Apache软件基金会的开放源码函式库，POI提供API给Java            <a href="https://www.cnblogs.com/zhongchengyi/p/12101960.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2019-12-26 18:59
+Cheney.Zhong.ZCY
+<span class="post-view-count">阅读(576)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12101960" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/zhongchengyi/archive/2019/04/03.html">2019年4月3日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/zhongchengyi/p/10650717.html">
+    node.js UDP NAT 穿透实现
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：源码：https://github.com/zhongchengyi/node-udp-trunnel-demo 1、原理 来自《P2P技术揭秒-P2P网络技术原理与典型系统开发》第5.4篇 2、流程 3、前提 需要一个有公网地址的电脑，运行服务器程序 需要在服务器和客户端都安装node.js和 n            <a href="https://www.cnblogs.com/zhongchengyi/p/10650717.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2019-04-03 18:31
+Cheney.Zhong.ZCY
+<span class="post-view-count">阅读(233)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=10650717" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+
+<div class="topicListFooter">
+    <div id="nav_next_page">
+        
+    
+
+    </div>    
+</div>
+
+
+
+
+            </div>
+        </div>
+
+        <div id="sideBar">
+            <div id="sideBarMain">
+                
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+                <div id="calendar"><div id="blog-calendar" style="display:none"></div></div>                
+                <script>loadBlogDefaultCalendar();</script>
+                <div id="leftcontentcontainer">
+                    <!-- begin:SingleColumn -->
+                    <div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+                    <!-- end:  SingleColumn -->
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <div id="footer">
+        <!--done-->
+Copyright &copy; 2020 Cheney.Zhong.ZCY
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+    </div>
+</div>
+
+    
+</body>
+</html>

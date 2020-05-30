@@ -1,0 +1,372 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    <meta property="og:description" content="[转自博友](https://www.cnblogs.com/czlun/articles/7010604.html) rewrite语法格式及参数语法说明如下: rewrite &amp;amp;lt;re" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>nginx URL重写（rewrite） - 那个萝卜在飘 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.ico?v=20200522" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/syy1757528181/custom.css?v=ytmQtB1oUcves9yhWLSGzmDcOKw=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/SimpleMemory/bundle-SimpleMemory-mobile.min.css" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/syy1757528181/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/syy1757528181/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/syy1757528181/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=6bwfCY2e02dLOXNW99G2BHZkYFmw9QyYTWeJ-W-sudo"></script>
+    <script>
+        var currentBlogId = 599572;
+        var currentBlogApp = 'syy1757528181';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'SimpleMemory';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/syy1757528181/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/syy1757528181/">那个萝卜在飘</a>
+</h1>
+<h2>
+
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/syy1757528181/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E9%82%A3%E4%B8%AA%E8%90%9D%E5%8D%9C%E5%9C%A8%E9%A3%98">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/syy1757528181/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+92&nbsp; </span>
+<span id="stats_article_count">文章 - 
+0&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+5</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/syy1757528181/p/12991094.html">nginx URL重写（rewrite）</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+    <p><a href="https://www.cnblogs.com/czlun/articles/7010604.html">转自博友</a></p>
+<h2 id="rewrite语法格式及参数语法说明如下">rewrite语法格式及参数语法说明如下:</h2>
+<pre><code>rewrite    &lt;regex&gt;    &lt;replacement&gt;    [flag];
+
+关键字      正则        替代内容          flag标记
+
+
+
+关键字：其中关键字error_log不能改变
+
+正则：perl兼容正则表达式语句进行规则匹配
+
+替代内容：将正则匹配的内容替换成replacement
+
+flag标记：rewrite支持的flag标记
+</code></pre>
+<p>flag标记说明：</p>
+<p>last  #本条规则匹配完成后，继续向下匹配新的location URI规则</p>
+<p>break  #本条规则匹配完成即终止，不再匹配后面的任何规则</p>
+<p>redirect  #返回302临时重定向，浏览器地址会显示跳转后的URL地址</p>
+<p>permanent  #返回301永久重定向，浏览器地址栏会显示跳转后的URL地址</p>
+<p>rewrite参数的标签段位置：<br>
+server,location,if</p>
+<p>例子：</p>
+<pre><code class="language-bash">rewrite ^/(.*) http://www.czlun.com/$1 permanent;
+</code></pre>
+<p>说明：</p>
+<p>rewrite为固定关键字，表示开始进行rewrite匹配规则</p>
+<p>regex部分是 ^/(.*) ，这是一个正则表达式，匹配完整的域名和后面的路径地址</p>
+<p>replacement部分是http://www.czlun.com/$1 $1，是取自regex部分()里的内容。匹配成功后跳转到的URL。</p>
+<p>flag部分 permanent表示永久301重定向标记，即跳转到新的 <a href="http://www.czlun.com/$1">http://www.czlun.com/$1</a> 地址上</p>
+<p>regex 常用正则表达式说明</p>
+<p>\</p>
+<p>将后面接着的字符标记为一个特殊字符或一个原义字符或一个向后引用。如“\n”匹配一个换行符，而“$”则匹配“$”</p>
+<p>^</p>
+<p>匹配输入字符串的起始位置</p>
+<p>$</p>
+<p>匹配输入字符串的结束位置</p>
+<p>*</p>
+<p>匹配前面的字符零次或多次。如“ol*”能匹配“o”及“ol”、“oll”</p>
+<p>+</p>
+<p>匹配前面的字符一次或多次。如“ol+”能匹配“ol”及“oll”、“oll”，但不能匹配“o”</p>
+<p>?</p>
+<p>匹配前面的字符零次或一次，例如“do(es)?”能匹配“do”或者“does”，&quot;?&quot;等效于&quot;{0,1}&quot;</p>
+<p>.</p>
+<p>匹配除“\n”之外的任何单个字符，若要匹配包括“\n”在内的任意字符，请使用诸如“[.\n]”之类的模式。</p>
+<p>(pattern)</p>
+<p>匹配括号内pattern并可以在后面获取对应的匹配，常用$0...$9属性获取小括号中的匹配内容，要匹配圆括号字符需要(Content)</p>
+<h2 id="rewrite-企业应用场景">rewrite 企业应用场景</h2>
+<p>Nginx的rewrite功能在企业里应用非常广泛：</p>
+<ul>
+<li>
+<p>可以调整用户浏览的URL，看起来更规范，合乎开发及产品人员的需求。</p>
+</li>
+<li>
+<p>为了让搜索引擎搜录网站内容及用户体验更好，企业会将动态URL地址伪装成静态地址提供服务。</p>
+</li>
+<li>
+<p>网址换新域名后，让旧的访问跳转到新的域名上。例如，访问京东的360buy.com会跳转到jd.com</p>
+</li>
+<li>
+<p>根据特殊变量、目录、客户端的信息进行URL调整等</p>
+</li>
+</ul>
+<h3 id="nginx配置rewrite过程介绍">Nginx配置rewrite过程介绍</h3>
+<p>（1）创建rewrite语句</p>
+<pre><code class="language-bash">#vi编辑虚拟主机配置文件
+vi conf/vhost/www.abc.com.conf
+
+server {
+
+        listen 80;
+
+        server_name abc.com;
+
+        rewrite ^/(.*) http://www.abc.com/$1 permanent;
+
+}
+
+server {
+
+        listen 80;
+
+        server_name www.abc.com;
+
+        location / {
+
+                root /data/www/www;
+
+                index index.html index.htm;
+
+        }
+
+        error_log    logs/error_www.abc.com.log error;
+
+        access_log    logs/access_www.abc.com.log    main;
+
+}
+
+或者
+
+server {
+
+        listen 80;
+
+        server_name abc.com www.abc.com;
+
+        if ( $host != 'www.abc.com'  ) {
+
+                rewrite ^/(.*) http://www.abc.com/$1 permanent;
+
+        }
+
+        location / {
+
+                root /data/www/www;
+
+                index index.html index.htm;
+
+        }
+
+        error_log    logs/error_www.abc.com.log error;
+
+        access_log    logs/access_www.abc.com.log    main;
+
+}
+</code></pre>
+<pre><code class="language-bash">#用于切换维护页面场景
+server {
+
+        listen 80;
+
+        server_name abc.com;
+
+        #rewrite ^(.*)$ /page/maintain.html break;
+           
+        ...
+}
+
+</code></pre>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2020-05-30 10:05</span>&nbsp;
+<a href="https://www.cnblogs.com/syy1757528181/">那个萝卜在飘</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12991094" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12991094);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 599572, cb_blogApp = 'syy1757528181', cb_blogUserGuid = 'f6346642-0876-41e9-afff-08d7e5fab1e4';
+    var cb_entryId = 12991094, cb_entryCreatedDate = '2020-05-30 10:05', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;"></div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 那个萝卜在飘
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+</body>
+</html>

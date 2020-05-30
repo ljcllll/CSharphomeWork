@@ -1,0 +1,709 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="never" />
+    <meta property="og:description" content="前置 由于之前构建的皮肤 reacg 偏二次元风，尽管提供了大量配置(包括几乎任何颜色、插件等的配置)，依然有人吐槽花里胡哨，遂重新构建了一款简约风格的博客园皮肤, 正如你所见。下文我将从零介绍它的构" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>构建一个简约博皮的过程 - DIVMonster - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.ico?v=20200522" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/guangzan/custom.css?v=XF&#x2B;aPxBwPqyTs7QfOIK9xLubihQ=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/custom/bundle-custom-mobile.min.css?v=-Yh290MhQyDeXLmvKTSses9H6-49lqbpXFh55zvS0w8" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/guangzan/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/guangzan/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/guangzan/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=6bwfCY2e02dLOXNW99G2BHZkYFmw9QyYTWeJ-W-sudo"></script>
+    <script>
+        var currentBlogId = 466832;
+        var currentBlogApp = 'guangzan';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'Custom';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    <div id="page_begin_html">
+        <div id="loading"><div class="loader-inner"></div></div>
+    </div>
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/guangzan/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/guangzan/">DIVMonster</a>
+</h1>
+<h2>
+
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/guangzan/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/DIVMonster">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/guangzan/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+101&nbsp; </span>
+<span id="stats_article_count">文章 - 
+0&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+164</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/guangzan/p/12979619.html">构建一个简约博皮的过程</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+    <h2 id="前置">前置</h2>
+<p>由于之前构建的皮肤 reacg 偏二次元风，尽管提供了大量配置(包括几乎任何颜色、插件等的配置)，依然有人吐槽花里胡哨，遂重新构建了一款简约风格的博客园皮肤, 正如你所见。下文我将从零介绍它的构建过程，构建它最快花费一个小时到几个小时。由于之前做了大量工作，所以现在按照流程走一遍就完事了。</p>
+<h2 id="准备工作">准备工作</h2>
+<ul>
+<li>环境：node &amp; npm</li>
+<li>git clone <a href="https://gitee.com/guangzan/awescnb.git">https://gitee.com/guangzan/awescnb.git</a></li>
+<li>运行 <code>npm install</code> 安装依赖</li>
+<li>在 themes 文件夹下新建 simple 文件夹、simple/index.js</li>
+</ul>
+<h2 id="配置">配置</h2>
+<p>config/options.js，这是 webpack 的配置：</p>
+<pre><code class="language-JavaScript">module.exports = {
+    themeName: 'simple',
+    template: 'index',
+    eslint: true,
+    sourceMap: false,
+    openAnalyzer: true,
+    cssExtract: false,
+    openBrowser: false,
+    // ...
+}
+</code></pre>
+<p>看个人所需，我在这里简单配置如下：</p>
+<ul>
+<li>themeName: 'simple' 对应 themes/simple 文件夹</li>
+<li>template: 运行 npm start 打开博客园首页模板</li>
+<li>开启 eslint</li>
+<li>开启 Analyzer，运行 npm run build 时我需要检查最终构建的体积大小</li>
+<li>cssExtract 先不分离 css，构建完成直接推送到远端，直接切换线上版本</li>
+</ul>
+<h2 id="开始">开始</h2>
+<ol>
+<li>simple/style 下存放样式文件</li>
+</ol>
+<ul>
+<li>index.scss</li>
+<li>index.m.scss</li>
+<li>markdown.scss</li>
+<li>reset.scss</li>
+<li>tools.scss</li>
+</ul>
+<p>最终只在入口文件 index.js 中导入 index.scss，其他 scss 由 index.scss 引入，由于之前编好了样式代码，所以需要新编写的样式极少。</p>
+<ol start="2">
+<li>simple/plugins/index.js</li>
+</ol>
+<p>引入构建好的博客园插件，不需要写任何功能代码，及其样式。</p>
+<pre><code class="language-JavaScript">import footer from '@plugins/footer'
+import highlight from '@plugins/highlight'
+import copy from '@plugins/copy'
+import linenumbers from '@plugins/linenumbers'
+import imagebox from '@plugins/imagebox'
+import commentsAvatars from '@plugins/commentsAvatars'
+import dragMenu from '@plugins/dragMenu'
+import donation from '@plugins/donation'
+import emoji from '@plugins/emoji'
+import player from '@plugins/player'
+import postMessage from '@plugins/postMessage'
+import postSignature from '@plugins/postSignature'
+import postTopimage from '@plugins/postTopimage'
+import notice from '@plugins/notice'
+
+const plugins = () =&gt; {
+    footer()
+    highlight()
+    copy()
+    linenumbers()
+    imagebox()
+    commentsAvatars()
+    donation()
+    dragMenu()
+    emoji()
+    player()
+    postMessage()
+    postSignature()
+    postTopimage()
+    notice()
+}
+
+module.exports = plugins
+</code></pre>
+<ul>
+<li>构建 footer 链接</li>
+<li>mac 样式代码高亮</li>
+<li>代码行号</li>
+<li>图片灯箱</li>
+<li>显示评论区头像</li>
+<li>捐增二维码</li>
+<li>按钮工具条（返回顶部，推荐，收藏。。。）</li>
+<li>评论框表情</li>
+<li>播放器</li>
+<li>在文章头部构建文章信息</li>
+<li>构建文章签名信息</li>
+<li>文章头图</li>
+<li>通知功能</li>
+</ul>
+<blockquote>
+<p>由于这个皮肤的基调是简约，所以只引入一些常用的功能模块。花里胡哨的就不考虑了。</p>
+</blockquote>
+<ol start="2">
+<li>simple/build/index.js</li>
+</ol>
+<p>index.js 引入了一些其他 JavaScript 用来做一些调整，例如 simple/build 文件夹下我还写了</p>
+<ul>
+<li>catalog（文章目录）</li>
+<li>header（头部导航逻辑）</li>
+<li>scroll（滚动控制）</li>
+<li>side (侧边栏逻辑)</li>
+</ul>
+<p>catalog/index.js</p>
+<details>
+<summary>代码有些长，我将它折叠</summary>
+<pre><code class="language-JavaScript">import './index.scss'
+import {
+    pageName,
+    userAgent,
+    hasPostTitle,
+    getClientRect,
+    throttle,
+} from '@tools'
+
+const { enable } = window.opts.catalog
+
+// 构建目录
+function build() {
+    let $catalogContainer = $(
+        `&lt;div id=&quot;catalog&quot;&gt;
+            &lt;div class='catalog-title'&gt;&lt;h3&gt;目录&lt;/h3&gt;&lt;/div&gt;
+        &lt;/div&gt;`,
+    )
+    const $ulContainer = $('&lt;ul&gt;&lt;/ul&gt;')
+    const titleRegExp = /^h[1-3]$/
+
+    $('#cnblogs_post_body')
+        .children()
+        .each(function() {
+            if (titleRegExp.test(this.tagName.toLowerCase())) {
+                if ($(this).text().length === 0) return // 如果标题为空 只有 #
+                let id
+                let text
+
+                if (this.id !== '') {
+                    id = this.id
+                    text =
+                        this.childNodes.length === 2
+                            ? this.childNodes[1].nodeValue
+                            : this.childNodes[0].nodeValue
+                } else {
+                    if (this.childNodes.length === 2) {
+                        const value = this.childNodes[1].nodeValue
+                        text = value ? value : $(this.childNodes[1]).text()
+                    } else {
+                        const value = this.childNodes[0].nodeValue
+                        text = value ? value : $(this.childNodes[0]).text() // 处理标题被 span 包裹的情况
+                    }
+                    id = text.trim()
+                    $(this).attr('id', id)
+                }
+
+                const title = `
+                            &lt;li class='${this.nodeName.toLowerCase()}-list'&gt;
+                                &lt;a href='#${id}'&gt;${text}&lt;/a&gt;
+                            &lt;/li&gt;
+                        `
+
+                $ulContainer.append(title)
+            }
+        })
+
+    const $catalog = $($catalogContainer.append($ulContainer))
+    $('#sidebar_news').after($catalog)
+}
+
+function noCatalog() {
+    if (pageName() !== 'post') return
+    // to do something
+}
+
+// 设置目录活跃标题样式
+function setActiveCatalogTitle() {
+    $(window).scroll(
+        throttle(
+            function() {
+                for (let i = $('#catalog ul li').length - 1; i &gt;= 0; i--) {
+                    const titleId = $($('#catalog ul li')[i])
+                        .find('a')
+                        .attr('href')
+                        .replace(/[#]/g, '')
+                    const postTitle = document.querySelector(
+                        `#cnblogs_post_body [id='${titleId}']`,
+                    )
+                    if (getClientRect(postTitle).top &lt;= 10) {
+                        if (
+                            $($('#catalog ul li')[i]).hasClass('catalog-active')
+                        )
+                            return
+                        $($('#catalog ul li')[i]).addClass('catalog-active')
+                        $($('#catalog ul li')[i])
+                            .siblings()
+                            .removeClass('catalog-active')
+                        return
+                    }
+                }
+            },
+            50,
+            1000 / 60,
+        ),
+    )
+}
+
+function setCatalogToggle() {
+    $(window).scroll(
+        throttle(
+            function() {
+                if ($('#catalog ul').css('display') === 'none') return
+                const bottom = getClientRect(
+                    document.querySelector('#sideBarMain'),
+                ).bottom
+                if (bottom &lt;= 0) {
+                    $('#catalog').addClass('catalog-sticky')
+                } else {
+                    $('#catalog').removeClass('catalog-sticky')
+                }
+            },
+            50,
+            1000 / 60,
+        ),
+    )
+}
+
+function toggle() {
+    $('.catalog-title').click(function() {
+        $('#catalog ul').toggle('fast', 'linear', function() {
+            $(this).css('display') === 'none'
+                ? $('.catalog-title').removeClass('is-active')
+                : $('.catalog-title').addClass('is-active')
+        })
+    })
+}
+
+function catalog() {
+    if (
+        enable &amp;&amp;
+        hasPostTitle() &amp;&amp;
+        pageName() === 'post' &amp;&amp;
+        userAgent() === 'pc'
+    ) {
+        build()
+        setActiveCatalogTitle()
+        setCatalogToggle()
+        toggle()
+    } else {
+        noCatalog()
+    }
+}
+
+module.exports = catalog
+</code></pre>
+</details>
+<p>header/index.js</p>
+<pre><code class="language-JavaScript">import './index.scss'
+import { pageName, userAgent } from '@tools'
+
+// header右侧按钮容器
+const buildHeader = () =&gt; {
+    const gitee = window.opts.gitee
+    $('#navList').after(`&lt;div class=&quot;navbar-end&quot;&gt;&lt;/div&gt;`)
+    $('#blog_nav_newpost').appendTo('.navbar-end')
+    $(
+        `&lt;a href=&quot;https://guangzan.gitee.io/awescnb-docs/&quot; id=&quot;header-awescnb&quot;&gt;构建新皮肤&lt;/a&gt;`,
+    ).appendTo('.navbar-end')
+    $(`&lt;a href=&quot;${gitee.url}&quot; id=&quot;header-gitee&quot;&gt;开源主页&lt;/a&gt;`).appendTo(
+        '.navbar-end',
+    )
+}
+
+// 构建header昵称
+const headerNickname = () =&gt; {
+    $('#Header1_HeaderTitle').text($('#profile_block a:first').text())
+}
+
+// header头像
+const buildAva = () =&gt; {
+    const { avatar } = window.opts.theme
+    $('#blogLogo').attr('src', `${avatar}`)
+}
+
+// 随笔页构建文章题目
+const headerInnerPostTitle = () =&gt; {
+    if (pageName() !== 'post') return
+    if (userAgent() !== 'pc') return
+    let title = $('.post .postTitle')
+        .text()
+        .replace(/\s*/g, '')
+    const titleLength = title.length
+
+    let offset = ''
+    if (0 &lt;= titleLength &amp;&amp; titleLength &lt; 10) offset = '-180%'
+    if (10 &lt;= titleLength &amp;&amp; titleLength &lt; 15) offset = '-140%'
+    if (15 &lt;= titleLength &amp;&amp; titleLength &lt; 20) offset = '-100%'
+    if (20 &lt;= titleLength &amp;&amp; titleLength &lt; 25) offset = '-65%'
+    if (25 &lt;= titleLength &amp;&amp; titleLength &lt; 28) offset = '-60%'
+    if (titleLength &gt;= 28) {
+        title = title.substring(0, 28) + '...'
+        offset = '-60%'
+    }
+    $('#navList').append(`&lt;span class='header-posttitle'&gt;${title}&lt;/span&gt;`)
+    $('head').append(
+        `&lt;style&gt;
+               .header-posttitle {transform: translate3d(${offset}, 300%, 0);}
+                #header.is-active .header-posttitle {transform: translate3d(${offset}, 0, 0);}
+        &lt;/style&gt;`,
+    )
+}
+
+// header移动端菜单
+const headerBtn = () =&gt; {
+    const ele = `&lt;div id=&quot;navbarBurger&quot; class=&quot;navbar-burger burger&quot; data-target=&quot;navMenuMore&quot;&gt;
+      &lt;span&gt;&lt;/span&gt;
+      &lt;span&gt;&lt;/span&gt;
+      &lt;span&gt;&lt;/span&gt;
+    &lt;/div&gt;`
+    $('#blogTitle').append(ele)
+    $('#navbarBurger').click(function() {
+        $(this).toggleClass('is-active')
+        $('#navigator').toggleClass('is-active')
+    })
+}
+
+// 创建自定义图标容器及其图标
+const customLinks = () =&gt; {
+    const github = window.opts.github
+    // wrap
+    $('.navbar-end').prepend(`&lt;div class=&quot;custom-links&quot;&gt;&lt;/div&gt;`)
+    $('#blogTitle h2').after(`&lt;div class=&quot;custom-links&quot;&gt;&lt;/div&gt;`)
+    // github icon
+    if (github.enable) {
+        $('.custom-links').append(`&lt;a class=&quot;github&quot; href=&quot;${github.url}&quot;&gt;&lt;/a&gt;`)
+    }
+    // qq
+    // $('.custom-links').append(`&lt;a class=&quot;qq&quot;&gt;&lt;/a&gt;`)
+    // 知乎
+    $('.custom-links').append(`&lt;a class=&quot;zhihu&quot;&gt;&lt;/a&gt;`)
+}
+
+// 首页 header 不要上下翻滚
+const preventHeaderChange = () =&gt; {
+    if (pageName() !== 'index') return
+    $('#header').addClass('navlist-fix')
+}
+
+const header = () =&gt; {
+    headerNickname()
+    buildHeader()
+    buildAva()
+    headerBtn()
+    customLinks()
+    headerInnerPostTitle()
+    preventHeaderChange()
+}
+
+module.exports = header
+</code></pre>
+<p>scroll/index.js</p>
+<pre><code class="language-JavaScript">// import './index.scss'
+import { userAgent } from '@tools'
+// 只触发一次向上或向下
+// 如果又重新反向滚动则再触发一次
+function scrollOnce() {
+    function scrollFunc() {
+        let scrollDirection
+        if (!scrollAction) {
+            scrollAction = window.pageYOffset
+        }
+        let diff = scrollAction - window.pageYOffset
+        if (diff &lt; 0) {
+            scrollDirection = 'down'
+        } else if (diff &gt; 0) {
+            scrollDirection = 'up'
+        } else {
+            // First scroll event
+        }
+        scrollAction = window.pageYOffset
+        return scrollDirection
+    }
+    let scrollAction, originalDir
+
+    $(window).scroll(function() {
+        if (userAgent() !== 'pc') return
+        let direction = scrollFunc()
+        if (direction &amp;&amp; originalDir != direction) {
+            if (direction == 'down') {
+                $('#header').addClass('is-active')
+                $('#catalog').addClass('catalog-scroll-up')
+                $('#catalog').removeClass('catalog-scroll-down')
+            } else {
+                $('#header').removeClass('is-active')
+                $('#catalog').removeClass('catalog-scroll-up')
+                $('#catalog').addClass('catalog-scroll-down')
+            }
+            originalDir = direction
+        }
+    })
+}
+
+function scroll() {
+    scrollOnce()
+    // ...
+}
+
+module.exports = scroll
+</code></pre>
+<p>side/index.js</p>
+<pre><code class="language-JavaScript">import './index.scss'
+import { poll } from '@tools'
+import { actions } from '@constants/element'
+
+const sideItemToggle = () =&gt; {
+    for (const { title, content } of actions) {
+        if (!title.length) continue
+        $(title).click(function() {
+            $(content).toggle('fast', 'linear', function() {
+                $(this).css('display') === 'none'
+                    ? $(title).removeClass('is-active')
+                    : $(title).addClass('is-active')
+            })
+        })
+    }
+}
+
+const addCalendarTitle = () =&gt; {
+    $('#blog-calendar').prepend(`&lt;div id=&quot;blog-calendar-title&quot;&gt;博客日历&lt;/div&gt;`)
+}
+
+const side = () =&gt; {
+    addCalendarTitle()
+    setTimeout(() =&gt; {
+        poll($('#blog-sidecolumn').length, sideItemToggle)
+    }, 0)
+}
+
+module.exports = side
+</code></pre>
+<ol start="3">
+<li>simple/index.js</li>
+</ol>
+<p>唯一需要写的样板代码：</p>
+<pre><code class="language-JavaScript">import './style/index.scss'
+import AwesCnb from '@awescnb'
+
+class Simple extends AwesCnb {
+    constructor() {
+        super()
+        super.init(this.init)
+    }
+
+    init() {
+        require('./build')()
+        require('./plugins')()
+    }
+}
+
+new Simple()
+</code></pre>
+<h2 id="构建">构建</h2>
+<ul>
+<li>运行 <code>npm start</code> 分别对首页、随笔详情页、标签页等调整</li>
+<li>运行 <code>npm run build</code> 打包</li>
+</ul>
+<p><img src="https://gitee.com/guangzan/imagehost/raw/master/markdown/size-simple.jpg" alt=""></p>
+<p>皮肤 simple 所有样式和逻辑加起来有 <strong>130+kb</strong>，没有异常。如果想拥有更好的体验可以将 css 分离，在文章开头的配置介绍中提供了这个选项。最后推送上去就能在博客园切换到新皮肤了。</p>
+<h2 id="链接">链接</h2>
+<ul>
+<li>安装 &amp; 构建皮肤：<a href="https://guangzan.gitee.io/awescnb-docs/">https://guangzan.gitee.io/awescnb-docs/</a></li>
+<li>代码仓库： <a href="https://gitee.com/guangzan/awescnb">https://gitee.com/guangzan/awescnb</a></li>
+</ul>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2020-05-29 18:04</span>&nbsp;
+<a href="https://www.cnblogs.com/guangzan/">DIVMonster</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12979619" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12979619);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 466832, cb_blogApp = 'guangzan', cb_blogUserGuid = 'adce83c6-a022-414e-4369-08d6259d0de2';
+    var cb_entryId = 12979619, cb_entryCreatedDate = '2020-05-29 18:04', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;"></div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 DIVMonster
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+</body>
+</html>

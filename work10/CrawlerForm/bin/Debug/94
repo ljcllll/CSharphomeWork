@@ -1,0 +1,463 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>那个萝卜在飘 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.ico?v=20200522" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/syy1757528181/custom.css?v=ytmQtB1oUcves9yhWLSGzmDcOKw=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/SimpleMemory/bundle-SimpleMemory-mobile.min.css" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/syy1757528181/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/syy1757528181/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/syy1757528181/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=6bwfCY2e02dLOXNW99G2BHZkYFmw9QyYTWeJ-W-sudo"></script>
+    <script>
+        var currentBlogId = 599572;
+        var currentBlogApp = 'syy1757528181';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'SimpleMemory';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/syy1757528181/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/syy1757528181/">那个萝卜在飘</a>
+</h1>
+<h2>
+
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/syy1757528181/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E9%82%A3%E4%B8%AA%E8%90%9D%E5%8D%9C%E5%9C%A8%E9%A3%98">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/syy1757528181/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+92&nbsp; </span>
+<span id="stats_article_count">文章 - 
+0&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+5</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+<!--done-->
+
+
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/syy1757528181/archive/2020/05/30.html">2020年5月30日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/syy1757528181/p/12991094.html">
+    nginx URL重写（rewrite）
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：[转自博友](https://www.cnblogs.com/czlun/articles/7010604.html) rewrite语法格式及参数语法说明如下: rewrite &amp;lt;regex&amp;gt; &amp;lt;replacement&amp;gt; [flag]; 关键字 正则 替代内容 flag标记 关键字：其中关键字er            <a href="https://www.cnblogs.com/syy1757528181/p/12991094.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-30 10:05
+那个萝卜在飘
+<span class="post-view-count">阅读(4)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12991094" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/syy1757528181/archive/2020/05/29.html">2020年5月29日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/syy1757528181/p/12989563.html">
+    CSS2
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：overflow &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt; &amp;lt;title&amp;gt;            <a href="https://www.cnblogs.com/syy1757528181/p/12989563.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-29 21:02
+那个萝卜在飘
+<span class="post-view-count">阅读(7)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12989563" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+            <div class="postSeparator"></div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/syy1757528181/p/12989261.html">
+    web服务器资源分类场景实践
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：web服务器资源分类场景实践 系统版本 主机角色 外网IP 内网IP 提供端口 CentOS7.5 负载均衡 10.0.0.5 172.16.1.5 80 CentOS7.5 提供Android页面 172.16.1.7 9090 CentOS7.5 提供Iphone页面 172.16.1.7 90            <a href="https://www.cnblogs.com/syy1757528181/p/12989261.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-29 19:26
+那个萝卜在飘
+<span class="post-view-count">阅读(6)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12989261" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+            <div class="postSeparator"></div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/syy1757528181/p/12989249.html">
+    web服务器动静资源分离及负载均衡调制
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：静态请求：不需要访问数据库 动态请求：需要访问数据库，登录 静态页：打开一个网页，不需要访问数据库 动态页：打开一个网页，需要访问数据库 无论是静态资源还是动态资源，都需要做共享存储 web单台服务器实现动静分离 location / { root /code/wordpress; index in            <a href="https://www.cnblogs.com/syy1757528181/p/12989249.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-29 19:22
+那个萝卜在飘
+<span class="post-view-count">阅读(5)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12989249" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+            <div class="postSeparator"></div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/syy1757528181/p/12989242.html">
+    四层负载均衡
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：课前回顾 代理，代理服务器，使用proxy模块 负载均衡解决了，使用一个域名访问多台web的问题，必须要使用proxy+upstream 负载均衡和共享存储都是为了web的共享 七层负载均衡：识别域名，作用于http层 四层负载均衡：不识别域名，作用于tcp层，可以做端口转发，做数据库的代理 ngi            <a href="https://www.cnblogs.com/syy1757528181/p/12989242.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-29 19:19
+那个萝卜在飘
+<span class="post-view-count">阅读(3)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12989242" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/syy1757528181/archive/2020/05/28.html">2020年5月28日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/syy1757528181/p/12982773.html">
+    集群中nginx服务的健康检查及负载均衡模板更新
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：课前回顾 编译的时候大长串是指定相关目录，指定启动用户 源码安装完成之后还能再添加模块，重新编译就好 卸载nginx的时候要先备份相关的.conf文件 nginx负载均衡的健康检查 nginx_upstream_check_module 该模块可以为Nginx提供主动式后端服务器健康检查的功能, 以            <a href="https://www.cnblogs.com/syy1757528181/p/12982773.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-28 18:21
+那个萝卜在飘
+<span class="post-view-count">阅读(7)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12982773" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+            <div class="postSeparator"></div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/syy1757528181/p/12982759.html">
+    源码安装nginx及增加模块，nginx的秒级升级，秒级回滚
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：nginx源码安装 为某一server配置日志的话，要先打开主配置文件中的日志 模块的默认安装和直接调用 0.卸载yum安装的nginx yum remove -y nginx 1.安装依赖包 [root@lb02 ~]# yum install -y gcc glibc gcc-c++ pcre-            <a href="https://www.cnblogs.com/syy1757528181/p/12982759.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-28 18:19
+那个萝卜在飘
+<span class="post-view-count">阅读(11)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12982759" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+            <div class="postSeparator"></div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/syy1757528181/p/12978135.html">
+    phpadmin+redis实现图形化管理数据库笔记
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：课前回顾 四层负载均衡	OSI 传输层	转发 七层负载均衡	OSI 应用层	代理 四层负载均衡后面的七层负载均衡server配置一定要相同 四层负载均衡是基于传输层协议包来封装的（如：TCP/IP），那我们前面使用到的七层是指的应用层，他的组装在四层的基础之上，无论四层还是七层都是指的OSI网络模型            <a href="https://www.cnblogs.com/syy1757528181/p/12978135.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-28 07:49
+那个萝卜在飘
+<span class="post-view-count">阅读(12)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12978135" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+            <div class="postSeparator"></div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/syy1757528181/p/12978095.html">
+    cookie和session
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：会话保持（也叫session共享） 面试题： 开发层面实现 记录用户的登录状态，将登录状态保存到我们的redis服务器中（更倾向），nfs共享存储，mysql数据库 我们从运维层面实现 因为开发没有写会话保持的功能，所以我们只能在nginx中使用upstream模块的ip_hash调度算法，但是这个            <a href="https://www.cnblogs.com/syy1757528181/p/12978095.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-28 07:07
+那个萝卜在飘
+<span class="post-view-count">阅读(10)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12978095" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/syy1757528181/archive/2020/05/27.html">2020年5月27日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/syy1757528181/p/12975044.html">
+    Nginx负载均衡相关
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：Nginx负载均衡调度算法 调度算法 概述 轮询（RR） 按时间顺序逐一分配到不同的后端服务器(默认) weight（WRR） 加权轮询,weight值越大,分配到的访问几率越高（默认是1） ip_hash 每个请求按访问IP的hash结果分配,这样来自同一IP的固定访问一个后端服务器(公网IP)，            <a href="https://www.cnblogs.com/syy1757528181/p/12975044.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-27 18:01
+那个萝卜在飘
+<span class="post-view-count">阅读(11)</span><text> </text>
+<span class="post-comment-count">评论(1)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12975044" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+
+<div class="topicListFooter">
+    <div id="nav_next_page">
+        
+    <a href="https://www.cnblogs.com/syy1757528181/default.html?page=2">
+        下一页
+    </a>
+
+    </div>    
+</div>
+
+
+
+
+
+
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 那个萝卜在飘
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+</body>
+</html>

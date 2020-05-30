@@ -1,0 +1,1140 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>悦光阴 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.ico?v=20200522" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/codinglife/bundle-codinglife.min.css?v=UeHyLv1TT2WTz4TwfUOiMoKNmtFvLUjUnIhFE2UmZ7I" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/ljhdo/custom.css?v=DX8EKHh15HF1sAF6gp7zJM5l/v0=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/codinglife/bundle-codinglife-mobile.min.css?v=XjHfryC9ctsatIZz1dHn7TsRIqmwz9c3aj_6SCfHSDM" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/ljhdo/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/ljhdo/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/ljhdo/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=6bwfCY2e02dLOXNW99G2BHZkYFmw9QyYTWeJ-W-sudo"></script>
+    <script>
+        var currentBlogId = 222587;
+        var currentBlogApp = 'ljhdo';
+        var cb_enable_mathjax = true;
+        var isLogined = false;
+        var skinName = 'CodingLife';
+    </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true },
+        TeX: {
+        equationNumbers: { autoNumber: ['AMS'], useLabelIds: true },
+        extensions: ['extpfeil.js', 'mediawiki-texvc.js'],
+        Macros: {bm: "\\boldsymbol"}
+        },
+        'HTML-CSS': { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+        });
+    </script>
+    <script src="https://mathjax.cnblogs.com/2_7_5/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;v=20200504"></script>
+    
+</head>
+<body>
+    <a name="top"></a>
+    <div id="page_begin_html">
+        <link  type="text/css" rel="stylesheet" href="https://files.cnblogs.com/files/hafiz/feedback.css">
+<script src="https://files.cnblogs.com/files/hafiz/jquery-migrate-1.2.1.js" defer></script>
+<div id="scrollTop" style="display:none;">
+      <div class="level-2"></div>
+      <div class="level-3"></div>
+</div>
+<script src="https://files.cnblogs.com/files/hafiz/scroll2top.js" defer></script>
+<script type="text/javascript">
+    UI.global_search();
+    var uvOptions = {};
+    // !important
+    (function() {
+        initScrollTop();
+    })();
+</script>
+    </div>
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/ljhdo/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/ljhdo/">悦光阴</a>
+</h1>
+<h2>
+请不要假装很努力，因为结果不会陪你演戏。
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/ljhdo/">
+首页</a>
+</li>
+<li>
+
+
+</li>
+<li>
+</li>
+<li>
+
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+431&nbsp; </span>
+<span id="stats_article_count">文章 - 
+8&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+877</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+<!--done-->
+
+
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ljhdo/archive/2015/10/24.html">2015年10月24日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ljhdo/p/4907528.html">
+[置顶]    SQL Server 查询请求
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：当SQL Server&#160;引擎接收到用户发出的查询请求时，SQL Server执行优化器将查询请求（Request）和Task绑定，并为Task分配一个Workder，SQL&#160;Server申请操作系统的进程（Thread）来执行Worker。如果以并行的方式执行Request，SQL Server根据            <a href="https://www.cnblogs.com/ljhdo/p/4907528.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2015-10-24 21:26
+悦光阴
+<span class="post-view-count">阅读(2852)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(6)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=4907528" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ljhdo/archive/2020/05/29.html">2020年5月29日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ljhdo/p/12966894.html">
+    SSIS 数据类型 第二篇：变量的数据类型
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：变量(Variable)用于存储在Package运行时用到的值，集成服务支持两种类型的变量：用户自定义的变量和系统变量，自定义的变量由用户来定义，系统变量由集成服务来定义。 变量的用途十分广泛，用于容器、Task和事件处理程序中，在Script Task和Scipt Component 也会用变量。            <a href="https://www.cnblogs.com/ljhdo/p/12966894.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-29 19:04
+悦光阴
+<span class="post-view-count">阅读(74)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12966894" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ljhdo/archive/2020/05/27.html">2020年5月27日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ljhdo/p/12965608.html">
+    数据加密 第八篇：密钥的保护和权限管理
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：数据加密的密钥和证书要设置对应的权限，并把重要的密钥，比如，SMK和DMK，以及证书进行异地备份。 查看系统中已存在的证书、对称密钥和非对称密钥： sys.certificates sys.asymmetric_keys sys.symmetric_keys 一，对加密机制的权限管理 对证书、对称密            <a href="https://www.cnblogs.com/ljhdo/p/12965608.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-27 10:14
+悦光阴
+<span class="post-view-count">阅读(10)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12965608" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ljhdo/archive/2020/05/26.html">2020年5月26日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ljhdo/p/12919963.html">
+    Security9：权限（Permission）
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：每一个SQL Server安全对象（Securable）都有相应的权限（Permission）被授予到安全主体（Principal）上，在服务器级别上，使用Login和Server Role来管理权限；在数据库级别上，使用User和Database Role来管理权限。 一，权限命名约定 一下列表列            <a href="https://www.cnblogs.com/ljhdo/p/12919963.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-26 09:42
+悦光阴
+<span class="post-view-count">阅读(11)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12919963" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ljhdo/archive/2020/05/25.html">2020年5月25日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ljhdo/p/4875407.html">
+    Security8：权限模拟
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：用户可以模拟其他用户或登陆的权限来执行查询，并且在查看用户和登录的权限时，结果会受到模拟上下文的影响。当执行EXECUTE AS命令时，原始用户的安全上下文会进行切换，除了ORIGINAL_LOGIN之外，其他函数都会返回模拟上下文的Login和User信息。 一，指定Session的安全上下文 默            <a href="https://www.cnblogs.com/ljhdo/p/4875407.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-25 09:06
+悦光阴
+<span class="post-view-count">阅读(211)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=4875407" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ljhdo/archive/2020/05/24.html">2020年5月24日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ljhdo/p/12935351.html">
+    关于SQL Server的几个基本概念 ——Connection、Session、Request、Task、Worker和Scheduler
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：SQL Server 是如何执行查询脚本的呢？首先，应用程序连接到SQL Server引擎， 向SQL Server发送请求。一旦应用程序连接到数据库引擎，SQL Server 创建会话（Session），用于表示客户端和服务器端之间数据交换的状态。其次，SQL Server引擎分配Task来接受查            <a href="https://www.cnblogs.com/ljhdo/p/12935351.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-24 12:42
+悦光阴
+<span class="post-view-count">阅读(150)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(1)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12935351" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ljhdo/archive/2020/05/20.html">2020年5月20日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ljhdo/p/12907215.html">
+    数据加密 第二篇：加密算法和加密机制
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：加密是指通过使用密钥或密码对数据进行模糊处理的过程，加密解密最简单的过程如下图所示： 对称加密是加密和解密使用同一个密钥的加密算法，在图中就是加密密钥和解密密钥是相同的。对称加密通常来说会比较羸弱，因为使用数据时不仅仅需要传输数据本身，还是要通过某种方式传输密钥，这很有可能使得密钥在传输的过程中被窃            <a href="https://www.cnblogs.com/ljhdo/p/12907215.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-20 09:29
+悦光阴
+<span class="post-view-count">阅读(52)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12907215" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ljhdo/archive/2020/05/19.html">2020年5月19日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ljhdo/p/12919667.html">
+    Agent 第三篇：执行Step的权限
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：执行Job Step需要特定的安全上下文，设置Job Step执行的权限，主要分两种：第一种是使用Proxy，第二种是使用Step Owner或Agent 服务账户的权限。除了执行TSQL Script的Step之外，对于其他类型的Step都需要Proxy的权限上下文来执行。 一，使用Proxy来执            <a href="https://www.cnblogs.com/ljhdo/p/12919667.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-19 22:15
+悦光阴
+<span class="post-view-count">阅读(24)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12919667" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ljhdo/archive/2020/05/18.html">2020年5月18日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ljhdo/p/4543767.html">
+    数据加密 第四篇：对称密钥
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：密钥分为对称密钥和非对称密钥，密钥本质上是加密数据的算法： 对称密钥（Symmetric Keys）是指加密和解密的过程使用相同的算法，是加密中最弱的算法，但是性能最好。对于对称密钥，可以使用密码或者另一个密钥甚至一个证书来加密。 非对称密钥（Asymmetric Keys）使用一对密钥（算法），一            <a href="https://www.cnblogs.com/ljhdo/p/4543767.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-18 11:31
+悦光阴
+<span class="post-view-count">阅读(304)</span><text> </text>
+<span class="post-comment-count">评论(2)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=4543767" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ljhdo/archive/2020/05/17.html">2020年5月17日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ljhdo/p/12905644.html">
+    数据加密 第一篇：加密的概念
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：加密是通过使用密钥或密码来混淆数据的处理过程，把明文处理为密文，如果没有拿到相应的解密密钥或密码，即使拿到密文，也是无用，因此加密是保护数据的一个方法。用户只有拿到密钥和证书把密文数据解密之后，才能使用数据。如果没有密钥和证书，即使得到了数据，也无法得知数据的原始值，数据就没有价值了。由于数据的加密            <a href="https://www.cnblogs.com/ljhdo/p/12905644.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-17 18:12
+悦光阴
+<span class="post-view-count">阅读(194)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(1)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12905644" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ljhdo/archive/2020/05/08.html">2020年5月8日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ljhdo/p/11810912.html">
+    数据加密 第三篇：公钥证书
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：证书（Certificates）全称是公钥证书，是一种数字签名语句，它把公钥的值绑定到用户、设备或服务的ID上，这些用户、设备或服务ID拥有私钥，而私钥用于对数据进行解密。SQL Server中的证书同时包含公钥和密钥，前者用来加密，后者解密。为了避免私钥的安全，证书的私钥会被加密，可以使用数据库主            <a href="https://www.cnblogs.com/ljhdo/p/11810912.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-08 14:52
+悦光阴
+<span class="post-view-count">阅读(278)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11810912" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ljhdo/archive/2020/04/29.html">2020年4月29日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ljhdo/p/12803768.html">
+    SSAS 修改Server Mode 
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：SQL Server Analysis Services的Server Mode共有三种，分别是Multidimensional、SharePoint和Tabular。Multidimensional模式就是我们通常所说的cube。 服务器模式是在配置文件msmdsrv.ini中指定的，配置文件存放            <a href="https://www.cnblogs.com/ljhdo/p/12803768.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-04-29 18:00
+悦光阴
+<span class="post-view-count">阅读(49)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12803768" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ljhdo/archive/2020/04/13.html">2020年4月13日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ljhdo/p/10268882.html">
+    SSAS 第一篇：多维数据分析基础
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：多维数据分析是指按照多个维度（即多个角度）对数据进行观察和分析，多维的分析操作是指通过对多维形式组织起来的数据进行切片 、切块、聚合、钻取 、旋转等分析操作，以求剖析数据，使用户能够从多种维度、多个侧面 、多种数据综合度查看数据，从而深入地了解包含在数据中的信息和规律。 多维数据分析以数据仓库为基础            <a href="https://www.cnblogs.com/ljhdo/p/10268882.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-04-13 15:26
+悦光阴
+<span class="post-view-count">阅读(362)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(1)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=10268882" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ljhdo/archive/2020/04/08.html">2020年4月8日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ljhdo/p/10556424.html">
+    SSIS 转移数据库和SQL Server对象组件
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：转移组件分为：转移数据库组件和转移数据库对象组件，前者把整个数据库复制或移动到新的SQL Server实例中，后者把数据库中的对象转移到新的SQL Server数据库中。 一，Transfer Database Task 转移数据库任务用于在两个SQL Server实例之间转移数据库，可以拷贝或移动            <a href="https://www.cnblogs.com/ljhdo/p/10556424.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-04-08 18:55
+悦光阴
+<span class="post-view-count">阅读(96)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=10556424" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ljhdo/archive/2020/04/02.html">2020年4月2日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ljhdo/p/12618643.html">
+    存储过程的output参数
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：在SSIS的Execute SQL Task组件中执行存储过程，想要返回单行的结果，总是无法返回查询的结果，返回的错误是无法把DBNull转换为String类型： The type of the value (DBNull) being assigned to variable &quot;User::Mai            <a href="https://www.cnblogs.com/ljhdo/p/12618643.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-04-02 11:47
+悦光阴
+<span class="post-view-count">阅读(255)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12618643" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ljhdo/archive/2020/03/19.html">2020年3月19日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ljhdo/p/5719669.html">
+    失控的查询
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：有时会遇到令人费解的情况，平时一分钟可以完成的查询语句，某一天突然发生意外，运行了2-3个小时还在运行，这就是失控查询的行为表现，失控的查询（Runaway Query）是指实际执行时间比预计的时间要长的多，并且消耗大量的系统资源的查询。通常情况下，失控的查询是由关联表没有索引、关联表使用错误的索引            <a href="https://www.cnblogs.com/ljhdo/p/5719669.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-03-19 19:52
+悦光阴
+<span class="post-view-count">阅读(105)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=5719669" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ljhdo/archive/2020/03/06.html">2020年3月6日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ljhdo/p/4607188.html">
+    SQL Server 最小日志记录
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：SQL Server之所以记录事务日志，首要目的是为了把失败或取消的操作还原到最原始的状态，但是，并不是所有的操作都需要完全记录事务日志，比如，在一个空表上放置排他锁，把大量的数据插入到该空表中。即使插入操作在任意时刻失败，只需要把清空表，就可以把表还原，根本不需要记录插入的详细数据。在表上放置排他            <a href="https://www.cnblogs.com/ljhdo/p/4607188.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-03-06 22:33
+悦光阴
+<span class="post-view-count">阅读(306)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(3)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=4607188" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ljhdo/archive/2020/02/28.html">2020年2月28日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ljhdo/p/11983708.html">
+    NVARCHAR(MAX) 的最大长度
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：本文使用的环境是SQL Server 2017， 主机是64位操作系统。 大家都知道，Micorosoft Docs对 max参数的定义是：max 指定最大的存储空间是2GB，这个结论是正确的。 nvarchar&#160;[ ( n |&#160;max&#160;) ]Variable-size string data.&#160;n            <a href="https://www.cnblogs.com/ljhdo/p/11983708.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-02-28 23:38
+悦光阴
+<span class="post-view-count">阅读(786)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11983708" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ljhdo/archive/2020/02/25.html">2020年2月25日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ljhdo/p/10818526.html">
+    数据分析 第七篇：方差分析（单因素方差分析）
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：在试验中，把考察的指标称为试验指标，影响试验指标的条件称为因素。因素可分为两类，一类是人为可控的测量数据，比如温度、身高等；一类是不可控的随机因素，例如，测量误差，气象条件等。因素所处的状态称为因素的水平。如果在试验过程中，只有一个因素在改变，称为单因素试验。方差分析（Analysis of Var            <a href="https://www.cnblogs.com/ljhdo/p/10818526.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-02-25 21:13
+悦光阴
+<span class="post-view-count">阅读(959)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=10818526" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ljhdo/archive/2020/02/24.html">2020年2月24日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ljhdo/p/11501415.html">
+    分析思维 第四篇：数据分析入门阶段——描述性统计分析和相关分析
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：数据分析的入门思维，首先要认识数据，然后对数据进行简单的分析，比如描述性统计分析和相关性分析等。 一，认识变量和数据 变量和数据是数据分析中常用的概念，用变量来描述事物的特征，而数据是变量的具体值，把变量的值也叫做观测值。 1，变量 变量是用来描述总体中成员的某一个特性，例如，性别、年龄、身高、收入            <a href="https://www.cnblogs.com/ljhdo/p/11501415.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-02-24 22:46
+悦光阴
+<span class="post-view-count">阅读(737)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11501415" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ljhdo/archive/2019/12/31.html">2019年12月31日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ljhdo/p/5613750.html">
+    数据分析 第六篇：同期群分析
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：同期群（Cohort）属于用户分群里的一个细分类型，是指在规定时间内对具有共同行为特征的用户进行分群。“共同行为特征”是指在某个时间段内的相似行为，它除了按不同时间的新增用户来分类外，还可以按不同的行为来分类，譬如“在2017年6月第一次购买”，“把5月1日~5月7日的注册用户划分为一个群组”等。             <a href="https://www.cnblogs.com/ljhdo/p/5613750.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2019-12-31 15:53
+悦光阴
+<span class="post-view-count">阅读(504)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(2)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=5613750" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+            <div class="postSeparator"></div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ljhdo/p/11671222.html">
+    [转] 同期群分析Cohort Analysis
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：一个漂亮的平均数完全是用数据创造出来的虚幻景象，会给我们的决策造成误导，因此我们需要掌握一个行之有效的方法来剖析真实的用户行为和用户价值，这个方法就是同期群分析（Cohort Analysis）。事实上，数据不会说谎，只是分析数据的人没有做到精准分析而导致对数据呈现的错误解读！ 国内对同期群分析相关            <a href="https://www.cnblogs.com/ljhdo/p/11671222.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2019-12-31 11:17
+悦光阴
+<span class="post-view-count">阅读(131)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11671222" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ljhdo/archive/2019/12/27.html">2019年12月27日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ljhdo/p/5061297.html">
+    数据分析 第五篇：离群点检测
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：离群点（outlier）是指和其他观测点偏离非常大的数据点，离群点是异常的数据点，但是不一定是错误的数据点。确定离群点对于数据分析会带来不利的影响，比如，增大错误方差、影响预测和影响正态性。 从散点图上可以直观地看到离群点，离群点是孤立的一个数据点；从分布上来看，离群点远离数据集中其他数据点。 在数            <a href="https://www.cnblogs.com/ljhdo/p/5061297.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2019-12-27 18:53
+悦光阴
+<span class="post-view-count">阅读(1456)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(1)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=5061297" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ljhdo/archive/2019/12/13.html">2019年12月13日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ljhdo/p/12036510.html">
+    pandas 学习 第12篇：DataFrame 避免链式赋值
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：在运行以下Python代码时，Pandas抛出SettingWithCopyWarning警告： row_data = df_pred.loc[key] row_data[&#39;col&#39;] = new_value df_pred是一个数据框，根据索引从数据框中获取一行，然后对该行的一个字段进行赋值，警告            <a href="https://www.cnblogs.com/ljhdo/p/12036510.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2019-12-13 19:03
+悦光阴
+<span class="post-view-count">阅读(490)</span><text> </text>
+<span class="post-comment-count">评论(3)</span><text> </text>
+<span class="post-digg-count">推荐(2)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12036510" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ljhdo/archive/2019/12/11.html">2019年12月11日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ljhdo/p/10571719.html">
+    NumPy 学习 第三篇：矢量化和广播
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：矢量化 矢量化是指用数组表达式替换显式的for循环，在Python中循环数组或其他跟数组类似的数据结构时，使用循环会涉及很多开销。NumPy中的矢量化操作把内部循环委托给高度优化的C和Fortran函数，从而实现更清晰，更快速的Python代码。 矢量化是NumPy中的一种强大功能，可以把操作表达为            <a href="https://www.cnblogs.com/ljhdo/p/10571719.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2019-12-11 16:13
+悦光阴
+<span class="post-view-count">阅读(373)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(1)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=10571719" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/ljhdo/archive/2019/12/05.html">2019年12月5日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/ljhdo/p/11964292.html">
+    Wait Type 整理
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：整理SQL Server中经常出现的等待类型。 一，CXCONSUMER CXCONSUMER: Occurs with parallel query plans when a consumer thread waits for a producer thread to send rows. Thi            <a href="https://www.cnblogs.com/ljhdo/p/11964292.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2019-12-05 08:25
+悦光阴
+<span class="post-view-count">阅读(266)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(1)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11964292" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+
+<div class="topicListFooter">
+    <div id="nav_next_page">
+        
+    <a href="https://www.cnblogs.com/ljhdo/default.html?page=2">
+        下一页
+    </a>
+
+    </div>    
+</div>
+
+
+
+
+
+
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 悦光阴
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    <div id="page_end_html">
+        <script type="text/javascript">
+$(function(){
+    $('#blogTitle h1').addClass('bounceInLeft animated');
+    $('#blogTitle h2').addClass('bounceInRight animated');
+    // 删除反对按钮
+    $('.buryit').remove();
+    initCommentData();
+});
+function initCommentData() {
+    $('.feedbackItem').each(function() {
+        var text = $(this).find('.feedbackListSubtitle .layer').text();
+        // 将楼层信息放到data里面
+        // $(this).find('.blog_comment_body').attr('data-louceng', text.replace(/^#/g, ''));
+        if($(this).find('.feedbackListSubtitle .louzhu').length>0) $(this).addClass('myself');
+        var avatar = $(this).find('> .feedbackCon > span').html() || 'http://pic.cnitblog.com/face/sample_face.gif';
+        $(this).find('> .feedbackCon > .blog_comment_body').append('<img class="user-avatar" src="'+avatar+'"/>')
+    });
+}
+
+$(document).ajaxComplete(function(event, xhr, settings) {
+  // 监听获取评论ajax事件
+  if(settings.url.indexOf('/mvc/blog/GetComments.aspx') >= 0) {
+    initCommentData();
+  }
+});
+</script>
+    </div>
+</body>
+</html>

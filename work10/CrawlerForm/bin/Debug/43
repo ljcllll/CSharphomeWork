@@ -1,0 +1,780 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>姜子轩 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.ico?v=20200522" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/lessismoreright/bundle-lessismoreright.min.css?v=aar1eIg4zz9tL2uCrzOGDur190sJi2DazF273FikoL4" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/jzhlin/custom.css?v=w6ksPv6d&#x2B;NtJh3WtcKoUwq3HLes=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/lessismoreright/bundle-lessismoreright-mobile.min.css?v=FJjyQba01xzuYKRyPpSwE1bMq69pRjxrz5wp2oZZGLY" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/jzhlin/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/jzhlin/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/jzhlin/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=6bwfCY2e02dLOXNW99G2BHZkYFmw9QyYTWeJ-W-sudo"></script>
+    <script>
+        var currentBlogId = 117614;
+        var currentBlogApp = 'jzhlin';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'LessIsMoreRight';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    <div id="page_begin_html">
+        <script>loadPageBeginHtml();</script>
+    </div>
+    <div id="home">
+    <div id="header">
+        <div id="blogTitle">
+            
+<div class="title"><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/jzhlin/">姜子轩</a>
+</div>
+<div class="subtitle">
+这个世界就是信息的集合。
+</div>
+
+        </div>
+        <div id="navigator">
+            
+<ul id="navList">
+    <li id="nav_sitehome">
+</li>
+    <li id="nav_myhome">
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/jzhlin/">
+首页</a>
+</li>
+    <li id="nav_newpost">
+
+
+</li>
+    <li id="nav_contact">
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E5%A7%9C%E5%AD%90%E8%BD%A9">
+联系</a></li>
+    <li id="nav_rss">
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/jzhlin/rss/">
+订阅</a></li>
+    <li id="nav_admin">
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+            <div class="blogStats">
+                
+<span id="stats_post_count">随笔 - 
+18&nbsp;</span>
+<span id="stats_article_count">文章 - 
+0&nbsp;</span>
+<!-- <span id="stats-comment_count"></span> -->
+<span id="stats_comment_count">评论 - 
+48</span>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div id="mainContent">
+            <div class="forFlow">
+                
+
+
+
+
+
+
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/jzhlin/archive/2020/05/29.html">2020年5月29日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/jzhlin/p/12989263.html">
+[置顶]    基于Python豆瓣自动化测试【2】
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：承接上一篇中最后的测试结果图，使用过的pytest-html 插件原生态的报告的话。可能会发现 内容样式都有些不同。其实是做了些扩展相关设置所呈现的效果，当然可以定制的更深度一些，更加中文、本地化，又或者根据公司需要进行定向研发。例如就上文中的测试报告进行一些中文定制改造后效果如下图所示。这篇就如何优化、定制pytest-html 测试报告进行些讲解            <a href="https://www.cnblogs.com/jzhlin/p/12989263.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2020-05-29 19:27
+姜子轩
+<span class="post-view-count">阅读(145)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(1)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12989263" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/jzhlin/archive/2020/05/27.html">2020年5月27日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/jzhlin/p/12970985.html">
+[置顶]    基于Python豆瓣自动化测试【1】
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：Pytest 是一个非常实用的自动化测试框架，目前来说资料也是非常多了。最近某友人在学习 Python的一些测试技术，帮其网上搜了下教程；发现大多数文章多是在介绍入门 又或者 多是聚焦在 Pytest 的一些语法 和 提供的功能上。对于如何实际功能中使用方面教程介绍不多。介于此，写这篇教程选豆瓣网来作为 黑盒评测 对象为例。            <a href="https://www.cnblogs.com/jzhlin/p/12970985.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2020-05-27 10:29
+姜子轩
+<span class="post-view-count">阅读(193)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(1)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12970985" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/jzhlin/archive/2020/05/29.html">2020年5月29日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/jzhlin/p/12989263.html">
+    基于Python豆瓣自动化测试【2】
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：承接上一篇中最后的测试结果图，使用过的pytest-html 插件原生态的报告的话。可能会发现 内容样式都有些不同。其实是做了些扩展相关设置所呈现的效果，当然可以定制的更深度一些，更加中文、本地化，又或者根据公司需要进行定向研发。例如就上文中的测试报告进行一些中文定制改造后效果如下图所示。这篇就如何优化、定制pytest-html 测试报告进行些讲解            <a href="https://www.cnblogs.com/jzhlin/p/12989263.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2020-05-29 19:27
+姜子轩
+<span class="post-view-count">阅读(145)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(1)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12989263" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/jzhlin/archive/2020/05/27.html">2020年5月27日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/jzhlin/p/12970985.html">
+    基于Python豆瓣自动化测试【1】
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：Pytest 是一个非常实用的自动化测试框架，目前来说资料也是非常多了。最近某友人在学习 Python的一些测试技术，帮其网上搜了下教程；发现大多数文章多是在介绍入门 又或者 多是聚焦在 Pytest 的一些语法 和 提供的功能上。对于如何实际功能中使用方面教程介绍不多。介于此，写这篇教程选豆瓣网来作为 黑盒评测 对象为例。            <a href="https://www.cnblogs.com/jzhlin/p/12970985.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2020-05-27 10:29
+姜子轩
+<span class="post-view-count">阅读(193)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(1)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12970985" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/jzhlin/archive/2016/10/28.html">2016年10月28日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/jzhlin/p/6008568.html">
+    java 程序运行的基础知识【Java bytecode】
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：JVM 线程栈 到 函数运行。每一个JVM线程来说启动的时候都会创建一个私有的线程栈。一个jvm线程栈用来存储栈帧，jvm线程栈和C语言中的栈很类似，它负责管理局部变量、部分运算结果，同时也参与到函数调用和函数返回的工作中。JVM规范中运行线程栈的大小可以是固定的或者是动态分配的，也可以是根据一定规则计算的。不同jvm对栈的实现会不同，一些可能提供给开发人员自己控制jvm线程栈初始大小的方式；对于动态分配来说也可能提供对jvm最大和最小值的设置。当计算一个线程需要的分配的大小超出了固定值、或者设置的最大值，jvm会抛出StackOverflowError。而对于动态分配栈来说，如果内存不能够提供足够的空间来满足最小值、或者需要的值JVM会抛出 OutOfMemoryError            <a href="https://www.cnblogs.com/jzhlin/p/6008568.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2016-10-28 17:16
+姜子轩
+<span class="post-view-count">阅读(1261)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(4)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=6008568" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/jzhlin/archive/2015/01/28.html">2015年1月28日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/jzhlin/p/4255883.html">
+    JAVA规则引擎JSR-94笔札
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：JSR-94 是由JCP(Java Community Process)组织所制定的java规则引擎API的java请求规范。它主要定义了规则引擎在java运行时的一些API，指导各个java规则引擎的厂商能够基于这个API实现规则引擎。当前主流支持这个标准的开源java规则引擎有：Drools、OpenRules、JLisa、JRuleEngine。            <a href="https://www.cnblogs.com/jzhlin/p/4255883.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2015-01-28 15:05
+姜子轩
+<span class="post-view-count">阅读(3050)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(2)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=4255883" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/jzhlin/archive/2012/08/13.html">2012年8月13日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/jzhlin/archive/2012/08/13/pnn.html">
+    概率神经网络 (PNN) 应用的简单DEMO
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：概率神经网络的全称是Probabilistic neural network，它主要用于模式分类，是基于贝叶斯策略前馈神经网络。它有着坚实的数学理论基础，当然本文并不打算从数学符号来对它进行介绍（有兴趣的可翻阅推荐书目），而是通过一个简单的C语言程序来认知它。 介绍程序之前，先看下它基本模型的结构示意图： 图中可以看到基本分为三层，如果有了解神经网络的话就很熟悉了。第一层是输入层，就如它的名字负责接收数据的输入；第二层是模式层，对数据进行收集整理；第三层是类别层，就是数据整理完后归属于哪一个类别的信息。最后就根据类别的信息输出了，如果把输出也作为一层的话，也可以看成四层结构。其中...            <a href="https://www.cnblogs.com/jzhlin/archive/2012/08/13/pnn.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2012-08-13 00:37
+姜子轩
+<span class="post-view-count">阅读(14010)</span><text> </text>
+<span class="post-comment-count">评论(3)</span><text> </text>
+<span class="post-digg-count">推荐(1)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=2635631" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/jzhlin/archive/2012/08/01.html">2012年8月1日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/jzhlin/archive/2012/08/01/bp_c2.html">
+    BP神经网络-- C语言实现 下
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：上一篇 C语言实现上中介绍了程序实现时定义的一些数据结构、程序执行的流程以及 程序的基本骨架（详情见 C语言实现上）。留下了两个关键函数computO(i) 和 backUpdate(i) 没有分析实现，参数 i 代表的是第 i 个样本，本篇我们一起来分析下这两个函数的实现。BP神经网络输出 函数 computO(i) 负责的是通过BP神经网络的机制对样本 i 的输入，预测其输出。回想BP神经网络的基本模型（详情见 基本模型）对应的公式（1）还有 激活函数对应的公式（2）： 在前篇设计的BP神经网络中，输入层与隐藏层权重对应的数据结构是w[Neuron][In]，隐藏层与输出层...            <a href="https://www.cnblogs.com/jzhlin/archive/2012/08/01/bp_c2.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2012-08-01 09:35
+姜子轩
+<span class="post-view-count">阅读(19161)</span><text> </text>
+<span class="post-comment-count">评论(13)</span><text> </text>
+<span class="post-digg-count">推荐(11)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=2617748" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/jzhlin/archive/2012/07/30.html">2012年7月30日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/jzhlin/archive/2012/07/30/bp_c.html">
+    BP神经网络-- C语言实现  上
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：在上一篇文章中，介绍了BP神经网络的基本模型、模型中的一些术语并对模型进行了数学上的分析，对它的原理有了初步的认识。那么如何用程序语言来具体的实现它，将是我们下一步需要讨论的问题。本文选取的是C语言来实现一个简单的单隐藏层的BP神经网络（默认大家了解了BP神经网络的基本概念，本文中涉及到些术语参见上一篇 基本模型），因此对于其他C类语言（C#、JAVA等）只需对本文中的代码稍作修改即可移植。一些数据的定义 首先，我们介绍些下文中描述的程序里面的一些重要数据的定义。#define Data 820#define In 2#define Out 1#define Neuron 45#def...            <a href="https://www.cnblogs.com/jzhlin/archive/2012/07/30/bp_c.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2012-07-30 23:38
+姜子轩
+<span class="post-view-count">阅读(24560)</span><text> </text>
+<span class="post-comment-count">评论(12)</span><text> </text>
+<span class="post-digg-count">推荐(9)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=2616087" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/jzhlin/archive/2012/07/28.html">2012年7月28日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/jzhlin/archive/2012/07/28/bp.html">
+    BP神经网络-- 基本模型
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：BP 神经网络中的 BP 为 Back Propagation 的简写，最早它是由Rumelhart、McCelland等科学家于 1986 年提出来的，Rumelhart 并在Nature 上发表了一篇非常著名的文章 《Learning representations by back-propag            <a href="https://www.cnblogs.com/jzhlin/archive/2012/07/28/bp.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2012-07-28 22:04
+姜子轩
+<span class="post-view-count">阅读(32130)</span><text> </text>
+<span class="post-comment-count">评论(8)</span><text> </text>
+<span class="post-digg-count">推荐(10)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=2613604" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/jzhlin/archive/2012/07/23.html">2012年7月23日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/jzhlin/archive/2012/07/23/Quorum.html">
+    Quorum 机制
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：分布式系统的设计中会涉及到许多的协议、机制用来解决可靠性问题、数据一致性问题等，Quorum 机制就是其中的一种。我们通过分布式系统中的读写模型来简单介绍它。分布式系统中的读写模型 分布式系统是由多个节点（指代一台服务器、存储设备等）构成，由于网络异常、宕机等节点并不能保证正常工作，特别是在节点数量很大的时候，出现异常状况的节点几乎是肯定的。为了保证系统的正常运行，能够提供可靠的服务，分布式系统中对于数据的存储采用多份数据副本（注：这里的副本并非只用来备份，它可参与提供系统服务）来保证可靠性，也就是其中一个节点上读取数据失败了那么可以转向另外一个存有相同数据副本的节点读取返回给用户。这个...            <a href="https://www.cnblogs.com/jzhlin/archive/2012/07/23/Quorum.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2012-07-23 15:46
+姜子轩
+<span class="post-view-count">阅读(4864)</span><text> </text>
+<span class="post-comment-count">评论(1)</span><text> </text>
+<span class="post-digg-count">推荐(5)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=2605077" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/jzhlin/archive/2012/06/25.html">2012年6月25日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/jzhlin/archive/2012/06/25/nginx_conf_2.html">
+    Nginx 源码分析-- 模块module 解析执行 nginx.conf 配置文件流程分析 二
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：接上一篇，通过关键代码段的分析、和一些关键函数的摘录对nginx 运用module 模块构架对nginx.conf 进行解析执行的流程有了一个基本认识。流程总结如下： 1、获取全部参与编译的模块module 进行统计编号。 2、根据module 模块的个数分配 配置信息资源的指针空间。 3、创建NGX_CORE_MODULE 核心模块的配置信息，并将指针空间中对应模块编号的指针进行设置。 4、初始化conf 配置信息，解析参数ngx_conf_param，解析配置文件ngx_conf_parse。 以上第4步中解析配置文件ngx_conf_parse过程又可分为： ...            <a href="https://www.cnblogs.com/jzhlin/archive/2012/06/25/nginx_conf_2.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2012-06-25 15:52
+姜子轩
+<span class="post-view-count">阅读(2824)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(1)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=2561373" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/jzhlin/archive/2012/06/18.html">2012年6月18日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/jzhlin/archive/2012/06/18/nginx_conf_1.html">
+    Nginx 源码分析-- 模块module 解析执行 nginx.conf 配置文件流程分析 一
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：搭建nginx服务器时，主要的配置文件 nginx.conf 是部署和维护服务器人员经常要使用到的文件， 里面进行了许多服务器参数的设置。那么nginx 以模块 module为骨架的设计下是如何运用模块 module来解析并执行nginx.conf配置文件下的指令的呢？在探究源码之前，需要对nginx下的模块 module 有个基本的认知（详情参考前面的博文 Nginx 源码分析-- 浅谈对模块module 的基本认知)同时也要对nginx中常用到的一些结构有个基本的了解如： 内存池pool 管理相关的函数、ngx_string 的基本结构等（详情参考前面的博文），若不然看代码的时候可能不..            <a href="https://www.cnblogs.com/jzhlin/archive/2012/06/18/nginx_conf_1.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2012-06-18 01:07
+姜子轩
+<span class="post-view-count">阅读(5111)</span><text> </text>
+<span class="post-comment-count">评论(4)</span><text> </text>
+<span class="post-digg-count">推荐(2)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=2553054" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/jzhlin/archive/2012/06/13.html">2012年6月13日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/jzhlin/archive/2012/06/13/nginx_string.html">
+    Nginx 源码分析-- ngx_string 的一些简单分析
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：对于一个web服务器程序来说，对字符串处理的需求是必须的。由于web环境下的各种编码，也导致了web服务器程序字符串处理的繁杂性。在nginx源码中，ngx_string.c 这个文件就是来应对字符串处理的一些源码，源码中经常的使用到了这里中的函数，本文对ngx_string.c 进行一些简单的分析，以方便阅读其他源码。 我们来看它的基本数据结构:typedef struct { size_t len; u_char *data;} ngx_str_t; 比较明显的可以看出，ngx_str_t 只是将字符串添加了一个标志长度的字段，并无其他特殊结构。　...            <a href="https://www.cnblogs.com/jzhlin/archive/2012/06/13/nginx_string.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2012-06-13 09:01
+姜子轩
+<span class="post-view-count">阅读(4203)</span><text> </text>
+<span class="post-comment-count">评论(1)</span><text> </text>
+<span class="post-digg-count">推荐(1)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=2547243" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/jzhlin/archive/2012/06/10.html">2012年6月10日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/jzhlin/archive/2012/06/10/ngx_list.html">
+    Nginx 源码分析-- ngx_array、ngx_list基本数据结构
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：应该说大家对这两个数据结构相当熟悉了，因此我们一并将它们进行分析，瞧一瞧nginx是如何实现它们的。在此篇之前，我们已经对nginx 内存池（pool）进行了分析，在此基础上来理解ngnix对它们的实现将变得非常简单，特别是内存池（pool）中的ngx_palloc 函数在这两个结构中多次用到，若不清楚想了解原理的可以看看我前面写的文章，它返回的是在内存池分配好空间了的首地址。一、ngx_array 数组：struct ngx_array_s { void *elts; ngx_uint_t nelts; size_t size; ng...            <a href="https://www.cnblogs.com/jzhlin/archive/2012/06/10/ngx_list.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2012-06-10 10:40
+姜子轩
+<span class="post-view-count">阅读(2519)</span><text> </text>
+<span class="post-comment-count">评论(2)</span><text> </text>
+<span class="post-digg-count">推荐(1)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=2543836" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/jzhlin/archive/2012/06/09.html">2012年6月9日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/jzhlin/archive/2012/06/09/module.html">
+    Nginx 源码分析-- 浅谈对模块module 的基本认知
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：分析nginx源码，谈到模块module是必然的。纵观nginx源码，可以说模块module机制是整个nginx的骨架。因此，对nginx的源码进行分析，那么对模块module就需要有一个基本的认知。在浅谈开始，我们要明确nginx 模块构架是从编译阶段开始的，不像apache那样可以动态的添加模块，nginx使用的是静态模块。这应该也是nginx 为何效率高的原因之一。对nginx的模块认知，必须要提到一篇大大有名的文章，我想也是每个分析nginx源码的人都拜读过的文章《Emiller&#39;s Guide To Nginx Module Development 》里面的内容虽然少了点，但            <a href="https://www.cnblogs.com/jzhlin/archive/2012/06/09/module.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2012-06-09 09:39
+姜子轩
+<span class="post-view-count">阅读(4067)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(2)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=2542841" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/jzhlin/archive/2012/06/07.html">2012年6月7日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/jzhlin/archive/2012/06/07/ngx_palloc.html">
+    Nginx 源码分析-- 内存池(pool)的分析 三
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：上一篇已经通过对ngx_palloc 这个内存池（pool）管理的核心函数--内存分配函数进行解析，我们窥探到了Nginx内存管理的主体方法还有对于大内存需求的解决之道，同时也对管理内存池的数据结构有了更深一步的认识，通过这些认识我们可以得到以下这样一张数据结构的示意图：图3 Nginx内存管理数据结构示意图 做说明下，这里示意的是有需求大内存分配时的结构示意图，为了图示的方便，我们将 large_t 特殊话到了和 large所在的同一个pool单元里面，其实实际运行中并非一定在同一个pool单元中。如果没有大内存需求时 large_t 也并不存在。 分析完了，内存分配函数ngx_pa...            <a href="https://www.cnblogs.com/jzhlin/archive/2012/06/07/ngx_palloc.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2012-06-07 09:39
+姜子轩
+<span class="post-view-count">阅读(3148)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(2)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=2539805" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+
+<div class="topicListFooter">
+    <div id="nav_next_page">
+        
+    <a href="https://www.cnblogs.com/jzhlin/default.html?page=2">
+        下一页
+    </a>
+
+    </div>    
+</div>
+
+
+
+
+            </div>
+        </div>
+
+        <div id="sideBar">
+            <div id="sideBarMain">
+                
+
+
+<div id="sidebar_ad"></div>
+                <div id="calendar"><div id="blog-calendar" style="display:none"></div></div>                
+                <script>loadBlogDefaultCalendar();</script>
+                <div id="leftcontentcontainer">
+                    <!-- begin:SingleColumn -->
+                    <div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+                    <!-- end:  SingleColumn -->
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <div id="footer">
+        <!--done-->
+Copyright &copy; 2020 姜子轩
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+    </div>
+</div>
+
+    <div id="page_end_html">
+        <script src="https://s96.cnzz.com/stat.php?id=4186047&web_id=4186047&show=pic" language="JavaScript"></script>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F9e45b74ac25c4e1e69e37055a3c3acdf' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=13262826" charset="UTF-8"></script>
+    </div>
+</body>
+</html>

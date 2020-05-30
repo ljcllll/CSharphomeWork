@@ -1,0 +1,825 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="never" />
+    <meta property="og:description" content="Alink 是阿里巴巴基于实时计算引擎 Flink 研发的新一代机器学习算法平台，是业界首个同时支持批式算法、流式算法的机器学习平台。迭代算法在很多数据分析领域会用到，比如机器学习或者图计算。本文将通" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Alink漫谈(五) : 迭代计算和Superstep - 罗西的思考 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.ico?v=20200522" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/lessismoreright/bundle-lessismoreright.min.css?v=aar1eIg4zz9tL2uCrzOGDur190sJi2DazF273FikoL4" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/lessismoreright/bundle-lessismoreright-mobile.min.css?v=FJjyQba01xzuYKRyPpSwE1bMq69pRjxrz5wp2oZZGLY" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/rossiXYZ/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/rossiXYZ/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/rossiXYZ/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=6bwfCY2e02dLOXNW99G2BHZkYFmw9QyYTWeJ-W-sudo"></script>
+    <script>
+        var currentBlogId = 556264;
+        var currentBlogApp = 'rossiXYZ';
+        var cb_enable_mathjax = true;
+        var isLogined = false;
+        var skinName = 'LessIsMoreRight';
+    </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true },
+        TeX: {
+        equationNumbers: { autoNumber: ['AMS'], useLabelIds: true },
+        extensions: ['extpfeil.js', 'mediawiki-texvc.js'],
+        Macros: {bm: "\\boldsymbol"}
+        },
+        'HTML-CSS': { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+        });
+    </script>
+    <script src="https://mathjax.cnblogs.com/2_7_5/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;v=20200504"></script>
+    
+</head>
+<body>
+    <a name="top"></a>
+    <div id="page_begin_html">
+        
+
+    </div>
+    <div id="home">
+    <div id="header">
+        <div id="blogTitle">
+            
+<div class="title"><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/rossiXYZ/">罗西的思考</a>
+</div>
+<div class="subtitle">
+一手伸向技术，一手伸向生活
+</div>
+
+        </div>
+        <div id="navigator">
+            
+<ul id="navList">
+    <li id="nav_sitehome"><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+    <li id="nav_myhome">
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/rossiXYZ/">
+首页</a>
+</li>
+    <li id="nav_newpost">
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+    <li id="nav_contact">
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E7%BD%97%E8%A5%BF%E7%9A%84%E6%80%9D%E8%80%83">
+联系</a></li>
+    <li id="nav_rss">
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/rossiXYZ/rss/">
+订阅</a></li>
+    <li id="nav_admin">
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+            <div class="blogStats">
+                
+<span id="stats_post_count">随笔 - 
+31&nbsp;</span>
+<span id="stats_article_count">文章 - 
+0&nbsp;</span>
+<!-- <span id="stats-comment_count"></span> -->
+<span id="stats_comment_count">评论 - 
+3</span>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div id="mainContent">
+            <div class="forFlow">
+                <div id="post_detail">
+    <div id="topics">
+        <div class="post">
+            <h1 class="postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/rossiXYZ/p/12990632.html">Alink漫谈(五) : 迭代计算和Superstep</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+    <div id="cnblogs_post_description" style="display: none">
+        Alink 是阿里巴巴基于实时计算引擎 Flink 研发的新一代机器学习算法平台，是业界首个同时支持批式算法、流式算法的机器学习平台。迭代算法在很多数据分析领域会用到，比如机器学习或者图计算。本文将通过Superstep入手看看Alink是如何利用Flink迭代API来实现具体算法。
+    </div>
+<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+    <h1 id="alink漫谈五--迭代计算和superstep">Alink漫谈(五) : 迭代计算和Superstep</h1>
+<p><div class="toc"><div class="toc-container-header">目录</div><ul><li><a href="#alink漫谈五--迭代计算和superstep">Alink漫谈(五) : 迭代计算和Superstep</a><ul><li><a href="#0x00-摘要">0x00 摘要</a></li><li><a href="#0x01-缘由">0x01 缘由</a></li><li><a href="#0x02-背景概念">0x02 背景概念</a><ul><li><a href="#21-四层执行图">2.1 四层执行图</a></li><li><a href="#22-task和subtask">2.2 Task和SubTask</a></li><li><a href="#23-如何划分-task-的依据">2.3 如何划分 Task 的依据</a></li><li><a href="#24-jobgraph">2.4 JobGraph</a></li><li><a href="#25-bsp模型和superstep">2.5 BSP模型和Superstep</a><ul><li><a href="#bsp模型">BSP模型</a></li><li><a href="#bsp模型的实现">BSP模型的实现</a></li><li><a href="#flink-gelly">Flink-Gelly</a></li></ul></li></ul></li><li><a href="#0x03-flink的迭代算法（superstep-based）">0x03 Flink的迭代算法（superstep-based）</a><ul><li><a href="#31-bulk-iterate">3.1 Bulk Iterate</a></li><li><a href="#32-迭代机制">3.2 迭代机制</a></li></ul></li><li><a href="#0x04-alink如何使用迭代">0x04 Alink如何使用迭代</a></li><li><a href="#0x05-深入flink源码和runtime来验证">0x05 深入Flink源码和runtime来验证</a><ul><li><a href="#51-向flink提交job">5.1 向Flink提交Job</a></li><li><a href="#52-生成jobgraph">5.2 生成JobGraph</a></li><li><a href="#53-迭代对应的task">5.3 迭代对应的Task</a><ul><li><a href="#531-iterationheadtask">5.3.1 IterationHeadTask</a></li><li><a href="#532-iterationintermediatetask">5.3.2 IterationIntermediateTask</a></li><li><a href="#533-iterationtailtask">5.3.3 IterationTailTask</a><ul><li><a href="#如何和head建立联系">如何和Head建立联系</a></li><li><a href="#如何把用户返回的数值传给head">如何把用户返回的数值传给Head</a></li></ul></li><li><a href="#534-iterationsynchronizationsinktask">5.3.4 IterationSynchronizationSinkTask</a></li></ul></li><li><a href="#54-superstep">5.4 superstep</a></li></ul></li><li><a href="#0x06-结合kmeans代码看superset">0x06 结合KMeans代码看superset</a><ul><li><a href="#61-k-means算法概要">6.1 K-means算法概要</a></li><li><a href="#62-kmeanspreallocatecentroid">6.2 KMeansPreallocateCentroid</a></li><li><a href="#63-kmeansassigncluster-和-kmeansupdatecentroids">6.3 KMeansAssignCluster 和 KMeansUpdateCentroids</a></li><li><a href="#64-kmeansoutputmodel">6.4 KMeansOutputModel</a></li></ul></li><li><a href="#0x07-参考">0x07 参考</a></li></ul></li></ul></div></p>
+<h2 id="0x00-摘要">0x00 摘要</h2>
+<p>Alink 是阿里巴巴基于实时计算引擎 Flink 研发的新一代机器学习算法平台，是业界首个同时支持批式算法、流式算法的机器学习平台。迭代算法在很多数据分析领域会用到，比如机器学习或者图计算。本文将通过Superstep入手看看Alink是如何利用Flink迭代API来实现具体算法。</p>
+<p>因为Alink的公开资料太少，所以以下均为自行揣测，肯定会有疏漏错误，希望大家指出，我会随时更新。</p>
+<h2 id="0x01-缘由">0x01 缘由</h2>
+<p>为什么提到 Superstep 这个概念，是因为在撸KMeans代码的时候，发现几个很奇怪的地方，比如以下三个步骤中，都用到了context.getStepNo()，而且会根据其数值的不同进行不同业务操作：</p>
+<pre><code class="language-java">public class KMeansPreallocateCentroid extends ComputeFunction {
+    public void calc(ComContext context) {
+        LOG.info(&quot;liuhao  KMeansPreallocateCentroid &quot;);
+        if (context.getStepNo() == 1) {
+          /** 具体业务逻辑代码
+           * Allocate memory for pre-round centers and current centers.
+           */        
+        }
+    }
+}  
+
+public class KMeansAssignCluster extends ComputeFunction {
+    public void calc(ComContext context) {
+        ......
+        if (context.getStepNo() % 2 == 0) {
+            stepNumCentroids = context.getObj(KMeansTrainBatchOp.CENTROID1);
+        } else {
+            stepNumCentroids = context.getObj(KMeansTrainBatchOp.CENTROID2);
+        }
+      /** 具体业务逻辑代码
+       * Find the closest cluster for every point and calculate the sums of the points belonging to the same cluster.
+       */
+    }
+}
+
+public class KMeansUpdateCentroids extends ComputeFunction {
+    public void calc(ComContext context) {
+        if (context.getStepNo() % 2 == 0) {
+            stepNumCentroids = context.getObj(KMeansTrainBatchOp.CENTROID2);
+        } else {
+            stepNumCentroids = context.getObj(KMeansTrainBatchOp.CENTROID1);
+        }
+      /** 具体业务逻辑代码
+       * Update the centroids based on the sum of points and point number belonging to the same cluster.
+       */
+    }
+</code></pre>
+<p>查看ComContext的源码，发现stepNo的来源居然是<code>runtimeContext.getSuperstepNumber()</code>。</p>
+<pre><code class="language-java">public class ComContext {
+   private final int taskId;
+   private final int numTask;
+   private final int stepNo; // 对，就是这里
+   private final int sessionId;
+	public ComContext(int sessionId, IterationRuntimeContext runtimeContext) {
+		this.sessionId = sessionId;
+		this.numTask = runtimeContext.getNumberOfParallelSubtasks();
+		this.taskId = runtimeContext.getIndexOfThisSubtask();
+		this.stepNo = runtimeContext.getSuperstepNumber(); // 这里进行了变量初始化
+	}  
+	/**
+	 * Get current iteration step number, the same as {@link IterationRuntimeContext#getSuperstepNumber()}.
+	 * @return iteration step number.
+	 */
+	public int getStepNo() {
+		return stepNo; // 这里是使用
+	}  
+}
+</code></pre>
+<p>看到这里有的兄弟可能会虎躯一震，<u><em>这不是BSP模型的概念嘛。我就是想写个KMeans算法，怎么除了MPI模型，还要考虑BSP模型</em></u>。下面就让我们一步一步挖掘究竟Alink都做了什么工作。</p>
+<h2 id="0x02-背景概念">0x02 背景概念</h2>
+<h3 id="21-四层执行图">2.1 四层执行图</h3>
+<p>在 Flink 中的执行图可以分为四层：StreamGraph -&gt; JobGraph -&gt; ExecutionGraph -&gt; 物理执行图</p>
+<ul>
+<li>StreamGraph：Stream API 编写的代码生成的最初的图。用来表示程序的拓扑结构。</li>
+<li>JobGraph：StreamGraph 经过优化后生成了 JobGraph， JobGraph是提交给 JobManager 的数据结构。主要的优化为，将多个符合条件的节点 chain 在一起作为一个节点，这样可以减少数据在节点之间流动所需要的序列化/反序列化/传输消耗。JobGraph是唯一被Flink的数据流引擎所识别的表述作业的数据结构，也正是这一共同的抽象体现了流处理和批处理在运行时的统一。</li>
+<li>ExecutionGraph：JobManager 根据 JobGraph 生成 ExecutionGraph。ExecutionGraph 是 JobGraph 的并行化版本，是调度层最核心的数据结构。</li>
+<li>物理执行图：JobManager 根据 ExecutionGraph 对 Job 进行调度后，在各个TaskManager 上部署 Task 后形成的“图”，并不是一个具体的数据结构。</li>
+</ul>
+<h3 id="22-task和subtask">2.2 Task和SubTask</h3>
+<p>因为某种原因，Flink内部对这两个概念的使用本身就有些混乱：在Task Manager里这个subtask的概念由一个叫Task的类来实现。Task Manager里谈论的Task对象实际上对应的是ExecutionGraph里的一个subtask。</p>
+<p>所以这两个概念需要理清楚。</p>
+<ul>
+<li>Task(任务) ：Task对应JobGraph的一个节点，是一个算子Operator。Task 是一个阶段多个功能相同 subTask 的集合，类似于 Spark 中的 TaskSet。</li>
+<li>subTask(子任务) ：subTask 是 Flink 中任务最小执行单元，是一个 Java 类的实例，这个 Java 类中有属性和方法，完成具体的计算逻辑。在ExecutionGraph里Task被分解为多个并行执行的subtask 。每个subtask作为一个excution分配到Task Manager里执行。</li>
+<li>Operator Chains(算子链) ：没有 shuffle 的多个算子合并在一个 subTask 中，就形成了 Operator Chains，类似于 Spark 中的 Pipeline。Operator subTask 的数量指的就是算子的并行度。同一程序的不同算子也可能具有不同的并行度（因为可以通过 setParallelism() 方法来修改并行度）。</li>
+</ul>
+<p>Flink 中的程序本质上是并行的。在执行期间，每一个算子 Operator (Transformation)都有一个或多个算子subTask（Operator SubTask），每个算子的 subTask 之间都是彼此独立，并在不同的线程中执行，并且可能在不同的机器或容器上执行。</p>
+<p>Task（ SubTask） 是一个Runnable 对象， Task Manager接受到TDD 后会用它实例化成一个Task对象， 并启动一个线程执行Task的Run方法。</p>
+<p>TaskDeploymentDescriptor(TDD) : 是Task Manager在submitTask是提交给TM的数据结构。 他包含了关于Task的所有描述信息。比如：</p>
+<ul>
+<li>TaskInfo : 包含该Task 执行的java 类，该类是某个 AbstractInvokable的实现类 ， 当然也是某个operator的实现类 （比如DataSourceTask, DataSinkTask, BatchTask,StreamTask 等）。</li>
+<li>IG描述 ：通常包含一个或两个InputGateDeploymentDescriptor（IGD)。</li>
+<li>目标RP的描述: ParitionId, PartitionType, RS个数等等。</li>
+</ul>
+<h3 id="23-如何划分-task-的依据">2.3 如何划分 Task 的依据</h3>
+<p>在以下情况下会重新划分task</p>
+<ul>
+<li>并行度发生变化时</li>
+<li>keyBy() /window()/apply() 等发生 Rebalance 重新分配;</li>
+<li>调用 startNewChain() 方法，开启一个新的算子链；</li>
+<li>调用 diableChaining()方法，即：告诉当前算子操作不使用 算子链 操作。</li>
+</ul>
+<p>比如有如下操作</p>
+<pre><code class="language-scala">DataStream&lt;String&gt; text = env.socketTextStream(hostname, port);
+
+DataStream counts = text
+    .filter(new FilterClass())
+    .map(new LineSplitter())
+    .keyBy(0)
+    .timeWindow(Time.seconds(10))
+    .sum(2)
+</code></pre>
+<p>那么StreamGraph的转换流是：</p>
+<pre><code class="language-java"> Source --&gt; Filter --&gt; Map --&gt; Timestamps/Watermarks --&gt; Window(SumAggregator) --&gt; Sink
+</code></pre>
+<p>其task是四个：</p>
+<ul>
+<li>Source --&gt; Filter --&gt; Map</li>
+<li>keyBy</li>
+<li>timeWindow</li>
+<li>Sink</li>
+</ul>
+<p>其中每个task又会被分成分若干subtask。在执行时，一个Task会被并行化成若干个subTask实例进行执行，一个subTask对应一个执行线程。</p>
+<h3 id="24-jobgraph">2.4 JobGraph</h3>
+<p>以上说了这么多，就是要说jobGraph和subtask，<u>因为本文中我们在分析源码和调试时候，主要是从jobGraph这里开始入手来看subtask</u>。</p>
+<p>JobGraph是在StreamGraph的基础之上，对StreamNode进行了关联合并的操作，比如对于source -&gt; flatMap -&gt; reduce -&gt; sink 这样一个数据处理链，当source和flatMap满足链接的条件时，可以可以将两个操作符的操作放到一个线程并行执行，这样可以减少网络中的数据传输，由于在source和flatMap之间的传输的数据也不用序列化和反序列化，所以也提高了程序的执行效率。</p>
+<p>相比流图（StreamGraph）以及批处理优化计划（OptimizedPlan），JobGraph发生了一些变化，已经不完全是“静态”的数据结构了，因为它加入了中间结果集（IntermediateDataSet）这一“动态”概念。</p>
+<p>作业顶点（JobVertex）、中间数据集（IntermediateDataSet）、作业边（JobEdge）是组成JobGraph的基本元素。这三个对象彼此之间互为依赖：</p>
+<ul>
+<li>一个JobVertex关联着若干个JobEdge作为输入端以及若干个IntermediateDataSet作为其生产的结果集；每个JobVertex都有诸如并行度和执行代码等属性。</li>
+<li>一个IntermediateDataSet关联着一个JobVertex作为生产者以及若干个JobEdge作为消费者；</li>
+<li>一个JobEdge关联着一个IntermediateDataSet可认为是源以及一个JobVertex可认为是目标消费者；</li>
+</ul>
+<p>那么JobGraph是怎么组织并存储这些元素的呢？其实JobGraph只以Map的形式存储了所有的JobVertex，键是JobVertexID：</p>
+<p><code>private final Map&lt;JobVertexID, JobVertex&gt; taskVertices = new LinkedHashMap&lt;JobVertexID, JobVertex&gt;();</code></p>
+<p>至于其它的元素，通过JobVertex都可以根据关系找寻到。需要注意的是，用于迭代的反馈边（feedback edge）当前并不体现在JobGraph中，而是被内嵌在特殊的JobVertex中通过反馈信道（feedback channel）在它们之间建立关系。</p>
+<h3 id="25-bsp模型和superstep">2.5 BSP模型和Superstep</h3>
+<h4 id="bsp模型">BSP模型</h4>
+<p>BSP模型是并行计算模型的一种。并行计算模型通常指从并行算法的设计和分析出发，将各种并行计算机（至少某一类并行计算机）的基本特征抽象出来，形成一个抽象的计算模型。</p>
+<p>BSP模型是一种异步MIMD-DM模型（DM: distributed memory，SM: shared memory），BSP模型支持消息传递系统，<u>块内异步并行，块间显式同步</u>，该模型基于一个master协调，所有的worker同步(lock-step)执行, 数据从输入的队列中读取。</p>
+<p>BSP计算模型不仅是一种体系结构模型，也是设计并行程序的一种方法。BSP程序设计准则是整体同步(bulk synchrony)，其独特之处在于超步(superstep)概念的引入。一个BSP程序同时具有水平和垂直两个方面的结构。从垂直上看,一个BSP程序由一系列串行的超步(superstep)组成。</p>
+<h4 id="bsp模型的实现">BSP模型的实现</h4>
+<p>BSP模型的实现大概举例如下：</p>
+<ul>
+<li><strong>Pregel</strong> ：Google的大规模图计算框架，首次提出了将BSP模型应用于图计算，具体请看Pregel——大规模图处理系统，不过至今未开源。</li>
+<li><strong>Apache Giraph</strong> ：ASF社区的Incubator项目，由Yahoo!贡献，是BSP的java实现，专注于迭代图计算（如pagerank，最短连接等），每一个job就是一个没有reducer过程的hadoop job。</li>
+<li><strong>Apache Hama</strong> ：也是ASF社区的Incubator项目，与Giraph不同的是它是一个纯粹的BSP模型的java实现，并且不单单是用于图计算，意在提供一个通用的BSP模型的应用框架。</li>
+</ul>
+<h4 id="flink-gelly">Flink-Gelly</h4>
+<p>Flink-Gelly利用Flink的高效迭代算子来支持海量数据的迭代式图处理。目前，Flink Gelly提供了“Vertex-Centric”，“Scatter-Gather”以及“Gather-Sum-Apply”等计算模型的实现。</p>
+<p>“Vertex-Centric”迭代模型也就是我们经常听到的“Pregel”，是一种从Vertex角度出发的图计算方式。其中，同步地迭代计算的步骤称之为“superstep”。在每个“superstep”中，每个顶点都执行一个用户自定义的函数，且顶点之间通过消息进行通信，当一个顶点知道图中其他任意顶点的唯一ID时，该顶点就可以向其发送一条消息。</p>
+<p>但是实际上，<u>KMeans不是图处理，Alink也没有基于Flink-Gelly来构建。也许只是借鉴了其概念。所以我们还需要再探寻。</u></p>
+<h2 id="0x03-flink的迭代算法（superstep-based）">0x03 Flink的迭代算法（superstep-based）</h2>
+<p>迭代算法在很多数据分析领域会用到，比如机器学习或者图计算。为了从大数据中抽取有用信息，这个时候往往会需要在处理的过程中用到迭代计算。</p>
+<p>所谓迭代运算，就是给定一个初值，用所给的算法公式计算初值得到一个中间结果，然后将中间结果作为输入参数进行反复计算，在满足一定条件的时候得到计算结果。</p>
+<p>大数据处理框架很多，比如spark，mr。实际上这些实现迭代计算都是很困难的。</p>
+<p>Flink直接支持迭代计算。Flink实现迭代的思路也是很简单，就是实现一个step函数，然后将其嵌入到迭代算子中去。有两种迭代操作算子: Iterate和Delta Iterate。两个操作算子都是在未收到终止迭代信号之前一直调用step函数。</p>
+<h3 id="31-bulk-iterate">3.1 Bulk Iterate</h3>
+<p>这种迭代方式称为全量迭代，它会将整个数据输入，经过一定的迭代次数，最终得到你想要的结果。</p>
+<p>迭代操作算子包括了简单的迭代形式：每次迭代，step函数会消费全量数据(本次输入和上次迭代的结果)，然后计算得到下轮迭代的输出(例如，map，reduce，join等)</p>
+<p>迭代过程主要分为以下几步：</p>
+<ul>
+<li>Iteration Input（迭代输入）：是初始输入值或者上一次迭代计算的结果。</li>
+<li>Step Function（step函数）：每次迭代都会执行step函数。它迭代计算DataSet，由一系列的operator组成，比如map，flatMap，join等，取决于具体的业务逻辑。</li>
+<li>Next Partial Solution（中间结果）：每一次迭代计算的结果，被发送到下一次迭代计算中。</li>
+<li>Iteration Result（迭代结果）：最后一次迭代输出的结果，被输出到datasink或者发送到下游处理。</li>
+</ul>
+<p>它迭代的结束条件是：</p>
+<ul>
+<li>达到最大迭代次数</li>
+<li>自定义收敛聚合函数</li>
+</ul>
+<p>编程的时候，需要调用iterate(int),该函数返回的是一个IterativeDataSet，当然我们可以对它进行一些操作，比如map等。Iterate函数唯一的参数是代表最大迭代次数。</p>
+<p>迭代是一个环。我们需要进行闭环操作，那么这时候就要用到closeWith(Dataset)操作了，参数就是需要循环迭代的dataset。也可以可选的指定一个终止标准，操作closeWith(DataSet, DataSet)，可以通过判断第二个dataset是否为空，来终止迭代。如果不指定终止迭代条件，迭代就会在迭代了最大迭代次数后终止。</p>
+<h3 id="32-迭代机制">3.2 迭代机制</h3>
+<p>DataSet API引进了独特的同步迭代机制（superstep-based），仅限于用在有界的流。</p>
+<p>我们将迭代操作算子的每个步骤函数的执行称为单个迭代。在并行设置中，在迭代状态的不同分区上并行计算step函数的多个实例。在许多设置中，对所有并行实例上的step函数的一次评估形成了所谓的superstep，这也是同步的粒度。因此，迭代的所有并行任务都需要在初始化下一个superstep之前完成superstep。终止准则也将被评估为superstep<em>同步</em>屏障。</p>
+<p>下面是Apache原文</p>
+<blockquote>
+<p>We referred to each execution of the step function of an iteration operator as <em>a single iteration</em>. In parallel setups, <strong>multiple instances of the step function are evaluated in parallel</strong> on different partitions of the iteration state. In many settings, one evaluation of the step function on all parallel instances forms a so called <strong>superstep</strong>, which is also the granularity of synchronization. Therefore, <em>all</em> parallel tasks of an iteration need to complete the superstep, before a next superstep will be initialized. <strong>Termination criteria</strong> will also be evaluated at superstep barriers.</p>
+</blockquote>
+<p>下面是apache原图</p>
+<p><img src="https://ci.apache.org/projects/flink/flink-docs-release-1.10/fig/iterations_supersteps.png" alt="Supersteps"></p>
+<p>概括如下：</p>
+<pre><code class="language-java">每次迭代都是一个superstep
+    每次迭代中有若干subtask在不同的partition上分别执行step
+      	 每个step有一个HeadTask，若干IntermediateTask，一个TailTask
+    每个superstep有一个SynchronizationSinkTask 同步，因为迭代的所有并行任务需要在下一个迭代前完成
+</code></pre>
+<p><u>由此我们可以知道，superstep这是Flink DataSet API的概念，但是你从这里能够看到BSP模型的影子</u>，比如：</p>
+<ul>
+<li>在传统的BSP模型中，一个superstep被分为3步： 本地的计算， 消息的传递， 同步的barrier.</li>
+<li>Barrier Synchronization又叫障碍同步或栅栏同步。每一次同步也是一个超步的完成和下一个超步的开始；</li>
+<li>Superstep超步 是一次计算迭代，从起始每往前步进一层对应一个超步。</li>
+<li>程序该什么时候结束是程序自己控制</li>
+</ul>
+<h2 id="0x04-alink如何使用迭代">0x04 Alink如何使用迭代</h2>
+<p>KMeansTrainBatchOp.iterateICQ函数中，生成了一个IterativeComQueue，而IterativeComQueue之中就用到了superstep-based迭代。</p>
+<pre><code class="language-java">return new IterativeComQueue()
+   .initWithPartitionedData(TRAIN_DATA, data)
+   .initWithBroadcastData(INIT_CENTROID, initCentroid)
+   .initWithBroadcastData(KMEANS_STATISTICS, statistics)
+   .add(new KMeansPreallocateCentroid())
+   .add(new KMeansAssignCluster(distance))
+   .add(new AllReduce(CENTROID_ALL_REDUCE))
+   .add(new KMeansUpdateCentroids(distance))
+   .setCompareCriterionOfNode0(new KMeansIterTermination(distance, tol)) // 终止条件
+   .closeWith(new KMeansOutputModel(distanceType, vectorColName, latitudeColName, longitudeColName)) 
+   .setMaxIter(maxIter) // 迭代最大次数
+   .exec();
+</code></pre>
+<p>而BaseComQueue.exec函数中则有：</p>
+<pre><code class="language-java">public DataSet&lt;Row&gt; exec() {
+   IterativeDataSet&lt;byte[]&gt; loop // Flink 迭代API
+      = loopStartDataSet(executionEnvironment)
+      .iterate(maxIter);
+     // 后续操作能看出来，之前添加在queue上的比如KMeansPreallocateCentroid，都是在loop之上运行的。
+  		if (null == compareCriterion) {
+        loopEnd = loop.closeWith...
+     	} else {     
+        // compare Criterion.
+        DataSet&lt;Boolean&gt; criterion = input ... compareCriterion
+        loopEnd = loop.closeWith( ... criterion ... )
+      }   
+}
+</code></pre>
+<p>再仔细研究代码，我们可以看出：</p>
+<p><strong>superstep</strong>包括：</p>
+<p>.add(new KMeansPreallocateCentroid())<br>
+.add(new KMeansAssignCluster(distance))<br>
+.add(new AllReduce(CENTROID_ALL_REDUCE))<br>
+.add(new KMeansUpdateCentroids(distance))</p>
+<p><strong>终止标准</strong>就是</p>
+<p>利用KMeansIterTermination构建了一个RichMapPartitionFunction作为终止标准。最后结束时候调用 KMeansOutputModel完成业务操作。</p>
+<p><strong>最大循环</strong>就是</p>
+<p>.setMaxIter(maxIter)</p>
+<p>于是我们可以得出结论，<em><u><strong>superstep-based Bulk Iterate 迭代算子是用来实现整体KMeans算法，KMeans算法就是一个superstep进行迭代。但是在superstep内容如果需要通讯或者栅栏同步，则采用了MPI的allReduce。</strong></u></em></p>
+<h2 id="0x05-深入flink源码和runtime来验证">0x05 深入Flink源码和runtime来验证</h2>
+<p>我们需要深入到Flink内部去挖掘验证，如果大家有兴趣，可以参见下面调用栈，自己添加断点来研究。</p>
+<pre><code class="language-java">execute:56, LocalExecutor (org.apache.flink.client.deployment.executors)
+executeAsync:944, ExecutionEnvironment (org.apache.flink.api.java)
+execute:860, ExecutionEnvironment (org.apache.flink.api.java)
+execute:844, ExecutionEnvironment (org.apache.flink.api.java)
+collect:413, DataSet (org.apache.flink.api.java)
+sinkFrom:44, PrintBatchOp (com.alibaba.alink.operator.batch.utils)
+sinkFrom:20, PrintBatchOp (com.alibaba.alink.operator.batch.utils)
+linkFrom:31, BaseSinkBatchOp (com.alibaba.alink.operator.batch.sink)
+linkFrom:17, BaseSinkBatchOp (com.alibaba.alink.operator.batch.sink)
+link:89, BatchOperator (com.alibaba.alink.operator.batch)
+linkTo:239, BatchOperator (com.alibaba.alink.operator.batch)
+print:337, BatchOperator (com.alibaba.alink.operator.batch)
+main:35, KMeansExample (com.alibaba.alink)
+</code></pre>
+<h3 id="51-向flink提交job">5.1 向Flink提交Job</h3>
+<p>Alink和Flink构建联系，是在print调用中完成的。因为是本地调试，Flink会启动一个miniCluster，然后会做如下操作。</p>
+<ul>
+<li>首先生成执行计划Plan。Plan以数据流形式来表示批处理程序，但它只是批处理程序最初的表示，然后计划会被优化以生成更高效的方案OptimizedPlan。</li>
+<li>然后，计划被编译生成JobGraph。这个图是要交给flink去生成task的图。</li>
+<li>生成一系列配置。</li>
+<li>将JobGraph和配置交给flink集群去运行。如果不是本地运行的话，还会把jar文件通过网络发给其他节点。</li>
+<li>以本地模式运行的话，可以看到启动过程，如启动性能度量、web模块、JobManager、ResourceManager、taskManager等等。</li>
+</ul>
+<p>当我们看到了<code>submitJob</code>调用，就知道<u>KMeans代码已经和Flink构建了联系</u>。</p>
+<pre><code class="language-java">@Internal
+public class LocalExecutor implements PipelineExecutor {
+
+   public static final String NAME = &quot;local&quot;;
+
+   @Override
+   public CompletableFuture&lt;JobClient&gt; execute(Pipeline pipeline, Configuration configuration) throws Exception {
+
+      // we only support attached execution with the local executor.
+      checkState(configuration.getBoolean(DeploymentOptions.ATTACHED));
+
+      final JobGraph jobGraph = getJobGraph(pipeline, configuration);
+      final MiniCluster miniCluster = startMiniCluster(jobGraph, configuration);
+      final MiniClusterClient clusterClient = new MiniClusterClient(configuration, miniCluster);
+
+      CompletableFuture&lt;JobID&gt; jobIdFuture = clusterClient.submitJob(jobGraph);
+
+      jobIdFuture
+            .thenCompose(clusterClient::requestJobResult)
+            .thenAccept((jobResult) -&gt; clusterClient.shutDownCluster());
+
+      return jobIdFuture.thenApply(jobID -&gt;
+            new ClusterClientJobClientAdapter&lt;&gt;(() -&gt; clusterClient, jobID));
+   }
+</code></pre>
+<h3 id="52-生成jobgraph">5.2 生成JobGraph</h3>
+<p>生成jobGraph的具体流程是：</p>
+<ul>
+<li>IterativeDataSet.closeWith会生成一个BulkIterationResultSet。</li>
+<li>PrintBatchOp.sinkFrom中会调用到ExecutionEnvironment.executeAsync</li>
+<li>调用createProgramPlan构建一个Plan</li>
+<li>OperatorTranslation.translate函数发现<code>if (dataSet instanceof BulkIterationResultSet)</code>，则调用<code>translateBulkIteration(bulkIterationResultSet);</code></li>
+<li>这时候生成了执行计划Plan</li>
+<li>ExecutionEnvironment.executeAsync调用LocalExecutor.execute</li>
+<li>然后调用FlinkPipelineTranslationUtil.getJobGraph来生成jobGraph</li>
+<li>GraphCreatingVisitor.preVisit中会判断 <code>if (c instanceof BulkIterationBase)</code>，以生成BulkIterationNode</li>
+<li>PlanTranslator.translateToJobGraph会调用到JobGraphGenerator.compileJobGraph，最终调用到createBulkIterationHead就生成了迭代处理的Head。</li>
+<li>最后将jobGraph提交给Cluster ,jobGraph 变形为 ExceutionGraph在JM和TM上执行。</li>
+</ul>
+<h3 id="53-迭代对应的task">5.3 迭代对应的Task</h3>
+<p>前面代码中，getJobGraph函数作用是生成了job graph。</p>
+<p>然后 JobManager 根据 JobGraph 生成 ExecutionGraph。ExecutionGraph 是 JobGraph 的并行化版本，是调度层最核心的数据结构。</p>
+<p>最后 JobManager 根据 ExecutionGraph 对 Job 进行调度后，在各个TaskManager 上部署 Task。</p>
+<p>所以我们需要看看最终运行时候，迭代API对应着哪些Task。</p>
+<p>针对IterativeDataSet，即superstep-based Bulk Iterate，Flink生成了如下的task。</p>
+<ul>
+<li>IterationHeadTask</li>
+<li>IterationIntermediateTask</li>
+<li>IterationTailTask</li>
+<li>IterationSynchronizationSinkTask</li>
+</ul>
+<h4 id="531-iterationheadtask">5.3.1 IterationHeadTask</h4>
+<p>IterationHeadTask主要作用是协调一次迭代。</p>
+<p>它会读取初始输入，和迭代Tail建立一个BlockingBackChannel。在成功处理输入之后，它会发送EndOfSuperstep事件给自己的输出。它在每次superstep之后会联系 synchronization task，等到自己收到一个用来同步的AllWorkersDoneEvent。AllWorkersDoneEvent表示所有其他的heads已经完成了自己的迭代。</p>
+<p>下一次迭代时候，上一次迭代中tail的输出就经由backchannel传输，形成了head的输入。何时进入到下一个迭代，是由HeadTask完成的。一旦迭代完成，head将发送TerminationEvent给所有和它关联的task，告诉他们shutdown。</p>
+<pre><code class="language-java">				barrier.waitForOtherWorkers();
+
+				if (barrier.terminationSignaled()) {
+					requestTermination();
+					nextStepKickoff.signalTermination();
+				} else {
+					incrementIterationCounter();
+					String[] globalAggregateNames = barrier.getAggregatorNames();
+					Value[] globalAggregates = barrier.getAggregates();
+					aggregatorRegistry.updateGlobalAggregatesAndReset(globalAggregateNames, globalAggregates);
+          // 在这里发起下一次Superstep。
+					nextStepKickoff.triggerNextSuperstep();
+				}
+			}
+</code></pre>
+<p>IterationHeadTask是在JobGraphGenerator.createBulkIterationHead中构建的。其例子如下：</p>
+<pre><code class="language-java">&quot;PartialSolution (Bulk Iteration) (org.apache.flink.runtime.iterative.task.IterationHeadTask)&quot;
+</code></pre>
+<h4 id="532-iterationintermediatetask">5.3.2 IterationIntermediateTask</h4>
+<p>IterationIntermediateTask是superstep中间段的task，其将传输EndOfSuperstepEvent和TerminationEvent给所有和它关联的tasks。此外，IterationIntermediateTask能更新the workset或者the solution set的迭代状态。</p>
+<p>如果迭代状态被更新，本task的输出将传送回IterationHeadTask，在这种情况下，本task将作为head再次被安排。</p>
+<p>IterationIntermediateTask的例子如下：</p>
+<pre><code class="language-java"> &quot;MapPartition (computation@KMeansUpdateCentroids) (org.apache.flink.runtime.iterative.task.IterationIntermediateTask)&quot;
+   
+ &quot;Combine (SUM(0), at kMeansPlusPlusInit(KMeansInitCentroids.java:135) (org.apache.flink.runtime.iterative.task.IterationIntermediateTask)&quot;
+   
+ &quot;MapPartition (AllReduceSend) (org.apache.flink.runtime.iterative.task.IterationIntermediateTask)&quot;
+   
+&quot;Filter (Filter at kMeansPlusPlusInit(KMeansInitCentroids.java:130)) (org.apache.flink.runtime.iterative.task.IterationIntermediateTask)&quot;
+   
+</code></pre>
+<h4 id="533-iterationtailtask">5.3.3 IterationTailTask</h4>
+<p>IterationTailTask是迭代的最末尾。如果迭代状态被更新，本task的输出将通过BlockingBackChannel传送回IterationHeadTask，反馈给迭代头就意味着一个迭代完整逻辑的完成，那么就可以关闭这个迭代闭合环了。这种情况下，本task将在head所在的实例上重新被调度。</p>
+<p>这里有几个关键点需要注意：</p>
+<h5 id="如何和head建立联系">如何和Head建立联系</h5>
+<p>Flink有一个BlockingQueueBroker类，这是一个阻塞式的队列代理，它的作用是对迭代并发进行控制。Broker是单例的，迭代头任务和尾任务会生成同样的broker ID，所以头尾在同一个JVM中会基于相同的dataChannel进行通信。dataChannel由迭代头创建。</p>
+<p>IterationHeadTask中会生成BlockingBackChannel，这是一个容量为1的阻塞队列。</p>
+<pre><code class="language-java">// 生成channel
+BlockingBackChannel backChannel = new BlockingBackChannel(new SerializedUpdateBuffer(segments, segmentSize, this.getIOManager())); 
+
+// 然后block在这里，等待Tail
+superstepResult = backChannel.getReadEndAfterSuperstepEnded();
+</code></pre>
+<p>IterationTailTask则是如下：</p>
+<pre><code class="language-java">// 在基类得到channel，因为是单例，所以会得到同一个
+worksetBackChannel = BlockingBackChannelBroker.instance().getAndRemove(brokerKey());
+
+// notify iteration head if responsible for workset update 在这里通知Head
+worksetBackChannel.notifyOfEndOfSuperstep();
+</code></pre>
+<p>而两者都是利用如下办法来建立联系，在同一个subtask中会使用同一个brokerKey，这样首尾就联系起来了。</p>
+<pre><code class="language-java">public String brokerKey() {
+    if (this.brokerKey == null) {
+        int iterationId = this.config.getIterationId();
+        this.brokerKey = this.getEnvironment().getJobID().toString() + '#' + iterationId + '#' + this.getEnvironment().getTaskInfo().getIndexOfThisSubtask();
+    }
+
+    return this.brokerKey;
+}
+</code></pre>
+<h5 id="如何把用户返回的数值传给head">如何把用户返回的数值传给Head</h5>
+<p>这是通过output.collect来完成的。</p>
+<p>首先，在Tail初始化时候，会生成一个outputCollector，这个outputCollector会被设置为本task的输出outputCollector。这样就保证了用户函数的输出都会转流到outputCollector。</p>
+<p>而outputCollector的输出就是worksetBackChannel的输出，这里设置为同一个instance。这样用户输出就输出到backChannel中。</p>
+<pre><code class="language-java">	@Override
+	protected void initialize() throws Exception {
+		super.initialize();
+    
+		// set the last output collector of this task to reflect the iteration tail state update:
+		// a) workset update,
+		// b) solution set update, or
+		// c) merged workset and solution set update
+
+		Collector&lt;OT&gt; outputCollector = null;
+		if (isWorksetUpdate) {
+      // 生成一个outputCollector
+			outputCollector = createWorksetUpdateOutputCollector();
+
+			// we need the WorksetUpdateOutputCollector separately to count the collected elements
+			if (isWorksetIteration) {
+				worksetUpdateOutputCollector = (WorksetUpdateOutputCollector&lt;OT&gt;) outputCollector;
+			}
+		}
+    
+    ......
+    // 把outputCollector设置为本task的输出
+		setLastOutputCollector(outputCollector);
+	}
+</code></pre>
+<p>outputCollector的输出就是worksetBackChannel的输出buffer，这里设置为同一个instance。</p>
+<pre><code class="language-java">	protected Collector&lt;OT&gt; createWorksetUpdateOutputCollector(Collector&lt;OT&gt; delegate) {
+		DataOutputView outputView = worksetBackChannel.getWriteEnd();
+		TypeSerializer&lt;OT&gt; serializer = getOutputSerializer();
+		return new WorksetUpdateOutputCollector&lt;OT&gt;(outputView, serializer, delegate);
+	}
+</code></pre>
+<p>运行时候如下：</p>
+<pre><code class="language-java">	@Override
+	public void run() throws Exception {
+
+		SuperstepKickoffLatch nextSuperStepLatch = SuperstepKickoffLatchBroker.instance().get(brokerKey());
+
+		while (this.running &amp;&amp; !terminationRequested()) {
+
+      // 用户在这里输出，最后会输出到output.collect，也就是worksetBackChannel的输出buffer。
+			super.run();
+
+      // 这时候以及输出到channel完毕，只是通知head进行读取。
+			if (isWorksetUpdate) {
+				// notify iteration head if responsible for workset update
+				worksetBackChannel.notifyOfEndOfSuperstep();
+			} else if (isSolutionSetUpdate) {
+				// notify iteration head if responsible for solution set update
+				solutionSetUpdateBarrier.notifySolutionSetUpdate();
+			}
+
+      ...
+	}
+</code></pre>
+<p>IterationTailTask例子如下：</p>
+<pre><code class="language-java">&quot;Pipe (org.apache.flink.runtime.iterative.task.IterationTailTask)&quot;
+</code></pre>
+<h4 id="534-iterationsynchronizationsinktask">5.3.4 IterationSynchronizationSinkTask</h4>
+<p>IterationSynchronizationSinkTask作用是同步所有的iteration heads，IterationSynchronizationSinkTask被是实现成一个 output  task。其只是用来协调，不处理任何数据。</p>
+<p>在每一次superstep，IterationSynchronizationSinkTask只是等待直到它从每一个head都收到一个WorkerDoneEvent。这表示下一次superstep可以开始了。</p>
+<p><u>这里需要注意的是 SynchronizationSinkTask 如何等待各个并行度的headTask</u>。比如Flink的并行度是5，那么SynchronizationSinkTask怎么做到等待这5个headTask。</p>
+<p>在IterationSynchronizationSinkTask中，注册了SyncEventHandler来等待head的WorkerDoneEvent。</p>
+<pre><code class="language-java">this.eventHandler = new SyncEventHandler(numEventsTillEndOfSuperstep, this.aggregators, this.getEnvironment().getUserClassLoader());
+this.headEventReader.registerTaskEventListener(this.eventHandler, WorkerDoneEvent.class);
+</code></pre>
+<p>在SyncEventHandler中，我们可以看到，在构建时候，numberOfEventsUntilEndOfSuperstep就被设置为并行度，每次收到一个WorkerDoneEvent，workerDoneEventCounter就递增，当等于numberOfEventsUntilEndOfSuperstep，即并行度时候，就说明本次superstep中，所有headtask都成功了。</p>
+<pre><code class="language-java">    private void onWorkerDoneEvent(WorkerDoneEvent workerDoneEvent) {
+        if (this.endOfSuperstep) {
+            throw new RuntimeException(&quot;Encountered WorderDoneEvent when still in End-of-Superstep status.&quot;);
+        } else {
+          // 每次递增
+            ++this.workerDoneEventCounter;
+            String[] aggNames = workerDoneEvent.getAggregatorNames();
+            Value[] aggregates = workerDoneEvent.getAggregates(this.userCodeClassLoader);
+            if (aggNames.length != aggregates.length) {
+                throw new RuntimeException(&quot;Inconsistent WorkerDoneEvent received!&quot;);
+            } else {
+                for(int i = 0; i &lt; aggNames.length; ++i) {
+                    Aggregator&lt;Value&gt; aggregator = (Aggregator)this.aggregators.get(aggNames[i]);
+                    aggregator.aggregate(aggregates[i]);
+                }
+
+              // numberOfEventsUntilEndOfSuperstep就是并行度，等于并行度时候就说明所有head都成功了。
+                if (this.workerDoneEventCounter % this.numberOfEventsUntilEndOfSuperstep == 0) {
+                    this.endOfSuperstep = true;
+                    Thread.currentThread().interrupt();
+                }
+            }
+        }
+    }
+</code></pre>
+<p>IterationSynchronizationSinkTask的例子如下：</p>
+<pre><code class="language-java">&quot;Sync (BulkIteration (Bulk Iteration)) (org.apache.flink.runtime.iterative.task.IterationSynchronizationSinkTask)&quot;
+</code></pre>
+<h3 id="54-superstep">5.4 superstep</h3>
+<p>综上所述，我们最终得到superstep如下:</p>
+<pre><code class="language-java">***** 文字描述如下 *****
+  
+每次迭代都是一个superstep
+  每次迭代中有若干subtask在不同的partition上分别执行step
+     每个step有一个HeadTask，若干IntermediateTask，一个TailTask
+  每个superstep有一个SynchronizationSinkTask
+  
+***** 伪代码大致如下 *****
+  
+for maxIter ：
+  begin superstep
+      for maxSubTask ：
+         begin step
+           IterationHeadTask
+           IterationIntermediateTask
+           IterationIntermediateTask
+           ...
+           IterationIntermediateTask
+           IterationIntermediateTask
+           IterationTailTask
+         end step
+    IterationSynchronizationSinkTask
+  end superstep
+</code></pre>
+<h2 id="0x06-结合kmeans代码看superset">0x06 结合KMeans代码看superset</h2>
+<h3 id="61-k-means算法概要">6.1 K-means算法概要</h3>
+<p>K-means算法的过程，为了尽量不用数学符号，所以描述的不是很严谨，大概就是这个意思，“物以类聚、人以群分”：</p>
+<ol>
+<li>首先输入k的值，即我们希望将数据集经过聚类得到k个分组。</li>
+<li>从数据集中随机选择k个数据点作为初始大哥（质心，Centroid）</li>
+<li>对集合中每一个小弟，计算与每一个大哥的距离（距离的含义后面会讲），离哪个大哥距离近，就跟定哪个大哥。</li>
+<li>这时每一个大哥手下都聚集了一票小弟，这时候召开人民代表大会，每一群选出新的大哥（其实是通过算法选出新的质心）。</li>
+<li>如果新大哥和老大哥之间的距离小于某一个设置的阈值（表示重新计算的质心的位置变化不大，趋于稳定，或者说收敛），可以认为我们进行的聚类已经达到期望的结果，算法终止。</li>
+<li>如果新大哥和老大哥距离变化很大，需要迭代3~5步骤。</li>
+</ol>
+<h3 id="62-kmeanspreallocatecentroid">6.2 KMeansPreallocateCentroid</h3>
+<p>KMeansPreallocateCentroid也是superstep一员，但是只有<code>context.getStepNo() == 1</code>的时候，才会进入实际业务逻辑，预分配Centroid。当superstep为大于1的时候，本task会执行，但不会进入具体业务代码。</p>
+<pre><code class="language-java">public class KMeansPreallocateCentroid extends ComputeFunction {
+    private static final Logger LOG = LoggerFactory.getLogger(KMeansPreallocateCentroid.class);
+
+    @Override
+    public void calc(ComContext context) {
+        // 每次superstep都会进到这里
+        LOG.info(&quot;  KMeansPreallocateCentroid 我每次都会进的呀   &quot;);
+        if (context.getStepNo() == 1) {
+          // 实际预分配业务只进入一次
+        }
+    }
+}
+</code></pre>
+<h3 id="63-kmeansassigncluster-和-kmeansupdatecentroids">6.3 KMeansAssignCluster 和 KMeansUpdateCentroids</h3>
+<p>KMeansAssignCluster 作用是为每个点(point)计算最近的聚类中心，为每个聚类中心的点坐标的计数和求和。</p>
+<p>KMeansUpdateCentroids 作用是基于计算出来的点计数和坐标，计算新的聚类中心。</p>
+<p>Alink在整个计算过程中维护一个特殊节点来记住待求中心点当前的结果。</p>
+<p>这就是为啥迭代时候需要区分奇数次和偶数次的原因了。奇数次就表示老大哥，偶数次就表示新大哥。每次superstep只会计算一批大哥，留下另外一批大哥做距离比对。</p>
+<p><strong>另外要注意的一点是</strong>：普通的迭代计算，是通过Tail给Head回传用户数据，但是KMeans这里的实现并没有采用这个办法，而是把计算出来的中心点都存在共享变量中，在各个intermediate之间互相交互。</p>
+<pre><code class="language-java">public class KMeansAssignCluster extends ComputeFunction {
+    public void calc(ComContext context) {
+        ......
+        if (context.getStepNo() % 2 == 0) {
+            stepNumCentroids = context.getObj(KMeansTrainBatchOp.CENTROID1);
+        } else {
+            stepNumCentroids = context.getObj(KMeansTrainBatchOp.CENTROID2);
+        }
+      /** 具体业务逻辑代码
+       * Find the closest cluster for every point and calculate the sums of the points belonging to the same cluster.
+       */
+    }
+}
+
+public class KMeansUpdateCentroids extends ComputeFunction {
+    public void calc(ComContext context) {
+        if (context.getStepNo() % 2 == 0) {
+            stepNumCentroids = context.getObj(KMeansTrainBatchOp.CENTROID2);
+        } else {
+            stepNumCentroids = context.getObj(KMeansTrainBatchOp.CENTROID1);
+        }
+      /** 具体业务逻辑代码
+       * Update the centroids based on the sum of points and point number belonging to the same cluster.
+       */
+    }
+</code></pre>
+<h3 id="64-kmeansoutputmodel">6.4 KMeansOutputModel</h3>
+<p>这里要特殊说明，因为KMeansOutputModel是最终输出模型，而KMeans算法的实现是：所有subtask都拥有所有中心点，就是说所有subtask都会有相同的模型，就没有必要全部输出，所以这里限定了第一个subtask才能输出，其他的都不输出。</p>
+<pre><code class="language-java">	@Override
+	public List &lt;Row&gt; calc(ComContext context) {
+    // 只有第一个subtask才输出模型数据。
+		if (context.getTaskId() != 0) {
+			return null;
+		}
+
+    ....
+      
+		modelData.params = new KMeansTrainModelData.ParamSummary();
+		modelData.params.k = k;
+		modelData.params.vectorColName = vectorColName;
+		modelData.params.distanceType = distanceType;
+		modelData.params.vectorSize = vectorSize;
+		modelData.params.latitudeColName = latitudeColName;
+		modelData.params.longtitudeColName = longtitudeColName;
+
+		RowCollector collector = new RowCollector();
+		new KMeansModelDataConverter().save(modelData, collector);
+		return collector.getRows();
+	}
+</code></pre>
+<h2 id="0x07-参考">0x07 参考</h2>
+<p><a href="https://blog.csdn.net/qq100440110/article/details/51657842">几种并行计算模型的区别(BSP LogP PRAM)</a></p>
+<p><a href="https://ci.apache.org/projects/flink/flink-docs-release-1.10/dev/batch/iterations.html">https://ci.apache.org/projects/flink/flink-docs-release-1.10/dev/batch/iterations.html</a><br>
+<a href="https://www.jianshu.com/p/fc91fed8c77b">聚类、K-Means、例子、细节</a></p>
+<p><a href="https://www.jianshu.com/p/e70e90d9d2cd">Flink-Gelly：Iterative Graph Processing</a></p>
+<p><a href="http://www.mamicode.com/info-detail-947492.html">从BSP模型到Apache Hama</a></p>
+<p><a href="https://blog.csdn.net/qq_37142346/article/details/90315229">Flink DataSet迭代运算</a></p>
+<p><a href="https://blog.csdn.net/qq100440110/article/details/51657842">几种并行计算模型的区别(BSP LogP PRAM)</a></p>
+<p><a href="https://www.cnblogs.com/nightbreeze/p/10942536.html">Flink架构，源码及debug</a></p>
+<p><a href="https://blog.csdn.net/lzb348110175/article/details/104248577">Flink 之 Dataflow、Task、subTask、Operator Chains、Slot 介绍</a></p>
+<p><a href="https://www.jianshu.com/p/72fe9f2959e4">Flink 任务和调度</a></p>
+<p><a href="https://blog.csdn.net/yanghua_kobe/article/details/56321793">Flink运行时之生成作业图</a></p>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2020-05-30 04:12</span>&nbsp;
+<a href="https://www.cnblogs.com/rossiXYZ/">罗西的思考</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12990632" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12990632);return false;">收藏</a></div>
+        </div>
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 556264, cb_blogApp = 'rossiXYZ', cb_blogUserGuid = '3d1961d5-3b13-4975-9d25-08d753a9a8fd';
+    var cb_entryId = 12990632, cb_entryCreatedDate = '2020-05-30 04:12', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;"></div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>    </div>
+</div>
+            </div>
+        </div>
+
+        <div id="sideBar">
+            <div id="sideBarMain">
+                
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+                <div id="calendar"><div id="blog-calendar" style="display:none"></div></div>                
+                <script>loadBlogDefaultCalendar();</script>
+                <div id="leftcontentcontainer">
+                    <!-- begin:SingleColumn -->
+                    <div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+                    <!-- end:  SingleColumn -->
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <div id="footer">
+        <!--done-->
+Copyright &copy; 2020 罗西的思考
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+    </div>
+</div>
+
+    
+</body>
+</html>

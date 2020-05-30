@@ -1,0 +1,541 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>费弗里 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.ico?v=20200522" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/custom/bundle-custom.min.css?v=1ssrnY3Il79Ok472qeVrpxlSprSXcHhYPgZC5S3wtVM" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/feffery/custom.css?v=lIMzqBk0DR0V9mKFkYoPtPjFMlY=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/custom/bundle-custom-mobile.min.css?v=-Yh290MhQyDeXLmvKTSses9H6-49lqbpXFh55zvS0w8" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/feffery/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/feffery/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/feffery/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=6bwfCY2e02dLOXNW99G2BHZkYFmw9QyYTWeJ-W-sudo"></script>
+    <script>
+        var currentBlogId = 415579;
+        var currentBlogApp = 'feffery';
+        var cb_enable_mathjax = true;
+        var isLogined = false;
+        var skinName = 'Custom';
+    </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true },
+        TeX: {
+        equationNumbers: { autoNumber: ['AMS'], useLabelIds: true },
+        extensions: ['extpfeil.js', 'mediawiki-texvc.js'],
+        Macros: {bm: "\\boldsymbol"}
+        },
+        'HTML-CSS': { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+        });
+    </script>
+    <script src="https://mathjax.cnblogs.com/2_7_5/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;v=20200504"></script>
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/feffery/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/feffery/">费弗里</a>
+</h1>
+<h2>
+数据科学玩家
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/feffery/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E8%B4%B9%E5%BC%97%E9%87%8C">
+联系</a></li>
+<li>
+
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+88&nbsp; </span>
+<span id="stats_article_count">文章 - 
+1&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+73</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+<!--done-->
+
+
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/feffery/archive/2020/05/30.html">2020年5月30日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/feffery/p/12987968.html">
+    （数据科学学习手札85）Python+Kepler.gl轻松制作酷炫路径动画
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：本文示例代码、数据已上传至我的Github仓库https://github.com/CNFeffery/DataScienceStudyNotes 1 简介 Kepler.gl相信很多人都听说过，作为Uber几年前开源的交互式地理信息可视化工具，kepler.gl依托WebGL强大的图形渲染能力，可            <a href="https://www.cnblogs.com/feffery/p/12987968.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-30 09:19
+费弗里
+<span class="post-view-count">阅读(43)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12987968" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/feffery/archive/2020/05/22.html">2020年5月22日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/feffery/p/12909284.html">
+    （数据科学学习手札84）基于geopandas的空间数据分析——空间计算篇（上）
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：本文示例代码已上传至我的 仓库 &quot;https://github.com/CNFeffery/DataScienceStudyNotes&quot; 1 简介 在本系列之前的文章中我们主要讨论了 及其相关库在数据可视化方面的应用，各个案例涉及的数据预处理过程也仅仅涉及到基础的矢量数据处理。在实际的空间数据分析过            <a href="https://www.cnblogs.com/feffery/p/12909284.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-22 16:16
+费弗里
+<span class="post-view-count">阅读(132)</span><text> </text>
+<span class="post-comment-count">评论(1)</span><text> </text>
+<span class="post-digg-count">推荐(1)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12909284" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/feffery/archive/2020/05/16.html">2020年5月16日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/feffery/p/12901334.html">
+    （数据科学学习手札83）基于geopandas的空间数据分析——geoplot篇(下) 
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：本文示例代码、数据及文件已上传至我的 仓库 &quot;https://github.com/CNFeffery/DataScienceStudyNotes&quot; 1 简介 在上一篇文章中我们详细学习了 中较为基础的三种绘图API： 、`polyplot() webmap() geoplot`中较为实用的几种高级            <a href="https://www.cnblogs.com/feffery/p/12901334.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-16 17:28
+费弗里
+<span class="post-view-count">阅读(90)</span><text> </text>
+<span class="post-comment-count">评论(1)</span><text> </text>
+<span class="post-digg-count">推荐(1)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12901334" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/feffery/archive/2020/05/02.html">2020年5月2日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/feffery/p/12779150.html">
+    （数据科学学习手札82）基于geopandas的空间数据分析——geoplot篇(上)
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：本文示例代码和数据已上传至我的 仓库 &quot;https://github.com/CNFeffery/DataScienceStudyNotes&quot; 1 简介 在前面的 基于geopandas的空间数据分析 系列文章中，我们已经对 的基础知识、基础可视化，以及如何科学绘制分层设色地图展开了深入的学习，而利            <a href="https://www.cnblogs.com/feffery/p/12779150.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-05-02 02:10
+费弗里
+<span class="post-view-count">阅读(275)</span><text> </text>
+<span class="post-comment-count">评论(5)</span><text> </text>
+<span class="post-digg-count">推荐(2)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12779150" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/feffery/archive/2020/03/31.html">2020年3月31日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/feffery/p/12609118.html">
+    （数据科学学习手札81）conda+jupyter玩转数据科学环境搭建
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：本文示例yaml文件已上传至我的 仓库 &quot;https://github.com/CNFeffery/DataScienceStudyNotes&quot; 1 简介 我们在使用 进行数据分析时，很多时候都在解决环境搭建的问题，不同版本、依赖包等问题经常给数据科学工作流的搭建和运转带来各种各样令人头疼的问题，本            <a href="https://www.cnblogs.com/feffery/p/12609118.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-03-31 22:25
+费弗里
+<span class="post-view-count">阅读(253)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12609118" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/feffery/archive/2020/03/27.html">2020年3月27日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/feffery/p/12483967.html">
+    （数据科学学习手札80）用Python编写小工具下载OSM路网数据
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：本文对应脚本已上传至我的 仓库 &quot;https://github.com/CNFeffery/DataScienceStudyNotes&quot; 1 简介 我们平时在数据可视化或空间数据分析的过程中经常会需要某个地区的道路网络及节点数据，而 就是一个很好的数据来源（譬如图1柏林路网）： 图1 通常我们可以在            <a href="https://www.cnblogs.com/feffery/p/12483967.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-03-27 17:12
+费弗里
+<span class="post-view-count">阅读(255)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(2)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12483967" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/feffery/archive/2020/03/09.html">2020年3月9日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/feffery/p/12381322.html">
+    （数据科学学习手札79）基于geopandas的空间数据分析——深入浅出分层设色
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：本文对应代码和数据已上传至我的 仓库 &quot;https://github.com/CNFeffery/DataScienceStudyNotes&quot; 1 简介 通过前面的文章，我们已经对 中的 数据结构 、 坐标参考系 、 文件IO 以及 基础可视化 有了较为深入的学习，其中在 基础可视化 那篇文章中我们            <a href="https://www.cnblogs.com/feffery/p/12381322.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-03-09 08:01
+费弗里
+<span class="post-view-count">阅读(470)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(1)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12381322" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/feffery/archive/2020/03/04.html">2020年3月4日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/feffery/p/12411344.html">
+    实用的Python（3）超简单！基于Python搭建个人“云盘”
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：1 简介 当我们想要从本地向云服务器上传文件时，比较常用的有 等工具，但避免不了每次上传都要写若干重复的代码，而笔者最近发现的一个基于 的工具 ，可以帮助我们在服务器上搭建类似云盘的服务，使得我们可以在web界面中完成文件的上传与下载，十分的方便，最重要的是， 特别特别特别简单！ 下面就带大家学习一            <a href="https://www.cnblogs.com/feffery/p/12411344.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-03-04 18:36
+费弗里
+<span class="post-view-count">阅读(550)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12411344" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/feffery/archive/2020/02/28.html">2020年2月28日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/feffery/p/12361421.html">
+    （数据科学学习手札78）基于geopandas的空间数据分析——基础可视化
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：本文对应代码和数据已上传至我的 仓库 &quot;https://github.com/CNFeffery/DataScienceStudyNotes&quot; 1 简介 通过前面的文章，我们已经对 中的 数据结构 、 坐标参考系 以及 文件IO 有了较为深入的学习，在拿到一份矢量数据开始分析时，对其进行可视化无疑是            <a href="https://www.cnblogs.com/feffery/p/12361421.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-02-28 17:30
+费弗里
+<span class="post-view-count">阅读(691)</span><text> </text>
+<span class="post-comment-count">评论(12)</span><text> </text>
+<span class="post-digg-count">推荐(4)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12361421" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/feffery/archive/2020/02/25.html">2020年2月25日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/feffery/p/12301966.html">
+    （数据科学学习手札77）基于geopandas的空间数据分析——文件IO
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：本文对应代码和数据已上传至我的 仓库 &quot;https://github.com/CNFeffery/DataScienceStudyNotes&quot; 1 简介 在 &quot;上一篇文章&quot; 中我们对 中的 坐标参考系 有了较为深入的学习，而在日常空间数据分析工作中矢量文件的读入和写出，是至关重要的环节。 作为 基于            <a href="https://www.cnblogs.com/feffery/p/12301966.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-02-25 13:48
+费弗里
+<span class="post-view-count">阅读(497)</span><text> </text>
+<span class="post-comment-count">评论(7)</span><text> </text>
+<span class="post-digg-count">推荐(2)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12301966" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+
+<div class="topicListFooter">
+    <div id="nav_next_page">
+        
+    <a href="https://www.cnblogs.com/feffery/default.html?page=2">
+        下一页
+    </a>
+
+    </div>    
+</div>
+
+
+
+
+
+
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 费弗里
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    <div id="page_end_html">
+        <script id="c_n_script" src="https://blog-static.cnblogs.com/files/feffery/js.js" color="190,190,190" opacity="1" count="50" zindex="-2">
+if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+
+} else {
+
+}
+</script>
+    </div>
+</body>
+</html>

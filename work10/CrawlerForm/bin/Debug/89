@@ -1,0 +1,324 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="never" />
+    <meta property="og:description" content="按值调用(call by value)表示方法接收的是调用者提供的值，而按引用调用（call by reference)表示方法接收的是调用者提供的变量地址。一个方法可以修改传递引用所对应的变量值，而" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Java值到底是怎么传递的？ - 小二凡 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.ico?v=20200522" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/codinglife/bundle-codinglife.min.css?v=UeHyLv1TT2WTz4TwfUOiMoKNmtFvLUjUnIhFE2UmZ7I" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/codinglife/bundle-codinglife-mobile.min.css?v=XjHfryC9ctsatIZz1dHn7TsRIqmwz9c3aj_6SCfHSDM" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/xiaoerfang/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/xiaoerfang/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/xiaoerfang/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=6bwfCY2e02dLOXNW99G2BHZkYFmw9QyYTWeJ-W-sudo"></script>
+    <script>
+        var currentBlogId = 606188;
+        var currentBlogApp = 'xiaoerfang';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'CodingLife';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/xiaoerfang/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/xiaoerfang/">小二凡</a>
+</h1>
+<h2>
+
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/xiaoerfang/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E5%B0%8F%E4%BA%8C%E5%87%A1">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/xiaoerfang/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+4&nbsp; </span>
+<span id="stats_article_count">文章 - 
+0&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+0</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/xiaoerfang/p/12991128.html">Java值到底是怎么传递的？</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+<div id="cnblogs_post_body" class="blogpost-body ">
+    <div>
+<h1 data-tool="mdnice编辑器" data-id="heading-0">&nbsp;</h1>
+<blockquote data-tool="mdnice编辑器">
+<p>按值调用(call by value)表示方法接收的是<strong>调用者提供的值</strong>，而按引用调用（call by reference)表示方法接收的是<strong>调用者提供的变量地址</strong>。一个方法可以修改<strong>传递引用所对应的变量值</strong>，而<strong>不能修改传递值调用所对应的变量值</strong>。</p>
+</blockquote>
+<h2 data-tool="mdnice编辑器" data-id="heading-1"><span class="prefix"><span class="content">基本类型传递</span></span></h2>
+<pre class="custom" data-tool="mdnice编辑器"><code class="hljs copyable"><span class="hljs-function"><span class="hljs-keyword">public <span class="hljs-keyword">static <span class="hljs-keyword">void <span class="hljs-title">main<span class="hljs-params">(String[] args) {
+    <span class="hljs-keyword">int num1 = <span class="hljs-number">10;
+    <span class="hljs-keyword">int num2 = <span class="hljs-number">20;
+
+    swap(num1, num2); <span class="hljs-comment">// 交换
+
+    System.out.println(<span class="hljs-string">"num1 = " + num1); <span class="hljs-comment">// 10
+    System.out.println(<span class="hljs-string">"num2 = " + num2); <span class="hljs-comment">// 20
+}
+
+<span class="hljs-function"><span class="hljs-keyword">public <span class="hljs-keyword">static <span class="hljs-keyword">void <span class="hljs-title">swap<span class="hljs-params">(<span class="hljs-keyword">int a, <span class="hljs-keyword">int b) {
+    <span class="hljs-keyword">int temp = a;
+    a = b;
+    b = temp;
+
+    System.out.println(<span class="hljs-string">"a = " + a); <span class="hljs-comment">// 20
+    System.out.println(<span class="hljs-string">"b = " + b); <span class="hljs-comment">// 10
+}
+<span class="hljs-comment">// a = 20
+<span class="hljs-comment">// b = 10
+<span class="hljs-comment">// num1 = 10
+<span class="hljs-comment">// num2 = 20
+<span class="copy-code-btn">复制代码</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p data-tool="mdnice编辑器">例子看不太明白，我们在<a href="https://www.cnblogs.com/xiaoerfang/p/12990198.html" target="_blank">整个图</a>： <img class="lazyload inited loaded" src="https://user-gold-cdn.xitu.io/2020/5/29/1725e913b20de7f1?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="基本类型传递" data-src="https://user-gold-cdn.xitu.io/2020/5/29/1725e913b20de7f1?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" data-width="1066" data-height="872"></p>
+<p data-tool="mdnice编辑器">&nbsp;</p>
+<blockquote data-tool="mdnice编辑器">
+<p>在 swap 方法中，<strong>a、b 的值进行交换，并不会影响到 num1、num2</strong>。因为，a、b 中的值，只是从 num1、num2 的复制过来的。也就是说，<strong>a、b 相当于 num1、num2 的副本</strong>，副本的内容无论怎么修改，都不会影响到原件本身。</p>
+</blockquote>
+<h2 data-tool="mdnice编辑器" data-id="heading-2"><span class="prefix"><span class="content">数组</span></span></h2>
+<pre class="custom" data-tool="mdnice编辑器"><code class="hljs copyable">    <span class="hljs-function"><span class="hljs-keyword">public <span class="hljs-keyword">static <span class="hljs-keyword">void <span class="hljs-title">main<span class="hljs-params">(String[] args) {
+        <span class="hljs-keyword">int[] arr = { <span class="hljs-number">1, <span class="hljs-number">2, <span class="hljs-number">3, <span class="hljs-number">4, <span class="hljs-number">5 };
+        System.out.println(arr[<span class="hljs-number">0]); <span class="hljs-comment">// 1
+        change(arr);
+        System.out.println(arr[<span class="hljs-number">0]); <span class="hljs-comment">// 0
+        <span class="hljs-comment">// 得到的是对象引用的拷贝，对象引用及其他的拷贝同时引用同一个对象。
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private <span class="hljs-keyword">static <span class="hljs-keyword">void <span class="hljs-title">change<span class="hljs-params">(<span class="hljs-keyword">int[] array) {
+        <span class="hljs-comment">// 修改数组中的一个元素
+        array[<span class="hljs-number">0] = <span class="hljs-number">0;
+    }
+<span class="hljs-comment">// 1
+<span class="hljs-comment">// 0
+<span class="copy-code-btn">复制代码</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p data-tool="mdnice编辑器">当然也可以用图助你一臂之力： <img class="lazyload inited" src="data:image/svg+xml;utf8,&lt;?xml version=&quot;1.0&quot;?&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; version=&quot;1.1&quot; width=&quot;988&quot; height=&quot;532&quot;&gt;&lt;/svg&gt;" alt="数组" data-src="https://user-gold-cdn.xitu.io/2020/5/29/1725e913a08f8f69?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" data-width="988" data-height="532"></p>
+<blockquote data-tool="mdnice编辑器">
+<p>array 被初始化 arr 的拷贝也就是<strong>一个对象的引用</strong>，也就是说 array 和 arr 指向的是<strong>同一个数组对象</strong>。 因此，外部对引用对象的改变会反映到所对应的对象上。</p>
+</blockquote>
+<p data-tool="mdnice编辑器">通过 example2 我们已经看到，实现一个改变对象参数状态的方法并不是一<a href="https://www.cnblogs.com/xiaoerfang/p/12990198.html" target="_blank">件难事</a>。理由很简单，<strong>方法得到的是对象引用的拷贝，对象引用及其他的拷贝同时引用同一个对象</strong>。</p>
+<h2 data-tool="mdnice编辑器" data-id="heading-3"><span class="prefix"><span class="content">再看</span></span></h2>
+<pre class="custom" data-tool="mdnice编辑器"><code class="hljs copyable">    <span class="hljs-function"><span class="hljs-keyword">public <span class="hljs-keyword">static <span class="hljs-keyword">void <span class="hljs-title">main<span class="hljs-params">(String[] args) {
+        <span class="hljs-comment">// 有些程序员认为 Java 程序设计语言对对象采用的是引用调用，实际上，这种理解是不对的。
+        Student s1 = <span class="hljs-keyword">new Student(<span class="hljs-string">"Mai");
+        Student s2 = <span class="hljs-keyword">new Student(<span class="hljs-string">"Feng");
+        swap2(s1, s2);
+        System.out.println(<span class="hljs-string">"s1:" + s1.getName()); <span class="hljs-comment">// Mai
+        System.out.println(<span class="hljs-string">"s2:" + s2.getName()); <span class="hljs-comment">// Feng
+        <span class="hljs-comment">// 方法并没有改变存储在变量 s1 和 s2 中的对象引用。
+        <span class="hljs-comment">// swap 方法的参数 x 和 y 被初始化为两个对象引用的拷贝，这个方法交换的是这两个拷贝
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private <span class="hljs-keyword">static <span class="hljs-keyword">void <span class="hljs-title">swap2<span class="hljs-params">(Student x, Student y) {
+        Student temp = x;
+        x = y;
+        y = temp;
+        System.out.println(<span class="hljs-string">"x:" + x.getName()); <span class="hljs-comment">// Feng
+        System.out.println(<span class="hljs-string">"y:" + y.getName()); <span class="hljs-comment">// Mai
+    }
+<span class="hljs-comment">// x:Feng
+<span class="hljs-comment">// y:Mai
+<span class="hljs-comment">// s1:Mai
+<span class="hljs-comment">// s2:Feng
+<span class="copy-code-btn">复制代码</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<img class="lazyload inited loaded" src="https://user-gold-cdn.xitu.io/2020/5/29/1725e913d52e90be?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="交换图" data-src="https://user-gold-cdn.xitu.io/2020/5/29/1725e913d52e90be?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" data-width="1280" data-height="327">交换图
+<blockquote data-tool="mdnice编辑器">
+<p>方法并没有改变存储在变量 s1 和 s2 中的对象引用。swap 方法的参数 x 和 y 被初始化为两个对象引用的拷贝，这个方法交换的是这两个拷贝</p>
+</blockquote>
+<h2 data-tool="mdnice编辑器" data-id="heading-4"><span class="prefix"><span class="content">总结</span></span></h2>
+<ul data-tool="mdnice编辑器">
+<li>一个方法不能修改一个基本数据类型的参数（即数值型或布尔型）。<strong>第一个例子</strong></li>
+<li>一个方法可以改变一个对象参数的状态。<strong>第二个例子</strong></li>
+<li>一个方法不能让对象参数引用一个新的对象。<strong>第三个例子</strong></li>
+</ul>
+<p><strong><a href="https://www.cnblogs.com/xiaoerfang/p/12990198.html">https://www.cnblogs.com/xiaoerfang/p/12990198.html</a></strong></p>
+<p><strong><a href="https://www.exception.site/essay/how-to-free-use-idea-20201">https://www.exception.site/essay/how-to-free-use-idea-20201</a></strong></p>
+</div>
+<p>&nbsp;</p>
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2020-05-30 10:16</span>&nbsp;
+<a href="https://www.cnblogs.com/xiaoerfang/">小二凡</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12991128" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12991128);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 606188, cb_blogApp = 'xiaoerfang', cb_blogUserGuid = '12f59868-01b3-4355-5675-08d7fe1b8b79';
+    var cb_entryId = 12991128, cb_entryCreatedDate = '2020-05-30 10:16', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;"></div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 小二凡
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+</body>
+</html>

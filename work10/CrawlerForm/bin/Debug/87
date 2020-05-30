@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    <meta property="og:description" content="一： 为什么需要开发手册规范? 团队开发中，如果没有开发手册的约束，每个人可能都按照自己的想法去命名，去写代码。这样就会造成 代码的可读性极差，后面维护代码的时候，会很痛苦，会浪费很多很多时间 ，所以" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>企业开发手册规范参考 - qq377905687 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.ico?v=20200522" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/lessismoreright/bundle-lessismoreright.min.css?v=aar1eIg4zz9tL2uCrzOGDur190sJi2DazF273FikoL4" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/Coder1988/custom.css?v=&#x2B;4uWSmSE4R/EOpk53fZXXBXWyXE=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/lessismoreright/bundle-lessismoreright-mobile.min.css?v=FJjyQba01xzuYKRyPpSwE1bMq69pRjxrz5wp2oZZGLY" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/Coder1988/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/Coder1988/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/Coder1988/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=6bwfCY2e02dLOXNW99G2BHZkYFmw9QyYTWeJ-W-sudo"></script>
+    <script>
+        var currentBlogId = 605723;
+        var currentBlogApp = 'Coder1988';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'LessIsMoreRight';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    <div id="page_begin_html">
+        <script>loadPageBeginHtml();</script>
+    </div>
+    <div id="home">
+    <div id="header">
+        <div id="blogTitle">
+            
+<div class="title"><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/Coder1988/"></a>
+</div>
+<div class="subtitle">
+
+</div>
+
+        </div>
+        <div id="navigator">
+            
+<ul id="navList">
+    <li id="nav_sitehome"><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+    <li id="nav_myhome">
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/Coder1988/">
+首页</a>
+</li>
+    <li id="nav_newpost">
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+    <li id="nav_contact">
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/qq377905687">
+联系</a></li>
+    <li id="nav_rss">
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/Coder1988/rss/">
+订阅</a></li>
+    <li id="nav_admin">
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+            <div class="blogStats">
+                
+<span id="stats_post_count">随笔 - 
+6&nbsp;</span>
+<span id="stats_article_count">文章 - 
+0&nbsp;</span>
+<!-- <span id="stats-comment_count"></span> -->
+<span id="stats_comment_count">评论 - 
+0</span>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div id="mainContent">
+            <div class="forFlow">
+                <div id="post_detail">
+    <div id="topics">
+        <div class="post">
+            <h1 class="postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/Coder1988/p/12991148.html">企业开发手册规范参考</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+<div id="cnblogs_post_body" class="blogpost-body ">
+    <p class="md-end-block md-p"><span class="md-plain">一： 为什么需要开发手册规范?</span></p>
+<p class="md-end-block md-p"><span class="md-plain">&nbsp;&nbsp;</span></p>
+<p class="md-end-block md-p"><span class="md-plain">&nbsp; &nbsp; &nbsp; &nbsp;团队开发中，如果没有开发手册的约束，每个人可能都按照自己的想法去命名，去写代码。这样就会造成</span></p>
+<p class="md-end-block md-p md-focus"><span class="md-plain">代码的可读性极差，后面维护代码的时候，会很痛苦，会浪费很多很多时间 ，所以 团队开发中，必须需要开发规范。</span></p>
+<p class="md-end-block md-p md-focus">&nbsp;</p>
+<p class="md-end-block md-p md-focus"><span class="md-plain">二 : 那写的代码怎么才能符合要求呢?</span></p>
+<p class="md-end-block md-p md-focus">&nbsp;</p>
+<p class="md-end-block md-p md-focus"><span class="md-plain">&nbsp; &nbsp; &nbsp; 当然每个公司都有自己的规范，自己的约束，比如 阿里有 ，京东有 ，字节跳动有，包括您自己服务公司都有。但是很多原则是有共性的。</span></p>
+<p class="md-end-block md-p"><span class="md-plain"> 比如 类名--首字母必须大写 ，你如果写一个小写的，可能在公司里面直接扣您绩效。</span></p>
+<p class="md-end-block md-p"><span class="md-plain"> 类名 --必须见闻知意，不要定义 a b c这种名字 比如 OrderServiceImpl.java</span></p>
+<p class="md-end-block md-p"><span class="md-plain"> 方法名 --首字母小写，其他单词首字母大写 比如 addProduct()</span></p>
+<p class="md-end-block md-p"><span class="md-plain"> 包名--全部小写 ，比如 com.xxx.service/com.xxx.mapper等</span></p>
+<p class="md-end-block md-p"><span class="md-plain"> 变量名 -- 和方法名规则一样</span></p>
+<p class="md-end-block md-p"><span class="md-plain"> 接口名-- 首字母大写</span></p>
+<p class="md-end-block md-p">&nbsp;</p>
+<p class="md-end-block md-p"><span class="md-plain"><img src="https://img2020.cnblogs.com/blog/2045578/202005/2045578-20200530101706390-2061146662.png" alt=""></span></p>
+<p class="md-end-block md-p">&nbsp;</p>
+<p class="md-end-block md-p"><span class="md-plain">数据库规范：</span></p>
+<p class="md-end-block md-p">&nbsp;</p>
+<p class="md-end-block md-p"><span class="md-tab"> <span class="md-plain"> 数据库命名-- 采用26个英文字母，不要出现汉字 命名尽量通俗易懂 不要超过30个字符</span></span></p>
+<p class="md-end-block md-p"><span class="md-tab"> <span class="md-plain"> 数据表命名-- 普通表 t<span><em>表名 比如 t_user t_test 系统表 sys</em><span class="md-plain">表名</span></span></span></span></p>
+<p class="md-end-block md-p"><span class="md-plain"> 数据库视图命名-- v_视图名 比如 v_reports</span></p>
+<p class="md-end-block md-p"><span class="md-plain"> 数据库存储过程命名-- pro_存储过器名</span></p>
+<p class="md-end-block md-p"><span class="md-plain"> 数据库触发器命名 -- tri_触发器名</span></p>
+<p class="md-end-block md-p md-focus"><span class="md-plain"> 索引名命名 -- table_col_index</span></p>
+<p class="md-end-block md-p md-focus">&nbsp;</p>
+<p class="md-end-block md-p md-focus"><span class="md-plain">项目规程规范:</span></p>
+<p class="md-end-block md-p md-focus">&nbsp;</p>
+<p class="md-end-block md-p"><span class="md-plain"> 采用分层结构书写，比如 </span></p>
+<p class="md-end-block md-p"><span class="md-plain"> 公司域名倒着写.项目名.层次名</span></p>
+<p class="md-end-block md-p"><span class="md-plain"> 比如： </span></p>
+<p class="md-end-block md-p"><span class="md-plain"> com.xxx.pgms.dto --数据传输对象</span></p>
+<p class="md-end-block md-p"><span class="md-plain"> com.xxx.pgms.query -- 数据查询对象</span></p>
+<p class="md-end-block md-p"><span class="md-plain"> com.xxx.pgms.service --数据业务层</span></p>
+<p class="md-end-block md-p"><span class="md-plain"> com.xxx.pgms.mapper --数据持久层</span></p>
+<p class="md-end-block md-p"><span class="md-plain"> com.xxx.pgms.web --数据web层</span></p>
+<p class="md-end-block md-p"><span class="md-plain"> com.xxx.pgms.web.controller -- 视图控制层</span></p>
+<p class="md-end-block md-p"><span class="md-plain"> com.xxx.pgms.web.filter --过滤器</span></p>
+<p class="md-end-block md-p"><span class="md-plain"> com.xxx.pgms.util -- 工具类</span></p>
+<p class="md-end-block md-p"><span class="md-plain"> com.xxx.pgms.config --配置类</span></p>
+<p class="md-end-block md-p">&nbsp;</p>
+<p class="md-end-block md-p"><span class="md-plain"> 注释规范：</span></p>
+<p class="md-end-block md-p">&nbsp;</p>
+<p class="md-end-block md-p"><span class="md-plain"> java代码注释</span></p>
+<p class="md-end-block md-p"><span class="md-tab"> <span class="md-plain">单行注释 //</span></span></p>
+<p class="md-end-block md-p"><span class="md-plain"> 多行注释 /***/</span></p>
+<p class="md-end-block md-p">&nbsp;</p>
+<p class="md-end-block md-p"><span class="md-plain"> html xml注释</span></p>
+<p class="md-end-block md-p md-focus"><span class="md-plain"> <span class="md-comment">&lt;!-- 注释内容 --&gt;</span></span></p>
+<p class="md-end-block md-p md-focus">&nbsp;</p>
+<p class="md-end-block md-p md-focus"><span class="md-plain"> 三： 实践部分</span></p>
+<p class="md-end-block md-p"><span class="md-tab"> <span class="md-plain"> 规范是已经给您了，您要按照上面的部分去完成，才行。如果要转载，请标明出处.</span></span></p>
+<p class="md-end-block md-p">&nbsp;</p>
+<p><span class="md-plain">&nbsp;</span></p>
+<p class="md-end-block md-p">&nbsp;</p>
+<p class="md-end-block md-p">&nbsp;</p>
+<p class="md-end-block md-p">&nbsp;</p>
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2020-05-30 10:19</span>&nbsp;
+<a href="https://www.cnblogs.com/Coder1988/">qq377905687</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12991148" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12991148);return false;">收藏</a></div>
+        </div>
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 605723, cb_blogApp = 'Coder1988', cb_blogUserGuid = '90f743b0-e1d0-46aa-5709-08d7fe1b8b79';
+    var cb_entryId = 12991148, cb_entryCreatedDate = '2020-05-30 10:19', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;"></div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>    </div>
+</div>
+            </div>
+        </div>
+
+        <div id="sideBar">
+            <div id="sideBarMain">
+                
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+                <div id="calendar"><div id="blog-calendar" style="display:none"></div></div>                
+                <script>loadBlogDefaultCalendar();</script>
+                <div id="leftcontentcontainer">
+                    <!-- begin:SingleColumn -->
+                    <div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+                    <!-- end:  SingleColumn -->
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <div id="footer">
+        <!--done-->
+Copyright &copy; 2020 qq377905687
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+    </div>
+</div>
+
+    
+</body>
+</html>

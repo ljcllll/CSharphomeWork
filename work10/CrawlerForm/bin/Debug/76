@@ -1,0 +1,468 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>ちょうご６６６ - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.ico?v=20200522" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/greenfield/bundle-greenfield.min.css?v=sCLmt02SO6S31fIBURL7NeHOodtK-DMwVZ39gfjUe-M" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/greenfield/bundle-greenfield-mobile.min.css?v=ADiCwO2hOTdd5yYidcx7eob7ix2VJI4o_TXjEycTHjs" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/tilyougogannbare666/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/tilyougogannbare666/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/tilyougogannbare666/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=6bwfCY2e02dLOXNW99G2BHZkYFmw9QyYTWeJ-W-sudo"></script>
+    <script>
+        var currentBlogId = 569381;
+        var currentBlogApp = 'tilyougogannbare666';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'GreenField';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    <div id="top">
+	
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/tilyougogannbare666/">我爱UE4</a>
+</h1>
+<p id="tagline">
+
+</p>
+
+
+</div>
+<div id="leftmenu">
+	
+		
+<h3>导航</h3>
+<ul>
+	<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+	<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/tilyougogannbare666/">
+首页</a>
+</li>
+	<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+	<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E3%81%A1%E3%82%87%E3%81%86%E3%81%94%EF%BC%96%EF%BC%96%EF%BC%96">
+联系</a></li>
+	<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/tilyougogannbare666/rss/">
+订阅</a>
+<a id="blog_nav_rss_image" href="https://www.cnblogs.com/tilyougogannbare666/rss/">
+    <img src="/skins/greenfield/images/xml.gif" alt="订阅" />
+</a></li>
+	<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+		
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+        <h3>统计</h3>
+	<ul>
+		<li>随笔 - 
+30</li>
+		<li>文章 - 
+0</li>
+		<li>评论 - 
+0</li>
+		<li>引用 - 
+0</li>
+</ul>
+
+	
+        <div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>		
+	
+</div>
+
+<div id="main">
+	
+
+
+
+
+		
+<p class="date">
+	2020年5月30日		  
+	<a href="https://www.cnblogs.com/tilyougogannbare666/archive/2020/05/30.html"></a>
+</p>
+
+
+		<div class="post">
+			<h2>
+
+<a class="postTitle2" href="https://www.cnblogs.com/tilyougogannbare666/p/12991338.html">
+    java异常处理
+</a>
+</h2>
+			
+			
+
+    <div class="c_b_p_desc">
+摘要：关键字 try{可能出现异常的代码} catch(异常类型){};//可以多个catch语句 finally{};//无论如何都会输出，除了程序在try语句终止。通常用来释放资源 throw//抛出异常，用法：throw new RuntimeException(&quot;年龄不符合要求&quot;); throws            <a href="https://www.cnblogs.com/tilyougogannbare666/p/12991338.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			
+			<p class="postfoot">		
+				posted @ 2020-05-30 10:45
+ちょうご６６６
+<span class="post-view-count">阅读(0)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12991338" rel="nofollow">
+    编辑
+</a>
+
+			</p>
+		</div>
+		<div class="post">
+			<h2>
+
+<a class="postTitle2" href="https://www.cnblogs.com/tilyougogannbare666/p/12990938.html">
+    java内部类
+</a>
+</h2>
+			
+			
+
+    <div class="c_b_p_desc">
+摘要：定义：在一个类内部声明一个类，叫做这个类的内部类 public class Neibu01 {&#160;private String st1=&quot;abc&quot;;&#160;private int in1=12;&#160;class Neibu02{//内部类 int in2=21;//优先访问内部类成员 int in1=14;//            <a href="https://www.cnblogs.com/tilyougogannbare666/p/12990938.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			
+			<p class="postfoot">		
+				posted @ 2020-05-30 09:35
+ちょうご６６６
+<span class="post-view-count">阅读(5)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12990938" rel="nofollow">
+    编辑
+</a>
+
+			</p>
+		</div>
+
+
+
+		
+<p class="date">
+	2020年5月29日		  
+	<a href="https://www.cnblogs.com/tilyougogannbare666/archive/2020/05/29.html"></a>
+</p>
+
+
+		<div class="post">
+			<h2>
+
+<a class="postTitle2" href="https://www.cnblogs.com/tilyougogannbare666/p/12987758.html">
+    unityUI拖拽
+</a>
+</h2>
+			
+			
+
+    <div class="c_b_p_desc">
+摘要：using System.Collections;using System.Collections.Generic;using UnityEngine;using UnityEngine.EventSystems; public class DrawPanel : MonoBehaviour ,ID            <a href="https://www.cnblogs.com/tilyougogannbare666/p/12987758.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			
+			<p class="postfoot">		
+				posted @ 2020-05-29 15:38
+ちょうご６６６
+<span class="post-view-count">阅读(6)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12987758" rel="nofollow">
+    编辑
+</a>
+
+			</p>
+		</div>
+		<div class="post">
+			<h2>
+
+<a class="postTitle2" href="https://www.cnblogs.com/tilyougogannbare666/p/12986298.html">
+    Java泛型
+</a>
+</h2>
+			
+			
+
+    <div class="c_b_p_desc">
+摘要：泛型分为类泛型，方法泛型，接口泛型 类泛型：public class Lei&lt;T&gt; {}; 方法泛型 public&lt;T&gt; void ***(){}; 接口泛型 Interface ***&lt;T&gt; {}; 泛型的使用：类的实现 public class ShiXian01 implements inte            <a href="https://www.cnblogs.com/tilyougogannbare666/p/12986298.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			
+			<p class="postfoot">		
+				posted @ 2020-05-29 11:05
+ちょうご６６６
+<span class="post-view-count">阅读(7)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12986298" rel="nofollow">
+    编辑
+</a>
+
+			</p>
+		</div>
+		<div class="post">
+			<h2>
+
+<a class="postTitle2" href="https://www.cnblogs.com/tilyougogannbare666/p/12986258.html">
+    java集合
+</a>
+</h2>
+			
+			
+
+    <div class="c_b_p_desc">
+摘要：Map集合的两种遍历方式：Map集合无序 public class Map1 {public static void main(String[] args) {&#160;Map&lt;String, String&gt; map=new HashMap();&#160;map.put(&quot;12&quot;, &quot;ss&quot;);&#160;map.put(&quot;            <a href="https://www.cnblogs.com/tilyougogannbare666/p/12986258.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			
+			<p class="postfoot">		
+				posted @ 2020-05-29 11:01
+ちょうご６６６
+<span class="post-view-count">阅读(5)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12986258" rel="nofollow">
+    编辑
+</a>
+
+			</p>
+		</div>
+
+
+
+		
+<p class="date">
+	2020年5月28日		  
+	<a href="https://www.cnblogs.com/tilyougogannbare666/archive/2020/05/28.html"></a>
+</p>
+
+
+		<div class="post">
+			<h2>
+
+<a class="postTitle2" href="https://www.cnblogs.com/tilyougogannbare666/p/12983176.html">
+    unityUI之Image
+</a>
+</h2>
+			
+			
+
+    <div class="c_b_p_desc">
+摘要：ImageType的四种形式： Simple为默认显示形式 Sliced九宫格显示图片 Tiled平铺显示图片 Filled填充显示图片 Preserve Aspect保持图片宽高比 代码获取方式： 1、引用命名空间 using UnityEngine.UI; 2、获取组件 Image image=            <a href="https://www.cnblogs.com/tilyougogannbare666/p/12983176.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			
+			<p class="postfoot">		
+				posted @ 2020-05-28 18:56
+ちょうご６６６
+<span class="post-view-count">阅读(8)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12983176" rel="nofollow">
+    编辑
+</a>
+
+			</p>
+		</div>
+
+
+
+		
+<p class="date">
+	2020年5月27日		  
+	<a href="https://www.cnblogs.com/tilyougogannbare666/archive/2020/05/27.html"></a>
+</p>
+
+
+		<div class="post">
+			<h2>
+
+<a class="postTitle2" href="https://www.cnblogs.com/tilyougogannbare666/p/12970703.html">
+    javaList接口
+</a>
+</h2>
+			
+			
+
+    <div class="c_b_p_desc">
+摘要：public class Demo5 { public static void main(String[] args) { // TODO Auto-generated method stub List list=new ArrayList(); list.add(&quot;ZG&quot;); list.add(&quot;            <a href="https://www.cnblogs.com/tilyougogannbare666/p/12970703.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			
+			<p class="postfoot">		
+				posted @ 2020-05-27 09:57
+ちょうご６６６
+<span class="post-view-count">阅读(9)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12970703" rel="nofollow">
+    编辑
+</a>
+
+			</p>
+		</div>
+		<div class="post">
+			<h2>
+
+<a class="postTitle2" href="https://www.cnblogs.com/tilyougogannbare666/p/12970493.html">
+    java集合的概念与Collection体系
+</a>
+</h2>
+			
+			
+
+    <div class="c_b_p_desc">
+摘要：概念：对象的容器，实现了对象的常用操作，类似数组功能，长度不固定，只能存储引用类型。 Collction特点：无序，无下标 集合添加学生类代码 //学生类 package qianfeng; public class Student {&#160;private int age;&#160;private String            <a href="https://www.cnblogs.com/tilyougogannbare666/p/12970493.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			
+			<p class="postfoot">		
+				posted @ 2020-05-27 09:29
+ちょうご６６６
+<span class="post-view-count">阅读(10)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12970493" rel="nofollow">
+    编辑
+</a>
+
+			</p>
+		</div>
+		<div class="post">
+			<h2>
+
+<a class="postTitle2" href="https://www.cnblogs.com/tilyougogannbare666/p/12970320.html">
+    JavaCalendar和Date和SimpleDateFormat
+</a>
+</h2>
+			
+			
+
+    <div class="c_b_p_desc">
+摘要：public class Demo {&#160;public static void main(String[] args) { Calendar cl=Calendar.getInstance(); System.out.println(cl.getTime().toLocaleString()); //            <a href="https://www.cnblogs.com/tilyougogannbare666/p/12970320.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			
+			<p class="postfoot">		
+				posted @ 2020-05-27 08:48
+ちょうご６６６
+<span class="post-view-count">阅读(14)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12970320" rel="nofollow">
+    编辑
+</a>
+
+			</p>
+		</div>
+
+
+
+		
+<p class="date">
+	2020年5月26日		  
+	<a href="https://www.cnblogs.com/tilyougogannbare666/archive/2020/05/26.html"></a>
+</p>
+
+
+		<div class="post">
+			<h2>
+
+<a class="postTitle2" href="https://www.cnblogs.com/tilyougogannbare666/p/12963805.html">
+    冒泡排序
+</a>
+</h2>
+			
+			
+
+    <div class="c_b_p_desc">
+摘要：public class MaoPaoPaiXv { public static void main(String[] args) { // TODO Auto-generated method stub int [] al= {12,4,6,76,33,49,80,1,16}; System.ou            <a href="https://www.cnblogs.com/tilyougogannbare666/p/12963805.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			
+			<p class="postfoot">		
+				posted @ 2020-05-26 10:12
+ちょうご６６６
+<span class="post-view-count">阅读(11)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12963805" rel="nofollow">
+    编辑
+</a>
+
+			</p>
+		</div>
+
+
+
+
+<div class="topicListFooter">
+    <div id="nav_next_page">
+        
+    <a href="https://www.cnblogs.com/tilyougogannbare666/default.html?page=2">
+        下一页
+    </a>
+
+    </div>    
+</div>
+
+
+
+
+
+
+
+
+</div>
+<p id="footer">
+	Powered by: 
+	<br />
+	
+	<a href="https://www.cnblogs.com/" id="footer_site_link">博客园</a>
+	<br />
+	Copyright &copy; 2020 ちょうご６６６
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+</p>
+
+
+
+
+
+    
+</body>
+</html>

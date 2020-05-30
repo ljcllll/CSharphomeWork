@@ -1,0 +1,542 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>良许Linux - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.ico?v=20200522" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/simpleclear/bundle-simpleclear.min.css?v=VK2UnJ8cJRhid2HBuGo4mQJdQ6E3Xlp7fD_jRXm5PUU" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/simpleclear/bundle-simpleclear-mobile.min.css?v=DidnFOvv24-VeVpMoJxhxZWs9iNA_ZwNuLjfe3iZZR8" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/yychuyu/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/yychuyu/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/yychuyu/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=6bwfCY2e02dLOXNW99G2BHZkYFmw9QyYTWeJ-W-sudo"></script>
+    <script>
+        var currentBlogId = 452427;
+        var currentBlogApp = 'yychuyu';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'SimpleClear';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    <div id="main">
+    <div id="header">
+        
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/yychuyu/">良许Linux</a>
+</h1>
+<p id="tagline">
+传播Linux干货
+</p>
+
+
+    </div>
+    
+
+
+
+
+		
+
+<!--
+<p class="date">
+	<a href="https://www.cnblogs.com/yychuyu/archive/2020/05/29.html" style="display:inline-block;border-width:0px;height:15px;width:12px;"></a>
+
+	<partial name="./Shared/_DateTitle.cshtml"/>		  
+</p>
+-->
+
+		<div class="post">
+			<h2 class="postTitle">
+
+<a class="postTitle2" href="https://www.cnblogs.com/yychuyu/p/12989158.html">
+    如何高效回退到特定层级目录？
+</a>
+</h2>
+			<div class="postText">
+			
+
+    <div class="c_b_p_desc">
+摘要：Linux 下如果我们进入到了一个比较长的路径，比如： /home/alvin/projects/blogdemos/linux-system-programming/thread /home/alvin/projects/blogdemos/diff /home/harry/study/亚洲文化/            <a href="https://www.cnblogs.com/yychuyu/p/12989158.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			</div>				
+			<div class="postFoot">		
+				posted @ 2020-05-29 18:57
+良许Linux
+<span class="post-view-count">阅读(122)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(1)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12989158" rel="nofollow">
+    编辑
+</a>
+
+			</div>
+		</div>
+
+
+
+		
+
+<!--
+<p class="date">
+	<a href="https://www.cnblogs.com/yychuyu/archive/2020/05/28.html" style="display:inline-block;border-width:0px;height:15px;width:12px;"></a>
+
+	<partial name="./Shared/_DateTitle.cshtml"/>		  
+</p>
+-->
+
+		<div class="post">
+			<h2 class="postTitle">
+
+<a class="postTitle2" href="https://www.cnblogs.com/yychuyu/p/12983328.html">
+    如何将目录下的脚本一次性全部执行
+</a>
+</h2>
+			<div class="postText">
+			
+
+    <div class="c_b_p_desc">
+摘要：大家好，我是良许。 我们在平时工作的时候，为了测试产品的一些功能，我们会写一系列的脚本，并且把它们放在同一个目录下。在做测试的时候，我们通常会依次执行这些脚本，然后记录测试结果。 这样做的弊端是显而易见的，那就是效率太低。如果脚本数不多，你的「时间管理」能力又很强的话，那么问题不大。但如果脚本数很多            <a href="https://www.cnblogs.com/yychuyu/p/12983328.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			</div>				
+			<div class="postFoot">		
+				posted @ 2020-05-28 19:19
+良许Linux
+<span class="post-view-count">阅读(46)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(1)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12983328" rel="nofollow">
+    编辑
+</a>
+
+			</div>
+		</div>
+
+
+
+		
+
+<!--
+<p class="date">
+	<a href="https://www.cnblogs.com/yychuyu/archive/2020/05/27.html" style="display:inline-block;border-width:0px;height:15px;width:12px;"></a>
+
+	<partial name="./Shared/_DateTitle.cshtml"/>		  
+</p>
+-->
+
+		<div class="post">
+			<h2 class="postTitle">
+
+<a class="postTitle2" href="https://www.cnblogs.com/yychuyu/p/12975938.html">
+    在树莓派里搭建 Lighttpd 服务器
+</a>
+</h2>
+			<div class="postText">
+			
+
+    <div class="c_b_p_desc">
+摘要：Lighttpd 像 Ngnix 一样，是被设计运行在低内存，低 CPU 负载的设备上，它们都非常适合在树莓派上运行。 本文将介绍如何在树莓派上运行基本配置的 Lighttpd ，以及如何与 PHP-FRM 一起使用。 安装 Lighthttpd 首先，我们先保证我们的树莓派软件都是最新的： $ s            <a href="https://www.cnblogs.com/yychuyu/p/12975938.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			</div>				
+			<div class="postFoot">		
+				posted @ 2020-05-27 19:33
+良许Linux
+<span class="post-view-count">阅读(59)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12975938" rel="nofollow">
+    编辑
+</a>
+
+			</div>
+		</div>
+
+
+
+		
+
+<!--
+<p class="date">
+	<a href="https://www.cnblogs.com/yychuyu/archive/2020/05/26.html" style="display:inline-block;border-width:0px;height:15px;width:12px;"></a>
+
+	<partial name="./Shared/_DateTitle.cshtml"/>		  
+</p>
+-->
+
+		<div class="post">
+			<h2 class="postTitle">
+
+<a class="postTitle2" href="https://www.cnblogs.com/yychuyu/p/12967366.html">
+    如何重复执行一条命令直至运行成功？
+</a>
+</h2>
+			<div class="postText">
+			
+
+    <div class="c_b_p_desc">
+摘要：大家好，我是良许。 在我们的日常工作中，需要我们重复做的工作简直不能太多。比如，我们想要确认网络是否是连通的，传统的做法就是使用 ping 命令不停去测试某个地址（比如百度）。网络比较好还好说，但如果网络很差，那么就需要一直去运行 ping 命令。 作为程序员，重复性的工作怎么能忍呢？只要是重复性的            <a href="https://www.cnblogs.com/yychuyu/p/12967366.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			</div>				
+			<div class="postFoot">		
+				posted @ 2020-05-26 18:44
+良许Linux
+<span class="post-view-count">阅读(103)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12967366" rel="nofollow">
+    编辑
+</a>
+
+			</div>
+		</div>
+
+
+
+		
+
+<!--
+<p class="date">
+	<a href="https://www.cnblogs.com/yychuyu/archive/2020/05/25.html" style="display:inline-block;border-width:0px;height:15px;width:12px;"></a>
+
+	<partial name="./Shared/_DateTitle.cshtml"/>		  
+</p>
+-->
+
+		<div class="post">
+			<h2 class="postTitle">
+
+<a class="postTitle2" href="https://www.cnblogs.com/yychuyu/p/12960365.html">
+    手把手教你Windows Linux双系统的安装与卸载
+</a>
+</h2>
+			<div class="postText">
+			
+
+    <div class="c_b_p_desc">
+摘要：作者：—叶丶知秋 链接：https://blog.csdn.net/fanxueya1322/article/details/90205143 转载请保留出处 良许前言： 后台突然有很多小伙伴留言想看 Linux+Windows 双系统的安装，本想自己写一个，但看了一眼自己那台服役快6年的老古董，想            <a href="https://www.cnblogs.com/yychuyu/p/12960365.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			</div>				
+			<div class="postFoot">		
+				posted @ 2020-05-25 19:06
+良许Linux
+<span class="post-view-count">阅读(84)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(1)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12960365" rel="nofollow">
+    编辑
+</a>
+
+			</div>
+		</div>
+
+
+
+		
+
+<!--
+<p class="date">
+	<a href="https://www.cnblogs.com/yychuyu/archive/2020/05/24.html" style="display:inline-block;border-width:0px;height:15px;width:12px;"></a>
+
+	<partial name="./Shared/_DateTitle.cshtml"/>		  
+</p>
+-->
+
+		<div class="post">
+			<h2 class="postTitle">
+
+<a class="postTitle2" href="https://www.cnblogs.com/yychuyu/p/12951574.html">
+    你以为只有马云会灌鸡汤？Linux 命令行也会！
+</a>
+</h2>
+			<div class="postText">
+			
+
+    <div class="c_b_p_desc">
+摘要：你以为只有马云会灌鸡汤？Linux 命令行也会！ “Linux 太南了o(╥﹏╥)o”，“我累了不想奋斗了o(︶︿︶)o”... 不知道你有没有想过，在你快丧失斗志的时候，Linux 还能牛逼得给你来一碗香喷喷的心灵鸡汤？ 和 能够在终端随机显示一些激励性的名句，可谓是两大心灵鸡汤烹饪师。 安装 m            <a href="https://www.cnblogs.com/yychuyu/p/12951574.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			</div>				
+			<div class="postFoot">		
+				posted @ 2020-05-24 17:02
+良许Linux
+<span class="post-view-count">阅读(52)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12951574" rel="nofollow">
+    编辑
+</a>
+
+			</div>
+		</div>
+
+
+
+		
+
+<!--
+<p class="date">
+	<a href="https://www.cnblogs.com/yychuyu/archive/2020/05/23.html" style="display:inline-block;border-width:0px;height:15px;width:12px;"></a>
+
+	<partial name="./Shared/_DateTitle.cshtml"/>		  
+</p>
+-->
+
+		<div class="post">
+			<h2 class="postTitle">
+
+<a class="postTitle2" href="https://www.cnblogs.com/yychuyu/p/12942862.html">
+    Linux 下三种提高工作效率的文件处理技巧
+</a>
+</h2>
+			<div class="postText">
+			
+
+    <div class="c_b_p_desc">
+摘要：Linux 下三种提高工作效率的文件处理技巧 在 Linux 下工作，打交道最多的就是文件了，毕竟 Linux 下工作一切皆文件嘛。Linux 也为大家提供了多种用于处理文件的命令，合理使用这些命令可以大大节省你的时间，并让我们的工作负担不再那么沉重。 寻找文件的技巧 当我们查找文件时，第一时间想到            <a href="https://www.cnblogs.com/yychuyu/p/12942862.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			</div>				
+			<div class="postFoot">		
+				posted @ 2020-05-23 15:59
+良许Linux
+<span class="post-view-count">阅读(46)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12942862" rel="nofollow">
+    编辑
+</a>
+
+			</div>
+		</div>
+
+
+
+		
+
+<!--
+<p class="date">
+	<a href="https://www.cnblogs.com/yychuyu/archive/2020/05/22.html" style="display:inline-block;border-width:0px;height:15px;width:12px;"></a>
+
+	<partial name="./Shared/_DateTitle.cshtml"/>		  
+</p>
+-->
+
+		<div class="post">
+			<h2 class="postTitle">
+
+<a class="postTitle2" href="https://www.cnblogs.com/yychuyu/p/12939234.html">
+    太高效了！玩了这么久的Linux，居然不知道这7个终端快捷键！
+</a>
+</h2>
+			<div class="postText">
+			
+
+    <div class="c_b_p_desc">
+摘要：大家好，我是良许。 作为 Linux 用户，大家肯定在 Linux 终端下敲过无数的命令。有的命令很短，比如： 、 、 之类，这种命令大家毫无压力。但是，有些命令就比较长了，比如： 这个时候，你要是敲错了哪怕是一个字母，是不是很崩溃？ 以前我的作法是，如果敲错了命令，就把光标移动到错误的地方，再进行            <a href="https://www.cnblogs.com/yychuyu/p/12939234.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			</div>				
+			<div class="postFoot">		
+				posted @ 2020-05-22 19:03
+良许Linux
+<span class="post-view-count">阅读(439)</span><text> </text>
+<span class="post-comment-count">评论(1)</span><text> </text>
+<span class="post-digg-count">推荐(3)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12939234" rel="nofollow">
+    编辑
+</a>
+
+			</div>
+		</div>
+
+
+
+		
+
+<!--
+<p class="date">
+	<a href="https://www.cnblogs.com/yychuyu/archive/2020/05/21.html" style="display:inline-block;border-width:0px;height:15px;width:12px;"></a>
+
+	<partial name="./Shared/_DateTitle.cshtml"/>		  
+</p>
+-->
+
+		<div class="post">
+			<h2 class="postTitle">
+
+<a class="postTitle2" href="https://www.cnblogs.com/yychuyu/p/12932795.html">
+    Linux下分析bin文件的10种方法
+</a>
+</h2>
+			<div class="postText">
+			
+
+    <div class="c_b_p_desc">
+摘要：这世界有10种人，一种人懂二进制，另一种人不懂二进制。 ——鲁迅 大家好，我是良许。 二进制文件是我们几乎每天都需要打交道的文件类型，但很少人知道他们的工作原理。这里所讲的二进制文件，是指一些可执行文件，包括你天天要使用的 Linux 命令，也是二进制文件的一种。 Linux 系统给我们提供了非常多            <a href="https://www.cnblogs.com/yychuyu/p/12932795.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			</div>				
+			<div class="postFoot">		
+				posted @ 2020-05-21 19:20
+良许Linux
+<span class="post-view-count">阅读(337)</span><text> </text>
+<span class="post-comment-count">评论(1)</span><text> </text>
+<span class="post-digg-count">推荐(2)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12932795" rel="nofollow">
+    编辑
+</a>
+
+			</div>
+		</div>
+
+
+
+		
+
+<!--
+<p class="date">
+	<a href="https://www.cnblogs.com/yychuyu/archive/2020/05/20.html" style="display:inline-block;border-width:0px;height:15px;width:12px;"></a>
+
+	<partial name="./Shared/_DateTitle.cshtml"/>		  
+</p>
+-->
+
+		<div class="post">
+			<h2 class="postTitle">
+
+<a class="postTitle2" href="https://www.cnblogs.com/yychuyu/p/12925524.html">
+    Linux下几个与磁盘空间和文件尺寸相关的命令
+</a>
+</h2>
+			<div class="postText">
+			
+
+    <div class="c_b_p_desc">
+摘要：大家好，我是良许。 硬盘是计算机非常重要的一个部件，不管是代码，还是 UI 、声音、文档，抑或是没人时偷偷看的小视频，都需要保存在硬盘里。 对于很多 Linux 服务器，会进行很多的编译操作。而编译操作在很多情况下都会产生大量的中间文件，这些文件会占用很多的磁盘空间，导致磁盘空间一直吃紧。 别问为啥            <a href="https://www.cnblogs.com/yychuyu/p/12925524.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			</div>				
+			<div class="postFoot">		
+				posted @ 2020-05-20 19:10
+良许Linux
+<span class="post-view-count">阅读(73)</span><text> </text>
+<span class="post-comment-count">评论(0)</span><text> </text>
+<span class="post-digg-count">推荐(0)</span><text> </text>
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12925524" rel="nofollow">
+    编辑
+</a>
+
+			</div>
+		</div>
+
+
+
+
+<div class="topicListFooter">
+    <div id="nav_next_page">
+        
+    <a href="https://www.cnblogs.com/yychuyu/default.html?page=2">
+        下一页
+    </a>
+
+    </div>    
+</div>
+
+
+
+
+
+
+
+
+</div>
+<div id="rightmenu">
+    
+<div id="my_links">
+<h3>导航</h3>
+<ul>
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/yychuyu/">
+首页</a>
+</li>
+
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E8%89%AF%E8%AE%B8Linux">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/yychuyu/rss/">
+订阅</a></li><!--<partial name="./Shared/_XmlLink.cshtml" model="Model" />-->
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+</div>
+
+
+    <div id="calendar">
+        <div id="blog-calendar" style="display: none"></div>
+    </div>
+    <script>loadBlogDefaultCalendar();</script>
+    
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+    <div id="blog_stats">
+<h3>统计</h3>
+<ul>
+<li>随笔 - 
+48</li>
+<li>文章 - 
+0</li>
+<li>评论 - 
+37
+<!--<li>引用 - <partial name="./Shared/_PingTrackCount.cshtml" model="BlogServer.Web.Models.HomeBlogPage" />-->
+</li>
+</ul>
+</div>
+
+
+    <div id="blog-sidecolumn"></div>
+    <script>loadBlogSideColumn();</script>
+    <div id="footer">
+	Powered by: 
+	<br />
+	
+	<a href="https://www.cnblogs.com/" id="footer_site_link">博客园</a>
+	<br />
+	Copyright &copy; 2020 良许Linux
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+</div>
+
+
+</div>
+    
+</body>
+</html>

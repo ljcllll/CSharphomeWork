@@ -1,0 +1,342 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    <meta property="og:description" content="Stanford cs224w 课程笔记：初探影响力最大化及爆发检测，这是两种较为常见的关于网络上信息传播的问题。" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>【图机器学习】cs224w Lecture 13 &amp; 14 - 影响力最大化 &amp; 爆发检测 - WineChocolate - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.ico?v=20200522" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/blacklowkey/bundle-blacklowkey.min.css?v=j7tHgwfwJlsr7nTrn_ZMLXE-yGBgD-V31AUkQVGn0Hk" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/blacklowkey/bundle-blacklowkey-mobile.min.css?v=cYvlxMu_nd6MVfg-vi7YqOC6FaZ7VHFsDM166vO_ekA" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/winechocolate/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/winechocolate/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/winechocolate/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=6bwfCY2e02dLOXNW99G2BHZkYFmw9QyYTWeJ-W-sudo"></script>
+    <script>
+        var currentBlogId = 593312;
+        var currentBlogApp = 'winechocolate';
+        var cb_enable_mathjax = true;
+        var isLogined = false;
+        var skinName = 'BlackLowKey';
+    </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true },
+        TeX: {
+        equationNumbers: { autoNumber: ['AMS'], useLabelIds: true },
+        extensions: ['extpfeil.js', 'mediawiki-texvc.js'],
+        Macros: {bm: "\\boldsymbol"}
+        },
+        'HTML-CSS': { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+        });
+    </script>
+    <script src="https://mathjax.cnblogs.com/2_7_5/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;v=20200504"></script>
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/winechocolate/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/winechocolate/">WineChocolate</a>
+</h1>
+<h2>
+
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/winechocolate/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+</li>
+<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/winechocolate/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+10&nbsp; </span>
+<span id="stats_article_count">文章 - 
+0&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+0</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/winechocolate/p/12989245.html">【图机器学习】cs224w Lecture 13 &amp; 14 - 影响力最大化 &amp; 爆发检测</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+    <div id="cnblogs_post_description" style="display: none">
+        Stanford cs224w 课程笔记：初探影响力最大化及爆发检测，这是两种较为常见的关于网络上信息传播的问题。
+    </div>
+<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+    <p><div class="toc"><div class="toc-container-header">目录</div><ul><li><a href="#influence-maximization">Influence Maximization</a><ul><li><a href="#propagation-models">Propagation Models</a><ul><li><a href="#linear-threshold-model">Linear Threshold Model</a></li><li><a href="#independent-cascade-model">Independent Cascade Model</a></li></ul></li><li><a href="#greedy-hill-climbing-algorithm">Greedy Hill Climbing Algorithm</a><ul><li><a href="#sketch-based-algorithm">Sketch-Based Algorithm</a></li></ul></li></ul></li><li><a href="#outbreak-detection">OutBreak Detection</a><ul><li><a href="#celf-cost-effective-lazy-forward-selection">CELF: Cost-Effective Lazy Forward-selection</a><ul><li><a href="#lazy-evaluation">Lazy Evaluation</a></li></ul></li><li><a href="#data-dependent-bound">Data Dependent Bound</a></li></ul></li></ul></div></p>
+<p>转自本人：<a href="https://blog.csdn.net/New2World/article/details/106431424">https://blog.csdn.net/New2World/article/details/106431424</a></p>
+<h1 id="influence-maximization">Influence Maximization</h1>
+<p>Influence maximization 字面意思，很好理解。比如 Twitter 要推一则广告，肯定希望这则广告能被更多的人看到，于是他们会选择一些用户投放广告，让这些用户转发广告然后推荐给他们的朋友。如何选择这些初始的用户才能让广告的传播更广就是一个影响最大化的问题。也就是说，我现在要选择 <span class="math inline">\(k\)</span> 个初始传播点 <span class="math inline">\(S\)</span>，并且从这些点开始能传播到的最多的点的期望为 <span class="math inline">\(f(S)\)</span>，那么 influence maximization 就是一个优化问题 <span class="math inline">\(\max\limits_{S\ of\ size\ k}f(S)\)</span>。而这个优化问题被证明是 NP-Complete 的，因此我们需要一个有效的 approx. 算法。</p>
+<h2 id="propagation-models">Propagation Models</h2>
+<h3 id="linear-threshold-model">Linear Threshold Model</h3>
+<p>任意节点都有一个阈值 <span class="math inline">\(\theta_v\sim U[0,1]\)</span>，且每个节点都受其邻接点的影响 <span class="math inline">\(b_{v,w}\)</span>。当且仅当这个影响的累加值大于等于节点阈值时，即 <span class="math inline">\(\sum\limits_{w\ active\ neighbor\ of\ v}b_{v,w} \geq \theta_v\)</span>，这个节点被激活。</p>
+<h3 id="independent-cascade-model">Independent Cascade Model</h3>
+<p>每对节点间都有一个概率 <span class="math inline">\(p_{vw}\)</span> 表示激活概率，被激活的点按概率激活其未激活的邻接点。这个模型里的顺序不影响结果，比如 <span class="math inline">\(u,v\)</span> 都是已激活节点，那么由谁先尝试激活 <span class="math inline">\(w\)</span> 是无关的。</p>
+<h2 id="greedy-hill-climbing-algorithm">Greedy Hill Climbing Algorithm</h2>
+<p>这个算法理论上能达到 <span class="math inline">\(f(S) \geq (1-1/e)\times f(OPT) = 0.63 \times f(OPT)\)</span>。它的核心思想是逐个添加节点，每次添加一个能激活最多点的节点。这里涉及到一个独立的数学分支 submodularity，这个玩意儿我做 influence maximization 的时候研究过但没深入，Stanford 专门有一门讲这个的课，可以去看看。不过它的基础概念很简单：回报递减，即 <span class="math inline">\(f(S\cup\{u\})-f(S) \geq f(T\cup\{u\})-f(T)\)</span>，其中 <span class="math inline">\(S \subseteq T\)</span>。举个例子：你现在很饿，给你一个汉堡你会非常开心；再给你一杯可乐你也会很开心，毕竟可乐汉堡是“标配”，但没有刚得到汉堡时那么开心；现在再给你一包薯条，还是很开心，但此时绝对没有在极度饥饿的情况下得到汉堡和可乐那么开心了，因为你可能已经饱了。<br>
+我们现在要证明在 influence maximization 中的 <span class="math inline">\(f(S)\)</span> 是 submodular 的，想偷个懒，这里我就不写了，cs224w 有单独一个 hand-out 可供参考。<br>
+以 IC 模型为例，我们可以按概率先 sample 多次得到不同的“平行世界” (realizations)，然后找能通过 <span class="math inline">\(S\)</span> 到达的所有点，即为一个 set cover 问题。根据多个 realization 的平均就能估计 <span class="math inline">\(f(S)\)</span> 的期望。</p>
+<p>然而，这个贪心算法相当慢，其复杂度为 <span class="math inline">\(O(knRm)\)</span>，其中的符号分别是：初始选定的节点数、图中总节点数、平行世界个数、图中边的条数。</p>
+<h3 id="sketch-based-algorithm">Sketch-Based Algorithm</h3>
+<p>回顾贪心算法为什么慢，因为每次在平行世界中计算影响范围时都是 <span class="math inline">\(O(m)\)</span> 的复杂度。由于计算影响范围是一个不确定的过程，因此我们尝试用一个 approx. 的方法来估计它，这就成了一个用 approx. 方法来估计 approx. 的过程。</p>
+<ul>
+<li>首先得到一个平行世界</li>
+<li>给每个节点分配一个 <span class="math inline">\([0,1]\)</span> 的值</li>
+<li>将每个节点的值更新为这个节点能到达的所有点中最小的值</li>
+</ul>
+<p>直观上讲如果一个节点传播的范围更广的话，它有更大的概率到达那些值很小的节点。因此我们可以通过对点按更新的值进行升序排序，值越小的节点影响越大。这些步骤都是预处理的步骤，也就是说在排好序后使用 greedy 时就只管查询就行。因此我们能在 <span class="math inline">\(O(1)\)</span> 复杂度内找到影响大的节点了。<br>
+但只使用一个值可能会导致结果偏差很大，因此我们可以维护多个值来保证算法的可靠性。我的理解是这样的，给每个节点分配 rank 值，预处理的时候考虑所有平行世界，对每个节点保留 <span class="math inline">\(c\)</span> 个最小的 rank (因为不同平行世界节点间的连通性不一定相同，所以可能出现有些世界能到达更小的 rank 而有些不能)。接下来在贪心的时候就能直接选出最小 rank。将新的节点加入 <span class="math inline">\(S\)</span> 后要删除所有由这个节点影响的点，并从其他节点中删除选中这个节点时所用的那个最小 rank 值。</p>
+<p>由于这个算法是贪心的近似，因此它的上界其实是贪心的下界。而这个方法的效果能有多好取决于保留的 rank 数 <span class="math inline">\(c\)</span>。实验证明，sketch-based 能比贪心更快地得到和贪心差不多的结果。</p>
+<h1 id="outbreak-detection">OutBreak Detection</h1>
+<p>Outbreak detection 和 influence maximization 问题很类似，都是在网络中选择一些节点来达到某个目的。以社交网络为例，influence maximization 是为了通过选中的节点使传播更广，而 outbreak detection 是为了通过这些选中的点来及时全面地侦测网络上可能会爆发的话题。这里要求侦测满足及时和全面两个要求，因此选点就得慎重了。我们先规定节点 <span class="math inline">\(u\)</span> 得知事件 <span class="math inline">\(i\)</span> 的时间为 <span class="math inline">\(T(u,i)\)</span>，以及通过我们选择的点侦测到事件 <span class="math inline">\(i\)</span> 的收益 <span class="math inline">\(f(S) = \sum_iP(i)f_i(S)\)</span>，<span class="math inline">\(P(i)\)</span> 为事件 <span class="math inline">\(i\)</span> 发生的概率。当然侦测所有点是最直接的方法，然而侦测一个点都会产生一定的代价。因此 outbreak detection 也是一个带约束的优化问题。</p>
+<p><div class="math display">\[\max\limits_{S\subseteq V}f(S) = \sum_iP(i)f_i(S) \\
+s.t.\ cost(S)&lt;B\]</div></p><p>目前还没解释的就是这个 reward <span class="math inline">\(f(S)\)</span> 了。它的定义至关重要，直接关系到及时性和全面性。它需要满足</p>
+<ol>
+<li>使事件被侦测到的时间要尽量早</li>
+<li>要侦测尽量多的事件</li>
+<li>一旦 outbreak 尽量减小受影响的范围</li>
+</ol>
+<p>围绕以上几个条件展开讨论，首先定义几个符号，<span class="math inline">\(\pi_i(t)\)</span> 表示在时刻 <span class="math inline">\(t\)</span> 侦测到事件 <span class="math inline">\(i\)</span> 的惩罚。</p>
+<ol>
+<li>time to detection (DT): <span class="math inline">\(\pi_i(t)=t\)</span></li>
+<li>detection likelihood (DL): <span class="math inline">\(\pi_i(t)=0, \pi_i(\infty)=1\)</span></li>
+<li>population affected (PA): <span class="math inline">\(\pi_i(t)=\{\#\ of\ infected\ nodes\ in\ outbreak\ i\ by\ time\ t \}\)</span></li>
+</ol>
+<p>那么我们用 penalty reduction 的思路来定义 reward 即 <span class="math inline">\(f_i(S)=\pi_i(\infty)-\pi_i(T(S,i))\)</span>。这里又出现了 submodular 的身影。把网络设想为一个黑暗的房间，侦测点是一个光源，那么放的第一个光源对这个黑暗房间的意义应该是最大的，因为你从伸手不见五指到能看清房间的一部分了。放第二个的时候你能看到的地方更多了，但它的效果明显没有第一个光源那么有意义。而当我们放入更多光源到一定程度后，整个房间都亮了，再放入光源已经完全没有必要了。抽象一下，可由符号表述为</p>
+<p><div class="math display">\[f(A\cup{x})-f(A) \geq f(B\cup{x})-f(B),\ A\subseteq B\subseteq V,\ x\in V\backslash B
+\]</div></p><p>如下为证明，不感兴趣的朋友可以跳过。要证明这个需要分 3 种情况讨论点 <span class="math inline">\(x\)</span> 侦测到事件 <span class="math inline">\(i\)</span> 的时间。</p>
+<ol>
+<li><span class="math inline">\(T(B,i)\leq T(A,i) &lt; T(x,i)\)</span>，即 <span class="math inline">\(x\)</span> 比 A 和 B 更晚侦测到。所以 <span class="math inline">\(f_i(A\cup{x})=f_i(A)\)</span>, <span class="math inline">\(f_i(B\cup{x})=f_i(B)\)</span></li>
+</ol>
+<p><div class="math display">\[f_i(A\cup{x})-f_i(A)=0=f_i(B\cup{x})-f_i(B)
+\]</div></p><ol start="2">
+<li><span class="math inline">\(T(B,i)\leq T(x,i) &lt; T(A,i)\)</span>，即 <span class="math inline">\(x\)</span> 比 B 早，比 A 晚。如此便有</li>
+</ol>
+<p><div class="math display">\[f_i(A\cup{x})-f_i(A)\geq 0=f_i(B\cup{x})-f_i(B)
+\]</div></p><ol start="3">
+<li><span class="math inline">\(T(x,i) &lt; T(B,i)\leq T(A,i)\)</span>，即 <span class="math inline">\(x\)</span> 比 A 和 B 都更早侦测到。所以</li>
+</ol>
+<p><div class="math display">\[\begin{aligned}
+f_i(A\cup{x})-f_i(A)&amp;=[\pi_i(\infty)-\pi_i(T(x,i))]-f_i(A) \\
+f_i(B\cup{x})-f_i(B)&amp;=[\pi_i(\infty)-\pi_i(T(x,i))]-f_i(B)
+\end{aligned}\]</div></p><p>由于 <span class="math inline">\(f_i(A)\leq f_i(B)\)</span>，所以 <span class="math inline">\(f_i(A\cup{x})-f_i(A)\geqf_i(B\cup{x})-f_i(B)\)</span></p>
+<p>综上，<span class="math inline">\(f_i(\cdot)\)</span> 是 submodular，因此 <span class="math inline">\(f(\cdot)=\sum_iP(i)f_i(\cdot)\)</span> 也是 submodular。那么根据 influence maximization 的经验，submodular 可以用贪心的方法做到 <span class="math inline">\((1-1/e)\cdot OPT\)</span>。然而这只对 unit cost 有效，当每个侦测点的代价不同时，贪心就不适用了。</p>
+<h2 id="celf-cost-effective-lazy-forward-selection">CELF: Cost-Effective Lazy Forward-selection</h2>
+<p><strong>Benefit-Cost Greedy</strong></p>
+<p>为什么忽略 cost 会出问题？假设，我们的预算为 <span class="math inline">\(B\)</span>，而现在有两种感应器各无数个</p>
+<ul>
+<li>s1: reward <span class="math inline">\(r\)</span>, cost <span class="math inline">\(B\)</span></li>
+<li>s2: reward <span class="math inline">\(r-\epsilon\)</span>, cost <span class="math inline">\(1\)</span></li>
+</ul>
+<p>忽略 cost 的情况下我们会首选 s1，这样一来预算消耗完了，我们得到了 <span class="math inline">\(r\)</span> 的收益。然而如果我们用 s2，我们可以装 <span class="math inline">\(B\)</span> 个上去，得到的收益为 <span class="math inline">\(B(r-\epsilon)\)</span>。</p>
+<p><strong>Unit-Cost Greedy</strong></p>
+<p>那么如果我们考虑性价比呢？回答还是否定的。考虑一个很极端的情况，预算为 <span class="math inline">\(B\)</span>，但我们只有两个感应器</p>
+<ul>
+<li>s1: reward <span class="math inline">\(2\epsilon\)</span>, cost <span class="math inline">\(\epsilon\)</span></li>
+<li>s2: reward <span class="math inline">\(B\)</span>, cost <span class="math inline">\(B\)</span></li>
+</ul>
+<p>光看性价比肯定选 s1，然而这样一来我们预算就不够装 s2 了，最终的 reward 就只有 <span class="math inline">\(2\epsilon\)</span>。</p>
+<p>那么，怎么解决这个问题？很简单，两个方法一起用，取最优呗！这就是 CELF 的精髓，即</p>
+<ul>
+<li>S': use benefit-cost greedy</li>
+<li>S'': use unit-cost greedy</li>
+</ul>
+<p>然后通过取最大得到最终结果 <span class="math inline">\(S=\arg\max(f(S'),f(S''))\)</span>。那这个方法能做到什么程度呢？<span class="math inline">\(\frac12(1-1/e)\cdot OPT\)</span>。惊人吧，两个 arbitrary bad 的方法能做到这么好的结果，我感觉类似 boosting 的本质：多个 suboptimal 可以提升为更好的结果。</p>
+<h3 id="lazy-evaluation">Lazy Evaluation</h3>
+<p>Greedy 效果挺好，但速度太慢。Influence maximization 中我们希望网络中的传播范围更大因此可以通过 rank 值来加速，但这里不行啊。我们需要充分利用 submodular 的性质。假设在一次迭代中，我们选择了点 <span class="math inline">\(x\)</span>，那么这次我们通过 <span class="math inline">\(x\)</span> 得到的收益一定是最多的。而且对于其它所有点，这次的回报一定比以后得到的更多。于是我们将所有点的收益排成递减序列，然后每次取首位的最大值就好。下一次迭代时按上次的顺序更新收益值，如果某个点的新收益值大于等于上次收益比这个点小且最接近的值，那么就能确定这个点就是这次的最大值；不然就得将更新后的值插入到正确位置以保证序列为降序。这里借用一个图<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>来说明</p>
+<p><img src="https://img2020.cnblogs.com/blog/1996991/202005/1996991-20200529191755219-2031391093.png" alt="lazy evaluation"></p>
+<h2 id="data-dependent-bound">Data Dependent Bound</h2>
+<p>上面提到的贪心算法的结果的下界是独立于数据的理论分析，相对来说可能很宽松。如果根据数据来估计能否得到一个更紧凑的界限。我们在每一次迭代时都会计算收益，如果将收益降序排列，我们能得到基于数据的估计 <span class="math inline">\(f(OPT)\leq f(S)+\sum\limits_{i=1}^k\delta(i)\)</span>，其中 <span class="math inline">\(\delta\)</span> 是收益，<span class="math inline">\(k\)</span> 是我们要选取的点的个数。至于为什么，我们来看看证明，假设 $S_{OPT}={t_1, t_2, ..., t_k}</p>
+<p><div class="math display">\[\begin{aligned}
+f(OPT)&amp;\leq f(OPT\cup S) \\
+&amp;= f(S)+f(OPT\cup S)-f(S) \\
+&amp;\leq f(S)+\sum\limits_{i=1}^k[f(S\cup{t_i})-f(S)] \\
+&amp;= f(S)+\sum\limits_{i=1}^k\delta(t_i) \\
+&amp;\leq f(S)+\sum\limits_{i=1}^k\delta(i)
+\end{aligned}\]</div></p><hr/>
+<p>后面还有一些 case study 来证明上面的理论是正确的。因为大多是图，这里就不贴了，感兴趣的话可以去看 slides。</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>图来自于 <a href="https://www.cnblogs.com/aaronhoo/p/6548760.html">https://www.cnblogs.com/aaronhoo/p/6548760.html</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2020-05-29 19:20</span>&nbsp;
+<a href="https://www.cnblogs.com/winechocolate/">WineChocolate</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12989245" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12989245);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 593312, cb_blogApp = 'winechocolate', cb_blogUserGuid = '0d5c7185-03f7-4b31-91e5-08d7d7b52bb0';
+    var cb_entryId = 12989245, cb_entryCreatedDate = '2020-05-29 19:20', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;"></div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+
+
+<div id="sidebar_ad"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 WineChocolate
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+</body>
+</html>

@@ -1,0 +1,495 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    <meta property="og:description" content="本文源码：GitHub&amp;amp;#183;点这里 || GitEE&amp;amp;#183;点这里 一、场景分析 1、场景案例 互联网行业的朋友一定了解或者听说过下列几个场景： 阿里：千人千面，意思不同用户" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>数据分析 | 基于智能标签，精准管理数据 - 知了一笑 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.ico?v=20200522" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/codinglife/bundle-codinglife.min.css?v=UeHyLv1TT2WTz4TwfUOiMoKNmtFvLUjUnIhFE2UmZ7I" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/codinglife/bundle-codinglife-mobile.min.css?v=XjHfryC9ctsatIZz1dHn7TsRIqmwz9c3aj_6SCfHSDM" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/cicada-smile/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/cicada-smile/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/cicada-smile/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=6bwfCY2e02dLOXNW99G2BHZkYFmw9QyYTWeJ-W-sudo"></script>
+    <script>
+        var currentBlogId = 519319;
+        var currentBlogApp = 'cicada-smile';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'CodingLife';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/cicada-smile/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/cicada-smile/">知了一笑</a>
+</h1>
+<h2>
+
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/cicada-smile/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E7%9F%A5%E4%BA%86%E4%B8%80%E7%AC%91">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/cicada-smile/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+136&nbsp; </span>
+<span id="stats_article_count">文章 - 
+0&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+20</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/cicada-smile/p/12990914.html">数据分析 | 基于智能标签，精准管理数据</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+    <p>本文源码：<a href="https://github.com/cicadasmile/data-manage-parent">GitHub·点这里</a> ||  <a href="https://gitee.com/cicadasmile/data-manage-parent">GitEE·点这里</a></p>
+<h1 id="一、场景分析">一、场景分析</h1>
+<h2 id="1、场景案例">1、场景案例</h2>
+<p>互联网行业的朋友一定了解或者听说过下列几个场景：</p>
+<p><strong>阿里</strong>：千人千面，意思不同用户使用阿里相关的产品感觉是不一样的，例如支付宝首页的推荐内容，和其他相关推荐流信息是完全不同的。</p>
+<p><strong>腾讯</strong>：社交广告，不同用户的朋友圈或者其他媒体场景下的广告信息是不同的，会基于用户特征推荐。</p>
+<p><strong>头条</strong>：信息价值，根据用户浏览信息，分析用户相关喜好，针对分析结果推荐相关的信息流，越关注某类内容，获取相关的信息越多。</p>
+<p>如上几种场景的逻辑就是：基于不断分析用户的行为，生成用户的特征画像，然后再基于用户标签，定制化的推荐相关内容。</p>
+<h2 id="2、基本概念">2、基本概念</h2>
+<p>通过上面的场景，衍生出来两个概念：</p>
+<p><strong>用户画像</strong></p>
+<p>用户画像，作为一种勾画目标用户、联系用户诉求与设计方向的有效工具，把该用户相关联的数据的可视化的展现，就形成了用户画像。用户画像在各领域得到了广泛的应用，最初是在电商领域得到应用的，在大数据时代背景下，用户信息充斥在网络中，将用户的每个具体信息抽象成标签，利用这些标签将用户形象具体化，从而为用户提供有针对性的服务。</p>
+<p><strong>标签数据</strong></p>
+<p>标签在生活中非常常见，比如商品标签，个人标签，行业标签，例如提到996就想到程序员，提到程序员就想到格子衫。</p>
+<p>标签是把分散的多方数据进行整合纳入统一的技术平台，并对这些数据进行标准化和细分，进行结构化存储和更新管理，让业务线可以把这些细分结果推向现有的互动营销环境里的平台，产生价值，这些数据称为标签数据，也就是常说的标签库。数据标签的概念也是在最近几年大数据的发展中不断火热起来的。</p>
+<p><strong>标签价值</strong></p>
+<ul>
+<li>精细运营的基础，有效提高流量精准和效率。</li>
+<li>帮助产品快速定位需求人群，进行精准营销；</li>
+<li>能帮助客户更快切入到市场周期中；</li>
+<li>深入的预测分析客户并作出及时反应；</li>
+<li>基于标签的开发智能推荐系统；</li>
+<li>基于某类用户的分析，洞察行业特征；</li>
+</ul>
+<p>标签的核心价值，或者说最常用的场景：实时智能推荐，精准化数字营销。</p>
+<h1 id="二、数据标签">二、数据标签</h1>
+<h2 id="1、标签划分">1、标签划分</h2>
+<p><strong>属性标签</strong></p>
+<p>属性标签是变化最小的，例如用户实名认证之后，基于身份信息获取相关：性别，生日，出生年月，年龄，等相关标签。变动频率小，且最具有精准性。</p>
+<p><strong>行为标签</strong></p>
+<p>行为标签就是用户通过在产品上的一系列操作，基于行为日志分析得出：例如购买能力、消费爱好、季节性消费标签等。在信息流的APP上，通过相关浏览行为，不断推荐用户感兴趣的内容就是基于该逻辑。</p>
+<p><strong>规则标签</strong></p>
+<p>根据业务场景需求，配置指定规则，基于规则生成分析结果，例如：</p>
+<ul>
+<li>近7天活跃用户：近7天，每天都登录的用户作为规则生成；</li>
+<li>丢失用户：六个月内没有任何操作，可以发放高额优惠劵；</li>
+<li>潜在用户：使用或产生浏览数据，但是未发生任何交易行为；</li>
+</ul>
+<p>这类标签可以基于动态的规则配置，经过计算和分析，生成描述结果，也就是规则标签。</p>
+<p><strong>拟合标签</strong></p>
+<p>拟合类的标签最具有复杂性，通过用户上述几种标签，智能组合分析，给的预测值，例如：未婚、浏览相关婚礼内容，通过分析预测用户将要举办婚礼，得到一个拟合结果：预测将要结婚。这个预测逻辑也可以反向执行，用户购买婴儿用品：预测已婚已育。</p>
+<p>这就是数据时代常说的一句话：用户在某个应用上一通操作之后，算法分析的结果可能比用户对自己的描述还要真实。</p>
+<h2 id="2、标签加工流程">2、标签加工流程</h2>
+<p><img src="https://img2020.cnblogs.com/blog/1691717/202005/1691717-20200530092657885-1982787006.png" alt=""></p>
+<p><strong>数据采集</strong></p>
+<p>数据采集的渠道相对较多，比如同一APP内的各种业务线：购物、支付、理财、外卖、信息浏览等等。通过数据通道传输到统一的数据聚合平台。有了这些海量日志数据的支撑，才具有数据分析的基础条件。不管是数据智能，深度学习，算法等都是建立在海量数据的基础条件上，这样才能获取具有价值的分析结果。</p>
+<p><strong>数据加工</strong></p>
+<p>结合如上业务，通过对海量数据的加工，分析和提取，获取相对精准的用户标签，这里还有关键的一步，就是对已有的用户标签进行不断的验证和修复，尤其是规则类和拟合类的相关标签。</p>
+<p><strong>标签库</strong></p>
+<p>通过标签库，管理复杂的标签结果，除了复杂的标签，和基于时间线的标签变，标签数据到这里，已经具有相当大的价值，可以围绕标签库开放一些收费服务，例如常见的，用户在某电商APP浏览某些商品，可以在某信息流平台看到商品推荐。大数据时代就是这么令人感觉智能和窒息。</p>
+<p><strong>标签业务</strong></p>
+<p>数据走了一大圈转换成标签，自然还是要回归到业务层面，通过对标签数据的用户的分析，可以进行精准营销，和智能推荐等相关操作，电商应用中可以提高成交量，信息流中可以更好的吸引用户。</p>
+<p><strong>应用层</strong></p>
+<p>把上述业务开发成服务，集成到具有的应用层面，不断提升应用服务的质量，不断的吸引用户，提供服务。当然用户的数据不断在应用层面产生，在转到数据采集服务中，最终形成完整的闭环流程。</p>
+<h2 id="3、应用案例">3、应用案例</h2>
+<p>从流程和业务层面描述都是简单的，到开发层面都会变得复杂和不好处理，这可能就是产品和开发之间的隔阂。</p>
+<p><strong>标签的数据类型</strong></p>
+<p>不同标签的分析结果需要用不同的数据类型描述，在标签体系中，常用描述标签的数据类型如下：枚举、数值、日期、布尔、文本类型。不同的类型需要不一样的分析流程。</p>
+<p><strong>商品和标签</strong></p>
+<p>这里提供一个基础案例，用商品的标签来分析商品，例如通过商品产地，价格，状态等条件，来查询产品库有多少符合条件的商品。</p>
+<p><code>数据表设计</code></p>
+<p>主要分四张表：标签分类，标签库，标签值，标签数据。</p>
+<pre><code class="language-sql">CREATE TABLE `tc_tag_catalog` (
+	`id` INT (11) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+	`catalog_name` VARCHAR (50) NOT NULL DEFAULT '' COMMENT '名称',
+	`create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+	`update_time` datetime DEFAULT NULL COMMENT '更新时间',
+	`state` INT (1) DEFAULT '1' COMMENT '状态1启用,2禁用',
+	PRIMARY KEY (`id`)
+) ENGINE = INNODB DEFAULT CHARSET = utf8 COMMENT = '标签层级目录';
+
+CREATE TABLE `tc_tag_cloud` (
+	`id` INT (11) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+	`catalog_id` INT (11) NOT NULL COMMENT '目录ID',
+	`tag_name` VARCHAR (100) DEFAULT '' COMMENT '标签名称',
+	`tag_code` INT (11) DEFAULT NULL COMMENT '标签编码',
+	`bind_column` VARCHAR (100) DEFAULT '' COMMENT '绑定数据列',
+	`data_type` INT (2) NOT NULL COMMENT '1枚举,2数值,3日期,4布尔,5值类型',
+	`create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+	`update_time` datetime DEFAULT NULL COMMENT '更新时间',
+	`remark` VARCHAR (150) DEFAULT NULL COMMENT '备注',
+	`state` INT (1) DEFAULT '1' COMMENT '状态1启用,2禁用',
+	PRIMARY KEY (`id`)
+) ENGINE = INNODB DEFAULT CHARSET = utf8 COMMENT = '标签云';
+
+CREATE TABLE `tc_tag_data_enum` (
+	`tag_code` INT (11) NOT NULL COMMENT '标签编码',
+	`data_value` VARCHAR (150) NOT NULL COMMENT '枚举值',
+	`create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+	KEY `tag_code_index` (`tag_code`) USING BTREE
+) ENGINE = INNODB DEFAULT CHARSET = utf8 COMMENT = '标签枚举值';
+
+CREATE TABLE `tc_tag_data_set` (
+	`id` INT (11) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+	`product_name` VARCHAR (100) DEFAULT '' COMMENT '商品名称',
+	`unit_price` DECIMAL (10, 2) DEFAULT '0.00' COMMENT '单价',
+	`is_shelves` INT (1) DEFAULT '1' COMMENT '是否上架：1否,2是',
+	`origin_place` VARCHAR (100) DEFAULT '' COMMENT '产地',
+	`create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+	PRIMARY KEY (`id`)
+) ENGINE = INNODB DEFAULT CHARSET = utf8 COMMENT = '标签数据集';
+</code></pre>
+<p><img src="https://img2020.cnblogs.com/blog/1691717/202005/1691717-20200530092641523-243323669.jpg" alt=""></p>
+<p><code>模拟入参接口</code></p>
+<p>这里的参数应该是基于需求，动态选取，进行组织到一起：</p>
+<p><img src="https://img2020.cnblogs.com/blog/1691717/202005/1691717-20200530092629661-1272185003.jpg" alt=""></p>
+<p>例如图片中这里给定的标签值列表，称为枚举值。</p>
+<pre><code class="language-java">@RestController
+public class AnalyzeController {
+
+    @Resource
+    private TagDataSetService tagDataSetService ;
+
+    @GetMapping(&quot;/analyze&quot;)
+    public String analyze (){
+        List&lt;TagParam&gt; tagParamList = new ArrayList&lt;&gt;() ;
+
+        TagParam tagParam1 = new TagParam(1,&quot;产地&quot;,&quot;origin_place&quot;) ;
+        List&lt;String&gt; valueList1 = new ArrayList&lt;&gt;() ;
+        valueList1.add(&quot;深圳&quot;);
+        valueList1.add(&quot;广东&quot;);
+        tagParam1.setValueList(valueList1);
+        tagParamList.add(tagParam1) ;
+
+        TagParam tagParam2 = new TagParam(2,&quot;价格&quot;,&quot;unit_price&quot;) ;
+        List&lt;String&gt; valueList2 = new ArrayList&lt;&gt;() ;
+        valueList2.add(&quot;1999&quot;);
+        tagParam2.setValueList(valueList2);
+        tagParamList.add(tagParam2) ;
+
+        TagParam tagParam3 = new TagParam(3,&quot;生产日期&quot;,&quot;create_time&quot;) ;
+        List&lt;String&gt; valueList3 = new ArrayList&lt;&gt;() ;
+        valueList3.add(&quot;2020-05-01 13:43:54&quot;);
+        tagParam3.setValueList(valueList3);
+        tagParamList.add(tagParam3) ;
+
+        TagParam tagParam4 = new TagParam(4,&quot;是否上架&quot;,&quot;is_shelves&quot;) ;
+        List&lt;String&gt; valueList4 = new ArrayList&lt;&gt;() ;
+        valueList4.add(&quot;1&quot;);
+        tagParam4.setValueList(valueList4);
+        tagParamList.add(tagParam4) ;
+
+        TagParam tagParam5 = new TagParam(5,&quot;产品名称&quot;,&quot;product_name&quot;) ;
+        List&lt;String&gt; valueList5 = new ArrayList&lt;&gt;() ;
+        valueList5.add(&quot;智能&quot;);
+        tagParam5.setValueList(valueList5);
+        tagParamList.add(tagParam5) ;
+
+        Integer count = tagDataSetService.analyze(tagParamList) ;
+
+        return &quot;Result：&quot; + count ;
+    }
+}
+</code></pre>
+<p><code>参数解析查询</code></p>
+<p>通过对参数的解析，最终形成查询的SQL语句，获取精准的结果数据。</p>
+<pre><code class="language-java">@Service
+public class TagDataSetServiceImpl extends ServiceImpl&lt;TagDataSetMapper, TagDataSet&gt; implements TagDataSetService {
+
+    @Resource
+    private TagDataSetMapper tagDataSetMapper ;
+
+    @Override
+    public Integer analyze(List&lt;TagParam&gt; tagParamList) {
+        StringBuffer querySQL = new StringBuffer() ;
+        for (TagParam tagParam:tagParamList){
+            querySQL.append(&quot; AND &quot;) ;
+            querySQL.append(tagParam.getBindColumn()) ;
+            // 1枚举,2数值,3日期,4布尔,5值类型
+            List&lt;String&gt; valueList = tagParam.getValueList();
+            switch (tagParam.getDataType()){
+                case 1:
+                    querySQL.append(&quot; IN (&quot;) ;
+                    for (int i = 0 ; i &lt; valueList.size() ;i++){
+                        if (i != valueList.size()-1){
+                            querySQL.append(&quot;'&quot;).append(valueList.get(i)).append(&quot;',&quot;);
+                        } else {
+                            querySQL.append(&quot;'&quot;).append(valueList.get(i)).append(&quot;'&quot;);
+                        }
+                    }
+                    querySQL.append(&quot; )&quot;) ;
+                    break;
+                case 2:
+                    querySQL.append(&quot;=&quot;).append(tagParam.getValueList().get(0)) ;
+                    break;
+                case 3:
+                    querySQL.append(&quot;&gt;='&quot;).append(tagParam.getValueList().get(0)).append(&quot;'&quot;) ;
+                    break;
+                case 4:
+                    querySQL.append(&quot;=&quot;).append(tagParam.getValueList().get(0)) ;
+                    break;
+                case 5:
+                    querySQL.append(&quot; LIKE '%&quot;).append(tagParam.getValueList().get(0)).append(&quot;%'&quot;) ;
+                    break;
+                default:
+                    break;
+            }
+        }
+        /* 最终执行的 SQL
+            SELECT COUNT(*) FROM tc_tag_data_set
+            WHERE 1 = 1
+            AND origin_place IN ('深圳', '广东')
+            AND unit_price = 1999
+            AND create_time &gt;= '2020-05-01 13:43:54'
+            AND is_shelves = 1
+            AND product_name LIKE '%智能%'
+         */
+        String whereCondition = String.valueOf(querySQL);
+        return tagDataSetMapper.analyze(whereCondition);
+    }
+}
+</code></pre>
+<p>可能有人会说这不就是个查询流程吗？如果有这样的疑问，把上述案例换成用户查询，标签数据的价值会更直观。</p>
+<h1 id="三、智能画像">三、智能画像</h1>
+<h2 id="1、基本概念">1、基本概念</h2>
+<p><strong>用户画像</strong></p>
+<p>作为一种勾画目标用户、联系用户诉求与设计方向的有效工具，用户画像在各领域得到了广泛的应用。最初是在电商领域得到应用的，在大数据时代背景下，用户信息充斥在网络中，将用户的每个具体信息抽象成标签，利用这些标签将用户形象具体化，从而为用户提供有针对性的服务。</p>
+<p><strong>行业画像</strong></p>
+<p>通过行业属性标签，行业下用户标签的综合分析，生成行业分析报告，提供极有价值的导向，这是最近两年极其热门的应用。</p>
+<p><strong>画像补全</strong></p>
+<p>通过不断分析用户数据，丰富标签库，使用户的画像更加丰富立体。</p>
+<h2 id="2、画像报告">2、画像报告</h2>
+<p>通过标签数据的分析，生成一份分析报告，报告内容包含丰富的用户标签统计数据。</p>
+<p>例如：90后画像报告</p>
+<p>这个报告，互联网用户一定或多或少都看到过。主要是一些标签统计，共性标签展示，或者哪些群体对90后三观影响最大，收入来源，学历等各种分析解读。</p>
+<h1 id="四、源代码地址">四、源代码地址</h1>
+<pre><code>GitHub·地址
+https://github.com/cicadasmile/data-manage-parent
+GitEE·地址
+https://gitee.com/cicadasmile/data-manage-parent
+</code></pre>
+<p><img src="https://img2018.cnblogs.com/blog/1691717/201908/1691717-20190823075428183-1996768914.png" alt=""></p>
+<p><strong>推荐阅读：《架构设计系列》，萝卜青菜，各有所需</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">序号</th>
+<th style="text-align:left">标题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">01</td>
+<td style="text-align:left"><a href="https://mp.weixin.qq.com/s/NGxI3rC-6mWMDnrClaOR3Q">架构设计：单服务.集群.分布式，基本区别和联系</a></td>
+</tr>
+<tr>
+<td style="text-align:left">02</td>
+<td style="text-align:left"><a href="https://mp.weixin.qq.com/s/1TKAwr99rKEHSxqXFixEhQ">架构设计：分布式业务系统中，全局ID生成策略</a></td>
+</tr>
+<tr>
+<td style="text-align:left">03</td>
+<td style="text-align:left"><a href="https://mp.weixin.qq.com/s/Yr4A95poVjlFsQ-Q0dF7hA">架构设计：分布式系统调度，Zookeeper集群化管理</a></td>
+</tr>
+<tr>
+<td style="text-align:left">04</td>
+<td style="text-align:left"><a href="https://mp.weixin.qq.com/s/o9sxN6GwxdNYTKZvRexwjg">架构设计：接口幂等性原则，防重复提交Token管理</a></td>
+</tr>
+<tr>
+<td style="text-align:left">05</td>
+<td style="text-align:left"><a href="https://mp.weixin.qq.com/s/jBu-OZ69DbXfmdIf5VC7kQ">架构设计：缓存管理模式，监控和内存回收策略</a></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2020-05-30 09:31</span>&nbsp;
+<a href="https://www.cnblogs.com/cicada-smile/">知了一笑</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12990914" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12990914);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 519319, cb_blogApp = 'cicada-smile', cb_blogUserGuid = '621b19fe-fde6-4ced-07ae-08d6d8e95ab6';
+    var cb_entryId = 12990914, cb_entryCreatedDate = '2020-05-30 09:31', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;"></div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 知了一笑
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+</body>
+</html>

@@ -1,0 +1,349 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    <meta property="og:description" content="变量(Variable)用于存储在Package运行时用到的值，集成服务支持两种类型的变量：用户自定义的变量和系统变量，自定义的变量由用户来定义，系统变量由集成服务来定义。 变量的用途十分广泛，用于容" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>SSIS 数据类型 第二篇：变量的数据类型 - 悦光阴 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.ico?v=20200522" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/codinglife/bundle-codinglife.min.css?v=UeHyLv1TT2WTz4TwfUOiMoKNmtFvLUjUnIhFE2UmZ7I" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/ljhdo/custom.css?v=DX8EKHh15HF1sAF6gp7zJM5l/v0=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/codinglife/bundle-codinglife-mobile.min.css?v=XjHfryC9ctsatIZz1dHn7TsRIqmwz9c3aj_6SCfHSDM" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/ljhdo/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/ljhdo/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/ljhdo/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=6bwfCY2e02dLOXNW99G2BHZkYFmw9QyYTWeJ-W-sudo"></script>
+    <script>
+        var currentBlogId = 222587;
+        var currentBlogApp = 'ljhdo';
+        var cb_enable_mathjax = true;
+        var isLogined = false;
+        var skinName = 'CodingLife';
+    </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true },
+        TeX: {
+        equationNumbers: { autoNumber: ['AMS'], useLabelIds: true },
+        extensions: ['extpfeil.js', 'mediawiki-texvc.js'],
+        Macros: {bm: "\\boldsymbol"}
+        },
+        'HTML-CSS': { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+        });
+    </script>
+    <script src="https://mathjax.cnblogs.com/2_7_5/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;v=20200504"></script>
+    
+</head>
+<body>
+    <a name="top"></a>
+    <div id="page_begin_html">
+        <link  type="text/css" rel="stylesheet" href="https://files.cnblogs.com/files/hafiz/feedback.css">
+<script src="https://files.cnblogs.com/files/hafiz/jquery-migrate-1.2.1.js" defer></script>
+<div id="scrollTop" style="display:none;">
+      <div class="level-2"></div>
+      <div class="level-3"></div>
+</div>
+<script src="https://files.cnblogs.com/files/hafiz/scroll2top.js" defer></script>
+<script type="text/javascript">
+    UI.global_search();
+    var uvOptions = {};
+    // !important
+    (function() {
+        initScrollTop();
+    })();
+</script>
+    </div>
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/ljhdo/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/ljhdo/">悦光阴</a>
+</h1>
+<h2>
+请不要假装很努力，因为结果不会陪你演戏。
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/ljhdo/">
+首页</a>
+</li>
+<li>
+
+
+</li>
+<li>
+</li>
+<li>
+
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+431&nbsp; </span>
+<span id="stats_article_count">文章 - 
+8&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+877</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/ljhdo/p/12966894.html">SSIS 数据类型 第二篇：变量的数据类型</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+<div id="cnblogs_post_body" class="blogpost-body ">
+    <p>变量(Variable)用于存储在Package运行时用到的值，集成服务支持两种类型的变量：用户自定义的变量和系统变量，自定义的变量由用户来定义，系统变量由集成服务来定义。</p>
+<p>变量的用途十分广泛，用于容器、Task和事件处理程序中，在Script Task和Scipt Component 也会用变量。SSIS中的变量是强类型的，这意味着必须为变量设置正确的类型。</p>
+<h2>一，变量的类型</h2>
+<p>SSIS变量支持的类型列表：</p>
+<ul>
+<li>Boolean：布尔类型，只有两个有效值：true 和 false</li>
+<li>Char：单个字符</li>
+<li>DateTime：日期和时间，格式是：5/29/2020 6:05:48 PM</li>
+<li>DBNull：NULL</li>
+<li>Decimal：精确小数</li>
+<li>Double 和 Single，双精度和单精度浮点数</li>
+<li>String：字符类型</li>
+<li>Object：System.Object类型</li>
+<li>SByte,Int16,Int32,Int64：有符号的整数，可以为正整数、0和负整数</li>
+<li>Byte,Uint32,Uint64：无符号的整数，值必须大于等于0，Byte占用1个字节，相当于UInt8，</li>
+</ul>
+<p>最为特殊的是Object类型，该类型的变量可以转换为其他数据类型。这些类型，有些可以和TSQL的数据类型进行匹配，有些不能匹配，在使用时，要根据自己的需要，为变量设置正确的数据类型。</p>
+<h2>二，变量的值</h2>
+<p>SSIS的变量不允许为null，当没有为变量赋值时，变量有默认值：</p>
+<p><img src="https://img2020.cnblogs.com/blog/628084/202005/628084-20200529174450615-201825173.png" alt="" width="591" height="174"></p>
+<p>经过测试，string 数据类型的长度可能是8000Bytes，也就是对应SQL Server的varchar(8000) 或 nvarchar(4000)&nbsp;</p>
+<h2>三，变量的数据类型和TSQL数据类型的映射</h2>
+<p>SSIS 变量的数据类型，不同于SSIS的数据类型，但都和SSIS的数据类型相兼容，在进行表达式求值时，SSIS自动将变量的数据类型隐式转换成SSIS的数据类型，然后进行求值。</p>
+<p><strong>1，字符数据类型</strong></p>
+<p>字符变量和TSQL数据类型的映射关系：</p>
+<ul>
+<li><strong>String</strong>：char,nchar,varchar(n),nvarchar(n)， 最大8000个字节。</li>
+<li><strong>object</strong>：varchar(max),nvarchar(max)</li>
+<li><strong>Char</strong>: char(1)</li>
+</ul>
+<p><strong>2，数值类型</strong></p>
+<p>数值类型的变量和TSQL数据类型的映射关系：</p>
+<ul>
+<li><strong>Boolean</strong>：bit</li>
+<li><strong>Int64</strong>：bigint</li>
+<li><strong>Int32</strong>：int</li>
+<li><strong>Int16</strong>：smallint</li>
+<li><strong>Byte</strong>：tinyint</li>
+<li><strong>object</strong>：varbinary(max), varchar(max)</li>
+<li>精确小数：<strong>Decimal</strong>&nbsp;在SQL Server 2012以后，对应TSQL的decimal</li>
+<li>近似小数：<strong>Single</strong>&nbsp;对应TSQL的float(24), &nbsp;<strong>Double</strong>&nbsp;对应TSQL的float(53)</li>
+</ul>
+<p><strong>3，日期/时间类型</strong></p>
+<p>日期/时间类型的变量和TSQL数据类型的映射关系：</p>
+<ul>
+<li><strong>DateTime</strong>：对应TSQL的datetime</li>
+<li><strong>Object</strong>：对应TSQL的time，date，datetime2</li>
+</ul>
+<p><strong>4，NULL</strong></p>
+<p>DBNull对应TSQL的NULL，这个类型很奇怪，暂时不知道用途。</p>
+<h2>四，如何处理TSQL中的max类型？</h2>
+<p>在执行Execute SQL Task时，如果把nvarchar(max) 和 varchar(max) 类型的值赋值给变量，并且变量的类型是String，那么SSIS会抛出错误，错误消息如下：</p>
+<blockquote>
+<p>[Execute SQL Task] Error: An error occurred while assigning a value to variable "strVar": "The type of the value (DBNull) being assigned to variable "User::strVar" differs from the current variable type (String). Variables may not change type during execution. Variable types are strict, except for variables of type Object.".</p>
+</blockquote>
+<p>错误消息会误导开发者做出错误的判断，实际上，正确的做法是把变量的类型修改Object 或者把字段的类型修改为nvarchar(n) 或者varchar(n)。</p>
+<p>但是，当变量的长度大于等于8000字节时，实际上，无法通过变量来传递到其他组件中。</p>
+<p><img src="https://img2020.cnblogs.com/blog/628084/202005/628084-20200529184940670-610187203.png" alt=""></p>
+<p>举个例子，在EXECUTE SQL TASK的参数映射中，把Parameter Size 设置为-1，表示不限制变长字符和binary的长度，但是，实际上，当字节数量大于8000时，无法把Object类型的变量转换为NVARCHAR类型。</p>
+<p>SSIS会抛出错误消息，从Object变量中抽取数据时出错：</p>
+<blockquote>
+<p>[Execute SQL Task] Error: Executing the query "insert into dbo.TestDT values(?)" failed with the following error: "An error occurred while extracting the result into a variable of type (DBTYPE_WSTR)".</p>
+</blockquote>
+<p>从数据类型DBTYPE_WSTR中，可以看出，通过EXECUTE SQL TASK 转换的NVARCHAR 和 -1 (Parameter Size)，实际上，最大值是NVARCHAR(4000)&nbsp; 或 VARCHAR(8000)。</p>
+<p>&nbsp;</p>
+<p>参考文档：</p>
+<p><a href="https://docs.microsoft.com/en-us/sql/integration-services/integration-services-ssis-variables?view=sql-server-ver15" target="_blank">Integration Services (SSIS) Variables</a></p>
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2020-05-29 19:04</span>&nbsp;
+<a href="https://www.cnblogs.com/ljhdo/">悦光阴</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12966894" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12966894);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 222587, cb_blogApp = 'ljhdo', cb_blogUserGuid = '768fab82-1acd-e311-8d02-90b11c0b17d6';
+    var cb_entryId = 12966894, cb_entryCreatedDate = '2020-05-29 19:04', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;"></div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 悦光阴
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    <div id="page_end_html">
+        <script type="text/javascript">
+$(function(){
+    $('#blogTitle h1').addClass('bounceInLeft animated');
+    $('#blogTitle h2').addClass('bounceInRight animated');
+    // 删除反对按钮
+    $('.buryit').remove();
+    initCommentData();
+});
+function initCommentData() {
+    $('.feedbackItem').each(function() {
+        var text = $(this).find('.feedbackListSubtitle .layer').text();
+        // 将楼层信息放到data里面
+        // $(this).find('.blog_comment_body').attr('data-louceng', text.replace(/^#/g, ''));
+        if($(this).find('.feedbackListSubtitle .louzhu').length>0) $(this).addClass('myself');
+        var avatar = $(this).find('> .feedbackCon > span').html() || 'http://pic.cnitblog.com/face/sample_face.gif';
+        $(this).find('> .feedbackCon > .blog_comment_body').append('<img class="user-avatar" src="'+avatar+'"/>')
+    });
+}
+
+$(document).ajaxComplete(function(event, xhr, settings) {
+  // 监听获取评论ajax事件
+  if(settings.url.indexOf('/mvc/blog/GetComments.aspx') >= 0) {
+    initCommentData();
+  }
+});
+</script>
+    </div>
+</body>
+</html>
